@@ -1,0 +1,10 @@
+# Local tooling binaries (version-pinned by URL + sha256 in research/relational/TOOLING.md)
+.tools/
+.venv-probe/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store

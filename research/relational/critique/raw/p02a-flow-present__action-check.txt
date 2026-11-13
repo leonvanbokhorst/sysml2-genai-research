@@ -1,0 +1,16 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:46Z
+probe model:    probes/p02a-flow-present.sysml
+model sha256:   1ba6e79e1be733576510657b1c6048aba01b2f49cdfdbc4efa6c131b4a7dfdf9
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -action TakePicture -engine check p02a-flow-present.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+✓ package P02A
+✓ Action TakePicture: no violation, exhaustive (3 states, 2 moves, depth 2)
+  outcome: picture = []
+  standing: outcomes (bounded over schedules: 3 states, 2 moves searched)
+----- end of output -----
+exit:           0

@@ -1,0 +1,16 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:49Z
+probe model:    probes/p12-fixed-binding-redefinition.sysml
+model sha256:   5466eb2d82951e85f65e12e5bf7fd3429e807f70a1cc7ea1581bf282502ff065
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -validate p12-fixed-binding-redefinition.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/critique/probes/p12-fixed-binding-redefinition.sysml:15:25: error[feature-value-overriding]: cannot override the binding value of P12::Base::x: a value written with `=` is fixed for every feature redefining it; write it as `default =` on P12::Base::x to allow overriding, or remove this value
+        attribute :>> x = 2.0;
+                        ^~~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/critique/probes/p12-fixed-binding-redefinition.sysml did not analyse cleanly; no check was made
+----- end of output -----
+exit:           2

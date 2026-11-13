@@ -1,0 +1,71 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:47Z
+probe model:    probes/p03b-req-constraint-violated.sysml
+model sha256:   31486116c443bf3be93faebddf668f79225906d8d6951060e40533f88b0f18c1
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -satisfy -json p03b-req-constraint-violated.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+{
+  "status": "fails",
+  "exit": 1,
+  "checks": [
+    {
+      "subject": "satisfy vehicleMaximumMass by vehicle",
+      "status": "fails",
+      "values": null,
+      "lines": [
+        "✗ satisfy vehicleMaximumMass by vehicle fails (on P03B::vehicle ID: 1)",
+        "  Required condition evaluated to false: massActual \u003c= massRequired",
+        "  standing: violated (witnessed: 1 run under reverse)"
+      ],
+      "rows": null,
+      "plan": {
+        "engine": "auto",
+        "standing": "violated (witnessed: 1 run under reverse)",
+        "steps": [
+          {
+            "engine": "run",
+            "status": "answered"
+          }
+        ],
+        "workers": 0,
+        "warming": 0
+      },
+      "results": [
+        {
+          "engine": "run",
+          "claim": "violated",
+          "strength": "witnessed",
+          "bounds": [
+            {
+              "name": "steps",
+              "limit": 10000000,
+              "reached": false
+            },
+            {
+              "name": "elements",
+              "limit": 1000000,
+              "reached": false
+            }
+          ],
+          "witness": {
+            "schedule": "reverse",
+            "choices": []
+          },
+          "reason": "satisfaction satisfy vehicleMaximumMass by vehicle: require condition evaluated to false: massActual \u003c= massRequired",
+          "standing": "violated (witnessed: 1 run under reverse)"
+        }
+      ]
+    }
+  ],
+  "diagnostics": null,
+  "output": [
+    "✓ package P03B"
+  ],
+  "errors": null
+}
+----- end of output -----
+exit:           1

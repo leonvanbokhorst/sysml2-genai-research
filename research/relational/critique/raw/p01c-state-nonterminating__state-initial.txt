@@ -1,0 +1,18 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:40Z
+probe model:    probes/p01c-state-nonterminating.sysml
+model sha256:   f321d2e5e756d741047f71b586535b432b6bc5654af684b2c88bda266f228a45
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -state Mission p01c-state-nonterminating.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+✓ package P01C
+✓ Started state machine executor for "Mission"
+  Current state: idle
+  Time: 0.0
+  Events: 1
+  standing: value (observed: 1 run under reverse)
+----- end of output -----
+exit:           0

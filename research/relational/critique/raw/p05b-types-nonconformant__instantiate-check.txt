@@ -1,0 +1,22 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:47Z
+probe model:    probes/p05b-types-nonconformant.sysml
+model sha256:   9a7ce8f7096b511e569be9e449cb1a4707998714009bc8199bc354999e0cf601
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -instantiate device -validate=device p05b-types-nonconformant.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/critique/probes/p05b-types-nonconformant.sysml:9:37: error[binding-connector-type-conformance]: cannot bind Rational value to a feature typed by Integer
+        attribute count : Integer = 2.5;
+                                    ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/critique/probes/p05b-types-nonconformant.sysml:10:36: error[binding-connector-type-conformance]: cannot bind Rational value to a feature typed by Natural
+        attribute num : Positive = 5.0;
+                                   ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/critique/probes/p05b-types-nonconformant.sysml:11:36: error[binding-connector-type-conformance]: cannot bind Natural value to a feature typed by Boolean
+        attribute flag : Boolean = 1;
+                                   ^
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/critique/probes/p05b-types-nonconformant.sysml did not analyse cleanly; no check was made
+----- end of output -----
+exit:           2

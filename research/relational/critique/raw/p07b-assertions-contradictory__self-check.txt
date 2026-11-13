@@ -1,0 +1,14 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:48Z
+probe model:    probes/p07b-assertions-contradictory.sysml
+model sha256:   af90be6a05ffc1b283d9ae5b7c2f9624ce19372b24cc6dadfa617f3216f3f9fa
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -self-check p07b-assertions-contradictory.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+✓ package P07B
+Self-model check: 6 elements, 72 checks, 0 violations, 0 unevaluated
+----- end of output -----
+exit:           0

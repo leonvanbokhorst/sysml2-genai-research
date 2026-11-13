@@ -1,0 +1,19 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:40Z
+probe model:    probes/p01b-state-terminal-unreachable.sysml
+model sha256:   51d223a74b52c8146ae941598fcdbedee20dde51b65dda84cded61b08f64d112
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -state Mission -advance 100 -engine check p01b-state-terminal-unreachable.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/critique/probes/p01b-state-terminal-unreachable.sysml:10:15: warning[name-conflict]: Duplicate of inherited member name 'done' from StateAction
+        state done;
+              ^~~~
+✓ package P01B
+✓ State machine Mission: no violation, exhaustive up to t=100.0 (2 states, 1 moves, depth 1)
+  outcome: finalState running; visits idle, running
+  standing: outcomes (bounded over schedules: 2 states, 1 move searched)
+----- end of output -----
+exit:           0

@@ -238,3 +238,30 @@ The OMG specification text and machine-readable files are © Object Management
 Group and the contributing organisations (see the PDF copyright page). They are
 cited, not redistributed here. The extraction, classification, registers and
 prose in this directory are the project's own work.
+
+---
+
+## Related research built on this catalogue
+
+The catalogue's `kind` and `obligation` columns (SHALL / SHOULD / MAY) turned out to be
+load-bearing for the pilot studies, not just descriptive. They are used to ask *what a validation
+result is allowed to mean*: a constraint whose obligation is MAY cannot support a claim about a
+validator's blind spot.
+
+- **Issue #7 pilot** — [`research/issue-007/`](../research/issue-007/) and
+  [`reports/issue-007-error-taxonomy-pilot.md`](../reports/issue-007-error-taxonomy-pilot.md):
+  a GenAI error taxonomy, with each class mapped to the constraint (and clause) it violates.
+- **Issue #8 pilot** — [`research/issue-008/`](../research/issue-008/) and
+  [`reports/issue-008-validator-reliability-pilot.md`](../reports/issue-008-validator-reliability-pilot.md):
+  specification-derived mutants with per-constraint provenance, and a per-class measured detection
+  rate for one pinned open validator.
+- **Relational demonstration** — [`research/relational/`](../research/relational/): the frozen
+  protocol, cross-reviews, independent reviews, #10 critique, adjudication and
+  [synthesis](../reports/relational-demo-synthesis.md). The adjudication cites the specification
+  passages that decided two contested readings, for the next reader to check directly: KerML
+  §8.3.2.4.5 (`validateNamespaceDistinguishibility`, the `name-conflict` question),
+  §8.3.4.11.2 and §8.4.4.12.2 (multiplicity ranges), and SysML §7.6.3/§7.6.5 and §7.13.4 (the
+  specification's own worked example that the distinguishability constraint appears to forbid).
+
+None of these changes the classification in `classified.csv`; they consume it. A constraint's
+dependency class (A/B/U) and its obligation are separate axes, and the pilots use both.

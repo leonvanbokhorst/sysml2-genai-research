@@ -1,0 +1,1976 @@
+{
+  "generated_at": "2026-11-13T15:03:59Z",
+  "pinned_at": "2026-11-13T14:51:34Z",
+  "adjudicator": "independent adjudicator (no stake in either pilot)",
+  "protocol": "research/relational/PROTOCOL.md P5 / Gate 4",
+  "validator": {
+    "name": "OpenSysML CLI",
+    "version": "v0.12.1",
+    "path": ".tools/sysml",
+    "sha256": "ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0",
+    "role": "observe, never ground truth"
+  },
+  "ruling_vocabulary": {
+    "ACCEPTED": "the challenge is well founded; the correction in 'correction' is required (may already be applied)",
+    "REJECTED": "the challenge fails; the researcher's text stands (reasoning says what the challenger got wrong)",
+    "UNRESOLVED": "the artefacts cannot decide it; both readings stay visible, with settle criteria in ADJUDICATION.md §5",
+    "claim_upheld": "for CC-13 / RA-14 / CS-*: no overstatement to correct, or the status proposition stands as stated"
+  },
+  "counts": {
+    "total": 81,
+    "ACCEPTED": 74,
+    "UNRESOLVED": 4,
+    "REJECTED": 3
+  },
+  "counts_by_group": {
+    "cross-review A->B": {
+      "ACCEPTED": 11,
+      "UNRESOLVED": 1
+    },
+    "cross-review B->A": {
+      "ACCEPTED": 15,
+      "REJECTED": 1
+    },
+    "independent review A (#7)": {
+      "ACCEPTED": 13,
+      "REJECTED": 1
+    },
+    "independent review B (#8)": {
+      "ACCEPTED": 12
+    },
+    "semantic-ceiling critique": {
+      "ACCEPTED": 12,
+      "REJECTED": 1
+    },
+    "critic status proposition": {
+      "ACCEPTED": 10
+    },
+    "cross-cutting (adjudicator)": {
+      "ACCEPTED": 1,
+      "UNRESOLVED": 3
+    }
+  },
+  "headline_effects_summary": {
+    "A_detection": "9/14 retained as registered; 9/13 after C12; 9/9 on established-and-mandatory subset; reading changes from blind-spot measure to composition statement",
+    "A_wrapper": "V1/V2 reported as 6/12 any-diagnostic and 9/9 exit-status; gate must be stated",
+    "B_sensitivity": "23/32 unchanged (F4-01 counted as a defect under the semantic reading); 22/32 only under a named-constraint-only criterion; label becomes 'default -validate path'",
+    "B_external": "9/13 unchanged; reading becomes 9/9 established + 0/4 discretionary/contested; M2/M3 applicable 3 not 1; 9/11 if R1 falls",
+    "B_F7": "default 0/4; across modes 1 violated / 1 undecided / 2 no verdict; overall mode-aware 24/32",
+    "numbers_that_move": [
+      "A combined 21->20->19 / S1 9->8",
+      "A external 11/18 fail -> 2 error-level / 9 warning-only / 7 clean",
+      "B '24 of 28'->23 (or 20 of 23)",
+      "B '5 silent'->4 silent + 1 warning-only",
+      "B external M2/M3 '1 evaluated'->3",
+      "A '7 of 21'->six live tool-surfaced records"
+    ],
+    "numbers_that_do_not_move": [
+      "A 9/14 (registered)",
+      "A 9",
+      "B 23/32",
+      "B 9/13",
+      "B 28/32 any-signal",
+      "B 0/10 known-good errors"
+    ]
+  },
+  "rulings": [
+    {
+      "target": "Researcher B (issue #8)",
+      "source_artifacts": [
+        "research/relational/cross-reviews/A-reviews-B.md §5 O1 (blocking)",
+        "research/relational/cross-reviews/B-response-to-A-review.md §1-2",
+        "reports/issue-008-validator-reliability-pilot.md §A2 L473-521"
+      ],
+      "correction": "None outstanding beyond adding a front-page pointer from §1/P3 to A2 (CORRECTIONS B-1).",
+      "group": "cross-review A->B",
+      "id": "A2B-01",
+      "reasoning": "The invocation discriminates the mutant from its base; B measured one verb (-validate), not the instrument. B's A2 correction and P3 restatement are complete and honest.",
+      "status_changed": true,
+      "reported_headline_effect": "F7 default-path 0/4 unchanged; across modes 1 violated / 1 undecided / 2 no verdict; mode-aware overall 24/32.",
+      "residual_uncertainty": "F7-02 is decidable only because B authored a checkable require constraint; A's observed corpus contains 0/18, so the reach of the verdict path in real generation is near zero.",
+      "claim": "Under -satisfy and -instantiate <obj> -validate=<obj> the pinned binary returns 'violated' on B's F7-02 mutant with a passing positive control on its known-good base, so 'invisible to the only available instrument' is unsupported.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher A",
+      "evidence": [
+        "adjudicator run 5: -satisfy p03a -> holds exit 0; p03b -> 'fails ... Required condition evaluated to false' exit 1",
+        "A-reviews-B.md L196-206",
+        "report A2 L484-495 with KG-07 positive control"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "A-reviews-B.md §5 O2",
+        "B-response-to-A-review.md §3",
+        "reports/issue-008 §A3 L525-547"
+      ],
+      "correction": "Name the standing vocabulary in §3.1's measurement definitions (B-2); keep the base-vs-mutant non-discrimination in the text.",
+      "group": "cross-review A->B",
+      "id": "A2B-02",
+      "reasoning": "Two output surfaces (diagnostics[] vs checks[] with a standing) and five standing values are demonstrated; 'undecided' is neither silent nor detected.",
+      "status_changed": true,
+      "reported_headline_effect": "F7-04 reclassified silent -> checked/undecided; no aggregate change.",
+      "residual_uncertainty": "The categories are demonstrated on four mutants plus probes; no frequency claim is possible.",
+      "claim": "The instrument's assertion verdict is multi-valued (holds / holds-vacuously / violated / undecided), and a binary diagnostics-based measure cannot represent 'checked and undecided'.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher A",
+      "evidence": [
+        "adjudicator runs 2 and 3 (p07b violated exit 1; p07c 2 of 2 undecided exit 2)",
+        "report A3 L531-544 incl. F7-04 vs base non-discrimination"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "A-reviews-B.md §5 O3 and O9",
+        "reports/issue-008 §A4 L551-585",
+        "research/issue-007/detection/summary.csv"
+      ],
+      "correction": "None outstanding; F1 must be labelled 'authored family' wherever quoted (B-3).",
+      "group": "cross-review A->B",
+      "id": "A2B-03",
+      "reasoning": "B's four F1 mutants all exit 2 (parse breakage); the empirical class exits 0. Neither the detection count nor the exit-status discussion transfers.",
+      "status_changed": true,
+      "reported_headline_effect": "None to F1 4/4; generalisation withdrawn.",
+      "residual_uncertainty": "The sub-class has seven instances in A's corpus and one independent probe; both are small.",
+      "claim": "A notation error can be reported at error severity with exit 0, and the empirical dominant notation mechanism (reserved keyword as a name) is a sub-class B's F1 mutants never produced, so F1 4/4 is not a statement about notation.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher A",
+      "evidence": [
+        "summary.csv rows T2-C2/T6-C1/T6-C3: exit_code=0, n_error=1, nonblocking_notation_only=yes",
+        "adjudicator run 9 reproduces warning[name-conflict] on the Gate-2 probe family",
+        "-strict converts exit 0 to exit 2 (A probe07, B probe P1)"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "A-reviews-B.md §5 O4",
+        "reports/issue-008 §A5 L589-610",
+        "research/issue-008/empirical/REPORT.md §6.2"
+      ],
+      "correction": "Keep both rates; add the constraint's MAY obligation to the F5 restatement and to A's S2 row (B-4, A-9).",
+      "group": "cross-review A->B",
+      "id": "A2B-04",
+      "reasoning": "Two rates must both be printed (3/4 authored, 3/5 cross-corpus) and B does so, with the cross-corpus item labelled and never merged into the frozen denominator.",
+      "status_changed": true,
+      "reported_headline_effect": "F5 3/4 unchanged on the authored family; 3/5 cross-corpus added.",
+      "residual_uncertainty": "S2's constraint is a 'check' with obligation 'MAY report, satisfy by implied relationships, or ignore', so the item is discretionary; a tool that creates the implied binding is not failing at its job.",
+      "claim": "B's F5 tests a satisfy defect the tool catches while the observed satisfy defect violates a different named constraint that the tool misses and positively reports as holding; F5 must be reported on the enlarged class.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher A",
+      "evidence": [
+        "adjudicator run 8 on research/issue-007/corpus/normalized/T2-C2.sysml: 'holds ... (vacuous: requirement ... states no required constraint)' exit 0",
+        "empirical raw ES-T2-C2-E01__M2",
+        "report A5"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "A-reviews-B.md §5 O5",
+        "reports/issue-008 §A1 L432-448 and §A6 L614-644",
+        "research/issue-008/empirical/REPORT.md §10"
+      ],
+      "correction": "Carry the three-way statement (type/expression/satisfy references resolved; succession sources not) wherever F2 is quoted (B-5).",
+      "group": "cross-review A->B",
+      "id": "A2B-05",
+      "reasoning": "The silence is at the site, not the name, which is the strongest form of the objection; F2 4/4 is four sites, not a class.",
+      "status_changed": true,
+      "reported_headline_effect": "F2 4/4 retained at the sites tested; class-level claim withdrawn.",
+      "residual_uncertainty": "Five sites is a small census; flow ends, connector ends and metadata arguments are untested.",
+      "claim": "Resolution coverage is site-dependent: type, parameter and redefinition references are detected, but a succession source is not resolved at all (an arbitrary undefined name there is equally silent).",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher A",
+      "evidence": [
+        "research/issue-008/results/probes-gate2/P2-succession-source-undefined.sysml -> zero diagnostics exit 0",
+        "/tmp/p2b.sysml variant 'first zzz;' -> zero diagnostics (transcript in run-log-run2-modes.md)",
+        "P5 satisfy-target probe -> error[unresolved] exit 2",
+        "A's four N1 satisfy-target items 4/4 detected"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "A-reviews-B.md §5 O6",
+        "reports/issue-008 §A6 L614-644",
+        "research/relational/TOOLING.md §1"
+      ],
+      "correction": "State the confound as measured, not avoided (B-5).",
+      "group": "cross-review A->B",
+      "id": "A2B-06",
+      "reasoning": "B's bases all import the prelude so B could not test the confound; the probe shows it is distinguishable by message and not by counting 'unresolved'. Both halves matter for anyone computing a pass rate.",
+      "status_changed": true,
+      "reported_headline_effect": "No number changes.",
+      "residual_uncertainty": "The message discriminator is a property of this binary, not of the language.",
+      "claim": "The missing-stdlib-prelude class is absent from B's corpus, so the confound TOOLING.md warns about is untested by B.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher A",
+      "evidence": [
+        "probe P4-missing-prelude -> two error[unresolved] naming ScalarValues::... and instructing the reader to import",
+        "A's T3-C1 diagnostics carry the same 'did you mean ScalarValues::Real' text"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "A-reviews-B.md §5 O7 and §3",
+        "reports/issue-008 §A7 L648-690",
+        "reviewer-b-issue-008.md C37/C40"
+      ],
+      "correction": "Carry the per-mutant construct-frequency assumption and the 'specification demonstration surface' scope in §3.1/§8 (B-6).",
+      "group": "cross-review A->B",
+      "id": "A2B-07",
+      "reasoning": "Four of eight classes have no observed counterpart; the layer statement travels, the class distribution does not. This is a scope limitation, not an error in the mutants.",
+      "status_changed": true,
+      "reported_headline_effect": "None to 0.72; its domain is stated.",
+      "residual_uncertainty": "A's prompts are simple by construction, so the census may under-sample; both researchers state this.",
+      "claim": "B's fault material is built on constructs an 18-model generation corpus never emitted (constraints 0/18, unit literals 0/18, metadata 0/18, connection def 0/18, explicit end 0/18, short names 0/18), so per-class rates for those classes are untestable against observation.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher A",
+      "evidence": [
+        "report A7 L655-671 (census)",
+        "adjudicator recount of the 18 normalised models for constraints/metadata/connection def",
+        "empirical REPORT §9"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "A-reviews-B.md §5 O8 and §4.2",
+        "reports/issue-008 §A8 L694-728",
+        "reviewer-b-issue-008.md RB-03 (extends)"
+      ],
+      "correction": "A8 stands; extend the disclosure to the pre-freeze calibration probes (B-7, RB-03).",
+      "group": "cross-review A->B",
+      "id": "A2B-08",
+      "reasoning": "The counts are insulated from expectations (they come from raw diagnostics); the audit is not. The signature of anchoring is visible and A's diagnosis is right.",
+      "status_changed": true,
+      "reported_headline_effect": "None to numbers; one interpretive claim downgraded to disclosure.",
+      "residual_uncertainty": "The audit's weakness is a matter of degree; no artefact shows what the author was thinking.",
+      "claim": "Reading the instrument's -explain diagnostic inventory before authoring expectations bounds what the expectation audit can claim.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher A",
+      "evidence": [
+        "research/issue-008/results/calibration/PRE-FREEZE-CALIBRATION.md -explain disclosure",
+        "report §4.1 L189-193 names only -explain",
+        "expectation audit: 24/24 expected-detectable signalled; both expectation errors in the 'expected undetectable' bucket, both towards the tool being stricter"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "A-reviews-B.md §5 O9 and O10",
+        "reports/issue-008 §A4 and §A7"
+      ],
+      "correction": "Label F4 'declared multiplicity' wherever the class table is reproduced (B-8).",
+      "group": "cross-review A->B",
+      "id": "A2B-09",
+      "reasoning": "A generator that never writes a short name cannot unquote one; F4-02 is declared multiplicity, not connection-end structure. Both are legitimate specification-surface probes.",
+      "status_changed": true,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "Whether a generator asked for quantities and constraints would emit short names is untested.",
+      "claim": "F1-04 (unquoted short name) and F4-02 (end-feature multiplicity) are specification-idiom constructs, not the empirical notation or connection-end mechanisms, and must not be counted as evidence about generation.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher A",
+      "evidence": [
+        "short names 0/18 and connection def 0/18 in A's corpus (report A7)",
+        "F4-02's only diagnostic is warning[end-feature-multiplicity]",
+        "A's R1 is a chain through a multi-valued usage in a connect"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "A-reviews-B.md §5 O11",
+        "reports/issue-008 §A9 L732-750",
+        "reviewer-b-issue-008.md C20"
+      ],
+      "correction": "A9 must include the mutant files in the disclosure (B-9).",
+      "group": "cross-review A->B",
+      "id": "A2B-10",
+      "reasoning": "Content is unchanged (hash chain intact) and B names the cause (its own documented reproduce step), but an idempotent rewrite of a pre-registration artefact after the run is a process error, and A9 names only author_manifest.py.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None - hash chain verifies.",
+      "claim": "mutants/MANIFEST.csv's mtime post-dates the first validator run it pre-registers.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher A",
+      "evidence": [
+        "expectations.sha256 14:13:00Z; first raw output 14:13:02Z; MANIFEST.csv mtime 14:15:56Z",
+        "shasum -c expectations.sha256 verifies OK",
+        "reviewer-b C20: the 32 mutant files share the rewritten mtime and mutants.sha256 also verifies"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "A-reviews-B.md §5 O12",
+        "reports/issue-008 §A8 L713-726",
+        "reviewer-b-issue-008.md RB-08"
+      ],
+      "correction": "Restate as relevance, not precision, and correct the counts (B-10).",
+      "group": "cross-review A->B",
+      "id": "A2B-11",
+      "reasoning": "With one injected defect per mutant any-error equals relevant-error almost by construction, and the cascade cases show one defect can yield five diagnostics.",
+      "status_changed": true,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "Relevance judgement is single-coder and post-hoc.",
+      "claim": "'Every emitted error was about the injected defect' measures the single-defect design, not the tool's specificity, and should not be read as evidence that the tool does not over-report.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher A",
+      "evidence": [
+        "diagnostics.csv recount: 30 error diagnostics over 23 error-bearing mutants; per-mutant error count 1->20, 2->1, 3->1, 5->1",
+        "cascades F1-03 (3) and F1-04 (5)"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "A-reviews-B.md §5 O13",
+        "B-response-to-A-review.md §3 O13",
+        "reports/issue-008 §A7 L682-688",
+        "research/issue-007/detection/diagnostics.csv"
+      ],
+      "correction": "Keep as a candidate class pending hand-coding against §7.6.3/§7.6.5 and KerML §8.3.2.4.5; do not add it to any fault model or taxonomy yet.",
+      "group": "cross-review A->B",
+      "id": "A2B-12",
+      "reasoning": "The observation is real and the class is genuinely absent from B's model. Whether it is a defect class is not resolvable on current evidence: the constraint as literally written forbids the construct, while the specification's own example uses it, and the tool emits a warning rather than an error.",
+      "status_changed": false,
+      "reported_headline_effect": "None; both pilots correctly declined to adopt it.",
+      "residual_uncertainty": "Settles with a normative ruling (OMG RTF / SysML expert) or an implementation check; see ADJUDICATION §5 (X-01) and §7.6.",
+      "claim": "A fault model for generated SysML v2 that has no duplicate-name (name-conflict) class is missing a condition that appears in 10 of 24 independent artefacts.",
+      "ruling": "UNRESOLVED",
+      "challenge_outcome": "open",
+      "challenger": "Researcher A",
+      "evidence": [
+        "119 of 140 external diagnostics are name-conflict; all have the form \"Duplicate of inherited member name 'X' from Y\" (adjudicator recount)",
+        "B's KG-04 warning has the same form on a specification-verbatim line",
+        "KerML validateNamespaceDistinguishibility (txt 8463-8470) plus default isDistinguishableFrom (8154-8170) with no override; SysML §7.13.4 example (txt 5215-5216) uses the same construct"
+      ]
+    },
+    {
+      "target": "Researcher A (issue #7)",
+      "source_artifacts": [
+        "research/relational/cross-reviews/B-reviews-A.md O1",
+        "A-response-to-B-review.md §1",
+        "reports/issue-007 §16.1",
+        "research/issue-007/coding/errors-post-inspection.csv"
+      ],
+      "correction": "C01 stands; replace the stale §1/§5.4 numbers (21 records, S1 9) with 20 and 8 (A-1).",
+      "group": "cross-review B->A",
+      "id": "B2A-01",
+      "reasoning": "An excerpt that is not a substring of its own model cannot stand. A concedes and answers the more interesting question: the substring check existed and was applied to the delegate's output, not to A's own post-inspection rows.",
+      "status_changed": true,
+      "reported_headline_effect": "Combined arm 21->20; S1 9->8; frozen 14 unaffected.",
+      "residual_uncertainty": "Other post-inspection rows would need the source-level check re-run; the combined set currently passes it.",
+      "claim": "Row T5-C3-P01 cites the excerpt 'port return;' at line 26 of a model that contains no port declaration at all; it is a duplicate of T6-C1-P01.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "grep -n port corpus/normalized/T5-C3.sysml returns only line 2 (the word appears inside 'import')",
+        "line 26 is 'part antenna : Antenna;'",
+        "C01 withdraws the row; apply_corrections.py now enforces the substring contract"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O2",
+        "A-response-to-B-review.md §2",
+        "research/issue-007/coding/CODEBOOK.md §11.1",
+        "research/issue-007/coding/reconciliation.md"
+      ],
+      "correction": "§5.4 'seven further defects' -> six live records (A-1).",
+      "group": "cross-review B->A",
+      "id": "B2A-02",
+      "reasoning": "B is right on both counts that matter (the phantom inflates S1; a real occurrence was described in prose but recorded nowhere) and A's C02/C03 fix both. Calling it a missing row is wrong under the codebook's mechanism-based coding unit, so the fix is an occurrence-list correction.",
+      "status_changed": true,
+      "reported_headline_effect": "None beyond B2A-01's arithmetic.",
+      "residual_uncertainty": "None material.",
+      "claim": "§5.4 describes eight post-inspection defects but the file has seven rows, and the real 'port out;' occurrence at T3-C2 line 24 is recorded nowhere.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "errors-post-inspection.csv has 7 rows",
+        "T3-C2 lines 23 (port in;), 24 (port out;), 33 (line.in); the frozen span was 23,33",
+        "occurrence_detection.csv records T3-C2 2/3 - the tool flags 23 and 24 and not 33"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O3",
+        "A-response-to-B-review.md §2",
+        "CODEBOOK §11.2",
+        "errors.csv T4-C1-E01"
+      ],
+      "correction": "C04 stands; state the convention in report §16 as well (A-2).",
+      "group": "cross-review B->A",
+      "id": "B2A-03",
+      "reasoning": "Two artefacts cannot both be true; A's convention (frozen file immutable, corrections in a dated register) resolves it and is now stated, which is what makes the detection table interpretable.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "The frozen T1 record's span (42-44) contradicts codebook §10.4's statement that it was narrowed to 42-43, and a reader cannot tell which version the detection table used.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "errors.csv T4-C1-E01 line_range=42-44 with 'then assign;' in the excerpt",
+        "CODEBOOK §11.2 records that §10.4's claim was false",
+        "C04 narrows the span in the combined population only"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O3 sub-claim",
+        "A-response-to-B-review.md §2"
+      ],
+      "correction": "None - B's sub-claim should not be carried into any correction. A's span correction (B2A-03) stands independently.",
+      "group": "cross-review B->A",
+      "id": "B2A-04",
+      "reasoning": "B infers legality from silence at exactly the site where silence is independently known not to indicate legality (A2B-05). A definition is not a feature, so the syntax tree does not admit it as a succession endpoint.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "The reading depends on memberFeature resolving only to features; the metamodel states it is a Feature.",
+      "claim": "Line 42 ('first checkCharge;') is not visibly defective as written, so the frozen T1 record contains an occurrence that is not a defect.",
+      "ruling": "REJECTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Researcher B",
+      "evidence": [
+        "SysML 2.0 §8.2.2.17.2 InitialNodeMember memberFeature = [QualifiedName], a reference to a Feature",
+        "checkCharge is declared 'action def' (lines 47-49), a type not a feature",
+        "the tool's endpoint-not-a-node at line 43 shows it treats these as action-node endpoints while staying silent at the source (probe01, P2 probe)"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O4",
+        "A-response-to-B-review.md §1",
+        "reports/issue-007 §16.2",
+        "reviewer-a-issue-007.md claim 12"
+      ],
+      "correction": "Withdraw 'hashed before detection' from Proposition 1, the banner and §2 (A-3).",
+      "group": "cross-review B->A",
+      "id": "B2A-05",
+      "reasoning": "The protocol makes a hash at freeze the mechanism and it was not used; the composition argument is good inference and A labels it as inference. C12 removes one of the three 'silent' records that argument used, so it is weaker after A's own correction.",
+      "status_changed": true,
+      "reported_headline_effect": "None to numbers; Proposition 1 downgraded to argued.",
+      "residual_uncertainty": "Ordering is not knowable from the artefacts; mtimes were reset by re-runs.",
+      "claim": "The anti-circularity guarantee rests on errors.csv being the pre-detection version, but no hash of that file exists in the artefacts.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "FREEZE-HASH.txt holds the methodology hash; CODEBOOK-HASH.txt the codebook; no hash of errors.csv",
+        "errors.csv mtime 14:17Z coincides with detection/*.csv because A re-ran the pipeline (report §16.2 L666-701)"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O5",
+        "A-response-to-B-review.md §1",
+        "reports/issue-007 §16.5",
+        "reviewer-a-issue-007.md M-5"
+      ],
+      "correction": "Do not quote kappa as reliability in §6, §16, the README or the subset (A-4).",
+      "group": "cross-review B->A",
+      "id": "B2A-06",
+      "reasoning": "Essentially every paired record's text is in the coder-facing codebook de-identified but not redacted; class agreement on those records is reproduction. A's downgrade is correct and is worse for A than B's version.",
+      "status_changed": true,
+      "reported_headline_effect": "No statistic changes; evidential status withdrawn.",
+      "residual_uncertainty": "The three clean-model calls and the reserved-keyword notices survive as genuine discrimination but are not a reliability statistic.",
+      "claim": "The coder-facing codebook contains the paired records' excerpts verbatim, so kappa = 1.0 is an answer-key reproduction check rather than inter-coder reliability.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "coding/second-coder/CODEBOOK.md contains first start;, satisfy greenhouse to moistureControl;, satisfy lowerBeforeArrival;, port in;, satisfy alarmTiming by pump;, first checkCharge;, the connection powerLink line, and the transition line across a line break",
+        "A's count 8/11 verbatim and 11/11 exemplar-covered supersedes B's 7/11"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O6",
+        "A-response-to-B-review.md §2",
+        "reports/issue-007 §16.1"
+      ],
+      "correction": "Annotate both rows; disclose the second coder's INSTRUCTIONS (RA-05) (A-5, A-13).",
+      "group": "cross-review B->A",
+      "id": "B2A-07",
+      "reasoning": "The arithmetic is right and the interpretation is wrong: 1/11 measures version skew. The related point also stands - '11/11 class agreement' includes a pair that agreed on an identifier whose definition was later found false.",
+      "status_changed": true,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "A re-coding under one version would test whether any real disagreement exists; not run.",
+      "claim": "The layer and severity agreement figures (10/11) measure codebook version skew, not coding disagreement, because the one differing pair is S2 whose definition changed.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "the coder-facing copy is v1.0 (S2 = syntax/parse, blocking)",
+        "A's S2 row moved to constraint/OCL, minor after the BNF was read (§9)",
+        "exactly one pair differs"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O7",
+        "A-response-to-B-review.md §2",
+        "reports/issue-007 §16.1/§16.7"
+      ],
+      "correction": "Carry 0-2 and 18->7 into the §1 table (A-1).",
+      "group": "cross-review B->A",
+      "id": "B2A-08",
+      "reasoning": "All three recompute as B says, none changes a conclusion, and A applied all three.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "Three recomputable slips: errors-per-model range is 0-2 not 0-3; the prose-only W1 reading is 18 vs 7 not 18 vs 4; trailing_prose_present is missing from models.csv.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "models.csv maximum n_errors = 2 (T3-C2, T4-C1)",
+        "preamble 4 / trailing prose 6 / union 7 (extraction-log.json)",
+        "trailing_prose_present now a column"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O8",
+        "A-response-to-B-review.md §2",
+        "reviewer-a-issue-007.md M-3 (extends)",
+        "errors.csv T4-C1-E02",
+        "CODEBOOK R1 body"
+      ],
+      "correction": "Mark R1 frozen_contested as to defect status, restate the criterion operationally, propagate to subset.json (A-6).",
+      "group": "cross-review B->A",
+      "id": "B2A-09",
+      "reasoning": "The challenge is stronger than A conceded: it goes to defect status, not only to layer. A's re-layering to type/typing is the right layer call but does not establish that the construct is ill-formed, and the frozen subset tells B the record is 'not disputed as defects'.",
+      "status_changed": true,
+      "reported_headline_effect": "None to 9 (the tool is silent either way); the class's evidential standing changes.",
+      "residual_uncertainty": "Whether such a connector end is ill-formed under KerML connector-end rules is unresolved (X-03).",
+      "claim": "R1's layer label is an authored placement and its admission criterion is not operationalised, so 'the instrument is blind to structural defects' rests on a class whose label is a judgement.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "errors.csv T4-C1-E02 notes validateFeatureEndMultiplicity is 'adjacent, not decisive'",
+        "CODEBOOK: no named constraint decides feature chains over multi-valued usages",
+        "A's criterion 'denotes more than one feature' versus controller.fleet.battery.power denoting one feature with ten featuring instances"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O9",
+        "A-response-to-B-review.md §2",
+        "reviewer-a-issue-007.md §4.2",
+        "errors-corrections.csv C07"
+      ],
+      "correction": "Add a 'contested' status to the codebook, not only to a CSV field (A-7).",
+      "group": "cross-review B->A",
+      "id": "B2A-10",
+      "reasoning": "The original justification only holds if the doc sentence is read as asserting the value of upperBound, which the text does not compel. A's refusal to withdraw it (which would flatter the rate) is correct procedure; both denominators are reported.",
+      "status_changed": true,
+      "reported_headline_effect": "9/14 retained; 9/13[-I1] added.",
+      "residual_uncertainty": "The defect-status question is genuinely two-way.",
+      "claim": "I1's 'no reading reconciles' is asserted, and a reconciling reading exists: a documented 35-75% band contains a declared 35-55% bound, which is a tightened engineering limit.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "errors.csv T1-C3-E01 excerpt and attributes",
+        "no constraint relates documentation to values (deriveElementDocumentation relates documentation to content)",
+        "C07 marks it frozen_contested"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O10",
+        "A-response-to-B-review.md §2",
+        "errors-corrections.csv C08-C10"
+      ],
+      "correction": "C08-C10 stand; the codebook class table still cites the old clauses (RA-04).",
+      "group": "cross-review B->A",
+      "id": "B2A-11",
+      "reasoning": "A class whose point is that the notation does not admit the text must cite the notation production; the correction is applied and the T2 MAY obligation is now stated with the §7.7.1 prose as the decisive basis.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "Two specification citations do not support their classes: S1 cites a MAY OCL check constraint for a notation defect, and the transition record cites the abstract-syntax clause rather than the textual notation.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "errors.csv T1-C2-E01 cites checkSatisfyRequirementUsageBindingConnector (8.3.21.10), a check with a MAY obligation",
+        "T2-C1-E01 cites §8.3.18.9; the textual notation is §8.2.2.18",
+        "C08/C09/C10 correct the citations"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O11",
+        "A-response-to-B-review.md §2",
+        "detection/occurrence_detection.csv"
+      ],
+      "correction": "Add T6-C2 to the occurrence table and carry the ceiling wording (A-8).",
+      "group": "cross-review B->A",
+      "id": "B2A-12",
+      "reasoning": "The record-level column is an upper bound for two records and A says so; the occurrence table omits T6-C2 (RA-10).",
+      "status_changed": true,
+      "reported_headline_effect": "None to the record-level rate; two records' coverage is now bounded.",
+      "residual_uncertainty": "Occurrence counting is itself a coding judgement.",
+      "claim": "Detection is counted per record, never per occurrence, so a record-level hit can rest on one of three occurrences.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "occurrence_detection.csv: T2-C1 4/4, T3-C1 9/9, T3-C2 2/3, T4-C1 1/2",
+        "T4-C1's T1 record is scored detected on one of two kind-mismatch occurrences"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O12",
+        "A-response-to-B-review.md §2",
+        "reports/issue-007 §16.6",
+        "detection/summary.csv"
+      ],
+      "correction": "Applied; keep the warning-level framing in the README and codebook (A-1).",
+      "group": "cross-review B->A",
+      "id": "B2A-13",
+      "reasoning": "'Fail' was defined as any diagnostic, which conflates warning with error and applies a stricter standard to the external arm than A applies elsewhere; the comparison is withdrawn rather than repaired, which is right.",
+      "status_changed": true,
+      "reported_headline_effect": "The '11/18 fail' figure is replaced by 2 error-level / 9 warning-only / 7 clean.",
+      "residual_uncertainty": "Whether the name-conflict warnings are defects (A2B-12 / X-01).",
+      "claim": "The external arm's '11 of 18 positive-folder files fail' is, for 9 of the 11, a statement about warnings, and the comparison with the authors' 51.16% acceptance is not like-for-like.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "adjudicator recount: positive folder = 2 error-level, 9 name-conflict-only at exit 0, 7 clean; negative 6/6 error-level",
+        "119 of 140 external diagnostics are name-conflict warnings",
+        "the 18 files are iteration_00 of cases selected because they converged"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "B-reviews-A.md O13",
+        "A-response-to-B-review.md §2",
+        "METHODOLOGY-FROZEN.md §7.2",
+        "detection/manifest.json"
+      ],
+      "correction": "Applied.",
+      "group": "cross-review B->A",
+      "id": "B2A-14",
+      "reasoning": "The practice existed in the same pipeline for the external arm and was not applied to the primary corpus, so a normalised model changed after the run would be invisible.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "manifest.json was written after the run and so pins the current models, not the models as run (harmless: every normalised body is a verbatim substring of its raw).",
+      "claim": "The detection run does not record the per-file sha256 and tool identity that the frozen plan §7.2 requires.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "raw files carry argv and exit status but no model hashes; run_detection.py has no hashlib",
+        "detection/manifest.json now carries tool path/sha256/-version/argv and per-file sha256 for 70 artefacts"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "research/issue-007/AMENDMENTS.md A7.1",
+        "errors-corrections.csv C12",
+        "reports/issue-007 §17.1"
+      ],
+      "correction": "C12 stands; show 13/11/7 beside every 14/12/6 (A-1).",
+      "group": "cross-review B->A",
+      "id": "B2A-15",
+      "reasoning": "The record said no action usage named start is declared; the name resolves to the inherited action. Withdrawal lowers the population to 13 and moves the rate upward, against A's interest.",
+      "status_changed": true,
+      "reported_headline_effect": "Frozen population 14->13; frozen detection 9/14->9/13.",
+      "residual_uncertainty": "The library is not stored in the repository, so offline checking rests on the instrument warning.",
+      "claim": "'first start;' is legal SysML 2.0 because every Action inherits a start action, so record T1-C1-E01's stated basis is false.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "adjudicator run 9: a locally declared 'action start;' produces warning[name-conflict] 'Duplicate of inherited member name start from Action'",
+        "A cites sysml.library/Systems Library/Actions.sysml line 43, sha256 ac36c940...5693, 'action start: Action :>> startShot'",
+        "reviewer-a independently fetched the same file and hash"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "research/issue-007/AMENDMENTS.md A7.2",
+        "errors-corrections.csv C13",
+        "reports/issue-007 §17.2"
+      ],
+      "correction": "Applied; B's A7 already carries the corrected census (B-11).",
+      "group": "cross-review B->A",
+      "id": "B2A-16",
+      "reasoning": "The substance (no unit-typed quantity in the corpus) survives; the '0/18' phrasing was wrong and is corrected in the register rather than by editing the frozen cross-review, which is the right convention.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "The construct census said 0/18 for ISQ/SI use; the imports appear in 3/18 (T3-C2, T3-C3, T5-C1), though no model writes a unit literal.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Researcher B",
+      "evidence": [
+        "grep matches T3-C2, T3-C3, T5-C1 for 'import SI::'",
+        "0/18 import ISQ and 0/18 write a unit literal"
+      ]
+    },
+    {
+      "target": "Researcher A / report #7",
+      "source_artifacts": [
+        "research/relational/reviews/reviewer-a-issue-007.md M-1 and claims 3,10",
+        "reports/issue-007 §5.1/§5.3/§17",
+        "errors.csv",
+        "catalogue/classified.csv row checkSatisfyRequirementUsageBindingConnector",
+        "C12, C07"
+      ],
+      "correction": "Replace the blind-spot sentence in §1 finding 2, §5.3 and §13.2 with the ladder and the composition; label 9/9 a subset result (A-9).",
+      "group": "independent review A (#7)",
+      "id": "RA-01",
+      "reasoning": "Every silent record is one the report itself now marks withdrawn, discretionary or contested, so 'silent on 5 of 14' presents a disagreement with disputed records as a blind-spot measurement. The correction does not require deciding S2/R1/I1 in A's favour, only showing the composition. Two cautions: 9/9 is a post-hoc subset spanning only notation, resolution and typing, so it is not a sensitivity estimate; and the same composition problem affects B's external arm (X-01).",
+      "status_changed": true,
+      "reported_headline_effect": "A's central critical claim changes from a blind-spot measure to a composition statement; numerator stays 9.",
+      "residual_uncertainty": "Whether S2/R1/I1 are defects at all is not settled (X-03); if any is established, 9/9 narrows correspondingly.",
+      "claim": "The 9/14 'validator blind spot' is composed of records that are withdrawn, discretionary or contested; after C12 it is 9/13, and on records that are established defects and mandatory-to-report the instrument detects 9/9.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "frozen 14 = N1 5, S1 3, N2 1, T1 1, R1 2, S2 1, I1 1; C12 removes T1-C1",
+        "the five silent records: T1-C1 withdrawn (C12); S2 a 'check' with obligation 'MAY report, satisfy by implied relationships, or ignore'; R1 x2 no named constraint and contested (RA-03); I1 contested (B2A-10)",
+        "per-class detection S1 3/3, N1 4/5 (miss = withdrawn record), N2 1/1, T1 1/1 = 9/9",
+        "ladder 9/14 -> 9/13 -> 9/12 -> 9/10 -> 9/9"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md M-2 and claim 5",
+        "reports/issue-007 §1 L43-47, §7 L410-422, §13",
+        "detection/summary.csv"
+      ],
+      "correction": "State the gate in §1, §7 and §13; report 6/12 and 9/9; correct the '0/18 -> 6/18 -> 12/18' sentence to name what each step measures (A-10).",
+      "group": "independent review A (#7)",
+      "id": "RA-02",
+      "reasoning": "The substance is the sharpest internal inconsistency in A's report: A insists exit status is not a validity verdict, then counts exit-0 models as 'invalid' without naming a gate, while applying an exit-code gate externally. Reviewer A's description of the three models as 'warning-only' is factually wrong, and the distinction matters because that is A's own finding; the correct contrast is any-diagnostic gate (6/12) versus exit-status gate (9/9).",
+      "status_changed": true,
+      "reported_headline_effect": "A's second headline number acquires two readings (6/12 any-diagnostic; 9/9 exit-status).",
+      "residual_uncertainty": "None about the counts; which gate should be used is a definitional choice for the report.",
+      "claim": "The V1/V2 wrapper split (6/12) is gate-dependent: three of the twelve 'invalid' normalised models are exit-0 non-blocking reports, so under the gate A applied to the external arm V1 = 9 and V2 = 9.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "summary.csv: 6 clean, 12 with any diagnostic, 9 with non-zero exit",
+        "T2-C2, T6-C1, T6-C3: n_error=1, code reserved-keyword-name, exit_code=0, nonblocking_notation_only=yes (error severity, not warning)"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md M-3 and §4.2",
+        "B-reviews-A.md O8",
+        "A-response-to-B-review.md O8",
+        "research/relational/empirical-subset/FROZEN-SUBSET.md L66-67",
+        "CODEBOOK R1 body"
+      ],
+      "correction": "Mark R1 contested as to defect status, restate the criterion, mark it contested-as-defect in subset.json (A-11).",
+      "group": "independent review A (#7)",
+      "id": "RA-03",
+      "reasoning": "A conceded the layer and stated a criterion, but the criterion is authored and as worded does not distinguish 'the end denotes many features' from 'the end denotes one feature through a multi-valued featuring'. The narrow claim that survives is true: the tool reported nothing on both connector records.",
+      "status_changed": true,
+      "reported_headline_effect": "None to any detection count; the class's standing changes.",
+      "residual_uncertainty": "Whether such a connector end is ill-formed under KerML connector-end rules is unresolved (X-03).",
+      "claim": "R1's re-layering to type/typing does not establish that R1 is an error; the operational criterion conflates a feature with its instances and has no decisive constraint, so R1 is contested as a defect and not only as to layer.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "errors.csv T4-C1-E02 'adjacent, not decisive'",
+        "CODEBOOK R1 body: no named constraint decides chains over multi-valued usages",
+        "controller.fleet.battery.power denotes one feature (power) whose featuring instances number ten through fleet : Agv[10]",
+        "FROZEN-SUBSET tells B the records are 'not disputed as defects'"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md M-4 and §4.3",
+        "research/issue-007/coding/CODEBOOK.md L33,L34,L39,L78-87,§11"
+      ],
+      "correction": "Update the table and bodies with dated 'superseded' markers, re-hash, and state that agreement needs a held-out set (A-12).",
+      "group": "independent review A (#7)",
+      "id": "RA-04",
+      "reasoning": "The class table and bodies are what a new coder uses, and §11 records corrections in prose without updating them, so v1.3 would reproduce the pre-correction labels. The second coder's S2 label demonstrates exactly that.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "Re-running agreement against a corrected codebook cannot recover an independent statistic because the exemplars remain.",
+      "claim": "Codebook v1.3 is internally inconsistent: the S2 body still says a mandatory clause is omitted, the R1 table still places R1 at structural/architectural, and the S1 table still cites the two superseded constraints.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "CODEBOOK L34 (S2 table: 'Required semantic binding absent where the notation's clause is optional') vs L78-87 (S2 body heading 'Mandatory clause omitted ... a clause the notation requires')",
+        "L39 R1 layer structural/architectural vs C05/C06 and §11.3",
+        "L33 S1 citations vs C08/C09"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md M-5 and §4.4",
+        "B-reviews-A.md O5/O6",
+        "reports/issue-007 §16.5",
+        "research/issue-007/coding/second-coder/INSTRUCTIONS.md L61-64"
+      ],
+      "correction": "Disclose the instruction channel in §6.1/§16.5, drop the W1 dissent claim, name the reserved-keyword notices as the surviving independence (A-13, A-17).",
+      "group": "independent review A (#7)",
+      "id": "RA-05",
+      "reasoning": "This is worse than an answer key for the excerpts: the class decision rules were supplied as facts, so class agreement measures instruction-following for those classes and the S2 pair has two channels pointing the same way. The review understates its own point by not naming the R1 criterion's effect on RA-03.",
+      "status_changed": true,
+      "reported_headline_effect": "None to numbers; the agreement claim's status falls further.",
+      "residual_uncertainty": "What survives (three clean calls, the reserved-keyword notices, excerpt verification) is genuine but not a reliability statistic.",
+      "claim": "The second coder was given an answer key and an instruction sheet that asserts the S2/T1/N2/R1 criteria as facts, including the false rule that the notation requires 'satisfy <requirement> by <feature>'; A's §16.5 omits the instruction channel and over-claims a W1 dissent.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "INSTRUCTIONS.md L61-64 lists four 'SysML v2 facts you may rely on', the first of which A's own v1.1 shows is false (by is optional, §8.2.2.21.2), the second of which is A's contested R1 criterion",
+        "attribute-by-part-def and definition-vs-usage are the T2/T1 criteria",
+        "rule 4 instructs the coder to apply the rule anyway"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md M-6 and §5 item 7",
+        "reports/issue-007 L8, L39-50, L98, L103, L291, §16.8",
+        "research/issue-007/README.md L23,L33"
+      ],
+      "correction": "Add a 'current numbers' table and 'superseded by §17' markers at every listed location; fix the README hashes and counts (A-1, A-14).",
+      "group": "independent review A (#7)",
+      "id": "RA-06",
+      "reasoning": "Amendment A1 preserves superseded text legitimately but does not license a reader-facing summary that states superseded values without a marker; the first screen contradicts §17, and a downstream citation takes the headline, not the addendum.",
+      "status_changed": false,
+      "reported_headline_effect": "None to numbers; presentation defect with evidentiary consequence.",
+      "residual_uncertainty": "None.",
+      "claim": "The report's summary sections were not updated after A's own corrections: the banner, §1 table, §2 propositions 1/6/9, §5.3, §5.4, §12 and §16.8 assert superseded values, and the README carries a stale codebook hash and a stale N1 count.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "report L8 'the frozen 14-record population survives'; L98 'frozen and hashed before detection'; L291 '7 further defects'; §16.8 asserts the frozen 14 unchanged",
+        "CODEBOOK v1.3 actual sha256 106e620d... vs README 33 fc476b1c...",
+        "README L23 'N1 ... (5)'"
+      ]
+    },
+    {
+      "target": "Researcher A / Lead",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md P-1 and §6",
+        "B-reviews-A.md boundary note",
+        "A-response-to-B-review.md §4",
+        "research/issue-007/CROSS-REVIEW-HASH.txt",
+        "errors-corrections.csv C12/C13"
+      ],
+      "correction": "Publish an append-only ledger with one row per write; corrections go to a new dated file, never to a 'frozen' one (A-15, L-2).",
+      "group": "independent review A (#7)",
+      "id": "RA-07",
+      "reasoning": "The current ledger is internally consistent and every ruling here cites stable bytes, so no evidence was lost; but a file declared frozen was edited and the ledger then recorded the post-edit bytes with the earlier time, which defeats the purpose of the ledger.",
+      "status_changed": false,
+      "reported_headline_effect": "None; process finding.",
+      "residual_uncertainty": "The intermediate bytes are unrecoverable, so what changed beyond A's own description cannot be established.",
+      "claim": "Artefacts under A's tree changed during Gate 2 and Gate 3, including a response edited after declaring itself frozen, and the hash ledger labels the later bytes with the earlier freeze time.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "CROSS-REVIEW-HASH.txt (at pin) records 965924fe... as 'A-response-to-B-review.md (frozen 2026-11-13T14:29Z)', but that file's final paragraph describes C12-C13 dated 14:31Z",
+        "R-A observed report 3f0a8cfe...->f507ed49...->edf02fc6..., codebook fc476b1c...->106e620d..., combined 21a75728...->56f4467a...",
+        "A's response §4 admits a pipeline re-run overwrote an agreement addendum"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md m-1 and §3.2",
+        "research/relational/empirical-subset/subset.json excluded",
+        "reports/issue-007 §5.4/§17.1"
+      ],
+      "correction": "Restate as counts; label 15/19 descriptive; fix '7 of 21' to six live records against 20/19 (A-16).",
+      "group": "independent review A (#7)",
+      "id": "RA-08",
+      "reasoning": "The factual finding (inspection missed six real notation/typing defects) is solid and is the pilot's most valuable result; the rate is not a miss-rate for inspection because the denominator includes the records the tool surfaced, and 15/19 cannot be read as recall.",
+      "status_changed": true,
+      "reported_headline_effect": "The inspection-gap rate is replaced by counts.",
+      "residual_uncertainty": "A held-out inspection would give a real miss-rate; not run.",
+      "claim": "The 'inspection missed a third' rate and the 15/19 combined detection rate are selection-biased because the post-inspection arm was surfaced by the validator.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "report §5.4: records discovered by the detection run then verified against the specification",
+        "subset.json excludes them as 'non-independent for a detection measurement'",
+        "all six tool-surfaced records are detected by construction"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md m-2 and §4.4",
+        "research/issue-007/coding/agreement.md L59-63",
+        "reports/issue-007 §6 L366, §16.5"
+      ],
+      "correction": "Drop 'dissent on the W1 convention' from §16.5 and 'real and unresolved' from §6 (A-17).",
+      "group": "independent review A (#7)",
+      "id": "RA-09",
+      "reasoning": "The difference is recording scope and whether W1 enters n_errors, not whether a bare fence is a wrapper defect; calling it an unresolved disagreement overstates a convention choice.",
+      "status_changed": true,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "The codebook should still decide the recording convention; that is a codebook task.",
+      "claim": "The W1 'convention disagreement' is not a disagreement: both coders treat a bare fence as W1; they differ on where it is recorded.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "agreement.md §'W1 convention (not a disagreement about the models)': A counts 18/18 raw outputs, B codes 12/12 models including bare fences",
+        "codebook include clause names a fenced block as sufficient"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md m-3",
+        "research/issue-007/detection/diagnostics.csv",
+        "errors.csv T6-C2-E01",
+        "occurrence_detection.csv"
+      ],
+      "correction": "Widen the record's occurrence list and add T6-C2 to the occurrence table (A-8).",
+      "group": "independent review A (#7)",
+      "id": "RA-10",
+      "reasoning": "The same name is unresolved three times and the record's span is one occurrence; the occurrence table omits the model. Record-level detection is unaffected.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "Occurrence counting is a coding judgement, but here the mechanism is one name at three sites.",
+      "claim": "T6-C2-E01 records line 40 only although the same unresolved name 'heating' occurs twice at line 42, and the occurrence table omits T6-C2.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "diagnostics.csv T6-C2: unresolved at line 40 (once) and line 42 (twice)",
+        "occurrence_detection.csv covers four records and not T6-C2"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md m-4",
+        "research/issue-007/coding/agreement.py L141-142"
+      ],
+      "correction": "Compute it or state a correct reason; fix the comment (A-18).",
+      "group": "independent review A (#7)",
+      "id": "RA-11",
+      "reasoning": "Presence kappa is computable (p_o = 1, p_e = 0.625, kappa = 1) and its suppression is unexplained; a false comment in the statistics script is the kind of small error that erodes trust in the reported figures.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "Presence agreement is uninformative here regardless.",
+      "claim": "agreement.py hard-codes presence kappa as None with the comment 'constant marginals (every model has an error on both sides)', which is false (9 error / 3 clean).",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "agreement.py L141-142 code and comment",
+        "marginals 9/3 per agreement.md"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md m-5 and §4.2",
+        "reports/issue-007 L655,L710,L787",
+        "research/issue-007/README.md L23",
+        "coding/apply_corrections.py L105"
+      ],
+      "correction": "Unique labels (9/13[C12]; 9/13[-I1]); rename the column (A-19).",
+      "group": "independent review A (#7)",
+      "id": "RA-12",
+      "reasoning": "Both 13s give 9/13 only because both removed records were undetected, which hides the collision; a column named post_inspection holding a combined count will mislead any recomputation.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "Two different denominators are both labelled '9/13', and models.csv's n_errors_post_inspection column holds the combined count.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "L655/L710: 9/13 = 14 - I1; L787: 9/13 = 14 - C12",
+        "README L23 calls the first 'the 13 uncontested records'",
+        "apply_corrections.py L105 writes the combined count"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md m-6 and §2.3",
+        "reports/issue-007 L44,L251,L304",
+        "detection/diagnostics.csv"
+      ],
+      "correction": "'81 raw diagnostics (72 syntax + 9 reserved-keyword-name)'; describe the inspection as recorded (A-20).",
+      "group": "independent review A (#7)",
+      "id": "RA-13",
+      "reasoning": "The label is wrong by nine diagnostics and contradicts the report's own insistence that the reserved-keyword class is separate from parse failure; the two-pass formulation asserts a process the artefacts do not evidence.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "A may have made two passes; the artefacts cannot show it.",
+      "claim": "'81 syntax diagnostics' is wrong (72 syntax + 9 reserved-keyword-name), and 'two-pass human-style inspection' is not evidenced as two passes.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "diagnostics.csv raw scope: 72 syntax + 9 reserved-keyword-name = 81",
+        "no pass log; only inspect.py indicators, _audit-view.txt and labels.py"
+      ]
+    },
+    {
+      "target": "Researcher B / frozen subset",
+      "source_artifacts": [
+        "reviewer-a-issue-007.md Adj-1",
+        "research/relational/empirical-subset/FROZEN-SUBSET.md L49-57,L74-83",
+        "research/issue-008/empirical/REPORT.md §5",
+        "reports/issue-008 §A10.4"
+      ],
+      "correction": "None required for B; optional cosmetic relabel of the subset summary line (A-21).",
+      "group": "independent review A (#7)",
+      "id": "RA-14",
+      "reasoning": "The hypothesised harm did not occur and the frozen file forecloses it twice. The count '7 controls' in the summary line is loose, but the tiers are explicit and the consumer followed them. The second half of Adj-1 (R1 contested only as to layer) is right and is adjudicated as RA-03.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "The subset's '7 controls' include three models A says are not controls, so B's specificity measurement could be contaminated.",
+      "ruling": "REJECTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Reviewer A",
+      "evidence": [
+        "FROZEN-SUBSET marks the three frozen-clean-only and states they must not be scored",
+        "empirical REPORT §5 and A10.4 score only the four clean-tier controls and report the three descriptively"
+      ]
+    },
+    {
+      "target": "Researcher B / external arm",
+      "source_artifacts": [
+        "research/relational/reviews/reviewer-b-issue-008.md RB-01, §3.3-§3.4",
+        "research/issue-008/empirical/PRE-REGISTRATION.md L227-251",
+        "research/issue-008/empirical/run-log.md §2"
+      ],
+      "correction": "State that the pre-run hash is unrecoverable and that pre-registration rests on content, AM1's disclosure and the run1/run2 identity; correct run-log §2; publish amendments in a separate file next time (B-12).",
+      "group": "independent review B (#8)",
+      "id": "RB-01",
+      "reasoning": "That hash cannot have existed before the first run, and the .sha256 file's freeze-time value was overwritten at the amendment. The amendment is conservative (it moves items from 'not detected' to 'not applicable' and fixes serialisation) and run1-to-run2 changed no M1 outcome, but the hash chain offered as proof of pre-registration does not establish it.",
+      "status_changed": true,
+      "reported_headline_effect": "None to 9/13; the pre-registration claim is downgraded from hashed to content-evidenced.",
+      "residual_uncertainty": "The pre-AM1 bytes are lost, so the claim that they differed only by a header timestamp cannot be verified.",
+      "claim": "The external pre-registration's 'frozen' hash 9458406e was computed after run1 (it contains amendment AM1), the pre-run hash was overwritten, and run-log §2 mis-describes the difference as 'only a header timestamp'.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "PRE-REGISTRATION.md (9458406e...) contains AM1 at L227-251, which states the first execution of run_external.py completed and revealed three defects",
+        "mtimes: PRE-REGISTRATION.md birth 14:35:13Z mtime 14:36:04Z; PRE-REGISTRATION.sha256 mtime 14:36:04Z; raw/run1 14:35:38-41Z; raw/run2 14:36:04Z",
+        "run-log §2: 'No rule ... differs between the two versions; only the header timestamp and a note were changed, before the first run'"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "reviewer-b-issue-008.md RB-02, C15",
+        "reports/issue-008 §2 P5 L67, §3.5 L161-168, §3.3 L120-122",
+        "/tmp/sysml/kerml-1.0.txt L14257-14290, L17267-17290, L14372-14396"
+      ],
+      "correction": "Delete 'an empty range is not obviously ill-formed'; restate P5/§3.5 as 'reports an unnamed but semantically impossible condition'; state the alternative arithmetic (22/32) and qualify 'no spurious error on a mutant' (B-13).",
+      "group": "independent review B (#8)",
+      "id": "RB-02",
+      "reasoning": "As written the two uses cannot both be right. Adjudicating the underlying question: for 4 > 2 the range is empty and no cardinality can satisfy it, so the declaration is defective on the specification's own definition, the error is a true detection, and the sentence 'not obviously ill-formed' is what must go. The remaining valid part of P5 - the condition is named by no catalogue constraint - is true and is better carried by the dimensional-consistency example.",
+      "status_changed": true,
+      "reported_headline_effect": "None to 23/32 under the semantic reading; 22/32 only under a named-constraint-only criterion.",
+      "residual_uncertainty": "Whether a tool must report an empty range is unspecified; readers adopting 'named-constraint-only' as the defect criterion will legitimately reach 22/32, and the report must say which criterion it uses.",
+      "claim": "F4-01 ([4..2]) is counted as a detection while the same error is cited as the instrument being stricter than the specification; the two readings are mutually exclusive and the report adopts neither.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "F4-01 diagnostic: error[multiplicity-range] 'multiplicity lower bound exceeds upper bound on wheels'",
+        "P5: 'no constraint in the 623-row catalogue forbids it ... an empty range is not obviously ill-formed'",
+        "KerML §8.3.4.11.2: a MultiplicityRange's value is the inclusive range of naturals given by lowerBound and upperBound; §8.4.4.12.2: it 'constrains the cardinality ... to be within this range'",
+        "validateMultiplicityRangeBoundResultTypes and validateMultiplicityRangeBounds constrain typing/non-negativity and owned-member order, not bound order"
+      ]
+    },
+    {
+      "target": "Researcher B / Lead (gate log)",
+      "source_artifacts": [
+        "reviewer-b-issue-008.md RB-03, C12, C40, C41, §3.6",
+        "reports/issue-008 §4.1 L189-193, §8.6, §A8",
+        "research/issue-008/METHODOLOGY-FROZEN.md §12.6",
+        "research/issue-008/results/calibration/PRE-FREEZE-CALIBRATION.md",
+        "research/relational/gate-log.md Gate 1"
+      ],
+      "correction": "Name the behavioural probes as a source of expectation knowledge in report §4.1, methodology §12.6, gate-log Gate 1 and A8; label the audit 'informed, not blind, and weak by construction' (B-14, L-1).",
+      "group": "independent review B (#8)",
+      "id": "RB-03",
+      "reasoning": "F6's and F8's 'yes' flags were written after the same mechanisms were observed firing, so '24/24 expected-detectable signalled' is near-tautological for those classes. The counts are insulated (they come from raw diagnostics) but the audit is not.",
+      "status_changed": true,
+      "reported_headline_effect": "None to numbers; the audit's evidential weight is downgraded.",
+      "residual_uncertainty": "F4-01 and F6-02 remain genuinely unpredicted, and both err towards the tool being stricter - the direction a spec-anchored forecast should err.",
+      "claim": "The expectation audit overstates its independence: the pre-freeze calibration log already recorded construct-level detections (incommensurable-binding, metadata-metaclass, metadata-owning-type-feature) that pre-determine F6's and F8's 'expected detectable' flags, and the report, methodology and gate log name only the -explain list.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "calibration log (14:06-14:08Z, before the 14:08:53Z methodology freeze): q1 -> incommensurable-binding fires as error; m1 -> error[metadata-metaclass]; m2 -> error[metadata-owning-type-feature]; t1 -> warning[bound-feature-types]",
+        "report §4.1 names only -explain; gate log characterises the probes as 'output shape, exit codes and short-circuit behaviour'"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "reviewer-b-issue-008.md RB-04, C6",
+        "research/issue-008/results/known-good-triage.md §'The one firing'",
+        "reports/issue-008 §3.6, §A10.3",
+        "/tmp/sysml/sysml-2.0-language.txt L5182, L5215-5216, L3439, L2752",
+        "/tmp/sysml/kerml-1.0.txt L8463-8470, L8154-8170"
+      ],
+      "correction": "Reclassify KG-04's warning as 'unresolved / spec-ambiguous'; correct the pointer to §7.6.3/§7.6.5 and KerML §8.3.2.4.5; state the identified reason in A10.3 (B-15).",
+      "group": "independent review B (#8)",
+      "id": "RB-04",
+      "reasoning": "On the letter of the constraint the warning may be correct, so 'over-reach' is not established; but the specification's own example uses the construct, so either the example is defective or the constraint is meant to admit implicit redefinition. B's triage hedges correctly and §3.6/A10.3 state it as fact.",
+      "status_changed": true,
+      "reported_headline_effect": "None; the known-good arm's 0/10 error rate is unaffected (this is a warning).",
+      "residual_uncertainty": "This is the same unresolved question as the name-conflict class (A2B-12 / X-01); the two normative texts conflict, so no retrieval settles it.",
+      "claim": "KG-04's warning is classified as over-reach on a specification-verbatim example, but 'over-reach' requires that a same-named member in a specializing definition is a legal implicit redefinition, which is not established; and the promised settling clause (§7.6.1) is 'Definition and Usage Overview'.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "§7.13.4 example: 'item def TestWithCutoff :> TestRecord { attribute cutoff : Rational default = 0.75 * averageScore; }' with TestRecord's cutoff Integer at L5182",
+        "§7.6.5 provides the implicit-name rule only for a usage with an owned redefinition declared without a name",
+        "validateNamespaceDistinguishibility requires all memberships of a namespace to be distinguishable; the default isDistinguishableFrom compares names and metaclasses with no override for feature memberships",
+        "SysML §7.6.1 (L2752) is 'Definition and Usage Overview'"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "reviewer-b-issue-008.md RB-05, C24",
+        "research/issue-008/empirical/REPORT.md L46-47",
+        "reports/issue-008 §A10.1 L784-785 vs §A10.5 L843",
+        "research/issue-008/empirical/results.csv"
+      ],
+      "correction": "Both documents to 3 evaluated / 10 n/a with the per-item breakdown (B-16).",
+      "group": "independent review B (#8)",
+      "id": "RB-05",
+      "reasoning": "A straight column-sum error, and applicability is the honest form of the M2/M3 null result, so it must be right. No detection count changes.",
+      "status_changed": false,
+      "reported_headline_effect": "M2/M3 '1 evaluated' -> 3 evaluated.",
+      "residual_uncertainty": "None.",
+      "claim": "The external M2/M3 accounting ('1 item evaluated, 10 not applicable') is arithmetically wrong and contradicts the same report's 'applicable to 3 items each'; results.csv shows 3 evaluated in each mode.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "results.csv M2: 10 not applicable, 1 not detected (S2), 2 wrong-target (I1, T4-C3) = 3 evaluated",
+        "results.csv M3: 10 not applicable, 2 not detected, 1 weaker signal = 3 evaluated",
+        "1 + 10 does not sum to the stated denominator 13"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "reviewer-b-issue-008.md RB-06, C25",
+        "PRE-REGISTRATION.md §4.2 L102-107",
+        "AM1 item 3",
+        "research/issue-008/empirical/run_external.py L222-231"
+      ],
+      "correction": "Re-label under §4.2 or add a dated addendum justifying wrong-target for non-satisfy items; relabel the controls (B-17).",
+      "group": "independent review B (#8)",
+      "id": "RB-06",
+      "reasoning": "The deviation cannot inflate detection (nothing becomes 'detected') but it makes 'applicable to 3 items' true only under the harness's reading, and it violates the amendment's own rule for controls. Under §4.2, M2's applicable count is 1 (S2) and M3's is 3.",
+      "status_changed": false,
+      "reported_headline_effect": "M2 applicable count 3 -> 1 under the registered rule.",
+      "residual_uncertainty": "None.",
+      "claim": "The external scoring does not follow the registered rule for non-satisfy-family items (registered 'not applicable', emitted 'wrong-target'), and six of seven controls carry the item-attribution vocabulary AM1 said must not be used for controls.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "results.csv M2: controls 6 wrong-target / 1 not applicable; M3 controls 6 not detected / 1 not applicable",
+        "run_external.py returns wrong-target for non-satisfy-family M2 items",
+        "PRE-REGISTRATION §4.2 registers not applicable for any other item class; AM1 item 3 relabels controls"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "reviewer-b-issue-008.md RB-07, C21b",
+        "research/issue-008/empirical/run_external.py",
+        "research/issue-008/harness/run_validators.py"
+      ],
+      "correction": "Implement refuse-if-exists or delete the claim; log the change (B-18).",
+      "group": "independent review B (#8)",
+      "id": "RB-07",
+      "reasoning": "A cited raw run can be silently overwritten by re-running the documented command, which is an evidence-integrity claim the code does not implement. It did not happen (run1 preserved, run2 on disk), but the claim must be fixed before raw files are cited by hash.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "The external harness's immutability claim is false: it uses Path.write_text with mkdir(exist_ok=True) and silently overwrites raw/run2, results.csv and run-log.md, unlike the synthetic harness which uses exclusive creation.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "run_external.py L165 mkdir(exist_ok=True), L191-192 write_text, L260 open(...,'w'), L292 write_text",
+        "synthetic harness uses open(..., 'x')"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "reviewer-b-issue-008.md RB-08, C13, C14, C23",
+        "reports/issue-008 §A8 L725",
+        "research/issue-008/results/analysis.md L12,L23",
+        "research/issue-008/empirical/REPORT.md §1 vs §6.1"
+      ],
+      "correction": "Correct to 23 of 28 (any severity) and 20 of 23 (errors); replace '5 silent' with 4 silent + 1 warning-only; use one exclusion order (B-19).",
+      "group": "independent review B (#8)",
+      "id": "RB-08",
+      "reasoning": "None touches a headline proportion, but '5 silent' contradicts the same page's 'any-signal 28/32', and the ladder order matters for a reader reconstructing 9/11.",
+      "status_changed": false,
+      "reported_headline_effect": "None to the headline; two auxiliary counts corrected.",
+      "residual_uncertainty": "None.",
+      "claim": "Three arithmetic/label errors: '24 of 28' should be 23 (or 20 of 23); '5 silent' should be 4 silent + 1 warning-only because F5-01 carries a warning; and the ladder's first exclusion differs between empirical REPORT §1 and §6.1.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "diagnostics.csv: diagnostics per mutant 1->23, 2->3, 3->1, 5->1; error-bearing 23, of which 20 have exactly one error",
+        "F5-01 raw output contains warning[name-conflict] at line 17; methodology §8 defines silent as zero diagnostics of any severity",
+        "§1 excludes I1 first; §6.1 excludes the short-circuited item first"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "reviewer-b-issue-008.md RB-09, C36",
+        "reports/issue-008 §A2 L484",
+        "results/run-log-run2-modes.md",
+        "PRE-REGISTRATION.md AM1"
+      ],
+      "correction": "Stop quoting self-reported times for ordering; use filesystem order or an append-only timestamped log (B-20).",
+      "group": "independent review B (#8)",
+      "id": "RB-09",
+      "reasoning": "Self-reported times that post-date the file's own last write cannot evidence ordering. The orderings the protocol depends on (methodology before mutants; expectations before the run) are independently established from the filesystem and are unaffected.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "The cause (clock or authoring convention) cannot be reconstructed; filesystem order is usable and was used here.",
+      "claim": "B's stated UTC times are unreliable and several are forward-dated: A2's run window 14:31-14:36Z versus filesystem 14:24:50-14:26:00Z; addenda dated 14:40Z in a file last written 14:38:04Z; A10 dated 14:56Z; AM1 dated 14:39Z in a file whose mtime is 14:36:04Z.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "raw/run2-modes mtimes 14:24:50-14:26:00Z; run-log-run2-modes.md header 14:24:51Z",
+        "report A2 states 14:31-14:36Z",
+        "AM1 header 14:39Z vs PRE-REGISTRATION.md mtime 14:36:04Z"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "reviewer-b-issue-008.md RB-10, C16",
+        "reports/issue-008 §3.4 L126-127",
+        "research/issue-008/harness/analysis.py"
+      ],
+      "correction": "Move the assignment to a dated file or restate as post-hoc-but-mechanical (B-21).",
+      "group": "independent review B (#8)",
+      "id": "RB-10",
+      "reasoning": "The buckets are transparent and the underlying text is frozen, but the provenance sentence overstates the assignment; it is a single-coder reading of frozen text, which is what it should say.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None material.",
+      "claim": "spec_status is a post-hoc, single-coder hard-coded mapping, not a frozen field, although the report says it 'was fixed before the run'.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "analysis.py holds the six-bucket spec_status as a hard-coded dict",
+        "MANIFEST.csv has no such column"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "reviewer-b-issue-008.md RB-11, C37, §4 finding 1",
+        "research/issue-008/METHODOLOGY-FROZEN.md §4.5/§5",
+        "mutants/MANIFEST.csv"
+      ],
+      "correction": "State the base concentration and iterate-to-silence history in §3.1/§8 (B-22).",
+      "group": "independent review B (#8)",
+      "id": "RB-11",
+      "reasoning": "The 0/10 reproduces and is unaffected, but base concentration means the per-class Wilson intervals do not represent the cluster structure, and 'independent of the mutant generator' needs the qualification. Ten small models cannot estimate a false-positive rate in any case.",
+      "status_changed": true,
+      "reported_headline_effect": "None to 0/10.",
+      "residual_uncertainty": "Independence from the instrument's own test suite is unverifiable (no test suite on disk).",
+      "claim": "The known-good arm is not independent of the mutant arm: the same 10 models are the parents of all 32 mutants, 9 of 32 edit one 23-line model, and the corpus was iterated to tool-silence before the freeze.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "base concentration: KG-01 9 mutants; KG-07 5; KG-08 5; top three carry 19/32",
+        "pre-freeze calibration records two firings, both tool-correct, before KG-04 was settled"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "reviewer-b-issue-008.md RB-12, C34",
+        "research/issue-008/README.md L53-59,L97-98"
+      ],
+      "correction": "Fix the README section and add a top-of-report pointer to A2/A3 (B-23).",
+      "group": "independent review B (#8)",
+      "id": "RB-12",
+      "reasoning": "This is the most concrete internal contradiction in either repository index, and it is exactly the sentence a reader would use to decide whether the pilot met its independence requirements.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "The README says 'No empirical challenge set ... nothing here was informed by Researcher A's work', contradicting research/issue-008/empirical/** and addenda A1-A10, and neither the report nor the README points from the summaries to the addenda that retract them.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Reviewer B",
+      "evidence": [
+        "README L97-98 versus L53-59 (which lists empirical/**) and the file's mtime after A10",
+        "report §1, §2 P3 and §11.1 carry claims retracted by A2/A3 with no pointer"
+      ]
+    },
+    {
+      "target": "Researcher A / report #7",
+      "source_artifacts": [
+        "research/relational/critique/CLAIMS.csv C01",
+        "reports/issue-007 §5.3 L281-287",
+        "evidence/spec-tooling.md L138,L208"
+      ],
+      "correction": "Replace with 'the default -validate invocation reports nothing on these records, and no invocation I ran returns a defect verdict for them' (A-22).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-01",
+      "reasoning": "A transfers a documented limitation of a different program to the instrument it measured. This is the mechanism by which a tool limitation becomes a claim about automated validation, so it is the most consequential attribution error in the run.",
+      "status_changed": true,
+      "reported_headline_effect": "None to 9; the scope justification is withdrawn.",
+      "residual_uncertainty": "The pinned binary's coverage of execution semantics is not characterised by either pilot; 'executes' is not 'executes correctly'.",
+      "claim": "Three of the undetected records are 'outside the instrument's stated scope' because 'the pilot implementation evaluates expressions but executes neither actions nor state machines'.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "evidence/spec-tooling.md L138 attributes the sentence to 'the pilot' (the OMG Pilot Implementation), citing the OpenSysML differential as a third party; L208 says the same about 'the pilot'",
+        "adjudicator runs 1 and 11 execute an action and analyse a verification case on the pinned binary"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "CLAIMS.csv C02",
+        "reports/issue-007 §13.2 L551-555"
+      ],
+      "correction": "'No diagnostic on these records under the invocation run; and no surface tested decides a documentation/value contradiction' (A-23).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-02",
+      "reasoning": "Supported for the two specific records under the default path only; 'invisible to the instrument' is invocation-unspecific and false for other semantic shapes. The narrow claim - no surface tested decides a documentation/value contradiction - survives.",
+      "status_changed": true,
+      "reported_headline_effect": "None to 9; the wording narrows.",
+      "residual_uncertainty": "Whether any encoding decides I1 is untested and probably untestable inside the model.",
+      "claim": "Structural and semantic defects are rare but present and 'invisible to the instrument'.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator runs 2, 4 and 5: contradictory assertions, missing flow and violated requirement are all decided under the verdict path"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "CLAIMS.csv C03",
+        "reports/issue-007 §14 L570-573"
+      ],
+      "correction": "'No mode returns a defect verdict; the condition is observable in a trace but not checked' (A-24).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-03",
+      "reasoning": "Unreachability is not reported as a defect, but it is observable in the visited-state set, and non-termination has a verdict; 'cannot' conflates 'no verdict' with 'unobservable'.",
+      "status_changed": true,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "Whether reachability is expressible as a property at all is not established - no flag states an eventual property in the material read.",
+      "claim": "No mechanism can check state-machine reachability: 'the pinned instrument cannot' for the four semantic/structural classes.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator run 6: -state Mission -advance 100 prints 'outcome: finalState running; visits idle, running' (done absent), exit 0 with no violation",
+        "critic p01c: -schedule explore reports non-termination as a failing linearization"
+      ]
+    },
+    {
+      "target": "Researcher A",
+      "source_artifacts": [
+        "CLAIMS.csv C04",
+        "reports/issue-007 §5.1 L238-249",
+        "errors-corrections.csv C12"
+      ],
+      "correction": "Keep 5/14 and add '4 of 13 after C12' plus the composition (merged with RA-01; A-9).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-04",
+      "reasoning": "The claim was true when written and is true of the frozen file; it is no longer the population A's own corrections describe, so the correction is a label rather than a number.",
+      "status_changed": true,
+      "reported_headline_effect": "Label changes; count 5/14 -> 4/13.",
+      "residual_uncertainty": "None.",
+      "claim": "The instrument is silent on 5 of 14 frozen records under the default -validate invocation.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "A's detection table reproduces byte-identically; 9/14 with S1 3/3, N1 4/5, N2 1/1, T1 1/1, R1 0/2, S2 0/1, I1 0/1",
+        "C12 withdraws T1-C1, making it 4 of 13"
+      ]
+    },
+    {
+      "target": "Researcher B / report #8",
+      "source_artifacts": [
+        "CLAIMS.csv C07",
+        "reports/issue-008 §1 L40-43",
+        "reports/issue-008 §A2 L497-505"
+      ],
+      "correction": "§1 must carry the A2 wording or a pointer to it (B-1).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-05",
+      "reasoning": "True of the default path, false of the instrument, as B's own A2 concedes. Because §1 is the headline position and A2 is 450 lines below with no pointer, the uncorrected form is what a reader takes away.",
+      "status_changed": true,
+      "reported_headline_effect": "None to 0.72; the headline sentence changes.",
+      "residual_uncertainty": "None.",
+      "claim": "A clean validation is evidence about notation, names, typing and per-constraint well-formedness and 'no evidence at all' about whether the model's structure means what it claims.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator run 5: the same model is clean under -validate and 'violated' under -satisfy"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "CLAIMS.csv C08",
+        "reports/issue-008 §A2 L497-505"
+      ],
+      "correction": "Replace 'and nothing more' with '...and, separately, execution failures and property checks where the model's own bindings force the issue'; add the p02d and p08b examples (B-24).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-06",
+      "reasoning": "I do not accept the critic's p07b example as a counterexample - an assert constraint is a checkable constraint, so contradictory assertions with bound values fall inside B's description. But execution failures and property checks do not, so 'and nothing more' is overstated; the first half of A2 is correct and is the pilot's most useful result.",
+      "status_changed": true,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "The practical reach of the verdict path is bounded by 0/18 models encoding a checkable constraint.",
+      "claim": "The verdict path decides exactly those defects the generator encoded as a checkable constraint, and nothing more.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator run 4: a missing data flow is decided by -action as an execution failure when the sink reads the input, with no constraint encoded",
+        "run 1: an invariant is decided by -check-property under the SMT engine",
+        "run 11: a verification postcondition is evaluated per assertion"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "CLAIMS.csv C10",
+        "reports/issue-008 §2 P4 L66, §3.4 L140-146",
+        "data: M31-F5-01 mutant, norm p12"
+      ],
+      "correction": "Restate P4 as site-dependent enforcement and record the rival reading about F5-01's validity (B-25).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-07",
+      "reasoning": "The diagnostic exists and fires where the redefinition is explicit, so 'not enforced' is a statement about one site. Two rival readings are live and neither is established: enforcement is site-dependent, or F5-01 does not violate the constraint because a same-named declaration is not a redefinition - the same unresolved question as name-conflict (X-01). Reviewer B's 'supported for the first example' is too generous once p12 is in evidence.",
+      "status_changed": true,
+      "reported_headline_effect": "None to 23/32 (F5-01 is not in the numerator).",
+      "residual_uncertainty": "Settles with X-01; until then the satisfy example and the end-feature-multiplicity warning-only case are P4's stronger evidence.",
+      "claim": "KerML validateFeatureValueOverriding is 'not enforced': the model that violates it validates silently.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator run 7 on the critic's p12: 'error[feature-value-overriding]: cannot override the binding value ... write it as default = ...' exit 2",
+        "adjudicator run 10 on B's F5-01: only warning[name-conflict], exit 0, and its redefinition is not written with :>>"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "CLAIMS.csv C11",
+        "reports/issue-008 §4.2 L196-198"
+      ],
+      "correction": "'The ceiling of the default -validate path is typing plus per-constraint well-formedness; beyond it the instrument decides conditions the model itself asserts, at the strength its engine reports' (B-26).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-08",
+      "reasoning": "The decision surface includes execution, assertions on objects, SMT property checks and verification-case postconditions, so the sentence describes one verb. B's own A2 breaks the statement and §4.2 was not amended.",
+      "status_changed": true,
+      "reported_headline_effect": "Framing changes; no number moves.",
+      "residual_uncertainty": "The reach of the verdict surface for generated models is near zero in A's corpus, which limits the practical significance but not the accuracy of the correction.",
+      "claim": "The ceiling of automated SysML v2 validation here is typing plus per-constraint well-formedness, and architectural meaning is outside it.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator runs 1 (SMT invariant), 2 (assertion evaluation), 11 (verification postcondition), plus -action and -state execution"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "CLAIMS.csv C12",
+        "reports/issue-008 §11.5 L367-372"
+      ],
+      "correction": "Rewrite §11.5 as two of four decided by no mode tested, one decided by -satisfy, one checked and undecided; for all four the oracle must be authored or supplied by an expert (B-27).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-09",
+      "reasoning": "The sentence contradicts the same document's addenda for two of the four; the oracle conclusion in the same paragraph survives and is the part worth keeping.",
+      "status_changed": true,
+      "reported_headline_effect": "None to 0.72; the sentence is corrected.",
+      "residual_uncertainty": "The 'any systems engineer would call wrong' clause is normative, not a finding.",
+      "claim": "Four defect classes that any systems engineer would call wrong are invisible, and the specification does not name any of them.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "report A2/A3 record one detected and one undecided",
+        "adjudicator runs 1 and 4"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "CLAIMS.csv C13",
+        "reports/issue-008 §8.1 L279-281"
+      ],
+      "correction": "Add the third separator to §8.1 and to §9's follow-up list (B-28).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-10",
+      "reasoning": "Invocation, encoding and engine are each a separator the pilot did not enumerate, and each is cheaper than the textual argument; the harness's own feature-value-overriding diagnostic it did not fire is a fourth instance.",
+      "status_changed": true,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "The tool gap and the language gap cannot be separated except through the specification-oracle table.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator runs 3 vs 2 (encoding flips undecided to violated)",
+        "run 1 (engine check says holds, smt says violated)",
+        "run 5 vs default (invocation flips clean to violated)",
+        "run 7 vs 10 (the diagnostic exists but fires at a different site)"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "CLAIMS.csv C15",
+        "reports/issue-008 §11.1 L347-353"
+      ],
+      "correction": "Insert 'default -validate' before 'pass' and replace 'means nothing at all' with 'returns no verdict for three of the four and detects the fourth only where the requirement encodes a constraint' (B-29).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-11",
+      "reasoning": "This is the report's own calibrated sentence and the most quotable one; as printed it lacks the qualifier that makes it true, and 'means nothing at all' is stronger than the evidence, since the defects are weakly observable in traces or empty results.",
+      "status_changed": true,
+      "reported_headline_effect": "Wording only.",
+      "residual_uncertainty": "None.",
+      "claim": "A pass means the model is expressible, resolvable, consistently typed and satisfies the implemented constraints; 'for four out of four structural defects tested it means nothing at all'.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "as CC-05/CC-08",
+        "run 6: the unreachable state is visible in the visited-state set; run 4: the missing flow yields an empty result"
+      ]
+    },
+    {
+      "target": "Researcher B",
+      "source_artifacts": [
+        "CLAIMS.csv C20",
+        "reports/issue-008 §2 P3 L65, §A2 L507-510",
+        "PROTOCOL.md Amendment A1"
+      ],
+      "correction": "Add 'corrected by A2' in the P3 cell (B-30).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-12",
+      "reasoning": "Amendment A1 requires the original to remain visible and forbids rewriting it, which is right; the consequence is that the document holds both forms and the headline position holds the retracted one. The fix is a pointer, not a deletion.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "The original P3 ('at least one class of plausible model defect is invisible to the only available instrument - Established') remains in the headline position.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "§2 P3 unqualified; A2 restates it at L507-510"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "CLAIMS.csv C05, C06, C09, C14, C16, C17, C18, C19"
+      ],
+      "correction": "None required. Optional editorial: add the p07b/p02d instances to A2 as further examples (B-31).",
+      "group": "semantic-ceiling critique",
+      "id": "CC-13",
+      "reasoning": "There is no overstatement to correct and recording that matters as much as recording the accepted ones. One substantive addition: the critic's observation that the encoding dependence generalises (to contradictory assertions and missing flow) strengthens B's A2/A10.5 rather than correcting it.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "Eight claims the critic judged not overstated (P9's qualifier, exit-status-not-validity, restated P3, P5's un-named conditions, P7, A10.5's bounded reach, both reports' deference to #10, vacuous holds).",
+      "ruling": "REJECTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "C06 reproduced (reserved-keyword-name at error severity, exit 0, summary.csv)",
+        "C14 reproduced (units: warning at the default gate, error under object check)",
+        "C17 reproduced (run 8: holds ... vacuous, exit 0)",
+        "C05/C09/C16/C18 are appropriately cautious by construction"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "research/relational/critique/semantic-ceiling-critique.md §2 S1"
+      ],
+      "correction": null,
+      "group": "critic status proposition",
+      "id": "CS-01",
+      "reasoning": "Established directly on the pinned binary, and it falsifies the premise both pilots inherited from the reference implementation's documentation.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "Execution coverage is not conformance; the semantics it implements are not characterised.",
+      "claim": "The pinned instrument executes actions and state machines.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator runs 1, 6 and 11: -action Seq executes and reports a step-level violation; -state Mission -advance prints visited states; -analysis over evaluates a postcondition"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "semantic-ceiling-critique.md §2 S2"
+      ],
+      "correction": null,
+      "group": "critic status proposition",
+      "id": "CS-02",
+      "reasoning": "Established with a working mutant/base contrast.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "Only for requirements written as checkable constraints; 0/18 in A's corpus.",
+      "claim": "The instrument decides requirement satisfaction when the requirement carries a require constraint.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator run 5: holds exit 0 vs 'fails ... Required condition evaluated to false' exit 1"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "semantic-ceiling-critique.md §2 S3"
+      ],
+      "correction": null,
+      "group": "critic status proposition",
+      "id": "CS-03",
+      "reasoning": "Established, and stronger than 'not checked': the output reads as a pass. This is the sharpest negative finding available about validator verdicts.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "The vacuity wording is this binary's; another tool might report nothing.",
+      "claim": "A prose-only requirement is reported as holding vacuously.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator run 8 on A's T2-C2: 'holds ... (vacuous: requirement ... states no required constraint)', exit 0"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "semantic-ceiling-critique.md §2 S4"
+      ],
+      "correction": null,
+      "group": "critic status proposition",
+      "id": "CS-04",
+      "reasoning": "Established with the cleanest encoding-only pair in the corpus.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "A contradictory assertion pair is decided when its feature is bound and undecided when it is not.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator runs 2 and 3 on models differing only in a feature value: violated exit 1 vs 2 of 2 undecided exit 2"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "semantic-ceiling-critique.md §2 S5, §4.1"
+      ],
+      "correction": null,
+      "group": "critic status proposition",
+      "id": "CS-05",
+      "reasoning": "Reproduced exactly, including the internal inconsistency of the tool's own output ('exhaustive' in prose, 'bounded' in the standing line). This is the single most important finding for anyone planning to gate on a validator, and neither pilot ran more than one engine.",
+      "status_changed": false,
+      "reported_headline_effect": "None to either pilot's numbers; it is the reason the verdict path cannot be quoted as self-certifying.",
+      "residual_uncertainty": "One model is not a rate; whether the false holds is systematic is unresolved (X-04).",
+      "claim": "A property-checkable invariant over an execution is decidable by the SMT engine, while the bounded check engine returns a false holds on the same model.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator run 1: -engine check -> 'no violation, exhaustive (3 states, 2 moves, depth 2)', standing holds (bounded), exit 0; -engine smt -> 'at step 2 ... assertion evaluated to false', violated (witnessed), exit 1; -engine all -> the tool names the conflict"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "semantic-ceiling-critique.md §2 S6"
+      ],
+      "correction": null,
+      "group": "critic status proposition",
+      "id": "CS-06",
+      "reasoning": "Established for the modes tested; the condition is observable but carries no verdict.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "Whether reachability is expressible as a property at all is not established.",
+      "claim": "Unreachability of a state is never reported as a defect, only observable in a trace.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "adjudicator run 6: finalState running; visits idle, running; done absent; exit 0, no violation"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "semantic-ceiling-critique.md §2 S7, §3.1"
+      ],
+      "correction": null,
+      "group": "critic status proposition",
+      "id": "CS-07",
+      "reasoning": "Established: a limitation documented of one program was read as a limitation of the tool in hand and then of automated validation.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "What the language's semantics support remains open; this ruling is about the attribution, not about decidability.",
+      "claim": "'The semantic ceiling' is not a property of the language, and the premise both pilots inherit is misattributed to the reference implementation.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "evidence/spec-tooling.md L138/L208 versus adjudicator runs 1 and 11"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "semantic-ceiling-critique.md §2 S8"
+      ],
+      "correction": null,
+      "group": "critic status proposition",
+      "id": "CS-08",
+      "reasoning": "Upheld as a statement about what the evidence licenses; no implementation other than the pinned binary was measured.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "A second implementation would settle whether any of this is instrument-specific; not obtainable here.",
+      "claim": "The ceiling is not a property of 'SysML v2 tooling'.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "one instrument, one version; no second measurement exists (TOOLING.md §2-3; B's second-validator-attempt.md)"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "semantic-ceiling-critique.md §2 S9, §4"
+      ],
+      "correction": null,
+      "group": "critic status proposition",
+      "id": "CS-09",
+      "reasoning": "Supported for this instrument on the properties tested. Its practical weight is bounded by the construct census: every demonstration encodes the condition in the model and A's corpus contains 0/18 checkable constraints.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "Whether the framing holds for the reference implementation or Syside is untested (access boundaries).",
+      "claim": "What automated checking can establish is a function of the model's encoding x the invocation x the engine x the reading, for the properties tested.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "eleven demonstrations in adjudicator runs 1-11: encoding pairs (3 vs 2; 5), engine pair (1), invocation pairs (5 vs default; 7 vs 10), reading (the standing line vs exit status)"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "semantic-ceiling-critique.md §2 S10, §5"
+      ],
+      "correction": null,
+      "group": "critic status proposition",
+      "id": "CS-10",
+      "reasoning": "Upheld, and it is the cleanest statement of what each pilot's numbers are. Its consequence is that no detectability figure in either pilot is a property of a class, only of a class-as-encoded.",
+      "status_changed": false,
+      "reported_headline_effect": "None.",
+      "residual_uncertainty": "None.",
+      "claim": "The two pilots' defect ground truth is authored and defensible, but their detectability ground truth is measured, not authored, and moves with the encoding.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "claim_upheld",
+      "challenger": "Semantic-ceiling critic",
+      "evidence": [
+        "MANIFEST.csv hashed pre-run vs results.csv measured",
+        "errors.csv authored vs detection/table.md measured",
+        "adjudicator runs 2/3 and 5 show the measurement moving with encoding and invocation"
+      ]
+    },
+    {
+      "target": "Researcher B / external arm",
+      "source_artifacts": [
+        "research/issue-008/empirical/REPORT.md §3",
+        "reports/issue-008 §A10.1",
+        "RA-01 (same correction applied to A)",
+        "catalogue/classified.csv row checkSatisfyRequirementUsageBindingConnector",
+        "B2A-10, RA-03"
+      ],
+      "correction": "Add the obligation-split line to empirical REPORT §1/§3 and report A10.1; state that the aggregate 9/13 is not a detection-gap measure (B-32).",
+      "group": "cross-cutting (adjudicator)",
+      "id": "X-01",
+      "reasoning": "B applied the layer reading of its misses but not the obligation reading, which the same table supplies. The obligation split is the more informative one because it is not confounded by class composition, and it is exactly the correction Reviewer A made to A - so the same correction applies symmetrically and nobody made it for B.",
+      "status_changed": true,
+      "reported_headline_effect": "9/13 retained; its reading changes to 9/9 established + 0/4 discretionary/contested; 9/11 if R1 falls.",
+      "residual_uncertainty": "With four misses, 'obligation predicts detection' is a description of this set, not an established predictor (X-02); and if R1 falls, the denominator becomes 11 (X-03).",
+      "claim": "B's external arm has the same composition problem as A's frozen population: its four misses are one discretionary constraint, two items with no normative basis and one contested item, so 9/13 is really 9/9 established plus 0/4 discretionary-or-contested.",
+      "ruling": "ACCEPTED",
+      "challenge_outcome": "correction_required",
+      "challenger": "Adjudicator (consolidation)",
+      "evidence": [
+        "misses: S2 (check, MAY obligation), R1 x2 (no named constraint; X-03), I1 (contested); one of the four also unmeasurable by short-circuit",
+        "detections: S1 3/3, N1 4/4, N2 1/1, T1 1/1 = 9/9 established"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "reports/issue-008 §5 H9 L230-236",
+        "reports/issue-008 §A7",
+        "RA-01",
+        "X-01"
+      ],
+      "correction": "Until settled, report both readings and do not state the layer boundary as a property of the instrument (B-33).",
+      "group": "cross-cutting (adjudicator)",
+      "id": "X-02",
+      "reasoning": "This decides how B's headline may be quoted: 'validators cannot see semantics' versus 'validators see what the specification tells them to see'. The second is what the evidence supports without residue, but it is not yet separated from the first.",
+      "status_changed": true,
+      "reported_headline_effect": "B's layer claim is held as one of two readings; no number moves.",
+      "residual_uncertainty": "n = 4 in the external arm, 4 in F7; the confound is structural, not statistical.",
+      "claim": "The observed 'layer boundary' is a property of the instrument; alternatively it is a property of the specification's obligation structure (named/mandatory vs discretionary/unnamed). The two are perfectly confounded in both corpora.",
+      "ruling": "UNRESOLVED",
+      "challenge_outcome": "open",
+      "challenger": "Adjudicator",
+      "evidence": [
+        "in both corpora every miss is discretionary (S2), unnamed (R1, F7) or contested (I1); B's H9 found two counterexamples (F4-01, F4-04 unnamed but caught)",
+        "class and obligation co-vary in both populations, so neither predictor can be isolated"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "RA-03",
+        "B-reviews-A.md O8",
+        "errors.csv T4-C1-E02",
+        "CODEBOOK R1 body",
+        "FROZEN-SUBSET L66-67",
+        "/tmp/sysml/kerml-1.0.txt connector/feature-chain rules"
+      ],
+      "correction": "Mark R1 contested as to defect status and carry the contest into subset.json; do not use it as evidence for either pilot's structural conclusion (A-11, B-34).",
+      "group": "cross-cutting (adjudicator)",
+      "id": "X-03",
+      "reasoning": "Both readings are defensible on the retrieved text depending on whether 'denotes' is read at the feature or the instance level. If R1 is not a defect, A's structural claim disappears and B's external denominator falls from 13 to 11 (9/11 rather than 9/13); if it is, the installed reading stands.",
+      "status_changed": true,
+      "reported_headline_effect": "If R1 falls: B external 9/13 -> 9/11; A's structural claim disappears (already narrowed to layer).",
+      "residual_uncertainty": "Settles with a normative ruling (OMG RTF or a SysML expert) or a run of the OMG pilot implementation under a JVM, which was not obtainable here.",
+      "claim": "Whether a connect end whose feature chain traverses a multi-valued usage (R1) is ill-formed at all: the chain resolves to one feature, but it denotes many instances, and no named constraint decides which reading governs a connector end.",
+      "ruling": "UNRESOLVED",
+      "challenge_outcome": "open",
+      "challenger": "Adjudicator (from RA-03)",
+      "evidence": [
+        "nearest named rule validateFeatureEndMultiplicity constrains an end feature's own multiplicity, not a traversed usage's",
+        "A's operational criterion is authored and as worded conflates a feature with its instances",
+        "the tool is silent on both records under every mode tested"
+      ]
+    },
+    {
+      "target": "both pilots",
+      "source_artifacts": [
+        "CS-05",
+        "critique raw p08b files",
+        "reports/issue-008 §A2/§A10.5"
+      ],
+      "correction": "Do not quote a verdict as self-certifying; report the engine and the standing label whenever a verdict is used (B-35).",
+      "group": "cross-cutting (adjudicator)",
+      "id": "X-04",
+      "reasoning": "One model is a demonstration, not a rate. If the failure is systematic, every 'holds' in the verdict path inherits an unknown error rate, which bears on B's A2/A10.5 and on any future 'gate on the validator' recommendation.",
+      "status_changed": false,
+      "reported_headline_effect": "None to current numbers; it constrains how the verdict path may be reported.",
+      "residual_uncertainty": "I reproduced the observation, not the cause; I read no source.",
+      "claim": "Whether the bounded check engine's false holds on a violated invariant is systematic, and therefore whether any verdict in the run's verdict modes can be quoted as self-certifying.",
+      "ruling": "UNRESOLVED",
+      "challenge_outcome": "open",
+      "challenger": "Adjudicator (from CS-05)",
+      "evidence": [
+        "adjudicator run 1 reproduces the disagreement on one model under three engines",
+        "neither pilot ran more than one engine; no rate exists"
+      ]
+    }
+  ]
+}

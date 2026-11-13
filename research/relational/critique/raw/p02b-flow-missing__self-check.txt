@@ -1,0 +1,14 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:46Z
+probe model:    probes/p02b-flow-missing.sysml
+model sha256:   2d3143591b2931af1054b91425b3b6816b2ca8b891ae2ab1bd9b18828a19b047
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -self-check p02b-flow-missing.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+✓ package P02B
+Self-model check: 31 elements, 282 checks, 0 violations, 0 unevaluated
+----- end of output -----
+exit:           0

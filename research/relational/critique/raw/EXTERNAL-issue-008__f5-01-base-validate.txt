@@ -1,0 +1,16 @@
+===== CRITIQUE CROSS-CHECK PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:50Z
+target model:   research/issue-008/known-good/KG-04-featurevalues.sysml  (read-only; authored by Researcher B, issue #8)
+model sha256:   6a9384467ce86904119fa6edae6456467ac7955ac41cabdd3abe58dee3cb2bd4
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -validate research/issue-008/known-good/KG-04-featurevalues.sysml
+----- stdout+stderr (verbatim) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+research/issue-008/known-good/KG-04-featurevalues.sysml:17:19: warning[name-conflict]: Duplicate of inherited member name 'cutoff' from TestRecord
+        attribute cutoff : Rational default = 0.75 * averageScore;
+                  ^~~~~~
+✓ package KG04FeatureValues
+✓ research/issue-008/known-good/KG-04-featurevalues.sysml: no errors
+----- end of output -----
+exit:           0
