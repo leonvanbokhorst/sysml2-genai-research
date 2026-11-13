@@ -31,6 +31,6 @@ for spec in ["SysML 2.0", "KerML 1.0"]:
             )
 out.sort(key=lambda r: r["sample_id"])
 with open(Path(__file__).parent / "sample.csv", "w", newline="") as f:
-    w = csv.DictWriter(f, fieldnames=["sample_id", "spec", "name", "kind", "context_metaclass", "clause", "prose", "ocl_body"])
+    w = csv.DictWriter(f, fieldnames=["sample_id", "spec", "name", "kind", "context_metaclass", "clause", "prose", "ocl_body"], lineterminator="\n")
     w.writeheader(); w.writerows(out)
 print(len(out), "rows ->", Path(__file__).parent / "sample.csv")

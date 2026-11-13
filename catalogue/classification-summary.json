@@ -52,6 +52,11 @@
     "B": 184,
     "U": 2
   },
+  "by_executable_ocl_status": {
+    "defective as published (high-confidence defect)": 43,
+    "no known defect found (not a proof of executability)": 575,
+    "possible defect (medium-confidence only)": 5
+  },
   "by_obligation": {
     "MAY report, satisfy by implied relationships, or ignore (explicitly discretionary)": 208,
     "SHALL enforce (derivation is mandatory for a conformant abstract-syntax tool)": 235,

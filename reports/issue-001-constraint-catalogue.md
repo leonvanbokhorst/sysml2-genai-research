@@ -21,10 +21,14 @@ tool sees them:
   violation, or it **may ignore** the violations";
 - **180 `validate…` validation constraints** — "should report violations".
 
-By what a checker actually needs, **437 are decidable from the model's abstract
-syntax alone** (class A), **184 need the normative Kernel/Semantic Library or the
-semantic layer** (class B), and **2 are placeholders** whose published body is
-the literal string `TBD` (class U). The 437 class-A constraints are not all
+By what a checker actually needs under the frozen **dependency-class** rule,
+**437 have no external library or semantic dependency** (class A — model-local;
+intended decidable from the abstract syntax), **184 need the normative
+Kernel/Semantic Library or the semantic layer** (class B), and **2 are
+placeholders** whose published body is the literal string `TBD` (class U). This
+is a classification of dependency, **not** a claim that the published OCL
+executes as written: 27 class-A rows and 14 class-B rows carry a high-confidence
+defect in their published body (§3.3). The 437 class-A constraints are not all
 obligations: 35 of them are `check…` constraints whose reporting is discretionary.
 
 Three further findings change what "well-formed" can mean:
@@ -43,32 +47,40 @@ Three further findings change what "well-formed" can mean:
    renamings, 11 have no counterpart at all, 6 are typos, and 2 are subsumed by a
    generic constraint. This is not "informative text"; it is normative prose
    asserting conditions with no formal definition.
-3. **The engineering-interesting properties are largely silent.** Ten areas have
-   no constraint at all: default multiplicities (OMG issue SYSML21-185, open
-   since 2024-06), general type conformance and inference, dimensional
-   consistency of units and quantities, diagnostic severity and identity,
-   implied-relationship materialisation, ambiguous name resolution, execution
-   behaviour, method-level adequacy, a conformance oracle, and version identity.
-   These are registered in [`silence-register.md`](../catalogue/silence-register.md).
+3. **The engineering-interesting properties are largely outside the constraint
+   surface.** Ten areas are registered: four are genuinely absent (default
+   multiplicities — OMG issue SYSML21-185, open since 2024-06 — general type
+   conformance and inference, dimensional consistency of units and quantities,
+   and diagnostic severity/identity); two are explicit discretion or delegation
+   (implied-relationship materialisation; method-level constraints); one is an
+   unresolved ambiguity (membership selection); one lies outside the
+   well-formedness surface (execution behaviour); and two are oracle/provenance
+   gaps (no conformance suite; frozen metamodel URI). The register distinguishes
+   these kinds rather than calling all ten "silence":
+   [`silence-register.md`](../catalogue/silence-register.md).
 
 On the implementation side, the reference pilot's validator names **200 distinct
-constraints**, of which only **156 match a catalogue name exactly** (0 `derive…`,
-2 `check…`, 154 `validate…`). Eight class-A, SHOULD-report control-node
-constraints are `// TODO` comments in empty `@Check` methods; an independent
-implementation (OpenSysML) adjudicates each as a "pilot gap"; and the pilot's
-2026-01 release admits that 13 named constraints "were previously **not being
-checked**". The pilot that most third parties benchmark against is therefore not
-a conformance oracle for the pinned 1.0/2.0 documents, and it cannot be one: since
-2026-07 it targets an unpublished **2.1 Beta 2** revision.
+identifiers**, of which **156 match a catalogue constraint name exactly**:
+**identifier coverage only**, not implementation, enforcement or conformance
+coverage. Of those 156, **149** occur in non-TODO `@Check` methods and **7** only
+in TODO-only methods; none was runtime-tested. Eight model-local, SHOULD-report
+control-node constraints are `// TODO` comments in empty `@Check` methods; an
+independent implementation (OpenSysML) also adjudicates each as a "pilot gap" at
+the source level; and the pilot's 2026-01 release admits that 13 named
+constraints "were previously **not being checked**". These are hypotheses for a
+runtime false-negative study (issue #8), not measured false negatives. The pilot
+that most third parties benchmark against is therefore not a conformance oracle
+for the pinned 1.0/2.0 documents, and it cannot be one: since 2026-07 it targets
+an unpublished **2.1 Beta 2** revision.
 
 **The direct answer.** "Correct with respect to what?" has four different answers,
 and they are not nested:
 
 | Sense of "correct" | Size | Who decides |
 |---|---|---|
-| Satisfies the 180 validation constraints | 169 class A + 11 class B | specification, SHOULD report |
-| Satisfies the 208 semantic constraints | 35 class A + 171 class B + 2 U | tool may imply, report or ignore |
-| Derives the 235 derived properties | 233 class A + 2 class B | specification, SHALL, but not "well-formedness" |
+| Satisfies the 180 validation constraints | 169 dependency class A + 11 class B | specification, SHOULD report |
+| Satisfies the 208 semantic constraints | 35 dependency class A + 171 class B + 2 U | tool may imply, report or ignore |
+| Derives the 235 derived properties | 233 dependency class A + 2 class B | specification, SHALL, but not "well-formedness" |
 | Type-correct, dimensionally consistent, method-adequate, behaviourally executable | **0 specified** | nobody |
 
 A validator pass is evidence for the first sense and, at best, weak evidence for
@@ -92,7 +104,8 @@ leaving each implementation to invent its own answer.
   body, and what a checker needs to decide it.
 - A four-way classification aligned to the issue's classes.
 - A deep-traced subset: 15 constraints followed to two independent implementations, 18 more to one implementation plus the normative text, and four contested release-note claims.
-- An explicit silence register with the corresponding implementation choices.
+- An explicit silence-and-discretion register with kind labels and the
+  corresponding implementation choices.
 
 **Explicitly out of scope (from the issue).** A validator implementation; full
 spec coverage as if exhaustive; a conformance verdict on any tool; adjudication
@@ -116,9 +129,12 @@ which the pilot targets and which has no published normative document.
 - The specification's §8.3.1 taxonomy and its modal verbs are as quoted
   (SHALL/SHOULD/MAY). This is the specification's own classification, retrieved
   from both documents.
-- 437 constraints are decidable from the abstract syntax alone, 184 require the
-  model library or semantic layer, and 2 are placeholders, under the frozen
-  decision procedure in [`coding/codebook.md`](../catalogue/coding/codebook.md).
+- 437 constraints are **dependency class A** (model-local: no external library or
+  semantic-layer dependency under the frozen rule), 184 are class B, and 2 are
+  placeholders, under the decision procedure in
+  [`coding/codebook.md`](../catalogue/coding/codebook.md). Dependency class does
+  not imply executability: 27 class-A and 14 class-B rows carry a
+  high-confidence defect in their published OCL.
 - 48 named constraints have at least one defect in their published OCL; 43 of
   the 48 are high confidence, 5 medium. Examples: two
   KerML `check…` bodies are `TBD`; `validateAssertConstraintUsageReference`
@@ -127,12 +143,19 @@ which the pilot targets and which has no published normative document.
 - 38 distinct constraint names are used in the PDFs and defined in neither XMI;
   31 are normative conditions asserted in Clause 8.4 (34 Clause-8.4 names minus
   1 non-constraint name and 2 worked examples).
-- Ten areas have no constraint (silence register), each with the specification
-  text and implementation evidence recorded.
+- Ten areas are recorded in the silence-and-discretion register, each with its
+  specification text and implementation evidence: four genuine absences (D1–D4),
+  two explicit discretion/delegation cases (D5, D8), one unresolved ambiguity
+  (D6), one area outside the well-formedness surface (D7), and two
+  oracle/provenance gaps (D9–D10). Only the first four are class D in the strict
+  sense.
 - The pilot's validator contains 114 active `@Check` methods (72 SysML, 42
-  KerML), mapping to 200 distinct constraint names. Zero `derive…` constraints
-  and two `check…` constraints are named. Eight control-node `validate…`
-  constraints are TODO-only, and OpenSysML independently reports the same gap.
+  KerML), mapping to 200 distinct identifiers. Zero `derive…` identifiers and two
+  `check…` identifiers are named. **156/623 is identifier coverage only**: 149
+  occur in non-TODO methods and 7 only in TODO-only methods; no check was run.
+  Eight control-node `validate…` constraints are TODO-only, and OpenSysML
+  independently reports the same source-level gap. The false-negative rate is
+  not measured.
 - OMG issue SYSML21-185 is publicly readable and states the specification has no
   formal default-multiplicity rule in Clause 8; status open, reported 2024-06-15.
 - The 2026-01 pilot release states 13 named constraints "were previously not
@@ -165,11 +188,13 @@ which the pilot targets and which has no published normative document.
 
 **Provisional.**
 
-- The class A/B rule as a proxy for "mechanically checkable". It operationalises
-  the boundary as "names a model-library element or library helper". A class-A
-  OCL expression can still be intractable to evaluate, and a class-B helper can
+- The dependency-class A/B rule as a proxy for "intended decidability". It operationalises
+  the dependency boundary as "names a model-library element or library helper".
+  It does not assert that the published OCL executes as written: a class-A OCL
+  expression can still be defective (27 rows are), intractable to evaluate, or
+  require an interpretation. A class-B helper can
   in principle be inlined. The rule is reproducible, not ontological.
-- The claim that the 437 class-A constraints are "the syntactic surface". Many
+- The claim that the 437 model-local (class-A) constraints are "the syntactic surface". Many
   are structural conditions on specialisation and redefinition that would
   ordinarily be called semantic. The label is about *what the checker needs*, not
   about linguistic depth.
@@ -181,7 +206,7 @@ which the pilot targets and which has no published normative document.
 - The false-negative rate of any validator on a representative model corpus.
   This study counts specified and named constraints; it does not run anything.
 - Whether any tool implements all 437 class-A constraints.
-- Whether the 2.1 Beta 2 text resolves the silence register.
+- Whether the 2.1 Beta 2 text resolves the registered absences and ambiguities.
 
 ---
 
@@ -222,17 +247,31 @@ equalities defining a derived property (`ownedFeature = ownedFeatureMembership.o
 metamodel-derived features (`feature->forAll(not isComposite)`). `check…` bodies
 either call `specializesFromLibrary('Actions::acceptActions')` or require
 redefinition/type-featuring/binding-connector relationships that the semantic
-layer is permitted to insert. That is why class B is dominated by `check…`
-constraints: 171 of 208 `check…` constraints name a library element or helper.
+layer is permitted to insert. That is why dependency class B is dominated by
+`check…` constraints: 171 of 208 `check…` constraints name a library element or
+helper.
 
-### 3.2 Class A / B: what a checker needs
+### 3.2 Dependency class A / B: what a checker needs
 
-| | A: abstract syntax alone | B: library / semantic layer | U | total |
+**Terminology revision (2026-11-13, after review).** The labels A/B/U are
+**dependency classes**. This changes wording, not the frozen decision rule, the
+sample, the labels assigned by either coder, or any count. "Mechanically
+checkable" in the issue is operationalised as "no external library or
+semantic-layer dependency"; executability is reported separately in
+`executable_ocl_status`.
+
+| | A: model-local (no external library/semantic dependency) | B: library / semantic layer | U | total |
 |---|---:|---:|---:|---:|
 | `derive…` (SHALL) | 233 | 2 | 0 | 235 |
 | `check…` (MAY) | 35 | 171 | 2 | 208 |
 | `validate…` (SHOULD) | 169 | 11 | 0 | 180 |
 | **total** | **437** | **184** | **2** | **623** |
+
+**Read A as a dependency class, not as a claim that the published OCL runs.**
+27 of the 437 class-A rows and 14 of the 184 class-B rows carry a high-confidence
+defect in their published body; `executable_ocl_status` records that separately.
+The boundary says only that a checker needs no external library or semantic-layer
+element under the frozen rule.
 
 The 11 class-B `validate…` constraints are the sharpest illustration of why the
 two dimensions must be separated. They are SHOULD-report, but a checker must load
@@ -241,8 +280,8 @@ normative library content and resolve it globally. Four are SysML
 and one other trigger condition, which call `specializesFromLibrary('Time::TimeInstantValue')`
 etc.); seven are KerML, including `validateElementFilterMembershipConditionIsBoolean`
 and `validateMetadataFeatureAnnotatedElement` (`resolveGlobal('Metaobjects::Metaobject::annotatedElement')`).
-Conversely, 35 `check…` constraints are model-only and class A — mechanically
-decidable, but with no reporting obligation: the tool may ignore them.
+Conversely, 35 `check…` constraints are model-local and class A — decidable in
+principle, but with no reporting obligation: the tool may ignore them.
 
 Two independent coders applied the decision procedure to a 60-row stratified
 sample (10 per specification × kind). Raw agreement was 60/60, Cohen's κ = 1.000;
@@ -325,10 +364,15 @@ Two examples make the consequence concrete:
   constraint exists in the KerML XMI. A reader who trusts the sentence will look
   for a rule that is not there.
 
-### 3.5 The silence register
+### 3.5 The silence-and-discretion register
 
-[`silence-register.md`](../catalogue/silence-register.md) records ten areas. The
-three with the largest consequences are:
+[`silence-register.md`](../catalogue/silence-register.md) records ten areas and
+labels each with a **kind**. Only four are silence in the strict sense — no
+normative rule at all (D1–D4). The others are explicit discretion (D5), explicit
+delegation (D8), unresolved ambiguity (D6), an area outside the well-formedness
+surface (D7), or an oracle/provenance gap (D9–D10); they have the same practical
+effect on a checker but are not "the specification says nothing". The three
+`absent` entries with the largest consequences are:
 
 **Default multiplicities.** SysML Clause 8 contains no default-multiplicity rule;
 the `1..1` default lives in the non-normative Language Description (§7.6.3). OMG
@@ -356,13 +400,14 @@ a checker to compare them. Syside cannot yet infer dimensions, so it "cannot
 currently catch such errors as assigning length quantity to a mass quantity."
 Assigning a length to a mass is a conformity question with no normative answer.
 
-The remaining seven — severity/identity, implied-relationship materialisation,
-ambiguous resolution, execution, method-level adequacy, conformance oracle, and
-version identity — are recorded with their evidence and implementation choices.
-Several are not "silence" in the sense of an omission but explicit delegation:
-§8.3.1's MAY for implied relationships, and §1's statement that "the specific
-methods and practices may impose additional constraints on how the language is
-used."
+The remaining entries are recorded with their evidence and implementation
+choices, and are not all silence: severity/identity is under-specified (D4);
+implied-relationship materialisation is explicit discretion (§8.3.1's MAY, D5);
+membership resolution is ambiguous (D6); execution lies outside the
+well-formedness surface (D7); method-level adequacy is explicitly delegated
+(§1: "the specific methods and practices may impose additional constraints on
+how the language is used", D8); and the conformance-oracle and version-identity
+entries (D9–D10) are institutional/artefact gaps, not missing language rules.
 
 ### 3.6 Specified versus enforced versus reported
 
@@ -373,18 +418,27 @@ against the catalogue ([`validator-coverage.json`](../catalogue/validator-covera
 from the CSV gives 200. The difference of two does not affect the coverage
 conclusion and is recorded rather than reconciled.)
 
-| Catalogue slice | Catalogue count | Named in pilot validator | Exact-match rate |
-|---|---:|---:|---:|
-| SysML `derive…` | 145 | 0 | 0% |
-| SysML `check…` | 128 | 0 | 0% |
-| SysML `validate…` | 92 | 77 | 84% |
-| KerML `derive…` | 90 | 0 | 0% |
-| KerML `check…` | 80 | 2 | 2% |
-| KerML `validate…` | 88 | 77 | 88% |
-| **total** | **623** | **156** | **25%** |
+| Catalogue slice | Catalogue count | Matched in a non-TODO `@Check` | Matched only in a TODO method | Identifier coverage |
+|---|---:|---:|---:|---:|
+| SysML `derive…` | 145 | 0 | 0 | 0 (0%) |
+| SysML `check…` | 128 | 0 | 0 | 0 (0%) |
+| SysML `validate…` | 92 | 70 | 7 | 77 (84%) |
+| KerML `derive…` | 90 | 0 | 0 | 0 (0%) |
+| KerML `check…` | 80 | 2 | 0 | 2 (2%) |
+| KerML `validate…` | 88 | 77 | 0 | 77 (88%) |
+| **total** | **623** | **149** | **7** | **156 (25.0%)** |
 
-These percentages are **lower bounds**, for three reasons that are themselves
-findings:
+**This is identifier coverage, not implementation or conformance coverage.** A
+name in a `@Check` method's comment or diagnostic-code constant does not
+demonstrate that the method executes, that it fires on a violating model, or that
+it enforces the constraint correctly. Seven of the 156 appear only in TODO-only
+methods; the 149 in non-TODO methods are still source-level attributions. No
+validator was built or run, and the 2.0/2.1 revision skew remains decisive. The
+25.0% figure should not be read as "the pilot implements a quarter of the
+specification".
+
+These identifier-match rates are **lower bounds**, for three reasons that are
+themselves findings:
 
 1. **The pilot uses different identifiers.** `validateReferenceUsageIsReferential`
    in the pilot corresponds to `validateReferenceUsageIsReference` in the
@@ -399,8 +453,8 @@ findings:
    those. This is the largest single limit on the comparison.
 
 Even with those caveats, the pattern is not ambiguous. The pilot's validator is a
-**validator for `validate…` constraints**: it names 154 of 180, and almost no
-`check…` or `derive…` constraints. That is consistent with the architecture: the
+**validator for `validate…` constraints**: it carries identifiers for 154 of
+180, and almost none for `check…` or `derive…` constraints. That is consistent with the architecture: the
 `check…` constraints are largely handled by the adapter/implied-relationship
 layer, not by diagnostics, and the `derive…` constraints are computed by getters.
 The specification's own MAY licenses exactly this. But it has a consequence for
@@ -427,11 +481,14 @@ not adjudicate that; it is recorded as contested.
 [`deep-trace.md`](../catalogue/deep-trace.md) follows 15 constraints from clause
 to two independent implementations, and 18 more to one implementation plus the
 normative text. Four further release-note claims could not be traced. The strongest case is the control-node family: eight SysML
-`validate…` constraints, each a short class-A OCL predicate, each SHOULD-report,
+`validate…` constraints, each a short model-local (dependency class A) OCL
+predicate, each SHOULD-report,
 each a TODO in an empty or near-empty `@Check` method, each independently
-adjudicated by OpenSysML as a "pilot gap". This meets the issue's "at least two
-implementations" bar with two independent sources (pilot source and OpenSysML
+reported by OpenSysML as a "pilot gap". This meets the issue's "at least two
+implementations" bar at the **source level** (pilot source and OpenSysML
 differential), and the constraints are not ambiguous or library-dependent.
+Neither source runs the check on a violating model: this is a hypothesis for
+runtime confirmation (issue #8), not a measured false-negative rate.
 
 Other traced cases:
 
@@ -483,7 +540,8 @@ validator acceptance as a correctness signal.
 
 **Tension 2: "The specification is complete; the tools lag" is supported, but
 only for part of the surface.** The control-node family is exactly the tools-lag
-story: eight class-A rules, no enforcement, independently confirmed. But the
+story: eight model-local rules, no source-level enforcement, independently
+reported. But the
 same trace shows constraints the specification cannot express without
 interpretation (KERML-199), constraints whose verdict depends on which KerML
 clause you read (`validateRedefinitionDirectionConformance`), and requirements in
@@ -500,8 +558,8 @@ and local well-formedness, and delegates semantics, typing, units, behaviour and
 method to the semantic layer, the libraries, or the adopter.
 
 **Tension 4: the third reading — the specified constraints are mostly the
-uninteresting ones — is the one the counts most support.** Of 437 class-A
-constraints, 233 are derivations (not well-formedness checks at all), and 169 are
+uninteresting ones — is the one the counts most support.** Of 437 dependency
+class-A constraints, 233 are derivations (not well-formedness checks at all), and 169 are
 validation predicates over structural properties (cardinalities, owning types,
 specialisation shape). The engineering-interesting properties — is this the right
 decomposition, is the value type-correct, are the units consistent, does the
@@ -510,12 +568,13 @@ holds, automated validation has a ceiling that is a property of the language, no
 of the tools. This study cannot prove the reading, but it supplies the counts
 that make it testable.
 
-**Counter-evidence to my own class A/B boundary.** OpenSysML's control-node
-adjudication found that a literal reading of the four multiplicity OCL
-constraints rejects `first a then f;`, a form the specification's own examples
-use. So a "mechanically checkable" class-A constraint can still be *wrong* as
-written, or require an interpretation. Class A means "a checker has everything it
-needs", not "the answer is uncontested". The OCL-defect register is the same
+**Counter-evidence to my own dependency-class boundary.** OpenSysML's
+control-node adjudication found that a literal reading of the four multiplicity
+OCL constraints rejects `first a then f;`, a form the specification's own
+examples use. So a model-local class-A constraint can still be *wrong* as
+written, or require an interpretation. Dependency class A means "no external
+library semantics are needed under the frozen rule", not "the OCL is executable
+or uncontested". The OCL-defect register is the same
 point in a different form.
 
 **Counter-evidence to "the pilot is permissive".** The pilot enforces 154
@@ -589,8 +648,8 @@ were pivotal:
   checked", 2026-03 "not conformant", and 2026-09 default-multiplicity quotes.
 - Fetched the SYSML21-185 public record and confirmed its status and summary.
 - Re-ran the validator inventory cross-check from the CSV rather than accepting
-  the summary counts; the 156/623 exact-match figure is my computation from the
-  teammate's inventory.
+  the summary counts; the 156/623 identifier-coverage figure (149 non-TODO, 7
+  TODO-only) is my computation from the teammate's inventory.
 
 I did **not** independently re-fetch every release note from 2026-02 to 2026-09.1;
 the chronology in `impl-evidence.md` is the teammate's, and I quote only the
@@ -614,10 +673,11 @@ was treated as a second witness for a source it read in the same way as me.
    This is the largest limit. The specified–enforced comparison is cross-revision
    by necessity. A 2.1 catalogue cannot be built from published OMG artefacts
    today.
-2. **"Mechanically checkable" is operationalised, not proved.** The class A/B rule
-   is reproducible and auditable, but it does not measure computational
-   tractability, and a class-A OCL expression can be wrong (see the defect
-   register) or require an interpretation (see the control-node multiplicities).
+2. **Dependency class A/B is operationalised, not proved.** The rule is
+   reproducible and auditable, but it classifies *what a checker needs*, not
+   whether the published OCL executes. 27 class-A rows carry a high-confidence
+   defect, and a class-A expression can still require an interpretation (see the
+   control-node multiplicities) or be intractable to evaluate.
 3. **The OCL audit is shallow.** It finds identifier-level problems, not type
    errors or semantic inconsistencies in the OCL. The 48-row register is a
    curated sample of a larger possible defect surface.
@@ -625,11 +685,13 @@ was treated as a second witness for a source it read in the same way as me.
    The false-negative rate of the pilot, Syside or OpenSysML is not measured.
 5. **The coding study is small and easy.** 60 rows, two LLM coders, one sample,
    no adjudication round after disagreement (there were none to adjudicate).
-6. **The silence register is an argument, not a proof of absence.** Ten areas were
-   searched by name, OCL body and specification text; an unusual constraint that
-   encodes a type or unit rule under a name that does not contain the term could
-   have been missed. The register names the search terms and the counts, so the
-   claim is auditable.
+6. **The silence-and-discretion register is an argument, not a proof of absence.**
+   Ten areas were searched by name, OCL body and specification text; an unusual
+   constraint that encodes a type or unit rule under a name that does not contain
+   the term could have been missed. Only four of the ten entries are genuine
+   absence; two are explicit discretion/delegation, one is ambiguity, one is
+   outside the well-formedness surface, and two are oracle/provenance gaps. The
+   register names the search terms and the counts, so the claim is auditable.
 7. **The prose-only categorisation is inferential.** "Renamed" and "missing" are
    my reading of context and nearest name, not OMG's intent. The CSV marks each
    row's status and nearest name so a reader can disagree with a specific row.
@@ -642,7 +704,8 @@ was treated as a second witness for a source it read in the same way as me.
   become auditable, the 44 unmatched pilot identifiers could be classified, and
   the cross-revision caveat would disappear.
 - **An OMG conformance suite.** It would replace this catalogue's denominator with
-  an authoritative one, and turn "156/623" into a comparable figure.
+  an authoritative one, and turn identifier coverage into a measured enforcement
+  rate on a violating-model corpus.
 - **A runtime differential.** Running the pilot, Syside and OpenSysML on a
   purpose-built corpus of one violating model per class-A constraint would
   convert the source-level gap into a measured false-negative rate. This is the
@@ -651,7 +714,7 @@ was treated as a second witness for a source it read in the same way as me.
   would move a specific register entry from "silent/defective/contested" to
   "specified".
 - **A human-expert coding round.** If two systems engineers disagreed materially
-  with the class A/B calls on the hardest 20 constraints, the classification
+  with the dependency-class calls on the hardest 20 constraints, the classification
   would need revision. The current agreement result does not test that.
 
 ---
@@ -698,12 +761,14 @@ that a better LLM or a longer repair loop fixes; it is a property of what the
 standard specifies.
 
 **For validator reliability (issue #8).** The false-negative rate is not a
-single number. It is at least: eight control-node constraints (confirmed by two
-implementations), 13 constraints unchecked before 2026-01 (first-party), four
+single number. It is at least: eight control-node constraints (reported at source
+level by two implementations; runtime confirmation is the first experiment this
+suggests), 13 constraints unchecked before 2026-01 (first-party), four
 constraints emitted as warnings, seven constraints whose diagnostic identity is
 lost, and 208 constraints whose reporting is discretionary. A reliability study
 that samples "constraints" uniformly will be dominated by easy structural rules;
-one that samples by engineering consequence will find the silence.
+one that samples by engineering consequence will find the absences and the
+discretion.
 
 **For benchmark design (issue #13).** A benchmark needs a pinned catalogue, a
 pinned validator build, and a per-constraint expected verdict. This catalogue is a
@@ -724,11 +789,11 @@ that no amount of GenAI or repair-loop engineering removes.
 
 - **Issue #2** (do tools agree?) — the pilot/Syside/OpenSysML divergence in this
   report is qualitative; a systematic same-model comparison is issue #2.
-- **Issue #7** (error populations) — the defect and silence registers suggest a
+- **Issue #7** (error populations) — the defect and silence/discretion registers suggest a
   taxonomy of model errors that validators cannot see; not built here.
 - **Issue #8** (validator reliability) — the 8 control-node gaps and the 17
   declared-but-unimplemented constraints are a ready-made test set; not executed.
-- **Issue #10** (semantic ceiling) — the silence register is its evidence base.
+- **Issue #10** (semantic ceiling) — the silence-and-discretion register is its evidence base.
 - **The 2.1 Beta 2 constraint set** — outside published OMG artefacts; not
   researched.
 - **The OMG RTF issue records behind the 39 prose-only names** — not retrieved;

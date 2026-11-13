@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
-"""Apply the frozen coding frame mechanically and produce the catalogue.
+"""Apply the frozen dependency-class frame and produce the catalogue.
 
 This is the reproducible backbone of the classification.  It implements the
 decision rules from catalogue/coding/codebook.md, using only signals that a
 third party can re-derive from the pinned XMI:
 
-  A  mechanically decidable from the model's abstract syntax alone
-     -> no model-library literal, no library helper, no library-path resolution
-  B  requires semantics beyond the abstract syntax
+  A  dependency class A: model-local
+     -> no model-library literal, no library helper, no library-path resolution.
+        This is a claim about what a checker needs, not that the published OCL
+        executes as written.
+  B  dependency class B: library/semantic dependency
      -> a quoted 'Package::Element' literal (other than a metamodel enumeration),
         a library helper call, or resolution against a library path
   U  undecidable as published
      -> the OCL body is a placeholder (e.g. TBD)
+
+The script records executability separately in `executable_ocl_status`, derived
+from the curated `ocl-defects.csv`; it does not change the dependency class.
 
 Class C (informative only) and D (absent) live in separate registers; C is
 derived in extract_constraints.py (pdf-only-names.csv) and D is the
@@ -30,6 +35,12 @@ import csv
 import json
 from collections import Counter, defaultdict
 from pathlib import Path
+
+CLASS_LABEL = {
+    "A": "dependency class A — model-local (no external library/semantic dependency; intended decidable from the abstract syntax)",
+    "B": "dependency class B — library/semantic dependency (requires the normative model library or semantic layer)",
+    "U": "undecidable as published — placeholder body",
+}
 
 OBLIGATION = {
     "derive": "SHALL enforce (derivation is mandatory for a conformant abstract-syntax tool)",
@@ -71,21 +82,28 @@ def main():
         high = [d for d in dr if d.get("confidence") == "high"]
         row = dict(r)
         row["class"] = cls
+        row["class_label"] = CLASS_LABEL[cls]
         row["class_basis"] = basis
         row["obligation"] = OBLIGATION[r["kind"]]
         row["published_ocl_defects"] = len(dr)
         row["high_confidence_ocl_defects"] = len(high)
-        row["mechanically_checkable_as_published"] = (
-            "yes" if cls in ("A", "B") and not high else ("no (defective OCL)" if high else "no")
-        )
+        # Separate dimension: the dependency class does NOT assert that the
+        # published OCL executes as written.  This column records the shallow
+        # audit result independently.
+        if high:
+            row["executable_ocl_status"] = "defective as published (high-confidence defect)"
+        elif dr:
+            row["executable_ocl_status"] = "possible defect (medium-confidence only)"
+        else:
+            row["executable_ocl_status"] = "no known defect found (not a proof of executability)"
         out.append(row)
 
     cols = list(rows[0].keys()) + [
-        "class", "class_basis", "obligation", "published_ocl_defects",
-        "high_confidence_ocl_defects", "mechanically_checkable_as_published",
+        "class", "class_label", "class_basis", "obligation", "published_ocl_defects",
+        "high_confidence_ocl_defects", "executable_ocl_status",
     ]
     with open(args.out, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=cols)
+        w = csv.DictWriter(f, fieldnames=cols, lineterminator="\n")
         w.writeheader()
         w.writerows(out)
 
@@ -94,6 +112,7 @@ def main():
         "by_spec_kind_class": {},
         "by_spec_kind": {},
         "by_class": dict(Counter(r["class"] for r in out)),
+        "by_executable_ocl_status": dict(Counter(r["executable_ocl_status"] for r in out)),
         "by_obligation": dict(Counter(r["obligation"] for r in out)),
         "constraints_with_published_defect": sum(1 for r in out if r["published_ocl_defects"]),
         "constraints_with_high_confidence_defect": sum(1 for r in out if int(r["high_confidence_ocl_defects"])),

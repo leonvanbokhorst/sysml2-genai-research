@@ -1,23 +1,51 @@
 {
+  "measure": "identifier coverage only; not implementation, enforcement or conformance coverage",
+  "runtime_tested": false,
   "catalogue_total": 623,
-  "catalogue_by_spec_kind": {
-    "SysML 2.0 / derive": 145,
-    "SysML 2.0 / check": 128,
-    "SysML 2.0 / validate": 92,
-    "KerML 1.0 / derive": 90,
-    "KerML 1.0 / check": 80,
-    "KerML 1.0 / validate": 88
+  "validator_distinct_identifier_names": 200,
+  "catalogue_identifiers_matched_exactly": 156,
+  "matched_in_active_check": 149,
+  "matched_only_in_todo_methods": 7,
+  "identifier_coverage_ratio": 0.2504,
+  "identifier_coverage_note": "156/623 = 25.0% of catalogue names appear in the pilot's own validation source, 149 of them in non-TODO methods. This does not demonstrate execution, correct enforcement, or conformance; it is name matching across a 2.0/2.1 revision skew.",
+  "by_spec_kind": {
+    "SysML 2.0 / derive": {
+      "catalogue": 145,
+      "matched_in_active_check": 0,
+      "matched_only_in_todo_methods": 0,
+      "identifier_coverage": 0
+    },
+    "SysML 2.0 / check": {
+      "catalogue": 128,
+      "matched_in_active_check": 0,
+      "matched_only_in_todo_methods": 0,
+      "identifier_coverage": 0
+    },
+    "SysML 2.0 / validate": {
+      "catalogue": 92,
+      "matched_in_active_check": 70,
+      "matched_only_in_todo_methods": 7,
+      "identifier_coverage": 77
+    },
+    "KerML 1.0 / derive": {
+      "catalogue": 90,
+      "matched_in_active_check": 0,
+      "matched_only_in_todo_methods": 0,
+      "identifier_coverage": 0
+    },
+    "KerML 1.0 / check": {
+      "catalogue": 80,
+      "matched_in_active_check": 2,
+      "matched_only_in_todo_methods": 0,
+      "identifier_coverage": 2
+    },
+    "KerML 1.0 / validate": {
+      "catalogue": 88,
+      "matched_in_active_check": 77,
+      "matched_only_in_todo_methods": 0,
+      "identifier_coverage": 77
+    }
   },
-  "covered_by_spec_kind": {
-    "SysML 2.0 / derive": 0,
-    "SysML 2.0 / check": 0,
-    "SysML 2.0 / validate": 77,
-    "KerML 1.0 / derive": 0,
-    "KerML 1.0 / check": 2,
-    "KerML 1.0 / validate": 77
-  },
-  "validator_distinct_named_constraints": 200,
-  "validator_names_matching_catalogue_exactly": 156,
   "validator_names_not_in_catalogue": [
     "checkSuccession",
     "checkTransitionUsage",
@@ -81,6 +109,5 @@
     "validateForkNodeIncomingSuccessions",
     "validateJoinNodeOutgoingSuccessions",
     "validateMergeNodeIncomingSuccessions"
-  ],
-  "note": "Exact-name matching only; lower bound. Pilot targets unpublished 2.1 Beta 2, so unmatched names are not necessarily implementation-specific."
+  ]
 }

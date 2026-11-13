@@ -164,6 +164,9 @@ def parse_xmi(path: Path, spec: str) -> list[dict]:
         specs = [x for x in c if localname(x.tag) == "specification"]
         comments = [x for x in c if localname(x.tag) == "ownedComment"]
         body = specs[0].get("body") if specs else ""
+        # Normalise trailing whitespace so CSV fields are stable and diff-clean;
+        # this changes no token, only line-end spaces from the XMI.
+        body = "\n".join(line.rstrip() for line in (body or "").splitlines()).strip()
         language = specs[0].get("language") if specs else ""
         prose = " ".join(
             re.sub(r"<[^>]+>", "", cm.get("body") or "") for cm in comments
@@ -372,7 +375,7 @@ def main() -> int:
         "prose", "ocl_body", "xmi_id",
     ]
     with open(args.out_dir / "constraints.csv", "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         for r in all_rows:
             w.writerow(r)
@@ -381,6 +384,7 @@ def main() -> int:
         w = csv.DictWriter(
             f,
             fieldnames=["name", "kind", "mentioned_in", "pdf_clause", "pdf_heading", "definition_style", "occurrences", "prefix_of_xmi_name"],
+            lineterminator="\n",
         )
         w.writeheader()
         for r in pdf_only:

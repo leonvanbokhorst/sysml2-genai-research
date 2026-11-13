@@ -6,6 +6,15 @@ defined in the normative machine-readable abstract syntax of SysML 2.0
 (`formal/2026-03-02`, MOF XMI `ptc/25-02-15`) or KerML 1.0 (`formal/2026-03-01`,
 MOF XMI `ptc/25-04-04`).
 
+**Terminology clarification (added 2026-11-13 after review; rule, sample and
+labels unchanged).** The codes A/B/U are **dependency classes**: they record what
+a checker must have under this frame. "A" means *no external library or
+semantic-layer dependency* — it is **not** a claim that the published OCL executes
+as written. Twenty-seven class-A rows carry a high-confidence defect in their
+published body (see [`../ocl-defects.csv`](../ocl-defects.csv)); executability is
+reported separately in `classified.csv` as `executable_ocl_status`. The frozen
+decision rule and the counts are unchanged by this wording.
+
 ## The question each coder answers
 
 Given the constraint's published prose and OCL body, **what must a checker have
@@ -13,8 +22,8 @@ in order to decide the constraint?** Code exactly one class:
 
 | Code | Class label | Definition |
 |---|---|---|
-| **A** | Mechanically decidable from the model's abstract syntax alone | The OCL body can be evaluated against an instance graph of the metamodel plus definitions that are *inside the metamodel itself* (metaclasses, properties, derived properties, operations, enumerations, enumeration literals). No element of the normative Kernel Semantic Library or Systems Model Library is needed, and no resolution against an external namespace. |
-| **B** | Requires semantics beyond the abstract syntax | The body names an element of the normative model libraries through a quoted `'Package::Element'` path, **or** calls a helper whose meaning is defined in terms of those libraries (`specializesFromLibrary`, `redefinesFromLibrary`, `resolveGlobal` with a library path, `libraryNamespace`, `isLibraryElement`), **or** otherwise depends on the semantic layer / implied relationships declared in the specification (Clause 8.4). |
+| **A** | No external library/semantic dependency (model-local; intended decidable from the abstract syntax) | The OCL body can be evaluated against an instance graph of the metamodel plus definitions that are *inside the metamodel itself* (metaclasses, properties, derived properties, operations, enumerations, enumeration literals). No element of the normative Kernel Semantic Library or Systems Model Library is needed, and no resolution against an external namespace. |
+| **B** | Requires semantics beyond the abstract syntax (library/semantic dependency) | The body names an element of the normative model libraries through a quoted `'Package::Element'` path, **or** calls a helper whose meaning is defined in terms of those libraries (`specializesFromLibrary`, `redefinesFromLibrary`, `resolveGlobal` with a library path, `libraryNamespace`, `isLibraryElement`), **or** otherwise depends on the semantic layer / implied relationships declared in the specification (Clause 8.4). |
 | **U** | Undecidable as published | The published body is not a usable decision criterion: a placeholder (e.g. `TBD`), a malformed expression, or otherwise not evaluable as written. |
 
 Class C (mentioned only in informative text or examples) and Class D (absent,

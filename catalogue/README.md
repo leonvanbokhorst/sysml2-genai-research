@@ -87,8 +87,16 @@ its reporting.
 
 Two independent dimensions are recorded in `classified.csv`:
 
-1. **Mechanism — class A / B / U** (from the frozen code frame in
-   [`coding/codebook.md`](coding/codebook.md)):
+*Terminology note (2026-11-13, after review): A/B/U are **dependency classes**;
+the frozen rule and all counts are unchanged. "Mechanically checkable" in the issue
+is operationalised as "no external library/semantic dependency"; executability is
+a separate column.*
+
+1. **Dependency class — A / B / U** (from the frozen code frame in
+   [`coding/codebook.md`](coding/codebook.md)). The class records what a
+   checker needs under the rule; it is **not** a claim that the published OCL
+   executes as written. Executability is recorded separately in
+   `executable_ocl_status` and audited in [`ocl-defects.csv`](ocl-defects.csv):
    - **A**: the OCL body is decidable from the model's abstract syntax alone;
      no Kernel Semantic Library / Systems Model Library element and no
      library-path resolution.
@@ -104,13 +112,13 @@ The mapping to the issue's four classes:
 
 | Issue class | Operationalisation | Count |
 |---|---|---|
-| Normative and mechanically checkable | class A | 437 (233 derive, 35 check, 169 validate) |
+| Normative and mechanically checkable | **dependency class A** — no external library/semantic dependency under the frozen rule (intended decidability; executability audited separately) | 437 (233 derive, 35 check, 169 validate) |
 | Normative but requiring semantics beyond the abstract syntax | class B | 184 (2 derive, 171 check, 11 validate) |
-| Present only in informative text or examples | **not** the `prose-only` block as a whole: see §5 | 3 example-only + 3 not-a-constraint-name; 31 further names are normative Clause 8.4 conditions with no metamodel definition |
-| Absent / left to tool discretion | [`silence-register.md`](silence-register.md) | 10 silent areas |
+| Present only in informative text or examples | **not** the `prose-only` block as a whole: see `prose-only-names.csv` | 3 example-only names, 3 non-constraint names, and 31 Clause-8.4 conditions with no metamodel definition (the 31 include 2 of the examples and 1 of the non-constraint names) |
+| Absent / discretion / delegation (distinguished) | [`silence-register.md`](silence-register.md) | 10 registered areas: 4 absent, 2 explicit discretion/delegation, 1 ambiguity, 1 outside the well-formedness surface, 2 oracle/provenance gaps |
 
-**Important nuance.** Class A ≠ "required". 35 `check…` constraints are class A
-mechanically, but their reporting obligation is MAY. Conversely, 11 `validate…`
+**Important nuance.** Dependency class A ≠ "required". 35 `check…` constraints
+are model-local under the frozen rule, but their reporting obligation is MAY. Conversely, 11 `validate…`
 constraints are class B: they are SHOULD-report, but need the model library.
 The two dimensions must be read together; that is the central table of the
 report.
@@ -123,11 +131,19 @@ report.
 | `derive…` (SHALL) | 145 | 90 | 235 |
 | `check…` (MAY) | 128 | 80 | 208 |
 | `validate…` (SHOULD) | 92 | 88 | 180 |
-| class A (model-only OCL) | 242 | 195 | **437** |
+| class A (model-local dependency) | 242 | 195 | **437** |
 | class B (library/semantics) | 123 | 61 | **184** |
 | class U (published `TBD`) | 0 | 2 | 2 |
 
-Class A/B by kind: derive 233/2; check 35/171 (plus 2 U); validate 169/11.
+Dependency class A/B by kind: derive 233/2; check 35/171 (plus 2 U); validate 169/11.
+
+**Dependency class is not executability.** 27 of the 437 class-A rows and 14 of
+the 184 class-B rows carry a high-confidence defect in their published OCL (two
+bodies are `TBD`; others have misspelled identifiers or malformed library paths).
+`classified.csv` records `executable_ocl_status` as a separate column, and
+[`ocl-defects.csv`](ocl-defects.csv) gives the evidence. A class-A label means
+"no external library semantics are needed under the frozen rule", not "this OCL
+can be run as written".
 
 ---
 
@@ -136,22 +152,22 @@ Class A/B by kind: derive 233/2; check 35/171 (plus 2 U); validate 169/11.
 | File | What it is |
 |---|---|
 | [`constraints.csv`](constraints.csv) | 623 rows, one per named constraint: spec, name, kind, context metaclass, clause, OCL language/body, prose, library/resolution signals, PDF presence |
-| [`classified.csv`](classified.csv) | the same rows plus `class`, `class_basis`, `obligation`, defect counts, `mechanically_checkable_as_published` |
+| [`classified.csv`](classified.csv) | the same rows plus `class`/`class_label` (dependency class), `class_basis`, `obligation`, defect counts, and `executable_ocl_status` (kept separate from the dependency class) |
 | [`classification-summary.json`](classification-summary.json) | counts by spec × kind × class |
 | [`extraction-report.json`](extraction-report.json) | artefact hashes, counts, PDF cross-check, anonymous constraints |
 | [`ocl-defects.csv`](ocl-defects.csv) | 48 named constraints whose published OCL is a placeholder, typo or malformed library path; confidence and verification per row |
 | [`ocl-audit.raw.csv`](ocl-audit.raw.csv) | the raw identifier-audit output from which `ocl-defects.csv` was curated (includes false positives) |
 | [`prose-only-names.csv`](prose-only-names.csv) | 38 names used in a specification PDF but defined in neither XMI, categorised (renamed / missing / typo / example / not-a-constraint / subsumed) |
 | [`pdf-only-names.raw.csv`](pdf-only-names.raw.csv) | the raw pre-curation output (includes line-wrapped fragments and false positives) |
-| [`silence-register.md`](silence-register.md) | 10 areas with no normative constraint, each with evidence and observed implementation choices |
+| [`silence-register.md`](silence-register.md) | 10 registered areas with a `Kind` label (absent, discretion, delegation, ambiguity, outside-surface, oracle, provenance), evidence, and observed implementation choices |
 | [`deep-trace.md`](deep-trace.md) | 18 constraints traced from clause to two implementations (where available) |
 | [`impl-evidence.md`](impl-evidence.md) | implementation-behaviour evidence: pilot source inventory, release notes 2026-01→2026-09.1, OpenSysML, Syside, SYSML21-185 |
 | [`validator-inventory.csv`](validator-inventory.csv) | 116 pilot `@Check` methods, with lines and the constraint names the source attributes to them |
-| [`validator-coverage.json`](validator-coverage.json) | exact-name cross-check of the catalogue against the pilot inventory |
+| [`validator-coverage.json`](validator-coverage.json) | **identifier-coverage** cross-check of the catalogue against the pilot inventory (156/623 exact identifiers; 149 in non-TODO methods, 7 TODO-only). Not implementation or enforcement coverage |
 | [`coding/`](coding/) | frozen codebook, 60-row stratified sample, coder A and coder B labels, agreement script |
 | [`extract_constraints.py`](extract_constraints.py) | XMI extraction + PDF cross-check; pinned URLs and hashes |
 | [`audit_ocl.py`](audit_ocl.py) | shallow OCL identifier audit that produced `ocl-defects.csv` candidates |
-| [`classify.py`](classify.py) | applies the frozen code frame mechanically |
+| [`classify.py`](classify.py) | applies the frozen dependency-class rule and records published-OCL executability as a separate column |
 | [`coverage.py`](coverage.py) | catalogue ↔ validator name cross-check |
 
 ---
@@ -189,11 +205,13 @@ extraction. The XMI extraction alone needs no external tool.
 1. **Extraction is syntactic.** A constraint is "named" if it is a `uml:Constraint`
    with a convention-conforming name in the normative XMI. An unnamed operation
    body condition is excluded by decision, not oversight.
-2. **Class A/B is a decision procedure, not a proof.** It operationalises
-   "needs semantics beyond the abstract syntax" as "names a model-library
-   element or library helper". It does not decide whether an individual OCL
-   expression is evaluable in reasonable time, nor whether a helper's own body
-   is library-dependent.
+2. **Dependency class A/B is a decision procedure, not a proof of executability.**
+   It operationalises "needs semantics beyond the abstract syntax" as "names a
+   model-library element or library helper". It does not decide whether an
+   individual OCL expression is evaluable in reasonable time, nor whether a
+   helper's own body is library-dependent. A class-A label therefore means
+   "model-local under the frozen rule", not "the published OCL runs as written";
+   27 class-A rows have a high-confidence defect in their published body.
 3. **The OCL audit is shallow.** It flags identifiers that do not occur as
    declared names in either XMI and malformed library literals. It does not
    parse OCL; a flagged identifier can be a legitimate name from a model library

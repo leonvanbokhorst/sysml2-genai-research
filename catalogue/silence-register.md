@@ -1,26 +1,44 @@
-# Specification-silence register
+# Specification-silence and discretion register
 
-**What this is.** Class D of the catalogue: areas where the normative
-specification does **not** state a well-formedness rule, so every tool invents
-its own answer. The register records, for each area: what the specification does
-say, the exact absence, the implementation choices observed, and what the
-silence costs a checker. It does not adjudicate whether the silence is a defect;
-it records it as the finding.
+**What this is.** The register records ten areas in which the normative
+specification does not supply a well-formedness rule a checker can enforce. For
+each area it records what the specification does say, what is missing or left
+open, the implementation choices observed, and what that costs a checker. It
+does not adjudicate whether the gap is a defect; it records it as the finding.
+
+**Not every entry is "silence" in the strict sense.** The `Kind` field
+distinguishes:
+- **absent** — no normative rule at all; genuine class D (D1–D4);
+- **explicit discretion** — the specification permits the tool to choose (D5);
+- **explicit delegation** — the specification says another practice or the
+  adopter supplies the rule (D8);
+- **ambiguous / partial** — a rule exists but does not determine the answer (D6);
+- **outside the well-formedness surface** — semantics are defined, but no
+  well-formedness constraint enforces them (D7);
+- **no oracle** (D9) and **provenance gap** (D10) — institutional/artefact gaps,
+  not missing language rules.
+
+Only the four `absent` entries are class D in the strict sense. The others are
+recorded because they have the same practical effect on what a validator can
+establish, but they should not be counted as "the specification says nothing".
 
 **Pinned sources.** SysML 2.0 `formal/2026-03-02`; KerML 1.0 `formal/2026-03-01`;
 both MOF XMI files as in `README.md`. Implementation evidence is the same as
 `deep-trace.md`; every claim names its source.
 
-**Scope note.** "Silence" here means *no named constraint and no OCL in the
-normative metamodel*. It is distinct from (a) a constraint that is named but
-defective (`ocl-defects.csv`), (b) a condition stated only in Clause 7/8.4 prose
+**Scope note.** Strict silence means *no named constraint and no OCL in the
+normative metamodel*; the four `absent` entries meet that test. All ten entries
+are distinct from (a) a constraint that is named but defective
+(`ocl-defects.csv`), (b) a condition stated only in Clause 7/8.4 prose
 (`prose-only-names.csv`), and (c) a constraint that is specified but whose
-reporting is discretionary (class B). Those are counted separately and must not
-be added to this register.
+reporting is discretionary (dependency class B). Those are counted separately
+and must not be added to this register.
 
 ---
 
 ## D1. Default multiplicities
+
+**Kind:** absent.
 
 **Silence.** The specification describes default `1..1` multiplicity in the
 *non-normative* Language Description (§7.6.3 and the attribute/item/port
@@ -54,6 +72,8 @@ explicit multiplicities, not defaults.
 ---
 
 ## D2. General type conformance and type inference
+
+**Kind:** absent.
 
 **Silence.** The catalogue contains **six** type-related *conformance*
 constraints, all local: `validateFeatureChainingFeatureConformance`,
@@ -90,6 +110,8 @@ class A but do not compose into a type system.
 
 ## D3. Units, quantities and dimensional consistency
 
+**Kind:** absent.
+
 **Silence.** Zero named constraints contain `Unit`, `Quantity` or `Dimension`;
 zero OCL bodies mention dimensional consistency (the one hit for "quantity" is
 `validateTriggerInvocationExpressionAfterArgument`, a trigger-argument type
@@ -111,6 +133,8 @@ well formed and dimensionally nonsensical.
 ---
 
 ## D4. Severity and diagnostic identity
+
+**Kind:** absent (under-specified).
 
 **Silence.** §8.3.1 says a tool "should report violations of validation
 constraints", and the compliance clause says an Abstract-Syntax-Conformant tool
@@ -141,6 +165,8 @@ is a measurable limit on "validator acceptance" as an outcome variable.
 
 ## D5. Whether implied relationships are materialised
 
+**Kind:** explicit discretion.
+
 **Not silence, but an explicit degree of freedom.** KerML §8.4.2: "a tool may
 insert certain implied Relationships into the model in order to meet the
 semantic constraints"; the tables "define what implied Relationships **should**
@@ -163,6 +189,8 @@ licenses all three.
 
 ## D6. Name and membership resolution in ambiguous cases
 
+**Kind:** ambiguous / partial.
+
 **Silence (partial).** `validateNamespaceDistinguishibility` exists in KerML, so
 distinctness is not wholly absent. But Syside records a case the constraint does
 not settle: "Named members in the root namespace are checked to be unique in the
@@ -183,6 +211,8 @@ that triggers it.
 
 ## D7. Execution and behavioural semantics
 
+**Kind:** outside the well-formedness surface.
+
 **Silence in the well-formedness surface.** The specification gives a
 mathematical semantics for behaviour (§8.4) and the Systems Model Library
 defines actions and states, but there is no constraint that a model's behaviour
@@ -200,6 +230,8 @@ the model says.
 ---
 
 ## D8. Method-level and organisational constraints
+
+**Kind:** explicit delegation.
 
 **Silence by design.** SysML §1 Scope: "The language is intended to support
 multiple systems engineering methods and practices. The specific methods and
@@ -222,6 +254,8 @@ reading in the brief.
 
 ## D9. A conformance oracle
 
+**Kind:** no oracle (institutional).
+
 **Silence.** The compliance clause makes conformance claims conditional on
 testing suites "in the event that testing suites are implemented or approved by
 Object Management Group". No such suite exists in any artefact read. OpenSysML:
@@ -238,6 +272,8 @@ list.
 ---
 
 ## D10. Version identity of the semantics
+
+**Kind:** provenance gap.
 
 **Silence in the artefacts.** The SysML metamodel URI is frozen at version date
 `20250201` across 2.0 and the 2.1 Beta line (pilot release 2026-05: "To promote
@@ -256,18 +292,18 @@ the pilot it cannot be, publicly.
 
 ## Summary table
 
-| # | Silent area | Normative text | Count in catalogue | Observed implementation divergence |
-|---|---|---|---|---|
-| D1 | Default multiplicities | §7.6.3 only (non-normative); SYSML21-185 open | 0 | pilot default changed 2026-09; backward incompatibility |
-| D2 | General type conformance / inference | none | 0 general (6 local) | pilot symmetric comparison; Syside full checking; `Positive = 5.0` accepted by pilot |
-| D3 | Unit / quantity dimensions | library §9.8 only | 0 | Syside cannot infer dimensions; pilot has no dimensional check |
-| D4 | Severity / diagnostic identity | "should report violations" only | 0 | pilot warnings; 7 constraints lose their identity |
-| D5 | Implied-relationship materialisation | explicit MAY in §8.3.1 / §8.4.2 | — | pilot omits implicit binding connectors; Syside/OpenSysML differ |
-| D6 | Ambiguous membership resolution | partial (`validateNamespaceDistinguishibility`) | 1 | Syside warns on duplicates; selection order unspecified |
-| D7 | Execution / behaviour | semantics §8.4, no constraint | 0 | pilot executes no actions/state machines |
-| D8 | Method / adequacy | explicitly deferred (§1) | 0 | non-normative extension libraries |
-| D9 | Conformance oracle | conditional on absent testing suites | — | no official suite; third-party self-assessments |
-| D10 | Version identity | metamodel URI frozen | — | pilot targets unpublished 2.1 Beta 2 |
+| # | Area | Kind | Normative text | Count in catalogue | Observed implementation divergence |
+|---|---|---|---|---:|---|
+| D1 | Default multiplicities | absent | §7.6.3 only (non-normative); SYSML21-185 open | 0 | pilot default changed 2026-09; backward incompatibility |
+| D2 | General type conformance / inference | absent | none | 0 general (6 local) | pilot symmetric comparison; Syside full checking; `Positive = 5.0` accepted by pilot |
+| D3 | Unit / quantity dimensions | absent | library §9.8 only | 0 | Syside cannot infer dimensions; pilot has no dimensional check |
+| D4 | Severity / diagnostic identity | absent (under-specified) | "should report violations" only | 0 | pilot warnings; 7 constraints lose their identity |
+| D5 | Implied-relationship materialisation | explicit discretion | explicit MAY in §8.3.1 / §8.4.2 | — | pilot omits implicit binding connectors; Syside/OpenSysML differ |
+| D6 | Ambiguous membership resolution | ambiguous / partial | partial (`validateNamespaceDistinguishibility`) | 1 | Syside warns on duplicates; selection order unspecified |
+| D7 | Execution / behaviour | outside well-formedness | semantics §8.4, no constraint | 0 | pilot executes no actions/state machines |
+| D8 | Method / adequacy | explicit delegation | explicitly deferred (§1) | 0 | non-normative extension libraries |
+| D9 | Conformance oracle | no oracle | conditional on absent testing suites | — | no official suite; third-party self-assessments |
+| D10 | Version identity | provenance gap | metamodel URI frozen | — | pilot targets unpublished 2.1 Beta 2 |
 
 **What would change this register.** A published SysML 2.1 / KerML 1.1 normative
 document with the constraint set the pilot now targets; an OMG conformance suite;

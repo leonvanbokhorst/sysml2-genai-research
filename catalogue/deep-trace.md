@@ -23,6 +23,11 @@ thereby "implementation-specific": it may be a constraint from the unpublished
 2.1 metamodel. This trace only makes claims where the 1.0/2.0 text and the
 implementation evidence can be joined by name or by quoted behaviour.
 
+**Terminology.** "class A/B/U" in this file are **dependency classes** from the
+frozen codebook: A = no external library/semantic dependency (model-local); B =
+library/semantic dependency; U = undecidable as published. A class-A label does
+not assert that the published OCL executes as written; see `ocl-defects.csv`.
+
 **Status vocabulary.** *Not enforced* — the implementation declares the
 constraint and enforces nothing (empty body or TODO). *Partial* — an
 approximation is enforced (e.g. at warning severity). *Enforced* — a check is
@@ -37,8 +42,8 @@ implementations or sources disagree and the evidence does not adjudicate.
 ### 1.1 The control-node succession family (8 constraints)
 
 All eight are SysML 2.0 `validate…` constraints on metaclasses in §8.3.17.
-Each is **class A** in the catalogue (OCL over metamodel properties, no library
-element) and carries the specification's **SHOULD report** obligation
+Each is **dependency class A** in the catalogue (OCL over metamodel properties,
+no library element) and carries the specification's **SHOULD report** obligation
 (§8.3.1). The pilot's own source leaves each as a `// TODO: Check validate… (?)`
 comment in an otherwise empty `@Check` method; OpenSysML's differential
 independently adjudicates each as a "pilot gap" and reports that its own checker
@@ -58,9 +63,11 @@ enforces all nine control-node constraints.
 **What this establishes.** These are not ambiguous or library-dependent rules:
 the specification gives a short OCL predicate over abstract-syntax properties,
 states that a conformant tool *should report* violations, and two independent
-implementations agree the pilot does not. This is the cleanest evidence in the
-study that the specified–enforced gap is real and countable, not a matter of
-interpretation.
+source-level assessments agree the pilot does not enforce them. This is the
+cleanest evidence in the study that the specified–enforced gap is real and
+countable, not a matter of interpretation. It is still a **source-level**
+finding: no violating model was run, so it is a hypothesis for issue #8 rather
+than a measured false-negative rate.
 
 **A caveat that cuts the other way.** OpenSysML's own adjudication records a
 readability problem: a literal evaluation of the four multiplicity constraints
@@ -70,7 +77,7 @@ OpenSysML adopts the "specification's intent" reading. So even this family
 requires an interpretation the OCL alone does not supply — evidence for the
 label `A` being about decidability, not about being trouble-free.
 
-### 1.2 `validateFeatureValueOverriding` (KerML 8.3.4.10.2) — class A, SHOULD report
+### 1.2 `validateFeatureValueOverriding` (KerML 8.3.4.10.2) — dependency class A, SHOULD report
 
 OCL: `featureWithValue.redefinition.redefinedFeature->closure(redefinition.redefinedFeature).valuation->forAll(isDefault)`.
 
@@ -93,10 +100,10 @@ OCL: `featureWithValue.redefinition.redefinedFeature->closure(redefinition.redef
 **Status: contested.** A vendor with a commercial interest asserts a specific
 false negative; an independent open-source implementation treats the rule as
 real; neither the pilot nor the specification supplies the diamond case as a
-test. The catalogue records the constraint as class A and the *behaviour* as not
-established.
+test. The catalogue records the constraint as dependency class A and the
+*behaviour* as not established.
 
-### 1.3 `validateAttributeUsageFeatures` and `validateAttributeDefinitionFeatures` (SysML 8.3.7.2–3) — class A, SHOULD report
+### 1.3 `validateAttributeUsageFeatures` and `validateAttributeDefinitionFeatures` (SysML 8.3.7.2–3) — dependency class A, SHOULD report
 
 OCL: `feature->forAll(not isComposite)`, on `AttributeUsage` and `AttributeDefinition`.
 
@@ -147,7 +154,7 @@ either nothing or a false violation; both are licensed.
 - **Status: not enforced.** The condition depends on the semantic metatype and
   library resolution; the pilot neither materialises the check nor reports.
 
-### 1.6 `validateInvocationExpressionParameterRedefinition` (KerML 8.3.4.8.8) — class A, SHOULD report
+### 1.6 `validateInvocationExpressionParameterRedefinition` (KerML 8.3.4.8.8) — dependency class A, SHOULD report
 
 - **Pilot.** `checkInvocationExpression` (`KerMLValidator.xtend:1198`) calls
   `checkInstantiationExpressionFeatures`; a check exists.
@@ -161,7 +168,7 @@ either nothing or a false violation; both are licensed.
   missed; the vendor's explanation is a mechanism (undirected features excluded
   from implicit redefinition), not a mere assertion.
 
-### 1.7 `validateRedefinitionDirectionConformance` (KerML 8.3.3.3.8) — class A, SHOULD report
+### 1.7 `validateRedefinitionDirectionConformance` (KerML 8.3.3.3.8) — dependency class A, SHOULD report
 
 - **Pilot.** `checkFeature` and `checkRedefinition` both call
   `checkRedefinitionDirection` (`KerMLValidator.xtend:592`, `:705`).
@@ -230,9 +237,9 @@ validator source on `master` at 2026-11-13:
 - `checkRequirementUsageObjectiveRedefinition` (`SYSML21-309`)
 - `checkRequirementUsageSubrequirementSpecialization` (`SYSML21-300`; described as revised)
 
-The catalogue defines the first three as class B SysML constraints (the first
-two use `specializesFromLibrary`; the third is model-only, class A). Either the
-pilot implemented them under different identifiers, or the release note refers
+The catalogue defines the first three as dependency class B SysML constraints
+(the first two use `specializesFromLibrary`; the third is model-local, dependency
+class A). Either the pilot implemented them under different identifiers, or the release note refers
 to resolution of the OMG issue rather than to a shipped check. **Not
 established**; this is exactly the kind of claim a name-based conformance audit
 would wrongly accept.
@@ -242,8 +249,10 @@ would wrongly accept.
 ## 5. What the trace establishes, and what it does not
 
 **Established.**
-1. At least eight class-A, SHOULD-report constraints are unimplemented in the
-   pilot, confirmed by the pilot's own source and an independent implementation.
+1. At least eight model-local (dependency class A), SHOULD-report constraints are
+   unimplemented in the pilot at the source level, confirmed by the pilot's own
+   source and an independent implementation. This is a source-level finding, not
+   a measured runtime false-negative rate.
 2. The 2026-01 release added checks for 12–13 named constraints that had been
    satisfied by getter defaults rather than checks; the source corroborates.
 3. At least five constraints are *deliberately* not checked, or checked only

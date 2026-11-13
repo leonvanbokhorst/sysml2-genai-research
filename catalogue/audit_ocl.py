@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Shallow mechanisation audit of the normative OCL constraint bodies.
 
-Purpose: separate "specified and mechanically checkable" from "specified, but the
-published OCL cannot be implemented literally".  This is NOT an OCL parser.  It
+Purpose: audit "specified, but the published OCL cannot be implemented literally",
+separately from the dependency class (which records what a checker needs).  This is NOT an OCL parser.  It
 does three reproducible things:
 
 1. Builds a vocabulary of every name declared in the normative XMI models
@@ -179,7 +179,7 @@ def main():
                 "unknown_identifiers": ";".join(unknown),
                 "likely_typos": ";".join(f"{u}->{b} (d={d})" for u, b, d in typos),
                 "bad_library_literals": ";".join(sorted(set(bad_literals))),
-                "ocl_body": r["ocl_body"],
+                "ocl_body": "\n".join(line.rstrip() for line in r["ocl_body"].splitlines()).strip(),
             }
         )
 
@@ -190,6 +190,7 @@ def main():
                 "spec", "name", "kind", "context_metaclass", "clause",
                 "unknown_identifiers", "likely_typos", "bad_library_literals", "ocl_body",
             ],
+            lineterminator="\n",
         )
         w.writeheader()
         w.writerows(out)
