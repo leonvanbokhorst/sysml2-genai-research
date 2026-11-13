@@ -1,0 +1,19 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T5-C1.md
+[exit 2]
+--- stdout ---
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T5-C1.md:1:1: error[syntax]: expected a namespace member
+```sysml
+^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T5-C1.md:53:1: error[syntax]: expected a namespace member
+```
+^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T5-C1.md:55:88: error[syntax]: expected '{' or ';' after declaration
+The station owns one antenna and one transceiver, the visibility-window requirement is satisfied by the station, and the scheduling activity checks the window, points the antenna and opens the link.
+                                                                                       ^~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T5-C1.md:55:88: error[syntax]: expected a namespace member
+The station owns one antenna and one transceiver, the visibility-window requirement is satisfied by the station, and the scheduling activity checks the window, points the antenna and opens the link.
+                                                                                       ^~~~~~~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T5-C1.md did not analyse cleanly; no check was made

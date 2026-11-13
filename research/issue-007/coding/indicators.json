@@ -1,0 +1,402 @@
+{
+  "T1-C1": {
+    "lines": 80,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 46,
+        "text": "satisfy moistureControl by greenhouse;"
+      }
+    ],
+    "connection_flow_lines": [],
+    "declared_names": 39,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 4
+  },
+  "T1-C2": {
+    "lines": 54,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 41,
+        "text": "satisfy greenhouse to moistureControl;"
+      }
+    ],
+    "connection_flow_lines": [],
+    "declared_names": 28,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 3
+  },
+  "T1-C3": {
+    "lines": 66,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 45,
+        "text": "satisfy moistureBand by greenhouse;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 64,
+        "text": "connection pumpToBedA connect greenhouse.pump.outlet to greenhouse.bedA.valve.inlet;"
+      },
+      {
+        "line": 65,
+        "text": "connection pumpToBedB connect greenhouse.pump.outlet to greenhouse.bedB.valve.inlet;"
+      }
+    ],
+    "declared_names": 35,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 3
+  },
+  "T2-C1": {
+    "lines": 53,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 40,
+        "text": "satisfy lowerBeforeArrival by crossing;"
+      }
+    ],
+    "connection_flow_lines": [],
+    "declared_names": 29,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "port_usages_untyped": 2
+  },
+  "T2-C2": {
+    "lines": 47,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 33,
+        "text": "satisfy lowerBeforeArrival;"
+      }
+    ],
+    "connection_flow_lines": [],
+    "declared_names": 23,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 0
+  },
+  "T2-C3": {
+    "lines": 69,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 48,
+        "text": "satisfy lowerBeforeArrival by crossing;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 68,
+        "text": "connection controllerToMotor connect crossing.controller.command to crossing.controller.motor.command;"
+      }
+    ],
+    "declared_names": 35,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 1
+  },
+  "T3-C1": {
+    "lines": 40,
+    "has_scalarvalues_import": false,
+    "bare_scalar_types_without_import": [
+      "Boolean",
+      "Real"
+    ],
+    "satisfy_lines": [
+      {
+        "line": 37,
+        "text": "satisfy occlusionAlarm by pump;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 39,
+        "text": "connection sensorToPump connect pump.sensor.measuredPressure to pump.flowRate;"
+      }
+    ],
+    "declared_names": 22,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 1
+  },
+  "T3-C2": {
+    "lines": 45,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 44,
+        "text": "satisfy alarmTiming by pump;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 33,
+        "text": "connection lineConnect connect mechanism.fluidOut to line.in;"
+      }
+    ],
+    "declared_names": 25,
+    "undeclared_names_in_connect_flow_satisfy": [
+      "pump"
+    ],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 4
+  },
+  "T3-C3": {
+    "lines": 49,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 45,
+        "text": "satisfy occlusionAlarm by pump;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 47,
+        "text": "connection sensorSignal connect pump.sensor.sense to pump.drive;"
+      },
+      {
+        "line": 48,
+        "text": "connection lineFlow connect pump.drive to pump.line.inlet;"
+      }
+    ],
+    "declared_names": 29,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 3
+  },
+  "T4-C1": {
+    "lines": 52,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 36,
+        "text": "satisfy returnToDock by controller;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 51,
+        "text": "connection powerLink connect controller.fleet.battery.power to controller.fleet.dock.power;"
+      }
+    ],
+    "declared_names": 28,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [
+      30
+    ],
+    "port_usages_untyped": 2
+  },
+  "T4-C2": {
+    "lines": 45,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 32,
+        "text": "satisfy returnToDock by fleet;"
+      }
+    ],
+    "connection_flow_lines": [],
+    "declared_names": 23,
+    "undeclared_names_in_connect_flow_satisfy": [
+      "fleet"
+    ],
+    "uses_from_to_on": [
+      26
+    ],
+    "port_usages_untyped": 0
+  },
+  "T4-C3": {
+    "lines": 57,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 42,
+        "text": "satisfy returnBeforeLowCharge by fleet;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 56,
+        "text": "connection batteryToDock connect fleet.vehicles.battery.power to fleet.stations.power;"
+      }
+    ],
+    "declared_names": 31,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [
+      36
+    ],
+    "port_usages_untyped": 3
+  },
+  "T5-C1": {
+    "lines": 51,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 36,
+        "text": "satisfy windowObligation by station;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 50,
+        "text": "connection signalPath connect station.antenna to station.transceiver;"
+      }
+    ],
+    "declared_names": 28,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 0
+  },
+  "T5-C2": {
+    "lines": 47,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 32,
+        "text": "satisfy insideWindow by station;"
+      }
+    ],
+    "connection_flow_lines": [],
+    "declared_names": 24,
+    "undeclared_names_in_connect_flow_satisfy": [
+      "station"
+    ],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 0
+  },
+  "T5-C3": {
+    "lines": 59,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 40,
+        "text": "satisfy contactInsideWindow by station;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 58,
+        "text": "connection antennaToTransceiver connect station.antenna to station.transceiver;"
+      }
+    ],
+    "declared_names": 31,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 0
+  },
+  "T6-C1": {
+    "lines": 51,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 46,
+        "text": "satisfy indoorMinimum by dwelling;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 48,
+        "text": "flow of Temperature from dwelling.pump.flowOut to dwelling.tank;"
+      },
+      {
+        "line": 49,
+        "text": "flow of Temperature from dwelling.tank to dwelling.circuit.supply;"
+      },
+      {
+        "line": 50,
+        "text": "flow of Temperature from dwelling.circuit.return to dwelling.pump.flowReturn;"
+      }
+    ],
+    "declared_names": 29,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [
+      48,
+      49,
+      50
+    ],
+    "port_usages_untyped": 4
+  },
+  "T6-C2": {
+    "lines": 43,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 40,
+        "text": "satisfy maintainTemperature by heating;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 42,
+        "text": "connection tankToCircuit connect heating.tank to heating.circuit.supply;"
+      }
+    ],
+    "declared_names": 24,
+    "undeclared_names_in_connect_flow_satisfy": [
+      "heating"
+    ],
+    "uses_from_to_on": [
+      34
+    ],
+    "port_usages_untyped": 3
+  },
+  "T6-C3": {
+    "lines": 52,
+    "has_scalarvalues_import": true,
+    "bare_scalar_types_without_import": [],
+    "satisfy_lines": [
+      {
+        "line": 47,
+        "text": "satisfy indoorTemperature by house;"
+      }
+    ],
+    "connection_flow_lines": [
+      {
+        "line": 49,
+        "text": "connection pumpToTank connect house.heatPump.heatOut to house.tank;"
+      },
+      {
+        "line": 50,
+        "text": "connection tankToCircuit connect house.tank to house.circuit.supply;"
+      },
+      {
+        "line": 51,
+        "text": "connection circuitToPump connect house.circuit.return to house.heatPump.heatReturn;"
+      }
+    ],
+    "declared_names": 30,
+    "undeclared_names_in_connect_flow_satisfy": [],
+    "uses_from_to_on": [],
+    "port_usages_untyped": 4
+  }
+}

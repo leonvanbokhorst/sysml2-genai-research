@@ -1,0 +1,242 @@
+[
+  {
+    "sample_id": "anthropic-001",
+    "backend": "anthropic",
+    "prompt": "001",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/anthropic/001/iteration_00.sysml",
+    "sha256": "6cd6d9457ee20306fa2e7d6d2f625c0d2b0edac02918d277ee5f361a0ed62290",
+    "bytes": 2123,
+    "local_path": "research/issue-007/detection/external/anthropic_001_iteration_00.sysml"
+  },
+  {
+    "sample_id": "anthropic-002",
+    "backend": "anthropic",
+    "prompt": "002",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/anthropic/002/iteration_00.sysml",
+    "sha256": "0f4e52d1e4ae81560a0cd0c28e954c26b01de00b6ead740d1938e471be5f9ac6",
+    "bytes": 731,
+    "local_path": "research/issue-007/detection/external/anthropic_002_iteration_00.sysml"
+  },
+  {
+    "sample_id": "anthropic-003",
+    "backend": "anthropic",
+    "prompt": "003",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/anthropic/003/iteration_00.sysml",
+    "sha256": "9ca1143dad478f7f0c91e53b485cd01a2fe423b0740a23913a732b8190b07fe3",
+    "bytes": 2794,
+    "local_path": "research/issue-007/detection/external/anthropic_003_iteration_00.sysml"
+  },
+  {
+    "sample_id": "anthropic-004",
+    "backend": "anthropic",
+    "prompt": "004",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/anthropic/004/iteration_00.sysml",
+    "sha256": "6e55b0b2533daf902171dacce8d5c39df1e56d66c2471dec452aca5e220e5b5a",
+    "bytes": 895,
+    "local_path": "research/issue-007/detection/external/anthropic_004_iteration_00.sysml"
+  },
+  {
+    "sample_id": "anthropic-005",
+    "backend": "anthropic",
+    "prompt": "005",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/anthropic/005/iteration_00.sysml",
+    "sha256": "2edac266b0a58c180f212b983dc9f35186b17d629f57b2029e00f273ee6c10f5",
+    "bytes": 347,
+    "local_path": "research/issue-007/detection/external/anthropic_005_iteration_00.sysml"
+  },
+  {
+    "sample_id": "anthropic-006",
+    "backend": "anthropic",
+    "prompt": "006",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/anthropic/006/iteration_00.sysml",
+    "sha256": "b966e6567b29e649d093c5d64461350e242b62e80a2d1be0a94effb19a7e3be0",
+    "bytes": 2656,
+    "local_path": "research/issue-007/detection/external/anthropic_006_iteration_00.sysml"
+  },
+  {
+    "sample_id": "deepseek_reasoner-001",
+    "backend": "deepseek_reasoner",
+    "prompt": "001",
+    "folder": "439 negative artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/439%20negative%20artifacts/deepseek_reasoner/001/iteration_00.sysml",
+    "sha256": "aa36d7a843db757e45be32b8d7cdca49c42f7dcbb9d9ddff5b56aafe190bb3ec",
+    "bytes": 785,
+    "local_path": "research/issue-007/detection/external/deepseek_reasoner_001_iteration_00.sysml"
+  },
+  {
+    "sample_id": "deepseek_reasoner-002",
+    "backend": "deepseek_reasoner",
+    "prompt": "002",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/deepseek_reasoner/002/iteration_00.sysml",
+    "sha256": "17529087d9781d0e7e4558d8ca2c99d8517ea75f224d1884799d3efbb98b4800",
+    "bytes": 404,
+    "local_path": "research/issue-007/detection/external/deepseek_reasoner_002_iteration_00.sysml"
+  },
+  {
+    "sample_id": "deepseek_reasoner-003",
+    "backend": "deepseek_reasoner",
+    "prompt": "003",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/deepseek_reasoner/003/iteration_00.sysml",
+    "sha256": "d29301b1fc52c8ac85218959ac6b9a4a329d542f6e9b5ab38ed39a8798164ef1",
+    "bytes": 379,
+    "local_path": "research/issue-007/detection/external/deepseek_reasoner_003_iteration_00.sysml"
+  },
+  {
+    "sample_id": "deepseek_reasoner-004",
+    "backend": "deepseek_reasoner",
+    "prompt": "004",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/deepseek_reasoner/004/iteration_00.sysml",
+    "sha256": "7b180ab537893af2d7f15e056a4e930dd79d5c7ca4c01e4d159d7fdd9d30eeac",
+    "bytes": 525,
+    "local_path": "research/issue-007/detection/external/deepseek_reasoner_004_iteration_00.sysml"
+  },
+  {
+    "sample_id": "deepseek_reasoner-005",
+    "backend": "deepseek_reasoner",
+    "prompt": "005",
+    "folder": "439 negative artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/439%20negative%20artifacts/deepseek_reasoner/005/iteration_00.sysml",
+    "sha256": "d0a13982ff69c96f916d6bd5dd8416469980b8bb0fc51a74c94dc0124972ad36",
+    "bytes": 357,
+    "local_path": "research/issue-007/detection/external/deepseek_reasoner_005_iteration_00.sysml"
+  },
+  {
+    "sample_id": "deepseek_reasoner-006",
+    "backend": "deepseek_reasoner",
+    "prompt": "006",
+    "folder": "439 negative artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/439%20negative%20artifacts/deepseek_reasoner/006/iteration_00.sysml",
+    "sha256": "7213db3de4104df51da5ddc95a7e317efbabd4da2a92259e8b8bc90d7f7372ed",
+    "bytes": 1836,
+    "local_path": "research/issue-007/detection/external/deepseek_reasoner_006_iteration_00.sysml"
+  },
+  {
+    "sample_id": "mistral_large-001",
+    "backend": "mistral_large",
+    "prompt": "001",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/mistral_large/001/iteration_00.sysml",
+    "sha256": "f0cacac63223e922059df49d9776fd575b6702d8937e9272893b4e2fa15a4090",
+    "bytes": 830,
+    "local_path": "research/issue-007/detection/external/mistral_large_001_iteration_00.sysml"
+  },
+  {
+    "sample_id": "mistral_large-002",
+    "backend": "mistral_large",
+    "prompt": "002",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/mistral_large/002/iteration_00.sysml",
+    "sha256": "bf554ebe7317ec66d4212685da06a428493a2c43d3fc2949b8e9dcb730502e81",
+    "bytes": 574,
+    "local_path": "research/issue-007/detection/external/mistral_large_002_iteration_00.sysml"
+  },
+  {
+    "sample_id": "mistral_large-003",
+    "backend": "mistral_large",
+    "prompt": "003",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/mistral_large/003/iteration_00.sysml",
+    "sha256": "3832cdaaefed46f0cec51d44528122e296841e9460453bdbe7a274f232f46c49",
+    "bytes": 506,
+    "local_path": "research/issue-007/detection/external/mistral_large_003_iteration_00.sysml"
+  },
+  {
+    "sample_id": "mistral_large-004",
+    "backend": "mistral_large",
+    "prompt": "004",
+    "folder": "439 negative artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/439%20negative%20artifacts/mistral_large/004/iteration_00.sysml",
+    "sha256": "091ebf71168d59eef97174c0dc62882bdf21651a9831ba45e8f664656ebe4f87",
+    "bytes": 812,
+    "local_path": "research/issue-007/detection/external/mistral_large_004_iteration_00.sysml"
+  },
+  {
+    "sample_id": "mistral_large-005",
+    "backend": "mistral_large",
+    "prompt": "005",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/mistral_large/005/iteration_00.sysml",
+    "sha256": "af9a3f95a680ea4b68e65cd0e77a3a12a1897a8b0d3d49f19f1852c2c490c241",
+    "bytes": 462,
+    "local_path": "research/issue-007/detection/external/mistral_large_005_iteration_00.sysml"
+  },
+  {
+    "sample_id": "mistral_large-006",
+    "backend": "mistral_large",
+    "prompt": "006",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/mistral_large/006/iteration_00.sysml",
+    "sha256": "8c967e7500b48cc6c7dd395cd7e179a7ff703f2febb82dea28cf5f9d420867ce",
+    "bytes": 1856,
+    "local_path": "research/issue-007/detection/external/mistral_large_006_iteration_00.sysml"
+  },
+  {
+    "sample_id": "openai-001",
+    "backend": "openai",
+    "prompt": "001",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/openai/001/iteration_00.sysml",
+    "sha256": "1fbbef14f17c197b4b39d4a41a36ebbd8d09545c04621dfd4d4b3bd3ca448c04",
+    "bytes": 713,
+    "local_path": "research/issue-007/detection/external/openai_001_iteration_00.sysml"
+  },
+  {
+    "sample_id": "openai-002",
+    "backend": "openai",
+    "prompt": "002",
+    "folder": "439 negative artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/439%20negative%20artifacts/openai/002/iteration_00.sysml",
+    "sha256": "d87234a38295caf6ff2c85dc8ad85b0c0f0f25a824eec72ba9ac4fcd88a11315",
+    "bytes": 362,
+    "local_path": "research/issue-007/detection/external/openai_002_iteration_00.sysml"
+  },
+  {
+    "sample_id": "openai-003",
+    "backend": "openai",
+    "prompt": "003",
+    "folder": "439 negative artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/439%20negative%20artifacts/openai/003/iteration_00.sysml",
+    "sha256": "f9728fdcda71d60b5e6731eacc857cc4007a90bd025fb4d2fe6effc3329e4a17",
+    "bytes": 347,
+    "local_path": "research/issue-007/detection/external/openai_003_iteration_00.sysml"
+  },
+  {
+    "sample_id": "openai-004",
+    "backend": "openai",
+    "prompt": "004",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/openai/004/iteration_00.sysml",
+    "sha256": "f7f902a40363ddc4b2f293f7d763294abd4a82d902ffa0e73761042a21dbea0e",
+    "bytes": 632,
+    "local_path": "research/issue-007/detection/external/openai_004_iteration_00.sysml"
+  },
+  {
+    "sample_id": "openai-005",
+    "backend": "openai",
+    "prompt": "005",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/openai/005/iteration_00.sysml",
+    "sha256": "3a67c9136821a3cdd04d7b5ec55a4a0052f5377ca86eae7b71a83049229872ef",
+    "bytes": 435,
+    "local_path": "research/issue-007/detection/external/openai_005_iteration_00.sysml"
+  },
+  {
+    "sample_id": "openai-006",
+    "backend": "openai",
+    "prompt": "006",
+    "folder": "604 positive artifacts",
+    "source_url": "https://raw.githubusercontent.com/cmuchancel/NL-to-SysMLv2-via-Conformance-Driven-Refinement/HEAD/Open-Source%20Dataset%20Release/604%20positive%20artifacts/openai/006/iteration_00.sysml",
+    "sha256": "ee8feadc4004b64747273fb8e77969f6e186adada61923b5a994a78da933e9f2",
+    "bytes": 1551,
+    "local_path": "research/issue-007/detection/external/openai_006_iteration_00.sysml"
+  }
+]

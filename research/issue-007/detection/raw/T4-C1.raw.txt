@@ -1,0 +1,43 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md
+[exit 2]
+--- stdout ---
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:1:1: error[syntax]: expected a namespace member
+Here is the AGV fleet model.
+^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:47:20: error[syntax]: expected an expression
+        then assign;
+                   ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:47:20: error[syntax]: expected ':=' after assignment target
+        then assign;
+                   ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:47:20: error[syntax]: expected a body member
+        then assign;
+                   ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:52:16: warning[reserved-keyword-name]: "assign" is a reserved keyword; write 'assign' to use it as a name
+    action def assign;
+               ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:56:1: error[syntax]: expected a namespace member
+```
+^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:58:158: warning[reserved-keyword-name]: "and" is a reserved keyword; write 'and' to use it as a name
+The model describes battery, docking station, AGV and fleet controller parts, the below-15% return obligation with a satisfy link, the job-assignment action and the power connection between battery and dock.
+                                                                                                                                                             ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:58:162: error[syntax]: expected '{' or ';' after action declaration
+The model describes battery, docking station, AGV and fleet controller parts, the below-15% return obligation with a satisfy link, the job-assignment action and the power connection between battery and dock.
+                                                                                                                                                                 ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:58:162: error[syntax]: expected a namespace member
+The model describes battery, docking station, AGV and fleet controller parts, the below-15% return obligation with a satisfy link, the job-assignment action and the power connection between battery and dock.
+                                                                                                                                                                 ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:58:191: error[syntax]: a connector end names a feature, not an expression; name the feature itself and put any multiplicity before it
+The model describes battery, docking station, AGV and fleet controller parts, the below-15% return obligation with a satisfy link, the job-assignment action and the power connection between battery and dock.
+                                                                                                                                                                                              ^~~~~~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:58:207: error[syntax]: missing ';' at end of declaration
+The model describes battery, docking station, AGV and fleet controller parts, the below-15% return obligation with a satisfy link, the job-assignment action and the power connection between battery and dock.
+                                                                                                                                                                                                              ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md:59:1: error[syntax]: expected 'to' between connector ends
+
+^
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T4-C1.md did not analyse cleanly; no check was made

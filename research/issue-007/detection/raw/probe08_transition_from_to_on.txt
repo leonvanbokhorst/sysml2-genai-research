@@ -1,0 +1,10 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/probes/probe08_transition_from_to_on.sysml
+[exit 2]
+--- stdout ---
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/probes/probe08_transition_from_to_on.sysml:6:25: error[syntax]: a transition states its ends as `transition first <source> … then <target>;`
+        transition from idle to run on trigger;
+                        ^~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/probes/probe08_transition_from_to_on.sysml did not analyse cleanly; no check was made

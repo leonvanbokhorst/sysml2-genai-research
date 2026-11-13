@@ -1,0 +1,43 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md
+[exit 2]
+--- stdout ---
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:1:1: error[syntax]: expected a namespace member
+Below is a level-crossing protection model. It uses a state machine for the operating sequence, and a requirement with a satisfy link for the lowering obligation.
+^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:1:69: error[syntax]: expected '{' or ';' after declaration
+Below is a level-crossing protection model. It uses a state machine for the operating sequence, and a requirement with a satisfy link for the lowering obligation.
+                                                                    ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:1:69: error[syntax]: expected a namespace member
+Below is a level-crossing protection model. It uses a state machine for the operating sequence, and a requirement with a satisfy link for the lowering obligation.
+                                                                    ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:1:120: error[syntax]: expected '{' or ';' after declaration
+Below is a level-crossing protection model. It uses a state machine for the operating sequence, and a requirement with a satisfy link for the lowering obligation.
+                                                                                                                       ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:1:120: error[syntax]: expected a namespace member
+Below is a level-crossing protection model. It uses a state machine for the operating sequence, and a requirement with a satisfy link for the lowering obligation.
+                                                                                                                       ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:51:25: error[syntax]: a transition states its ends as `transition first <source> … then <target>;`
+        transition from idle to lowering on detection.approaching;
+                        ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:52:25: error[syntax]: a transition states its ends as `transition first <source> … then <target>;`
+        transition from lowering to closed when leftArm.isLowered and rightArm.isLowered;
+                        ^~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:53:25: error[syntax]: a transition states its ends as `transition first <source> … then <target>;`
+        transition from closed to raising on detection.clear;
+                        ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:54:25: error[syntax]: a transition states its ends as `transition first <source> … then <target>;`
+        transition from raising to idle when leftArm.position > 0.9;
+                        ^~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:57:1: error[syntax]: expected a namespace member
+```
+^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:59:95: error[syntax]: expected '{' or ';' after declaration
+The crossing has two arms on one motor, flashing lights and a detector, and the state machine walks idle → lowering → closed → raising → idle.
+                                                                                              ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md:59:95: error[syntax]: expected a namespace member
+The crossing has two arms on one motor, flashing lights and a detector, and the state machine walks idle → lowering → closed → raising → idle.
+                                                                                              ^~~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T2-C1.md did not analyse cleanly; no check was made

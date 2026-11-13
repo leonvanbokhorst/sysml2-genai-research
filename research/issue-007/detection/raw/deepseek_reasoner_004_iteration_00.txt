@@ -1,0 +1,26 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_004_iteration_00.sysml
+[exit 0]
+--- stdout ---
+✓ package VehicleSystem
+✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_004_iteration_00.sysml: no errors
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_004_iteration_00.sysml:9:19: warning[name-conflict]: Duplicate of inherited member name 'cylinders' from Engine
+        attribute cylinders : Integer = 4;
+                  ^~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_004_iteration_00.sysml:13:19: warning[name-conflict]: Duplicate of inherited member name 'cylinders' from Engine
+        attribute cylinders : Integer = 6;
+                  ^~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_004_iteration_00.sysml:21:9: warning[name-conflict]: Duplicate of inherited member name 'cylinders' from Engine, SmallEngine
+        part engine : SmallEngine;
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_004_iteration_00.sysml:21:14: warning[name-conflict]: Duplicate of inherited member name 'engine' from Vehicle
+        part engine : SmallEngine;
+             ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_004_iteration_00.sysml:25:9: warning[name-conflict]: Duplicate of inherited member name 'cylinders' from Engine, LargeEngine
+        part engine : LargeEngine;
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_004_iteration_00.sysml:25:14: warning[name-conflict]: Duplicate of inherited member name 'engine' from Vehicle
+        part engine : LargeEngine;
+             ^~~~~~

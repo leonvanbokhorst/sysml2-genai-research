@@ -1,0 +1,62 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml
+[exit 0]
+--- stdout ---
+✓ package VehicleManagementSystem
+✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml: no errors
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:49:14: warning[name-conflict]: Duplicate of inherited member name 'vehicles' from Fleet
+        part vehicles : Vehicle[*] {
+             ^~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:50:18: warning[name-conflict]: Duplicate of inherited member name 'currentStatus' from Vehicle
+            part currentStatus : VehicleStatus {
+                 ^~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:51:27: warning[name-conflict]: Duplicate of inherited member name 'gearSetting' from VehicleStatus
+                attribute gearSetting : GearSetting = GearSetting::PARK;
+                          ^~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:52:27: warning[name-conflict]: Duplicate of inherited member name 'acceleratorPedalPosition' from VehicleStatus
+                attribute acceleratorPedalPosition : Real = 0.0;
+                          ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:54:18: warning[name-conflict]: Duplicate of inherited member name 'engine' from Vehicle
+            part engine : Engine {
+                 ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:55:27: warning[name-conflict]: Duplicate of inherited member name 'displacement' from Engine
+                attribute displacement : Real = 2.0;
+                          ^~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:56:27: warning[name-conflict]: Duplicate of inherited member name 'horsepower' from Engine
+                attribute horsepower : Real = 150.0;
+                          ^~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:57:27: warning[name-conflict]: Duplicate of inherited member name 'engineType' from Engine
+                attribute engineType : String = "V4";
+                          ^~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:59:18: warning[name-conflict]: Duplicate of inherited member name 'driver' from Vehicle
+            part driver : Driver[0..1] {
+                 ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:60:22: warning[name-conflict]: Duplicate of inherited member name 'personInfo' from Driver
+                part personInfo : Person {
+                     ^~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:61:31: warning[name-conflict]: Duplicate of inherited member name 'firstName' from Person
+                    attribute firstName : String = "John";
+                              ^~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:62:31: warning[name-conflict]: Duplicate of inherited member name 'lastName' from Person
+                    attribute lastName : String = "Doe";
+                              ^~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:63:31: warning[name-conflict]: Duplicate of inherited member name 'licenseNumber' from Person
+                    attribute licenseNumber : String = "DL123456";
+                              ^~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:65:27: warning[name-conflict]: Duplicate of inherited member name 'experienceYears' from Driver
+                attribute experienceYears : Integer = 5;
+                          ^~~~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:67:23: warning[name-conflict]: Duplicate of inherited member name 'vehicleMass' from Vehicle
+            attribute vehicleMass : Real = 1500.0;
+                      ^~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:68:23: warning[name-conflict]: Duplicate of inherited member name 'make' from Vehicle
+            attribute make : String = "Toyota";
+                      ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:69:23: warning[name-conflict]: Duplicate of inherited member name 'model' from Vehicle
+            attribute model : String = "Camry";
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_001_iteration_00.sysml:70:23: warning[name-conflict]: Duplicate of inherited member name 'year' from Vehicle
+            attribute year : Integer = 2023;
+                      ^~~~

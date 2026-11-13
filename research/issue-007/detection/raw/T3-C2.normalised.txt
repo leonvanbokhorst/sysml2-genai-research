@@ -1,0 +1,16 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/corpus/normalized/T3-C2.sysml
+[exit 2]
+--- stdout ---
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/corpus/normalized/T3-C2.sysml:23:14: error[reserved-keyword-name]: "in" is a reserved keyword, not a name the ID terminal admits; write 'in' to use it as a name
+        port in;
+             ^~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/corpus/normalized/T3-C2.sysml:24:14: error[reserved-keyword-name]: "out" is a reserved keyword, not a name the ID terminal admits; write 'out' to use it as a name
+        port out;
+             ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/corpus/normalized/T3-C2.sysml:44:28: error[unresolved]: unresolved reference: pump — did you mean InfusionPump::AlarmTiming::pump?
+    satisfy alarmTiming by pump;
+                           ^~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/corpus/normalized/T3-C2.sysml did not analyse cleanly; no check was made

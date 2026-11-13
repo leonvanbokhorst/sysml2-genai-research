@@ -1,0 +1,6 @@
+error_id,model_id,occurrences,occurrence_lines,occurrences_flagged,flagged_lines,occurrence_complete
+T2-C1-E01,T2-C1,4,48 49 50 51,4,48 49 50 51,yes
+T3-C1-E01,T3-C1,9,4 5 9 10 14 15 19 20 32,9,4 5 9 10 14 15 19 20 32,yes
+T3-C2-E01,T3-C2,3,23 24 33,2,23 24,no
+T4-C1-E01,T4-C1,2,42 43,1,43,no
+T6-C2-E01,T6-C2,2,40 42,2,40 42,yes

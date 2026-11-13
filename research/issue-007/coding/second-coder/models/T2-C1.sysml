@@ -1,0 +1,53 @@
+package LevelCrossing {
+    private import ScalarValues::*;
+
+    part def BarrierArm {
+        attribute position : Real;
+        attribute isLowered : Boolean = false;
+    }
+
+    part def BarrierMotor {
+        attribute torque : Real;
+        port drive;
+    }
+
+    part def FlashingLight {
+        attribute isFlashing : Boolean = false;
+        attribute colour : String = "red";
+    }
+
+    part def TrainDetector {
+        attribute detectionState : String;
+        port track;
+    }
+
+    part def CrossingController {
+        part motor : BarrierMotor;
+        part leftArm : BarrierArm;
+        part rightArm : BarrierArm;
+        part lights : FlashingLight[2];
+        part detector : TrainDetector;
+    }
+
+    part crossing : CrossingController;
+
+    requirement def LowerBeforeArrival {
+        doc /* The barrier shall be fully lowered before a train reaches the crossing. */
+    }
+
+    requirement lowerBeforeArrival : LowerBeforeArrival;
+
+    satisfy lowerBeforeArrival by crossing;
+
+    state def OperatingSequence {
+        state idle;
+        state lowering;
+        state closed;
+        state raising;
+
+        transition from idle to lowering on detection.approaching;
+        transition from lowering to closed when leftArm.isLowered and rightArm.isLowered;
+        transition from closed to raising on detection.clear;
+        transition from raising to idle when leftArm.position > 0.9;
+    }
+}

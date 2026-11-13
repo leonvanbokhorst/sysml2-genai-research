@@ -1,0 +1,47 @@
+# Append-only hash ledger for A's cross-review artefacts and the Gate-2/Gate-4 corrections.
+# Adjudication RA-07 / A-15: one row per write, each with the artefact's own mtime in UTC. A later
+# row for the same artefact SUPERSEDES earlier rows for it; earlier rows are kept, because deleting
+# them is what made the old ledger untrustworthy. No row labels post-edit bytes with an earlier time.
+# "IMMUTABLE" marks artefacts that must never change after their first freeze.
+
+# --- initial freeze (Gate 2) ---
+2026-11-13T14:22:13Z  05ca64ccaa4ceae4032ca36aa22f2090c5565449d021764a9da480bbbb1a8102  research/relational/cross-reviews/A-reviews-B.md  IMMUTABLE
+2026-11-13T14:28:49Z  30265ff57bdd1f4036304c6acbc1026678d36f0b3604c925a7b538455fc815f6  research/issue-007/coding/errors.csv  IMMUTABLE (still the bytes Reviewer B pinned)
+2026-11-13T14:28:49Z  285d70ea816eb3d73da9a954faba5f54d05292103da3c740abb9763da7851f74  research/issue-007/coding/errors-post-inspection.csv  IMMUTABLE
+2026-11-13T14:33:20Z  bc2b92a5fdff6e976ae7156b13beba3535f0895e4a41268cf76c1551a6c3dfaa  research/relational/empirical-subset/subset.json  IMMUTABLE (B's run pinned)
+2026-11-13T14:33:20Z  a968ff34079a35cdab943dd72415853a4f05617eb353b8deb5665f93ae26b0cb  research/relational/empirical-subset/models/manifest.csv  IMMUTABLE
+
+# --- earlier recorded values, superseded (kept for the record; times as recorded at the time) ---
+2026-11-13T14:29:00Z  65bc23a1b6f01a8c3046e6289161d6d67492886e8f1a12b563cb5968387ea474  research/relational/cross-reviews/A-response-to-B-review.md  SUPERSEDED by 965924fe… and later rows
+2026-11-13T15:04:00Z  965924fe8e2bce7a1387aef44060bfe7292219461f6cdaaf353c9d61151ebd45  research/relational/cross-reviews/A-response-to-B-review.md  SUPERSEDED (timestamp corrections + C12–C13 pointer)
+2026-11-13T14:33:20Z  fce76f47776293b39a008209f950293b71431dc7e1e117de991288aaec0c6c03  research/relational/empirical-subset/FROZEN-SUBSET.md  SUPERSEDED (addendum pointer + control relabel)
+
+# --- Gate-4 adjudication corrections (mtime-verified) ---
+2026-11-13T15:05:47Z  91f963bffb980924f4969da4200cb2a35231e23ca80a8afa4497435f886094b9  research/issue-007/coding/CODEBOOK.md  (v1.4; A-6/A-7/A-12)
+2026-11-13T15:05:54Z  f161f5612fef72b0cb1ed72d24bbd714cb4624d05a2ab6796269eeb6c8086c3b  research/issue-007/coding/errors-corrections.csv  (C01–C16)
+2026-11-13T15:07:59Z  5728ae66d00da36249f4c76119198aaff652e1ccbaa6bd102d1840da4ae49d0c  research/relational/empirical-subset/FROZEN-SUBSET-ADDENDUM.md  (A-11)
+2026-11-13T15:08:04Z  35e71ab25dee020fbef65a5ec658708171037673a9d08636de0c2a5a5c3ef9fd  research/relational/empirical-subset/FROZEN-SUBSET.md  (pointer + control relabel; item set bytes unchanged)
+2026-11-13T15:08:15Z  df3bea50321609fd5556dce82f6d2098b2657c355c61343b9e74032d5539eb85  research/issue-007/coding/agreement-addendum.md  (A-4/A-13/A-17)
+2026-11-13T15:08:20Z  d9dde98cdaf6c61a7aa71c795eb4dde9b2c2de70331cdd63773e10d83828029a  research/issue-007/coding/agreement.md  (regenerated; W1 wording)
+2026-11-13T15:08:20Z  ae554be3241e94252afcc645b02374712a9cb9fdafdb9ad040826a818e65984a  research/issue-007/coding/agreement.json  (presence κ = 1.0 computed)
+2026-11-13T15:08:22Z  5b33693108b43ebe587a62f6179826f35f83a0f0c0ad47438c83dc8857c48c87  research/issue-007/coding/errors-combined.csv
+2026-11-13T15:08:22Z  0e40c3a63939b6d5807943a28394d7f6da844346a8040ba3c0a6833a3a40995a  research/issue-007/coding/models.csv  (n_errors_combined; contested_records)
+2026-11-13T15:08:22Z  821b2a339b1d23c4eb2640087d696148bf36c3dca33174d83c95a1be8c45e7e4  research/issue-007/detection/occurrence_detection.csv  (T6-C2 added)
+2026-11-13T15:08:22Z  ffec11e9cf1423427bb1513ac50b700a31888556870238befd045301fbfab08c  research/issue-007/detection/manifest.json
+2026-11-13T15:08:27Z  7a650a9195712ba11522f3e2835266dcb260ca0f3d6b577570b0f238cce6ba7f  research/issue-007/README.md
+2026-11-13T15:08:59Z  6e8ab42e6b85ff6e1f49fa1e34bd80ea34f4b72199e534a6039df01e06fadde8  research/relational/cross-reviews/A-response-to-B-review.md  CURRENT (freeze-time corrected to 14:33Z)
+2026-11-13T15:08:59Z  b60533359c342112553be72f478f999fed446a65266a669365744b5f1f4e0cdc  reports/issue-007-error-taxonomy-pilot.md  CURRENT
+
+# Rule: if an artefact changes, append a row with its new time and hash; never amend an existing row.
+# times are the file's mtime in UTC (container local time is UTC+1).
+
+# --- final Gate-4 state (mtime-verified; supersedes the earlier rows for the same artefacts) ---
+2026-11-13T15:09:26Z  e50e19077c35afc80f44090b0498a148d9109e46ba6e26f5c84cb08dad71925b  reports/issue-007-error-taxonomy-pilot.md  CURRENT (§18 + inline markers)
+2026-11-13T15:08:27Z  7a650a9195712ba11522f3e2835266dcb260ca0f3d6b577570b0f238cce6ba7f  research/issue-007/README.md  CURRENT
+2026-11-13T15:09:53Z  5b33693108b43ebe587a62f6179826f35f83a0f0c0ad47438c83dc8857c48c87  research/issue-007/coding/errors-combined.csv  CURRENT
+2026-11-13T15:09:53Z  0e40c3a63939b6d5807943a28394d7f6da844346a8040ba3c0a6833a3a40995a  research/issue-007/coding/models.csv  CURRENT
+2026-11-13T15:09:53Z  821b2a339b1d23c4eb2640087d696148bf36c3dca33174d83c95a1be8c45e7e4  research/issue-007/detection/occurrence_detection.csv  CURRENT
+2026-11-13T15:09:53Z  d9dde98cdaf6c61a7aa71c795eb4dde9b2c2de70331cdd63773e10d83828029a  research/issue-007/coding/agreement.md  CURRENT
+2026-11-13T15:09:53Z  ae554be3241e94252afcc645b02374712a9cb9fdafdb9ad040826a818e65984a  research/issue-007/coding/agreement.json  CURRENT
+2026-11-13T15:09:46Z  1069cf7f40977ddeba8162b258811b069407863915b74cc3f37e04ad5126fcde  research/issue-007/ADJUDICATION-RESPONSE.md  CURRENT
+2026-11-13T15:10:05Z  a55540dea57ad893e578fe759dacd94f24b4fa808fd9f0833bff555600d4ae37  research/issue-007/README.md  CURRENT (index extended with ADJUDICATION-RESPONSE and the ledger)

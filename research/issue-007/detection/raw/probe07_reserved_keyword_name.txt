@@ -1,0 +1,11 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml
+[exit 0]
+--- stdout ---
+✓ package P
+✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml: no error that stops a check; the notation reported above does not conform
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml:3:23: error[reserved-keyword-name]: "in" is a reserved keyword, not a name the ID terminal admits; write 'in' to use it as a name
+    part def L { port in; }
+                      ^~

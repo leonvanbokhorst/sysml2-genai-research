@@ -1,0 +1,13 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_006_iteration_00.sysml
+[exit 2]
+--- stdout ---
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_006_iteration_00.sysml:5:9: error[syntax]: expected a body member
+        unclassified,
+        ^~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_006_iteration_00.sysml:35:9: error[syntax]: expected a body member
+        A,
+        ^
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_006_iteration_00.sysml did not analyse cleanly; no check was made

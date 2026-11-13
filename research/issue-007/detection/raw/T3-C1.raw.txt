@@ -1,0 +1,31 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T3-C1.md
+[exit 2]
+--- stdout ---
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T3-C1.md:1:1: error[syntax]: expected a namespace member
+```sysml
+^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T3-C1.md:42:1: error[syntax]: expected a namespace member
+```
+^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T3-C1.md:44:43: error[syntax]: expected a namespace member
+The pump owns the line, sensor and alarm; the requirement captures the two-second alarm obligation and is satisfied by the pump; the connection links the sensor reading to the pump.
+                                          ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T3-C1.md:44:68: error[syntax]: expected '{' or ';' after declaration
+The pump owns the line, sensor and alarm; the requirement captures the two-second alarm obligation and is satisfied by the pump; the connection links the sensor reading to the pump.
+                                                                   ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T3-C1.md:44:68: error[syntax]: expected a namespace member
+The pump owns the line, sensor and alarm; the requirement captures the two-second alarm obligation and is satisfied by the pump; the connection links the sensor reading to the pump.
+                                                                   ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T3-C1.md:44:130: error[syntax]: expected a namespace member
+The pump owns the line, sensor and alarm; the requirement captures the two-second alarm obligation and is satisfied by the pump; the connection links the sensor reading to the pump.
+                                                                                                                                 ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T3-C1.md:44:151: error[syntax]: expected '{' or ';' after declaration
+The pump owns the line, sensor and alarm; the requirement captures the two-second alarm obligation and is satisfied by the pump; the connection links the sensor reading to the pump.
+                                                                                                                                                      ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T3-C1.md:44:151: error[syntax]: expected a namespace member
+The pump owns the line, sensor and alarm; the requirement captures the two-second alarm obligation and is satisfied by the pump; the connection links the sensor reading to the pump.
+                                                                                                                                                      ^~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T3-C1.md did not analyse cleanly; no check was made

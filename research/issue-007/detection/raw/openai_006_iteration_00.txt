@@ -1,0 +1,65 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml
+[exit 0]
+--- stdout ---
+✓ package ClassificationModel
+✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml: no errors
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:31:17: warning[name-conflict]: Duplicate of inherited member name 'level' from InfoClassification
+      attribute level = InfoLevel::Unclassified;
+                ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:32:17: warning[name-conflict]: Duplicate of inherited member name 'code' from InfoClassification
+      attribute code = "uncl";
+                ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:33:17: warning[name-conflict]: Duplicate of inherited member name 'color' from InfoClassification
+      attribute color = "green";
+                ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:36:17: warning[name-conflict]: Duplicate of inherited member name 'level' from InfoClassification
+      attribute level = InfoLevel::Confidential;
+                ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:37:17: warning[name-conflict]: Duplicate of inherited member name 'code' from InfoClassification
+      attribute code = "conf";
+                ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:38:17: warning[name-conflict]: Duplicate of inherited member name 'color' from InfoClassification
+      attribute color = "yellow";
+                ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:41:17: warning[name-conflict]: Duplicate of inherited member name 'level' from InfoClassification
+      attribute level = InfoLevel::Secret;
+                ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:42:17: warning[name-conflict]: Duplicate of inherited member name 'code' from InfoClassification
+      attribute code = "secr";
+                ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:43:17: warning[name-conflict]: Duplicate of inherited member name 'color' from InfoClassification
+      attribute color = "red";
+                ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:47:17: warning[name-conflict]: Duplicate of inherited member name 'level' from GradeClassification
+      attribute level = GradeLevel::A;
+                ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:48:17: warning[name-conflict]: Duplicate of inherited member name 'points' from GradeClassification
+      attribute points = 4.0;
+                ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:51:17: warning[name-conflict]: Duplicate of inherited member name 'level' from GradeClassification
+      attribute level = GradeLevel::B;
+                ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:52:17: warning[name-conflict]: Duplicate of inherited member name 'points' from GradeClassification
+      attribute points = 3.0;
+                ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:55:17: warning[name-conflict]: Duplicate of inherited member name 'level' from GradeClassification
+      attribute level = GradeLevel::C;
+                ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:56:17: warning[name-conflict]: Duplicate of inherited member name 'points' from GradeClassification
+      attribute points = 2.0;
+                ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:59:17: warning[name-conflict]: Duplicate of inherited member name 'level' from GradeClassification
+      attribute level = GradeLevel::D;
+                ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:60:17: warning[name-conflict]: Duplicate of inherited member name 'points' from GradeClassification
+      attribute points = 1.0;
+                ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:63:17: warning[name-conflict]: Duplicate of inherited member name 'level' from GradeClassification
+      attribute level = GradeLevel::F;
+                ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_006_iteration_00.sysml:64:17: warning[name-conflict]: Duplicate of inherited member name 'points' from GradeClassification
+      attribute points = 0.0;
+                ^~~~~~
