@@ -1,0 +1,7 @@
+✓ package InfusionPumpAlarmSystem
+✓ Created instance of InfusionPumpAlarmSystem::pump
+  ID: 1
+  Use %features pump to inspect
+✓ satisfy occlusionAlarm by pump holds (on InfusionPumpAlarmSystem::pump ID: 1)
+✓ InfusionPumpAlarmSystem::pump is valid: its 1 assertion holds
+  standing: holds (observed: 1 run under reverse)

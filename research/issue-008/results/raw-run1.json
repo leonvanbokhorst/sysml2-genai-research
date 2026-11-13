@@ -1,0 +1,1472 @@
+[
+  {
+    "case_id": "KG-01-parts",
+    "kind": "known-good",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-01-parts.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:02Z",
+    "finished_utc": "2026-11-13T14:13:02Z",
+    "exit_code": 0,
+    "model_sha256": "d1b81dfbb47288bae2040e59753e0ac7a2e4a6e83016d12fa829f8944f23f7bb",
+    "raw_json": "results/raw/run1/known-good/KG-01-parts.json",
+    "raw_stderr": "results/raw/run1/known-good/KG-01-parts.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "KG-02-ports",
+    "kind": "known-good",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-02-ports.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:02Z",
+    "finished_utc": "2026-11-13T14:13:02Z",
+    "exit_code": 0,
+    "model_sha256": "97df0a137ecc8a2dd52b250c9112107d148628fedf96612538ab702c388c4a59",
+    "raw_json": "results/raw/run1/known-good/KG-02-ports.json",
+    "raw_stderr": "results/raw/run1/known-good/KG-02-ports.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "KG-03-connections",
+    "kind": "known-good",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-03-connections.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:02Z",
+    "finished_utc": "2026-11-13T14:13:02Z",
+    "exit_code": 0,
+    "model_sha256": "4bfae2db8fb8258a26c3d5e7a346ca0d0715fc2975ff998793364caad7728df2",
+    "raw_json": "results/raw/run1/known-good/KG-03-connections.json",
+    "raw_stderr": "results/raw/run1/known-good/KG-03-connections.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "KG-04-featurevalues",
+    "kind": "known-good",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-04-featurevalues.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:02Z",
+    "finished_utc": "2026-11-13T14:13:02Z",
+    "exit_code": 0,
+    "model_sha256": "6a9384467ce86904119fa6edae6456467ac7955ac41cabdd3abe58dee3cb2bd4",
+    "raw_json": "results/raw/run1/known-good/KG-04-featurevalues.json",
+    "raw_stderr": "results/raw/run1/known-good/KG-04-featurevalues.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [
+      {
+        "severity": "warning",
+        "message": "Duplicate of inherited member name 'cutoff' from TestRecord",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-04-featurevalues.sysml",
+        "line": 17,
+        "column": 19,
+        "pass": "name-resolution",
+        "code": "name-conflict"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "KG-05-states",
+    "kind": "known-good",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-05-states.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:02Z",
+    "finished_utc": "2026-11-13T14:13:02Z",
+    "exit_code": 0,
+    "model_sha256": "fc05b3a54ce7ad9484b2717013e952b23dfaf550f586470de4704b313d73d0a0",
+    "raw_json": "results/raw/run1/known-good/KG-05-states.json",
+    "raw_stderr": "results/raw/run1/known-good/KG-05-states.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "KG-06-transitions",
+    "kind": "known-good",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-06-transitions.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:02Z",
+    "finished_utc": "2026-11-13T14:13:02Z",
+    "exit_code": 0,
+    "model_sha256": "1dedb9a99ba5c473780645698a75ec5beafef523f648cd4a5b21e6649eac4905",
+    "raw_json": "results/raw/run1/known-good/KG-06-transitions.json",
+    "raw_stderr": "results/raw/run1/known-good/KG-06-transitions.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "KG-07-requirements",
+    "kind": "known-good",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-07-requirements.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:02Z",
+    "finished_utc": "2026-11-13T14:13:02Z",
+    "exit_code": 0,
+    "model_sha256": "89848f2ace66e2bd7cf63102b75d361769c98ea4597b9c4b4fb0f1a841e2ea28",
+    "raw_json": "results/raw/run1/known-good/KG-07-requirements.json",
+    "raw_stderr": "results/raw/run1/known-good/KG-07-requirements.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "KG-08-quantities",
+    "kind": "known-good",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-08-quantities.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:02Z",
+    "finished_utc": "2026-11-13T14:13:02Z",
+    "exit_code": 0,
+    "model_sha256": "bd890f7b8f3fac44e68562ecbc2c7bd5ac3b100ec9552a566f49fadb7e5960b6",
+    "raw_json": "results/raw/run1/known-good/KG-08-quantities.json",
+    "raw_stderr": "results/raw/run1/known-good/KG-08-quantities.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "KG-09-actions",
+    "kind": "known-good",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-09-actions.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:02Z",
+    "finished_utc": "2026-11-13T14:13:02Z",
+    "exit_code": 0,
+    "model_sha256": "4365970c7dd32a55a47ae2c0cdbee8ae29e787070e5d011361f57c658ba15ac9",
+    "raw_json": "results/raw/run1/known-good/KG-09-actions.json",
+    "raw_stderr": "results/raw/run1/known-good/KG-09-actions.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "KG-10-asserts",
+    "kind": "known-good",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-10-asserts.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:02Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 0,
+    "model_sha256": "264a3c0d4b5a3a4e1eedbf40ff073d309fac99fd39bc46c2d52a5c5b4e963da5",
+    "raw_json": "results/raw/run1/known-good/KG-10-asserts.json",
+    "raw_stderr": "results/raw/run1/known-good/KG-10-asserts.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F1-01-missing-semicolon",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-01-missing-semicolon.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "22b68f83bbc124c4f9cdd9a7dfc80913992b4a4ad4c70fe9cceed8f545d06ffe",
+    "raw_json": "results/raw/run1/mutants/M31-F1-01-missing-semicolon.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F1-01-missing-semicolon.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-01-missing-semicolon.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "missing ';' at end of declaration",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-01-missing-semicolon.sysml",
+        "line": 20,
+        "column": 23,
+        "pass": "syntax",
+        "code": "syntax"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F1-02-extra-brace",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-02-extra-brace.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "e44936be2dc70fbfc3d6778603a30244dd3b1ce71162a7f7b4480f1d9f3a9244",
+    "raw_json": "results/raw/run1/mutants/M31-F1-02-extra-brace.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F1-02-extra-brace.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-02-extra-brace.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "expected a namespace member",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-02-extra-brace.sysml",
+        "line": 21,
+        "column": 1,
+        "pass": "syntax",
+        "code": "syntax"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F1-03-keyword-typo",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-03-keyword-typo.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "61060ac7f31b515024101ec00f5451ed5e857fda819bed3dcf296dda3ee01cfe",
+    "raw_json": "results/raw/run1/mutants/M31-F1-03-keyword-typo.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F1-03-keyword-typo.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-03-keyword-typo.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "expected a namespace member",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-03-keyword-typo.sysml",
+        "line": 8,
+        "column": 5,
+        "pass": "syntax",
+        "code": "syntax"
+      },
+      {
+        "severity": "error",
+        "message": "expected a namespace member",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-03-keyword-typo.sysml",
+        "line": 8,
+        "column": 10,
+        "pass": "syntax",
+        "code": "syntax"
+      },
+      {
+        "severity": "error",
+        "message": "expected a namespace member",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-03-keyword-typo.sysml",
+        "line": 20,
+        "column": 1,
+        "pass": "syntax",
+        "code": "syntax"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F1-04-unquoted-shortname",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-04-unquoted-shortname.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "884eb325530d31de04764da1633bbf68cb7d1823769eb6d5c3fe69806a14c27e",
+    "raw_json": "results/raw/run1/mutants/M31-F1-04-unquoted-shortname.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F1-04-unquoted-shortname.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-04-unquoted-shortname.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "expected '>'",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-04-unquoted-shortname.sysml",
+        "line": 13,
+        "column": 22,
+        "pass": "syntax",
+        "code": "syntax"
+      },
+      {
+        "severity": "error",
+        "message": "expected '{' or ';' after declaration",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-04-unquoted-shortname.sysml",
+        "line": 13,
+        "column": 22,
+        "pass": "syntax",
+        "code": "syntax"
+      },
+      {
+        "severity": "error",
+        "message": "expected a namespace member",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-04-unquoted-shortname.sysml",
+        "line": 13,
+        "column": 22,
+        "pass": "syntax",
+        "code": "syntax"
+      },
+      {
+        "severity": "error",
+        "message": "expected short name after '<'",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-04-unquoted-shortname.sysml",
+        "line": 13,
+        "column": 22,
+        "pass": "syntax",
+        "code": "syntax"
+      },
+      {
+        "severity": "error",
+        "message": "expected a namespace member",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-04-unquoted-shortname.sysml",
+        "line": 39,
+        "column": 1,
+        "pass": "syntax",
+        "code": "syntax"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F2-01-type-typo",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-01-type-typo.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "c851bb3fe2d8e8f42f49b5600213fcfcced6009346faecebe43ff476fb8c1056",
+    "raw_json": "results/raw/run1/mutants/M31-F2-01-type-typo.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F2-01-type-typo.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-01-type-typo.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "unresolved reference: Engin \u2014 did you mean Engine?",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-01-type-typo.sysml",
+        "line": 20,
+        "column": 23,
+        "pass": "name-resolution",
+        "code": "unresolved",
+        "fixes": [
+          {
+            "title": "Change 'Engin' to 'Engine'",
+            "preferred": true,
+            "edits": [
+              {
+                "line": 20,
+                "column": 23,
+                "endLine": 20,
+                "endColumn": 28,
+                "newText": "Engine"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F2-02-parameter-typo",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-02-parameter-typo.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "ae6027e2431263dd29b54c9d7bd5c25bf0eb1238396dcaf94122ebfd9768b3df",
+    "raw_json": "results/raw/run1/mutants/M31-F2-02-parameter-typo.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F2-02-parameter-typo.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-02-parameter-typo.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "unresolved reference: scne \u2014 did you mean scene?",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-02-parameter-typo.sysml",
+        "line": 24,
+        "column": 28,
+        "pass": "name-resolution",
+        "code": "unresolved",
+        "fixes": [
+          {
+            "title": "Change 'scne' to 'scene'",
+            "preferred": true,
+            "edits": [
+              {
+                "line": 24,
+                "column": 28,
+                "endLine": 24,
+                "endColumn": 32,
+                "newText": "scene"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F2-03-redefinition-typo",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-03-redefinition-typo.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "1e6fe410da23463c4c5907b574a3f4759e9ba5bef41399b429a9513af5b60e57",
+    "raw_json": "results/raw/run1/mutants/M31-F2-03-redefinition-typo.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F2-03-redefinition-typo.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-03-redefinition-typo.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "unresolved reference: massActul",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-03-redefinition-typo.sysml",
+        "line": 34,
+        "column": 23,
+        "pass": "name-resolution",
+        "code": "unresolved"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F2-04-missing-declaration",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-04-missing-declaration.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "5d04d19b2f24d7d3a987e22d7554df6b1f1bc366cd1cc6f64e5041d5af247d09",
+    "raw_json": "results/raw/run1/mutants/M31-F2-04-missing-declaration.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F2-04-missing-declaration.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-04-missing-declaration.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "unresolved reference: Wheel \u2014 did you mean wheels?",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-04-missing-declaration.sysml",
+        "line": 20,
+        "column": 26,
+        "pass": "name-resolution",
+        "code": "unresolved",
+        "fixes": [
+          {
+            "title": "Change 'Wheel' to 'wheels'",
+            "preferred": true,
+            "edits": [
+              {
+                "line": 20,
+                "column": 26,
+                "endLine": 20,
+                "endColumn": 31,
+                "newText": "wheels"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F3-01-part-typed-by-portdef",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-01-part-typed-by-portdef.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 0,
+    "model_sha256": "bc981b5c37e87b8b4db7f07b783cb34a4e41875dbd4255ef80eecdc3822bd175",
+    "raw_json": "results/raw/run1/mutants/M31-F3-01-part-typed-by-portdef.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F3-01-part-typed-by-portdef.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [
+      {
+        "severity": "warning",
+        "message": "Duplicate of inherited member name 'self' from Part, Port",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-01-part-typed-by-portdef.sysml",
+        "line": 15,
+        "column": 9,
+        "pass": "name-resolution",
+        "code": "name-conflict"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F3-02-attribute-typed-by-partdef",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-02-attribute-typed-by-partdef.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "a96638d450b9d17c03e18c8573b09ea818dafa9eed500f30b91292091e0d1660",
+    "raw_json": "results/raw/run1/mutants/M31-F3-02-attribute-typed-by-partdef.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F3-02-attribute-typed-by-partdef.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-02-attribute-typed-by-partdef.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "An attribute must be typed by attribute definitions.",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-02-attribute-typed-by-partdef.sysml",
+        "line": 10,
+        "column": 9,
+        "pass": "type",
+        "code": "usage-typing"
+      },
+      {
+        "severity": "warning",
+        "message": "Bound features should have conforming types",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-02-attribute-typed-by-partdef.sysml",
+        "line": 14,
+        "column": 13,
+        "pass": "type",
+        "code": "bound-feature-types"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F3-03-state-replaced-by-action",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-03-state-replaced-by-action.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "d5a8d2a7df9e643915c8e75ba7267666abd5fc157f93ad287280d09e17a9d665",
+    "raw_json": "results/raw/run1/mutants/M31-F3-03-state-replaced-by-action.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F3-03-state-replaced-by-action.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-03-state-replaced-by-action.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "transition endpoint on is not a state or pseudostate",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-03-state-replaced-by-action.sysml",
+        "line": 13,
+        "column": 42,
+        "pass": "name-resolution",
+        "code": "not-a-vertex"
+      },
+      {
+        "severity": "error",
+        "message": "transition endpoint on is not a state or pseudostate",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-03-state-replaced-by-action.sysml",
+        "line": 14,
+        "column": 33,
+        "pass": "name-resolution",
+        "code": "not-a-vertex"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F3-04-subject-typed-by-requirement",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-04-subject-typed-by-requirement.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 0,
+    "model_sha256": "7f3670976b229d940185e71610a29ad07fd5660e14472c8848f1e6f06b94497a",
+    "raw_json": "results/raw/run1/mutants/M31-F3-04-subject-typed-by-requirement.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F3-04-subject-typed-by-requirement.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [
+      {
+        "severity": "warning",
+        "message": "Bound features should have conforming types",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-04-subject-typed-by-requirement.sysml",
+        "line": 38,
+        "column": 35,
+        "pass": "type",
+        "code": "bound-feature-types"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F4-01-inverted-bounds",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-01-inverted-bounds.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "5b778ebc1df1950633252e2c90d07153e065010cf68443f39d2b7c0a9082bda7",
+    "raw_json": "results/raw/run1/mutants/M31-F4-01-inverted-bounds.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F4-01-inverted-bounds.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-01-inverted-bounds.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "multiplicity lower bound exceeds upper bound on wheels",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-01-inverted-bounds.sysml",
+        "line": 21,
+        "column": 20,
+        "pass": "constraint",
+        "code": "multiplicity-range"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F4-02-end-feature-multiplicity",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-02-end-feature-multiplicity.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 0,
+    "model_sha256": "574ffbbdf36ca24ebfbd7fa5109a24a36a394039b5b5e12ef7de9ae45007cfa2",
+    "raw_json": "results/raw/run1/mutants/M31-F4-02-end-feature-multiplicity.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F4-02-end-feature-multiplicity.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [
+      {
+        "severity": "warning",
+        "message": "End feature must have multiplicity 1: an end relates exactly one thing per link; write `[1]` or take it from a feature the end subsets or redefines",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-02-end-feature-multiplicity.sysml",
+        "line": 11,
+        "column": 9,
+        "pass": "constraint",
+        "code": "end-feature-multiplicity"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F4-03-non-natural-bound",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-03-non-natural-bound.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "cbfd15badff66bb818294197ce08ff45a95f21947e9614cad3e59674e365f506",
+    "raw_json": "results/raw/run1/mutants/M31-F4-03-non-natural-bound.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F4-03-non-natural-bound.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-03-non-natural-bound.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "Must have a Natural value",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-03-non-natural-bound.sysml",
+        "line": 21,
+        "column": 21,
+        "pass": "constraint",
+        "code": "multiplicity-bound-natural"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F4-04-feature-value-count",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-04-feature-value-count.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "51d0ac759c34ce38761352c43bc9451dac11d58a16d41b54d8072d329d59fb58",
+    "raw_json": "results/raw/run1/mutants/M31-F4-04-feature-value-count.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F4-04-feature-value-count.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-04-feature-value-count.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "2 value(s) bound to a feature with multiplicity upper bound 1",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-04-feature-value-count.sysml",
+        "line": 11,
+        "column": 41,
+        "pass": "type",
+        "code": "feature-value-count"
+      },
+      {
+        "severity": "warning",
+        "message": "Duplicate of inherited member name 'cutoff' from TestRecord",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-04-feature-value-count.sysml",
+        "line": 17,
+        "column": 19,
+        "pass": "name-resolution",
+        "code": "name-conflict"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F5-01-feature-value-overriding",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-01-feature-value-overriding.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 0,
+    "model_sha256": "9cedccd799bf8a2b3da214ea983f4587e3dfe30d56c053005809790fdb94f0a5",
+    "raw_json": "results/raw/run1/mutants/M31-F5-01-feature-value-overriding.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F5-01-feature-value-overriding.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [
+      {
+        "severity": "warning",
+        "message": "Duplicate of inherited member name 'cutoff' from TestRecord",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-01-feature-value-overriding.sysml",
+        "line": 17,
+        "column": 19,
+        "pass": "name-resolution",
+        "code": "name-conflict"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F5-02-satisfy-reference",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-02-satisfy-reference.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "95699f1f2c835a482c403f069dba31e9f69105a83e9304f58f2cfbd561e26051",
+    "raw_json": "results/raw/run1/mutants/M31-F5-02-satisfy-reference.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F5-02-satisfy-reference.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-02-satisfy-reference.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "satisfy target must be a requirement usage, found partDef",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-02-satisfy-reference.sysml",
+        "line": 38,
+        "column": 13,
+        "pass": "type",
+        "code": "relationship-target-kind"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F5-03-decision-node-incoming",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-03-decision-node-incoming.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "ed27768681da7386a9107fe7fe6333c7325a0afcb085026499bcdc96aa3d27c2",
+    "raw_json": "results/raw/run1/mutants/M31-F5-03-decision-node-incoming.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F5-03-decision-node-incoming.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-03-decision-node-incoming.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "decide decision1 has 2 incoming successions; a decision node may have at most one \u2014 merge the flows before the decision",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-03-decision-node-incoming.sysml",
+        "line": 48,
+        "column": 16,
+        "pass": "control-node",
+        "code": "decision-incoming-successions"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F5-04-composite-port-feature",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-04-composite-port-feature.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "ddc03874b1fafda42acb692201d2d9d50570b30924356b5920b426a001d907d5",
+    "raw_json": "results/raw/run1/mutants/M31-F5-04-composite-port-feature.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F5-04-composite-port-feature.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-04-composite-port-feature.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "Owned usages of a port definition (other than ports) must be referential.",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-04-composite-port-feature.sysml",
+        "line": 12,
+        "column": 9,
+        "pass": "type",
+        "code": "port-owned-usage-composite"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F6-01-wrong-dimension-unit",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-01-wrong-dimension-unit.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "9fe1e047789c1a5af8377d269a0e1cc6a2f3a4cbaa35f6a122bc30f9e5636217",
+    "raw_json": "results/raw/run1/mutants/M31-F6-01-wrong-dimension-unit.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F6-01-wrong-dimension-unit.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-01-wrong-dimension-unit.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "cannot bind kg (dimension M) to a feature typed by SpeedValue (dimension L\u00b7T^-1)",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-01-wrong-dimension-unit.sysml",
+        "line": 12,
+        "column": 45,
+        "pass": "type",
+        "code": "incommensurable-binding"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F6-02-missing-unit",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-02-missing-unit.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "3d8e54e89b4cd4896bf802d3b42e165e7ac8f15f37322452f28fdec768868c27",
+    "raw_json": "results/raw/run1/mutants/M31-F6-02-missing-unit.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F6-02-missing-unit.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-02-missing-unit.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "cannot bind Rational value to a feature typed by MassValue",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-02-missing-unit.sysml",
+        "line": 10,
+        "column": 45,
+        "pass": "type",
+        "code": "binding-connector-type-conformance"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F6-03-incommensurable-sum",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-03-incommensurable-sum.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 0,
+    "model_sha256": "a4dd74b03407248c22c9d7fc59022256c6b699f510cd48cb2f2680d557d85e29",
+    "raw_json": "results/raw/run1/mutants/M31-F6-03-incommensurable-sum.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F6-03-incommensurable-sum.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [
+      {
+        "severity": "warning",
+        "message": "operator '+' combines incommensurable quantities: MassValue (dimension M) and SpeedValue (dimension L\u00b7T^-1)",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-03-incommensurable-sum.sysml",
+        "line": 14,
+        "column": 13,
+        "pass": "type",
+        "code": "incommensurable-operands"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F6-04-wrong-product-dimension",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-04-wrong-product-dimension.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "b352c959579d6c08a2550821134bf8e656b73c9b4fc7c0c389e97be865191308",
+    "raw_json": "results/raw/run1/mutants/M31-F6-04-wrong-product-dimension.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F6-04-wrong-product-dimension.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-04-wrong-product-dimension.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "cannot bind a value of dimension L\u00b7M\u00b7T^-1 to a feature typed by EnergyValue (dimension L^2\u00b7M\u00b7T^-2)",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-04-wrong-product-dimension.sysml",
+        "line": 14,
+        "column": 13,
+        "pass": "type",
+        "code": "incommensurable-binding"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F7-01-unreachable-state",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F7-01-unreachable-state.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 0,
+    "model_sha256": "70c25c24f159b752bbf01730c2d1eae992dce10f932e931de797d7f6f87f6919",
+    "raw_json": "results/raw/run1/mutants/M31-F7-01-unreachable-state.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F7-01-unreachable-state.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F7-02-satisfied-but-violated",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F7-02-satisfied-but-violated.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 0,
+    "model_sha256": "36ddb3d016de9d1c532c911674cffc7c5d414494be1e9d330df9f6cdac511e28",
+    "raw_json": "results/raw/run1/mutants/M31-F7-02-satisfied-but-violated.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F7-02-satisfied-but-violated.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F7-03-missing-flow",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F7-03-missing-flow.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 0,
+    "model_sha256": "bb5379acb5be9536f9e2f429bb337d8ca14104755f9ba2750ec89e32bb24496c",
+    "raw_json": "results/raw/run1/mutants/M31-F7-03-missing-flow.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F7-03-missing-flow.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F7-04-contradictory-assertions",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F7-04-contradictory-assertions.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 0,
+    "model_sha256": "307277f2e284af543f5d43f84518fd173a9e1efd01d6a99a0ba6a7355b79d125",
+    "raw_json": "results/raw/run1/mutants/M31-F7-04-contradictory-assertions.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F7-04-contradictory-assertions.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "holds",
+    "envelope_exit": 0,
+    "envelope_errors": null,
+    "diagnostics": [],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F8-01-annotation-not-metadata",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-01-annotation-not-metadata.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "2b570649719a4806353f64ed66f0f9beb97a5841f4a2d7f7401782130f1aacbc",
+    "raw_json": "results/raw/run1/mutants/M31-F8-01-annotation-not-metadata.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F8-01-annotation-not-metadata.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-01-annotation-not-metadata.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "A metadata usage must be typed by one metadata definition.",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-01-annotation-not-metadata.sysml",
+        "line": 18,
+        "column": 9,
+        "pass": "constraint",
+        "code": "metadata-metaclass"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F8-02-body-feature-typo",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-02-body-feature-typo.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "886bc49f797fa2f93dcaedfb4ac16092b718c8513109b8e0578e07d4ef8c2bc3",
+    "raw_json": "results/raw/run1/mutants/M31-F8-02-body-feature-typo.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F8-02-body-feature-typo.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-02-body-feature-typo.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "Must redefine an owning-type feature",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-02-body-feature-typo.sysml",
+        "line": 18,
+        "column": 27,
+        "pass": "constraint",
+        "code": "metadata-owning-type-feature"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F8-03-value-kind",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-03-value-kind.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "6b6529b15ad3f5bbc539ff04b739fc2a6b9c796de790bbcbfb17e936132ff9c3",
+    "raw_json": "results/raw/run1/mutants/M31-F8-03-value-kind.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F8-03-value-kind.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-03-value-kind.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "cannot bind String value to a feature typed by Integer",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-03-value-kind.sysml",
+        "line": 18,
+        "column": 35,
+        "pass": "type",
+        "code": "binding-connector-type-conformance"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  },
+  {
+    "case_id": "M31-F8-04-abstract-metaclass",
+    "kind": "mutants",
+    "argv": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/.tools/sysml",
+      "-validate",
+      "-format",
+      "json",
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-04-abstract-metaclass.sysml"
+    ],
+    "started_utc": "2026-11-13T14:13:03Z",
+    "finished_utc": "2026-11-13T14:13:03Z",
+    "exit_code": 2,
+    "model_sha256": "f8a68bdf7956b1fc63bed22f39d256eacbfcc4b5d57f176328e6e3f41e041885",
+    "raw_json": "results/raw/run1/mutants/M31-F8-04-abstract-metaclass.json",
+    "raw_stderr": "results/raw/run1/mutants/M31-F8-04-abstract-metaclass.stderr.txt",
+    "json_parsed": true,
+    "json_parse_error": null,
+    "envelope_status": "unresolved",
+    "envelope_exit": 2,
+    "envelope_errors": [
+      "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-04-abstract-metaclass.sysml did not analyse cleanly; no check was made"
+    ],
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "Must have a concrete type",
+        "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-04-abstract-metaclass.sysml",
+        "line": 18,
+        "column": 9,
+        "pass": "constraint",
+        "code": "metadata-concrete-type"
+      }
+    ],
+    "stderr": "sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted\n"
+  }
+]

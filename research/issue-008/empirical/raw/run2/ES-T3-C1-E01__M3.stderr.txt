@@ -1,0 +1,29 @@
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:4:35: error[unresolved]: unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;
+        attribute innerDiameter : Real;
+                                  ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:5:32: error[unresolved]: unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;
+        attribute isOccluded : Boolean = false;
+                               ^~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:9:38: error[unresolved]: unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;
+        attribute measuredPressure : Real;
+                                     ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:10:40: error[unresolved]: unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;
+        attribute occlusionThreshold : Real;
+                                       ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:14:31: error[unresolved]: unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;
+        attribute isAudible : Boolean = false;
+                              ^~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:15:31: error[unresolved]: unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;
+        attribute isVisible : Boolean = false;
+                              ^~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:19:30: error[unresolved]: unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;
+        attribute flowRate : Real;
+                             ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:20:34: error[unresolved]: unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;
+        attribute isDelivering : Boolean = false;
+                                 ^~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:32:37: error[unresolved]: unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;
+        attribute maxDelaySeconds : Real = 2.0;
+                                    ^~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml did not analyse cleanly; no check was made

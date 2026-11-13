@@ -1,0 +1,2 @@
+✓ package KG09Actions
+Self-model check: 46 elements, 509 checks, 0 violations, 0 unevaluated

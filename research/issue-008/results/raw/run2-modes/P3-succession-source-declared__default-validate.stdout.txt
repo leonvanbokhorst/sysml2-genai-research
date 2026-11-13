@@ -1,0 +1,24 @@
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "message": "Duplicate of inherited member name 'start' from Action",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P3-succession-source-declared.sysml",
+      "line": 7,
+      "column": 16,
+      "pass": "name-resolution",
+      "code": "name-conflict"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P3-succession-source-declared.sysml:7:16: warning[name-conflict]: Duplicate of inherited member name 'start' from Action",
+    "        action start;",
+    "               ^~~~~",
+    "✓ package P3SuccessionControl",
+    "✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P3-succession-source-declared.sysml: no errors"
+  ],
+  "errors": null
+}

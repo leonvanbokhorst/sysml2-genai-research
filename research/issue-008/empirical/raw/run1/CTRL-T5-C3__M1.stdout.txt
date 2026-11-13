@@ -1,0 +1,24 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "An attribute must be typed by attribute definitions.",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T5-C3.sysml",
+      "line": 11,
+      "column": 9,
+      "pass": "type",
+      "code": "usage-typing"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T5-C3.sysml:11:9: error[usage-typing]: An attribute must be typed by attribute definitions.",
+    "        attribute window : VisibilityWindow;",
+    "        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T5-C3.sysml did not analyse cleanly; no check was made"
+  ]
+}

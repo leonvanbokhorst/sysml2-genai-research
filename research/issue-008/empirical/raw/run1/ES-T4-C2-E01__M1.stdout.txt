@@ -1,0 +1,39 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "unresolved reference: fleet — did you mean WarehouseAgvFleet::ReturnToDockBelowFifteen::fleet?",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C2.sysml",
+      "line": 32,
+      "column": 29,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'fleet' to 'WarehouseAgvFleet::ReturnToDockBelowFifteen::fleet'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 32,
+              "column": 29,
+              "endLine": 32,
+              "endColumn": 34,
+              "newText": "WarehouseAgvFleet::ReturnToDockBelowFifteen::fleet"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C2.sysml:32:29: error[unresolved]: unresolved reference: fleet — did you mean WarehouseAgvFleet::ReturnToDockBelowFifteen::fleet?",
+    "    satisfy returnToDock by fleet;",
+    "                            ^~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C2.sysml did not analyse cleanly; no check was made"
+  ]
+}

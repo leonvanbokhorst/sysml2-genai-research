@@ -1,0 +1,3 @@
+✓ package HeatPumpHeatingSystem
+✓ satisfy indoorTemperature by house holds (on HeatPumpHeatingSystem::house ID: 1)
+  standing: holds (observed: 1 run under reverse; vacuous: requirement indoorTemperature states no required constraint, so it holds vacuously)

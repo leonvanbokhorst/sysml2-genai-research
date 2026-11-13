@@ -1,0 +1,24 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "\"return\" is a reserved keyword, not a name the ID terminal admits; write 'return' to use it as a name",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C1.sysml",
+      "line": 26,
+      "column": 14,
+      "pass": "syntax",
+      "code": "reserved-keyword-name"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C1.sysml:26:14: error[reserved-keyword-name]: \"return\" is a reserved keyword, not a name the ID terminal admits; write 'return' to use it as a name",
+    "        port return;",
+    "             ^~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C1.sysml did not analyse cleanly; no check was made"
+  ]
+}

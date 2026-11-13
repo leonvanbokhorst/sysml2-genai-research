@@ -1,0 +1,5 @@
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P1-reserved-keyword-name.sysml:7:14: error[reserved-keyword-name]: "return" is a reserved keyword, not a name the ID terminal admits; write 'return' to use it as a name
+        port return;
+             ^~~~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P1-reserved-keyword-name.sysml did not analyse cleanly; no check was made

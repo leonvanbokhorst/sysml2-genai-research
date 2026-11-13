@@ -1,0 +1,363 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml",
+      "line": 4,
+      "column": 35,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Real' to 'ScalarValues::Real'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 4,
+              "column": 35,
+              "endLine": 4,
+              "endColumn": 39,
+              "newText": "ScalarValues::Real"
+            }
+          ]
+        },
+        {
+          "title": "Import 'ScalarValues::*'",
+          "edits": [
+            {
+              "line": 3,
+              "column": 5,
+              "endLine": 3,
+              "endColumn": 5,
+              "newText": "private import ScalarValues::*;\n    "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml",
+      "line": 5,
+      "column": 32,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Boolean' to 'ScalarValues::Boolean'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 5,
+              "column": 32,
+              "endLine": 5,
+              "endColumn": 39,
+              "newText": "ScalarValues::Boolean"
+            }
+          ]
+        },
+        {
+          "title": "Import 'ScalarValues::*'",
+          "edits": [
+            {
+              "line": 3,
+              "column": 5,
+              "endLine": 3,
+              "endColumn": 5,
+              "newText": "private import ScalarValues::*;\n    "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml",
+      "line": 9,
+      "column": 38,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Real' to 'ScalarValues::Real'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 9,
+              "column": 38,
+              "endLine": 9,
+              "endColumn": 42,
+              "newText": "ScalarValues::Real"
+            }
+          ]
+        },
+        {
+          "title": "Import 'ScalarValues::*'",
+          "edits": [
+            {
+              "line": 3,
+              "column": 5,
+              "endLine": 3,
+              "endColumn": 5,
+              "newText": "private import ScalarValues::*;\n    "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml",
+      "line": 10,
+      "column": 40,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Real' to 'ScalarValues::Real'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 10,
+              "column": 40,
+              "endLine": 10,
+              "endColumn": 44,
+              "newText": "ScalarValues::Real"
+            }
+          ]
+        },
+        {
+          "title": "Import 'ScalarValues::*'",
+          "edits": [
+            {
+              "line": 3,
+              "column": 5,
+              "endLine": 3,
+              "endColumn": 5,
+              "newText": "private import ScalarValues::*;\n    "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml",
+      "line": 14,
+      "column": 31,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Boolean' to 'ScalarValues::Boolean'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 14,
+              "column": 31,
+              "endLine": 14,
+              "endColumn": 38,
+              "newText": "ScalarValues::Boolean"
+            }
+          ]
+        },
+        {
+          "title": "Import 'ScalarValues::*'",
+          "edits": [
+            {
+              "line": 3,
+              "column": 5,
+              "endLine": 3,
+              "endColumn": 5,
+              "newText": "private import ScalarValues::*;\n    "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml",
+      "line": 15,
+      "column": 31,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Boolean' to 'ScalarValues::Boolean'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 15,
+              "column": 31,
+              "endLine": 15,
+              "endColumn": 38,
+              "newText": "ScalarValues::Boolean"
+            }
+          ]
+        },
+        {
+          "title": "Import 'ScalarValues::*'",
+          "edits": [
+            {
+              "line": 3,
+              "column": 5,
+              "endLine": 3,
+              "endColumn": 5,
+              "newText": "private import ScalarValues::*;\n    "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml",
+      "line": 19,
+      "column": 30,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Real' to 'ScalarValues::Real'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 19,
+              "column": 30,
+              "endLine": 19,
+              "endColumn": 34,
+              "newText": "ScalarValues::Real"
+            }
+          ]
+        },
+        {
+          "title": "Import 'ScalarValues::*'",
+          "edits": [
+            {
+              "line": 3,
+              "column": 5,
+              "endLine": 3,
+              "endColumn": 5,
+              "newText": "private import ScalarValues::*;\n    "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml",
+      "line": 20,
+      "column": 34,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Boolean' to 'ScalarValues::Boolean'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 20,
+              "column": 34,
+              "endLine": 20,
+              "endColumn": 41,
+              "newText": "ScalarValues::Boolean"
+            }
+          ]
+        },
+        {
+          "title": "Import 'ScalarValues::*'",
+          "edits": [
+            {
+              "line": 3,
+              "column": 5,
+              "endLine": 3,
+              "endColumn": 5,
+              "newText": "private import ScalarValues::*;\n    "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml",
+      "line": 32,
+      "column": 37,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Real' to 'ScalarValues::Real'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 32,
+              "column": 37,
+              "endLine": 32,
+              "endColumn": 41,
+              "newText": "ScalarValues::Real"
+            }
+          ]
+        },
+        {
+          "title": "Import 'ScalarValues::*'",
+          "edits": [
+            {
+              "line": 3,
+              "column": 5,
+              "endLine": 3,
+              "endColumn": 5,
+              "newText": "private import ScalarValues::*;\n    "
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:4:35: error[unresolved]: unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+    "        attribute innerDiameter : Real;",
+    "                                  ^~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:5:32: error[unresolved]: unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;",
+    "        attribute isOccluded : Boolean = false;",
+    "                               ^~~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:9:38: error[unresolved]: unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+    "        attribute measuredPressure : Real;",
+    "                                     ^~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:10:40: error[unresolved]: unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+    "        attribute occlusionThreshold : Real;",
+    "                                       ^~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:14:31: error[unresolved]: unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;",
+    "        attribute isAudible : Boolean = false;",
+    "                              ^~~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:15:31: error[unresolved]: unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;",
+    "        attribute isVisible : Boolean = false;",
+    "                              ^~~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:19:30: error[unresolved]: unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+    "        attribute flowRate : Real;",
+    "                             ^~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:20:34: error[unresolved]: unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;",
+    "        attribute isDelivering : Boolean = false;",
+    "                                 ^~~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml:32:37: error[unresolved]: unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+    "        attribute maxDelaySeconds : Real = 2.0;",
+    "                                    ^~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C1.sysml did not analyse cleanly; no check was made"
+  ]
+}

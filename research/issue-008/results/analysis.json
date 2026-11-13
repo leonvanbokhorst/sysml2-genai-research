@@ -1,0 +1,600 @@
+{
+  "instrument": {
+    "name": "OpenSysML CLI",
+    "version": "sysml v0.12.1",
+    "commit": "b2f0e9b802a334369da94312c35cefbd8726d3bf",
+    "binary_sha256": "ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0"
+  },
+  "corpus": {
+    "mutants": 32,
+    "known_good": 10,
+    "mutants_per_class": 4,
+    "expected_detectable_counts": {
+      "yes": 24,
+      "no": 6,
+      "uncertain": 2
+    },
+    "surface_tell_counts": {
+      "yes": 3,
+      "no": 29
+    }
+  },
+  "primary_measure": {
+    "definition": "relevant error-severity detection (METHODOLOGY-FROZEN.md \u00a78/\u00a79 M1, M4)",
+    "overall": "23/32 = 0.72 [0.55, 0.84]",
+    "by_class": {
+      "F1-syntax": {
+        "n": 4,
+        "detected_relevant_error": 4,
+        "detected_ids": [
+          "M31-F1-01-missing-semicolon",
+          "M31-F1-02-extra-brace",
+          "M31-F1-03-keyword-typo",
+          "M31-F1-04-unquoted-shortname"
+        ],
+        "any_error": 4,
+        "any_signal": 4,
+        "categories": {
+          "detected": 4
+        },
+        "sensitivity_ci": "4/4 = 1.00 [0.51, 1.00]",
+        "any_signal_ci": "4/4 = 1.00 [0.51, 1.00]",
+        "spec_statuses": {
+          "notation": 4
+        }
+      },
+      "F2-unresolved": {
+        "n": 4,
+        "detected_relevant_error": 4,
+        "detected_ids": [
+          "M31-F2-01-type-typo",
+          "M31-F2-02-parameter-typo",
+          "M31-F2-03-redefinition-typo",
+          "M31-F2-04-missing-declaration"
+        ],
+        "any_error": 4,
+        "any_signal": 4,
+        "categories": {
+          "detected": 4
+        },
+        "sensitivity_ci": "4/4 = 1.00 [0.51, 1.00]",
+        "any_signal_ci": "4/4 = 1.00 [0.51, 1.00]",
+        "spec_statuses": {
+          "resolution_mechanism": 4
+        }
+      },
+      "F3-kind-mismatch": {
+        "n": 4,
+        "detected_relevant_error": 2,
+        "detected_ids": [
+          "M31-F3-02-attribute-typed-by-partdef",
+          "M31-F3-03-state-replaced-by-action"
+        ],
+        "any_error": 2,
+        "any_signal": 4,
+        "categories": {
+          "misleading": 1,
+          "detected": 2,
+          "incidental": 1
+        },
+        "sensitivity_ci": "2/4 = 0.50 [0.15, 0.85]",
+        "any_signal_ci": "4/4 = 1.00 [0.51, 1.00]",
+        "spec_statuses": {
+          "prose_only": 3,
+          "metamodel_constraint": 1
+        }
+      },
+      "F4-multiplicity": {
+        "n": 4,
+        "detected_relevant_error": 3,
+        "detected_ids": [
+          "M31-F4-01-inverted-bounds",
+          "M31-F4-03-non-natural-bound",
+          "M31-F4-04-feature-value-count"
+        ],
+        "any_error": 3,
+        "any_signal": 4,
+        "categories": {
+          "detected": 3,
+          "wrong_severity": 1
+        },
+        "sensitivity_ci": "3/4 = 0.75 [0.30, 0.95]",
+        "any_signal_ci": "4/4 = 1.00 [0.51, 1.00]",
+        "spec_statuses": {
+          "none": 2,
+          "metamodel_constraint": 2
+        }
+      },
+      "F5-named-constraint": {
+        "n": 4,
+        "detected_relevant_error": 3,
+        "detected_ids": [
+          "M31-F5-02-satisfy-reference",
+          "M31-F5-03-decision-node-incoming",
+          "M31-F5-04-composite-port-feature"
+        ],
+        "any_error": 3,
+        "any_signal": 4,
+        "categories": {
+          "incidental": 1,
+          "detected": 3
+        },
+        "sensitivity_ci": "3/4 = 0.75 [0.30, 0.95]",
+        "any_signal_ci": "4/4 = 1.00 [0.51, 1.00]",
+        "spec_statuses": {
+          "metamodel_constraint": 3,
+          "prose_only": 1
+        }
+      },
+      "F6-quantity": {
+        "n": 4,
+        "detected_relevant_error": 3,
+        "detected_ids": [
+          "M31-F6-01-wrong-dimension-unit",
+          "M31-F6-02-missing-unit",
+          "M31-F6-04-wrong-product-dimension"
+        ],
+        "any_error": 3,
+        "any_signal": 4,
+        "categories": {
+          "detected": 3,
+          "wrong_severity": 1
+        },
+        "sensitivity_ci": "3/4 = 0.75 [0.30, 0.95]",
+        "any_signal_ci": "4/4 = 1.00 [0.51, 1.00]",
+        "spec_statuses": {
+          "library_semantics": 4
+        }
+      },
+      "F7-structural": {
+        "n": 4,
+        "detected_relevant_error": 0,
+        "detected_ids": [],
+        "any_error": 0,
+        "any_signal": 0,
+        "categories": {
+          "silent": 4
+        },
+        "sensitivity_ci": "0/4 = 0.00 [0.00, 0.49]",
+        "any_signal_ci": "0/4 = 0.00 [0.00, 0.49]",
+        "spec_statuses": {
+          "none": 4
+        }
+      },
+      "F8-metadata": {
+        "n": 4,
+        "detected_relevant_error": 4,
+        "detected_ids": [
+          "M31-F8-01-annotation-not-metadata",
+          "M31-F8-02-body-feature-typo",
+          "M31-F8-03-value-kind",
+          "M31-F8-04-abstract-metaclass"
+        ],
+        "any_error": 4,
+        "any_signal": 4,
+        "categories": {
+          "detected": 4
+        },
+        "sensitivity_ci": "4/4 = 1.00 [0.51, 1.00]",
+        "any_signal_ci": "4/4 = 1.00 [0.51, 1.00]",
+        "spec_statuses": {
+          "metamodel_constraint": 4
+        }
+      }
+    }
+  },
+  "outcome_categories": {
+    "detected": 23,
+    "wrong_severity": 2,
+    "misleading": 1,
+    "incidental": 2,
+    "silent": 4,
+    "ids": {
+      "detected": [
+        "M31-F1-01-missing-semicolon",
+        "M31-F1-02-extra-brace",
+        "M31-F1-03-keyword-typo",
+        "M31-F1-04-unquoted-shortname",
+        "M31-F2-01-type-typo",
+        "M31-F2-02-parameter-typo",
+        "M31-F2-03-redefinition-typo",
+        "M31-F2-04-missing-declaration",
+        "M31-F3-02-attribute-typed-by-partdef",
+        "M31-F3-03-state-replaced-by-action",
+        "M31-F4-01-inverted-bounds",
+        "M31-F4-03-non-natural-bound",
+        "M31-F4-04-feature-value-count",
+        "M31-F5-02-satisfy-reference",
+        "M31-F5-03-decision-node-incoming",
+        "M31-F5-04-composite-port-feature",
+        "M31-F6-01-wrong-dimension-unit",
+        "M31-F6-02-missing-unit",
+        "M31-F6-04-wrong-product-dimension",
+        "M31-F8-01-annotation-not-metadata",
+        "M31-F8-02-body-feature-typo",
+        "M31-F8-03-value-kind",
+        "M31-F8-04-abstract-metaclass"
+      ],
+      "wrong_severity": [
+        "M31-F4-02-end-feature-multiplicity",
+        "M31-F6-03-incommensurable-sum"
+      ],
+      "misleading": [
+        "M31-F3-01-part-typed-by-portdef"
+      ],
+      "incidental": [
+        "M31-F3-04-subject-typed-by-requirement",
+        "M31-F5-01-feature-value-overriding"
+      ],
+      "silent": [
+        "M31-F7-01-unreachable-state",
+        "M31-F7-02-satisfied-but-violated",
+        "M31-F7-03-missing-flow",
+        "M31-F7-04-contradictory-assertions"
+      ]
+    }
+  },
+  "any_error_mechanical": {
+    "definition": ">=1 error-severity diagnostic, no relevance judgement (\u00a78)",
+    "overall": "23/32 = 0.72 [0.55, 0.84]"
+  },
+  "any_signal": {
+    "definition": ">=1 diagnostic of any severity",
+    "overall": "28/32 = 0.88 [0.72, 0.95]"
+  },
+  "expectation_audit": {
+    "expected_yes": {
+      "n": 24,
+      "error_outcome": {
+        "hit": [
+          "M31-F1-01-missing-semicolon",
+          "M31-F1-02-extra-brace",
+          "M31-F1-03-keyword-typo",
+          "M31-F1-04-unquoted-shortname",
+          "M31-F2-01-type-typo",
+          "M31-F2-02-parameter-typo",
+          "M31-F2-03-redefinition-typo",
+          "M31-F2-04-missing-declaration",
+          "M31-F3-02-attribute-typed-by-partdef",
+          "M31-F3-03-state-replaced-by-action",
+          "M31-F4-03-non-natural-bound",
+          "M31-F5-02-satisfy-reference",
+          "M31-F5-03-decision-node-incoming",
+          "M31-F6-01-wrong-dimension-unit",
+          "M31-F6-04-wrong-product-dimension",
+          "M31-F8-01-annotation-not-metadata",
+          "M31-F8-02-body-feature-typo",
+          "M31-F8-03-value-kind",
+          "M31-F8-04-abstract-metaclass"
+        ],
+        "miss": [
+          "M31-F3-01-part-typed-by-portdef",
+          "M31-F3-04-subject-typed-by-requirement",
+          "M31-F4-02-end-feature-multiplicity",
+          "M31-F5-01-feature-value-overriding",
+          "M31-F6-03-incommensurable-sum"
+        ],
+        "error_seen": [
+          "M31-F1-01-missing-semicolon",
+          "M31-F1-02-extra-brace",
+          "M31-F1-03-keyword-typo",
+          "M31-F1-04-unquoted-shortname",
+          "M31-F2-01-type-typo",
+          "M31-F2-02-parameter-typo",
+          "M31-F2-03-redefinition-typo",
+          "M31-F2-04-missing-declaration",
+          "M31-F3-02-attribute-typed-by-partdef",
+          "M31-F3-03-state-replaced-by-action",
+          "M31-F4-03-non-natural-bound",
+          "M31-F5-02-satisfy-reference",
+          "M31-F5-03-decision-node-incoming",
+          "M31-F6-01-wrong-dimension-unit",
+          "M31-F6-04-wrong-product-dimension",
+          "M31-F8-01-annotation-not-metadata",
+          "M31-F8-02-body-feature-typo",
+          "M31-F8-03-value-kind",
+          "M31-F8-04-abstract-metaclass"
+        ],
+        "no_error": [
+          "M31-F3-01-part-typed-by-portdef",
+          "M31-F3-04-subject-typed-by-requirement",
+          "M31-F4-02-end-feature-multiplicity",
+          "M31-F5-01-feature-value-overriding",
+          "M31-F6-03-incommensurable-sum"
+        ]
+      },
+      "signal_outcome": {
+        "signal_seen": [
+          "M31-F1-01-missing-semicolon",
+          "M31-F1-02-extra-brace",
+          "M31-F1-03-keyword-typo",
+          "M31-F1-04-unquoted-shortname",
+          "M31-F2-01-type-typo",
+          "M31-F2-02-parameter-typo",
+          "M31-F2-03-redefinition-typo",
+          "M31-F2-04-missing-declaration",
+          "M31-F3-01-part-typed-by-portdef",
+          "M31-F3-02-attribute-typed-by-partdef",
+          "M31-F3-03-state-replaced-by-action",
+          "M31-F3-04-subject-typed-by-requirement",
+          "M31-F4-02-end-feature-multiplicity",
+          "M31-F4-03-non-natural-bound",
+          "M31-F5-01-feature-value-overriding",
+          "M31-F5-02-satisfy-reference",
+          "M31-F5-03-decision-node-incoming",
+          "M31-F6-01-wrong-dimension-unit",
+          "M31-F6-03-incommensurable-sum",
+          "M31-F6-04-wrong-product-dimension",
+          "M31-F8-01-annotation-not-metadata",
+          "M31-F8-02-body-feature-typo",
+          "M31-F8-03-value-kind",
+          "M31-F8-04-abstract-metaclass"
+        ],
+        "silent": []
+      }
+    },
+    "expected_no": {
+      "n": 6,
+      "error_outcome": {
+        "hit": [],
+        "miss": [],
+        "error_seen": [
+          "M31-F4-01-inverted-bounds",
+          "M31-F6-02-missing-unit"
+        ],
+        "no_error": [
+          "M31-F7-01-unreachable-state",
+          "M31-F7-02-satisfied-but-violated",
+          "M31-F7-03-missing-flow",
+          "M31-F7-04-contradictory-assertions"
+        ]
+      },
+      "signal_outcome": {
+        "signal_seen": [
+          "M31-F4-01-inverted-bounds",
+          "M31-F6-02-missing-unit"
+        ],
+        "silent": [
+          "M31-F7-01-unreachable-state",
+          "M31-F7-02-satisfied-but-violated",
+          "M31-F7-03-missing-flow",
+          "M31-F7-04-contradictory-assertions"
+        ]
+      }
+    },
+    "expected_uncertain": {
+      "n": 2,
+      "error_outcome": {
+        "hit": [],
+        "miss": [],
+        "error_seen": [
+          "M31-F4-04-feature-value-count",
+          "M31-F5-04-composite-port-feature"
+        ],
+        "no_error": []
+      },
+      "signal_outcome": {
+        "signal_seen": [
+          "M31-F4-04-feature-value-count",
+          "M31-F5-04-composite-port-feature"
+        ],
+        "silent": []
+      }
+    }
+  },
+  "layer_confusion": {
+    "syntax": {
+      "syntax": 4
+    },
+    "names": {
+      "name-resolution": 4
+    },
+    "typing": {
+      "name-resolution": 2,
+      "type": 8,
+      "constraint": 1
+    },
+    "none": {
+      "constraint": 1,
+      "none": 4
+    },
+    "constraints": {
+      "constraint": 4,
+      "name-resolution": 1,
+      "type": 2,
+      "control-node": 1
+    }
+  },
+  "surface_tell_stratum": {
+    "yes": {
+      "n": 3,
+      "detected": 3,
+      "ci": "3/3 = 1.00 [0.44, 1.00]"
+    },
+    "no": {
+      "n": 29,
+      "detected": 20,
+      "ci": "20/29 = 0.69 [0.51, 0.83]"
+    }
+  },
+  "oracle_gap": {
+    "metamodel_constraint": {
+      "n": 10,
+      "detected": 8,
+      "detected_ids": [
+        "M31-F3-03-state-replaced-by-action",
+        "M31-F4-03-non-natural-bound",
+        "M31-F5-02-satisfy-reference",
+        "M31-F5-03-decision-node-incoming",
+        "M31-F8-01-annotation-not-metadata",
+        "M31-F8-02-body-feature-typo",
+        "M31-F8-03-value-kind",
+        "M31-F8-04-abstract-metaclass"
+      ],
+      "missed": {
+        "M31-F4-02-end-feature-multiplicity": "wrong_severity",
+        "M31-F5-01-feature-value-overriding": "incidental"
+      }
+    },
+    "prose_only": {
+      "n": 4,
+      "detected": 2,
+      "detected_ids": [
+        "M31-F3-02-attribute-typed-by-partdef",
+        "M31-F5-04-composite-port-feature"
+      ],
+      "missed": {
+        "M31-F3-01-part-typed-by-portdef": "misleading",
+        "M31-F3-04-subject-typed-by-requirement": "incidental"
+      }
+    },
+    "library_semantics": {
+      "n": 4,
+      "detected": 3,
+      "detected_ids": [
+        "M31-F6-01-wrong-dimension-unit",
+        "M31-F6-02-missing-unit",
+        "M31-F6-04-wrong-product-dimension"
+      ],
+      "missed": {
+        "M31-F6-03-incommensurable-sum": "wrong_severity"
+      }
+    },
+    "resolution_mechanism": {
+      "n": 4,
+      "detected": 4,
+      "detected_ids": [
+        "M31-F2-01-type-typo",
+        "M31-F2-02-parameter-typo",
+        "M31-F2-03-redefinition-typo",
+        "M31-F2-04-missing-declaration"
+      ],
+      "missed": {}
+    },
+    "notation": {
+      "n": 4,
+      "detected": 4,
+      "detected_ids": [
+        "M31-F1-01-missing-semicolon",
+        "M31-F1-02-extra-brace",
+        "M31-F1-03-keyword-typo",
+        "M31-F1-04-unquoted-shortname"
+      ],
+      "missed": {}
+    },
+    "none": {
+      "n": 6,
+      "detected": 2,
+      "detected_ids": [
+        "M31-F4-01-inverted-bounds",
+        "M31-F4-04-feature-value-count"
+      ],
+      "missed": {
+        "M31-F7-01-unreachable-state": "silent",
+        "M31-F7-02-satisfied-but-violated": "silent",
+        "M31-F7-03-missing-flow": "silent",
+        "M31-F7-04-contradictory-assertions": "silent"
+      }
+    }
+  },
+  "known_good_arm": {
+    "models": 10,
+    "models_with_error": 0,
+    "false_positive_rate_errors": "0/10 = 0.00 [0.00, 0.28]",
+    "models_with_warning": 1,
+    "false_positive_rate_warnings": "1/10 = 0.10 [0.02, 0.40]",
+    "over_reach_models": 1,
+    "rows": [
+      {
+        "case_id": "KG-01-parts",
+        "n_errors": 0,
+        "n_warnings": 0,
+        "codes": "",
+        "triage": "none"
+      },
+      {
+        "case_id": "KG-02-ports",
+        "n_errors": 0,
+        "n_warnings": 0,
+        "codes": "",
+        "triage": "none"
+      },
+      {
+        "case_id": "KG-03-connections",
+        "n_errors": 0,
+        "n_warnings": 0,
+        "codes": "",
+        "triage": "none"
+      },
+      {
+        "case_id": "KG-04-featurevalues",
+        "n_errors": 0,
+        "n_warnings": 1,
+        "codes": "name-conflict",
+        "triage": "ii over-reach / legal-but-flagged"
+      },
+      {
+        "case_id": "KG-05-states",
+        "n_errors": 0,
+        "n_warnings": 0,
+        "codes": "",
+        "triage": "none"
+      },
+      {
+        "case_id": "KG-06-transitions",
+        "n_errors": 0,
+        "n_warnings": 0,
+        "codes": "",
+        "triage": "none"
+      },
+      {
+        "case_id": "KG-07-requirements",
+        "n_errors": 0,
+        "n_warnings": 0,
+        "codes": "",
+        "triage": "none"
+      },
+      {
+        "case_id": "KG-08-quantities",
+        "n_errors": 0,
+        "n_warnings": 0,
+        "codes": "",
+        "triage": "none"
+      },
+      {
+        "case_id": "KG-09-actions",
+        "n_errors": 0,
+        "n_warnings": 0,
+        "codes": "",
+        "triage": "none"
+      },
+      {
+        "case_id": "KG-10-asserts",
+        "n_errors": 0,
+        "n_warnings": 0,
+        "codes": "",
+        "triage": "none"
+      }
+    ]
+  },
+  "diagnostics_per_defect": {
+    "mutants_with_any_diagnostic": 28,
+    "mutants_with_error": 23,
+    "mutants_silent": 4,
+    "exactly_one_any_severity": 23,
+    "exactly_one_error_among_error_bearing": 20,
+    "distribution_any_severity": {
+      "1": 23,
+      "2": 3,
+      "3": 1,
+      "5": 1
+    },
+    "distribution_errors_among_error_bearing": {
+      "1": 20,
+      "2": 1,
+      "3": 1,
+      "5": 1
+    },
+    "claim": "relevance, not precision: single-defect mutants make any-error equal relevant-error almost by construction"
+  }
+}

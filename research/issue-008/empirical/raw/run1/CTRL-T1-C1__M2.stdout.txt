@@ -1,0 +1,3 @@
+✓ package GreenhouseIrrigation
+✓ satisfy moistureControl by greenhouse holds (on GreenhouseIrrigation::greenhouse ID: 1)
+  standing: holds (observed: 1 run under reverse; vacuous: requirement moistureControl states no required constraint, so it holds vacuously)

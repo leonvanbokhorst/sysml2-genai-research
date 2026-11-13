@@ -1,0 +1,4 @@
+✓ package LevelCrossingProtection
+✓ Created instance of LevelCrossingProtection::levelCrossing
+  ID: 1
+  Use %features levelCrossing to inspect

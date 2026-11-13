@@ -1,0 +1,8 @@
+✓ package KG07Requirements
+✓ Created instance of KG07Requirements::vehicle
+  ID: 1
+  Use %features vehicle to inspect
+✗ satisfy vehicleMaximumMass by vehicle fails (on KG07Requirements::vehicle ID: 1)
+  Required condition evaluated to false: massActual <= massRequired
+✗ KG07Requirements::vehicle is not valid: 1 of 1 assertion fails
+  standing: violated (witnessed: 1 run under reverse)

@@ -1,0 +1,24 @@
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "message": "operator '+' combines incommensurable quantities: MassValue (dimension M) and SpeedValue (dimension L·T^-1)",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-03-incommensurable-sum.sysml",
+      "line": 14,
+      "column": 13,
+      "pass": "type",
+      "code": "incommensurable-operands"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-03-incommensurable-sum.sysml:14:13: warning[incommensurable-operands]: operator '+' combines incommensurable quantities: MassValue (dimension M) and SpeedValue (dimension L·T^-1)",
+    "            unladenMass + ratedSpeed;",
+    "            ^~~~~~~~~~~~~~~~~~~~~~~~",
+    "✓ package KG08Quantities",
+    "✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-03-incommensurable-sum.sysml: no errors"
+  ],
+  "errors": null
+}

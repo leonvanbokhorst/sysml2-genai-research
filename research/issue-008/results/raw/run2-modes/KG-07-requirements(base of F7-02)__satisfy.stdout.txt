@@ -1,0 +1,3 @@
+✓ package KG07Requirements
+✓ satisfy vehicleMaximumMass by vehicle holds (on KG07Requirements::vehicle ID: 1)
+  standing: holds (observed: 1 run under reverse)

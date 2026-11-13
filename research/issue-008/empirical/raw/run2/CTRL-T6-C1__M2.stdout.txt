@@ -1,0 +1,3 @@
+✓ package HeatPumpHeating
+✓ satisfy indoorMinimum by dwelling holds (on HeatPumpHeating::dwelling ID: 1)
+  standing: holds (observed: 1 run under reverse; vacuous: requirement indoorMinimum states no required constraint, so it holds vacuously)

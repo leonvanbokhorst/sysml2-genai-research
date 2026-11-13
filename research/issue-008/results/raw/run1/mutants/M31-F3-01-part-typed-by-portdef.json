@@ -1,0 +1,24 @@
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "message": "Duplicate of inherited member name 'self' from Part, Port",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-01-part-typed-by-portdef.sysml",
+      "line": 15,
+      "column": 9,
+      "pass": "name-resolution",
+      "code": "name-conflict"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-01-part-typed-by-portdef.sysml:15:9: warning[name-conflict]: Duplicate of inherited member name 'self' from Part, Port",
+    "        part fuelOutPort : FuelingPort;",
+    "        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+    "✓ package KG02Ports",
+    "✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-01-part-typed-by-portdef.sysml: no errors"
+  ],
+  "errors": null
+}

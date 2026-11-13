@@ -1,0 +1,14 @@
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml:48:25: error[syntax]: a transition states its ends as `transition first <source> … then <target>;`
+        transition from idle to lowering on detection.approaching;
+                        ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml:49:25: error[syntax]: a transition states its ends as `transition first <source> … then <target>;`
+        transition from lowering to closed when leftArm.isLowered and rightArm.isLowered;
+                        ^~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml:50:25: error[syntax]: a transition states its ends as `transition first <source> … then <target>;`
+        transition from closed to raising on detection.clear;
+                        ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml:51:25: error[syntax]: a transition states its ends as `transition first <source> … then <target>;`
+        transition from raising to idle when leftArm.position > 0.9;
+                        ^~~~~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml did not analyse cleanly; no check was made

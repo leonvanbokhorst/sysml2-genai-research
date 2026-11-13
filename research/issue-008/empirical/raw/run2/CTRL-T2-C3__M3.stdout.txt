@@ -1,0 +1,7 @@
+✓ package LevelCrossingSystem
+✓ Created instance of LevelCrossingSystem::crossing
+  ID: 1
+  Use %features crossing to inspect
+✓ satisfy lowerBeforeArrival by crossing holds (on LevelCrossingSystem::crossing ID: 1)
+✓ LevelCrossingSystem::crossing is valid: its 1 assertion holds
+  standing: holds (observed: 1 run under reverse)

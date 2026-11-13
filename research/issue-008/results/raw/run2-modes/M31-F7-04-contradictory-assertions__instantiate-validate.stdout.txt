@@ -1,0 +1,4 @@
+✓ package KG10Asserts
+✓ Created instance of KG10Asserts::testObject
+  ID: 1
+  Use %features testObject to inspect

@@ -1,0 +1,11 @@
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": null,
+  "diagnostics": null,
+  "output": [
+    "✓ package GreenhouseIrrigation",
+    "✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/../issue-007/corpus/normalized/T1-C1.sysml: no errors"
+  ],
+  "errors": null
+}

@@ -1,0 +1,24 @@
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "message": "Bound features should have conforming types",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-04-subject-typed-by-requirement.sysml",
+      "line": 38,
+      "column": 35,
+      "pass": "type",
+      "code": "bound-feature-types"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-04-subject-typed-by-requirement.sysml:38:35: warning[bound-feature-types]: Bound features should have conforming types",
+    "    satisfy vehicleMaximumMass by vehicle;",
+    "                                  ^~~~~~~",
+    "✓ package KG07Requirements",
+    "✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-04-subject-typed-by-requirement.sysml: no errors"
+  ],
+  "errors": null
+}

@@ -1,0 +1,63 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "\"in\" is a reserved keyword, not a name the ID terminal admits; write 'in' to use it as a name",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C2.sysml",
+      "line": 23,
+      "column": 14,
+      "pass": "syntax",
+      "code": "reserved-keyword-name"
+    },
+    {
+      "severity": "error",
+      "message": "\"out\" is a reserved keyword, not a name the ID terminal admits; write 'out' to use it as a name",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C2.sysml",
+      "line": 24,
+      "column": 14,
+      "pass": "syntax",
+      "code": "reserved-keyword-name"
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: pump — did you mean InfusionPump::AlarmTiming::pump?",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C2.sysml",
+      "line": 44,
+      "column": 28,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'pump' to 'InfusionPump::AlarmTiming::pump'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 44,
+              "column": 28,
+              "endLine": 44,
+              "endColumn": 32,
+              "newText": "InfusionPump::AlarmTiming::pump"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C2.sysml:23:14: error[reserved-keyword-name]: \"in\" is a reserved keyword, not a name the ID terminal admits; write 'in' to use it as a name",
+    "        port in;",
+    "             ^~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C2.sysml:24:14: error[reserved-keyword-name]: \"out\" is a reserved keyword, not a name the ID terminal admits; write 'out' to use it as a name",
+    "        port out;",
+    "             ^~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C2.sysml:44:28: error[unresolved]: unresolved reference: pump — did you mean InfusionPump::AlarmTiming::pump?",
+    "    satisfy alarmTiming by pump;",
+    "                           ^~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T3-C2.sysml did not analyse cleanly; no check was made"
+  ]
+}

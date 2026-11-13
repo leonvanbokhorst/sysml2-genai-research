@@ -1,0 +1,39 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "unresolved reference: scne — did you mean scene?",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-02-parameter-typo.sysml",
+      "line": 24,
+      "column": 28,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'scne' to 'scene'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 24,
+              "column": 28,
+              "endLine": 24,
+              "endColumn": 32,
+              "newText": "scene"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-02-parameter-typo.sysml:24:28: error[unresolved]: unresolved reference: scne — did you mean scene?",
+    "        bind focus.scene = scne;",
+    "                           ^~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-02-parameter-typo.sysml did not analyse cleanly; no check was made"
+  ]
+}

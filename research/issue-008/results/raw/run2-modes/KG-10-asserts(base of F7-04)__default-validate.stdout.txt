@@ -1,0 +1,11 @@
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": null,
+  "diagnostics": null,
+  "output": [
+    "✓ package KG10Asserts",
+    "✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-10-asserts.sysml: no errors"
+  ],
+  "errors": null
+}

@@ -1,0 +1,24 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "Must have a concrete type",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-04-abstract-metaclass.sysml",
+      "line": 18,
+      "column": 9,
+      "pass": "constraint",
+      "code": "metadata-concrete-type"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-04-abstract-metaclass.sysml:18:9: error[metadata-concrete-type]: Must have a concrete type",
+    "        @SafetyRelevant { level = 3; }",
+    "        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-04-abstract-metaclass.sysml did not analyse cleanly; no check was made"
+  ]
+}

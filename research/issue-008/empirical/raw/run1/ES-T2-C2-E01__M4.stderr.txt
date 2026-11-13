@@ -1,0 +1,5 @@
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C2.sysml:17:19: error[reserved-keyword-name]: "state" is a reserved keyword, not a name the ID terminal admits; write 'state' to use it as a name
+        attribute state : String;
+                  ^~~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C2.sysml did not analyse cleanly; no check was made

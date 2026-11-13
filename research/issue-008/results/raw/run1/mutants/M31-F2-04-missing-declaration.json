@@ -1,0 +1,39 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "unresolved reference: Wheel — did you mean wheels?",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-04-missing-declaration.sysml",
+      "line": 20,
+      "column": 26,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Wheel' to 'wheels'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 20,
+              "column": 26,
+              "endLine": 20,
+              "endColumn": 31,
+              "newText": "wheels"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-04-missing-declaration.sysml:20:26: error[unresolved]: unresolved reference: Wheel — did you mean wheels?",
+    "        part wheels[4] : Wheel;",
+    "                         ^~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-04-missing-declaration.sysml did not analyse cleanly; no check was made"
+  ]
+}

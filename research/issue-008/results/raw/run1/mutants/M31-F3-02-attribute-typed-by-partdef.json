@@ -1,0 +1,36 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "An attribute must be typed by attribute definitions.",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-02-attribute-typed-by-partdef.sysml",
+      "line": 10,
+      "column": 9,
+      "pass": "type",
+      "code": "usage-typing"
+    },
+    {
+      "severity": "warning",
+      "message": "Bound features should have conforming types",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-02-attribute-typed-by-partdef.sysml",
+      "line": 14,
+      "column": 13,
+      "pass": "type",
+      "code": "bound-feature-types"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-02-attribute-typed-by-partdef.sysml:10:9: error[usage-typing]: An attribute must be typed by attribute definitions.",
+    "        attribute unladenMass : Vehicle = 1200.0 [kg];",
+    "        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-02-attribute-typed-by-partdef.sysml:14:13: warning[bound-feature-types]: Bound features should have conforming types",
+    "            0.5 * unladenMass * ratedSpeed * ratedSpeed;",
+    "            ^~~~~~~~~~~~~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-02-attribute-typed-by-partdef.sysml did not analyse cleanly; no check was made"
+  ]
+}

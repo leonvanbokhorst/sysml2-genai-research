@@ -1,0 +1,14 @@
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml:22:14: error[reserved-keyword-name]: "return" is a reserved keyword, not a name the ID terminal admits; write 'return' to use it as a name
+        port return;
+             ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml:40:36: error[unresolved]: unresolved reference: heating — did you mean HeatPumpBufferTank::MaintainIndoorTemperature::heating?
+    satisfy maintainTemperature by heating;
+                                   ^~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml:42:38: error[unresolved]: unresolved reference: heating — did you mean HeatPumpBufferTank::MaintainIndoorTemperature::heating?
+    connection tankToCircuit connect heating.tank to heating.circuit.supply;
+                                     ^~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml:42:54: error[unresolved]: unresolved reference: heating — did you mean HeatPumpBufferTank::MaintainIndoorTemperature::heating?
+    connection tankToCircuit connect heating.tank to heating.circuit.supply;
+                                                     ^~~~~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml did not analyse cleanly; no check was made
