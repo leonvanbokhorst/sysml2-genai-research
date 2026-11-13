@@ -1,0 +1,69 @@
+{
+  "pinned": {
+    "sysml": {
+      "spec": "SysML 2.0",
+      "omg_doc": "formal/2026-03-02",
+      "date": "March 2026",
+      "xmi_url": "https://www.omg.org/spec/SysML/20250201/SysML.xmi",
+      "xmi_sha256": "caa65d54f56798bf7582d173f7567e1eea37a49c45984f8bd7df145011cf8c6f",
+      "xmi_sha256_pinned": "caa65d54f56798bf7582d173f7567e1eea37a49c45984f8bd7df145011cf8c6f",
+      "pdf_url": "https://www.omg.org/spec/SysML/2.0/Language/PDF",
+      "pdf_sha256": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a",
+      "pdf_sha256_actual": "46e6c0476a6f1f34f367d57e039d56659bff75e41d2e4b3d37ca4cadea84a83a"
+    },
+    "kerml": {
+      "spec": "KerML 1.0",
+      "omg_doc": "formal/2026-03-01",
+      "date": "March 2026",
+      "xmi_url": "https://www.omg.org/spec/KerML/20250201/KerML.xmi",
+      "xmi_sha256": "45b18775afe2b2fcdc70e24f37c6d2f344defcc3f38a02075a193354e2d7b466",
+      "xmi_sha256_pinned": "45b18775afe2b2fcdc70e24f37c6d2f344defcc3f38a02075a193354e2d7b466",
+      "pdf_url": "https://www.omg.org/spec/KerML/1.0/PDF",
+      "pdf_sha256": "3bcc96f989bfa9d05cd28e026df3351b795fe8d494187b87bff3db7d96373697",
+      "pdf_sha256_actual": "3bcc96f989bfa9d05cd28e026df3351b795fe8d494187b87bff3db7d96373697"
+    }
+  },
+  "counts": {
+    "sysml": {
+      "total_named": 365,
+      "by_kind": {
+        "check": 128,
+        "derive": 145,
+        "validate": 92
+      },
+      "with_ocl": 365,
+      "without_ocl": 0,
+      "with_library_helper": 121,
+      "with_library_literal": 123,
+      "language_mismatch": 1,
+      "with_implied": 0,
+      "with_resolution": 4
+    },
+    "kerml": {
+      "total_named": 258,
+      "by_kind": {
+        "check": 80,
+        "derive": 90,
+        "validate": 88
+      },
+      "with_ocl": 258,
+      "without_ocl": 0,
+      "with_library_helper": 58,
+      "with_library_literal": 59,
+      "language_mismatch": 8,
+      "with_implied": 4,
+      "with_resolution": 5
+    },
+    "pdf_only_names": 39,
+    "pdf_wrapped_name_fragments": 86,
+    "pdf_only_by_kind": {
+      "check": 30,
+      "validate": 9
+    }
+  },
+  "cross_checks": {},
+  "anonymous_constraints": {
+    "sysml": 19,
+    "kerml": 82
+  }
+}
