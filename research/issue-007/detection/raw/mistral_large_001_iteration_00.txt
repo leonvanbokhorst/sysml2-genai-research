@@ -1,0 +1,8 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_001_iteration_00.sysml
+[exit 0]
+--- stdout ---
+✓ package VehicleSystem
+✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_001_iteration_00.sysml: no errors
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted

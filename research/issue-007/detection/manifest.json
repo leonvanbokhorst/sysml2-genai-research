@@ -1,0 +1,435 @@
+{
+  "instrument": {
+    "path": ".tools/sysml",
+    "sha256": "ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0",
+    "version_output": "sysml v0.12.1\n  Commit:     b2f0e9b802a334369da94312c35cefbd8726d3bf\n  Build time: 2026-11-06_03:25:57\n  Go version: go1.27.3"
+  },
+  "argv": [
+    ".tools/sysml",
+    "-validate",
+    "<file>"
+  ],
+  "note": "per-file sha256 for every artefact the detection run touched; the raw/*.txt outputs are byte-identical to the ones pinned in B-reviews-A.md",
+  "artefacts": [
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T1-C1.sysml",
+      "sha256": "1484db7af49e4e930447d6d8ecceec9980d5b9a33f2eaedc591effe63eafe0b8",
+      "bytes": 2010
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T1-C2.sysml",
+      "sha256": "5e304465dcaabf76ac65a2271a9d9d745c272a92b51578324544a4ba723bcc0f",
+      "bytes": 1281
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T1-C3.sysml",
+      "sha256": "dcf3d5c076aa567053e97fa0635f2554812a9b7b902f406436b276168b18c418",
+      "bytes": 1683
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T2-C1.sysml",
+      "sha256": "23dd88d4fea73e142e45bd015a59d41d0412d6e8be5cd8c193cbd726b6cd6c8f",
+      "bytes": 1418
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T2-C2.sysml",
+      "sha256": "8d4bf408c16de58d3408ffc32f14e669f4c82a3b709c79564f9898c9d744e61e",
+      "bytes": 1134
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T2-C3.sysml",
+      "sha256": "42f39d246bda264cd1708acb61a82d23a7fa0a8e75bf02ba2bdde84b310a1998",
+      "bytes": 1796
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T3-C1.sysml",
+      "sha256": "46621a449c56e48930e036c142be755bf1d27adb0d1e5190a403976ecf9ef8fe",
+      "bytes": 1118
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T3-C2.sysml",
+      "sha256": "4b848f247a778d1ed771894feaa4ecf8c8d543b79a71393345d7a4d5403298cc",
+      "bytes": 1143
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T3-C3.sysml",
+      "sha256": "ff587b42d05ce6e68017148d66c0b2c23535e7c26ea6860482ba9c51f6c788d6",
+      "bytes": 1389
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T4-C1.sysml",
+      "sha256": "b65009d585230ea5239bf410333a6f63504902c8f901137c35b0360e517fb832",
+      "bytes": 1380
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T4-C2.sysml",
+      "sha256": "dfaa7efc641b99495943a460e5c2d75fd128c329bfaa8930d92bb445c833dae6",
+      "bytes": 1183
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T4-C3.sysml",
+      "sha256": "9d75dd751018f1620748b3e9e00039790fd7ee1656fc09bfe6ea169d1c0c3402",
+      "bytes": 1577
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T5-C1.sysml",
+      "sha256": "be6f6b44b3901ec345182306aded496c44b7f833e719bf6e01159e12c80cad75",
+      "bytes": 1354
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T5-C2.sysml",
+      "sha256": "52aa2c2581f429d1f0bd1ed70716a6623f09e51221ada5aeb87f4c96928ce4a5",
+      "bytes": 1208
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T5-C3.sysml",
+      "sha256": "f4f041ff1cddd728a5aae5b98e710915a12a7ccfff289a6afcb650eb8e070547",
+      "bytes": 1606
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T6-C1.sysml",
+      "sha256": "d7b14df1f4da2e1b0cc00cd7bcdb0346f8ceb250053bc434486860806d625673",
+      "bytes": 1479
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T6-C2.sysml",
+      "sha256": "eafb84ca1d472bf2e9eca688e20e7af97babd5cb4f77ff3c2e01f5c551c74c29",
+      "bytes": 1132
+    },
+    {
+      "scope": "normalised",
+      "file": "research/issue-007/corpus/normalized/T6-C3.sysml",
+      "sha256": "aec638d98b2cc90f124e5cabb408c43f6f35e11a6a2d898ed3c3c253507e5659",
+      "bytes": 1590
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T1-C1.md",
+      "sha256": "b3c3b74d8984497f277c0457eb047b0238c2d6116c7f354e25073528f4309d8b",
+      "bytes": 2438
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T1-C2.md",
+      "sha256": "d8cb81a2b406976e45a6e445695ddc3e23c9f30f0735dea02d8954bbff4117e9",
+      "bytes": 1294
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T1-C3.md",
+      "sha256": "f618cbedc514bcecae3ace758cb2e915da96fbad84c722d875c6431d63f8f5d7",
+      "bytes": 1696
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T2-C1.md",
+      "sha256": "17236df8adbe1b967cb7899cc0307312b005dc6202ebe696f721a1375e63c482",
+      "bytes": 1747
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T2-C2.md",
+      "sha256": "f4a902c51edebe959a84858d23f763269b906ca7849ec3924412a6ef82f44f37",
+      "bytes": 1147
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T2-C3.md",
+      "sha256": "1c541e79a3d0d85a8c41aaec7ff5037528b971ab0572269d3bb622dc4689f436",
+      "bytes": 1809
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T3-C1.md",
+      "sha256": "997c2ac1148719a0b33152638d1da5771ab438e6a5b1365036e72ba1ad3aa62a",
+      "bytes": 1314
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T3-C2.md",
+      "sha256": "62b80ca0edd6e08812596c88bff75c16a420cd9b28892ab596416b0bc52edf7d",
+      "bytes": 1156
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T3-C3.md",
+      "sha256": "aa17431bca546602e61273a7512ad2c3166c4cd717d4952eb42ed70b7774d519",
+      "bytes": 1402
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T4-C1.md",
+      "sha256": "09d40e47d4939f8035ff587232dee239ef14687db3d05f80b647ff02d5aa2836",
+      "bytes": 1632
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T4-C2.md",
+      "sha256": "14f14f9f9301123fe01005d83535a99ed3151fc14b113f536cf6dd9cc4bac752",
+      "bytes": 1196
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T4-C3.md",
+      "sha256": "49bdc558564fb6c497237db486a1ced9ec4eb6094d9d6079de61f1991585fb5b",
+      "bytes": 1590
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T5-C1.md",
+      "sha256": "37b3366b62cb6235cf529f84c856f51f8447b88f5c916d76b30f8b602df3b428",
+      "bytes": 1567
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T5-C2.md",
+      "sha256": "587340bbb792967fae2f5b2c864b14e959455554dce14a711997e6a49deefd61",
+      "bytes": 1241
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T5-C3.md",
+      "sha256": "2819f78e061a0d9bead95b8c59ed9fd1dbb9445b706d1fd58caaaf19d33a8212",
+      "bytes": 1619
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T6-C1.md",
+      "sha256": "eb0d5437f4195f9d6d8d429c2d5cea37690d36ca6769d76d1d206fe4dc7f284b",
+      "bytes": 1727
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T6-C2.md",
+      "sha256": "2151abc9c86d1058fdc76c7f22052cc3ca8350eb226afcce6e5b330596c902a4",
+      "bytes": 1145
+    },
+    {
+      "scope": "raw",
+      "file": "research/issue-007/raw/T6-C3.md",
+      "sha256": "5496c8136b2da94f237cddee00a5868b5006726b2fd807ae4b79eb06bd3f7d03",
+      "bytes": 1603
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/anthropic_001_iteration_00.sysml",
+      "sha256": "6cd6d9457ee20306fa2e7d6d2f625c0d2b0edac02918d277ee5f361a0ed62290",
+      "bytes": 2123
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/anthropic_002_iteration_00.sysml",
+      "sha256": "0f4e52d1e4ae81560a0cd0c28e954c26b01de00b6ead740d1938e471be5f9ac6",
+      "bytes": 731
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/anthropic_003_iteration_00.sysml",
+      "sha256": "9ca1143dad478f7f0c91e53b485cd01a2fe423b0740a23913a732b8190b07fe3",
+      "bytes": 2794
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/anthropic_004_iteration_00.sysml",
+      "sha256": "6e55b0b2533daf902171dacce8d5c39df1e56d66c2471dec452aca5e220e5b5a",
+      "bytes": 895
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/anthropic_005_iteration_00.sysml",
+      "sha256": "2edac266b0a58c180f212b983dc9f35186b17d629f57b2029e00f273ee6c10f5",
+      "bytes": 347
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/anthropic_006_iteration_00.sysml",
+      "sha256": "b966e6567b29e649d093c5d64461350e242b62e80a2d1be0a94effb19a7e3be0",
+      "bytes": 2656
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/deepseek_reasoner_001_iteration_00.sysml",
+      "sha256": "aa36d7a843db757e45be32b8d7cdca49c42f7dcbb9d9ddff5b56aafe190bb3ec",
+      "bytes": 785
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/deepseek_reasoner_002_iteration_00.sysml",
+      "sha256": "17529087d9781d0e7e4558d8ca2c99d8517ea75f224d1884799d3efbb98b4800",
+      "bytes": 404
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/deepseek_reasoner_003_iteration_00.sysml",
+      "sha256": "d29301b1fc52c8ac85218959ac6b9a4a329d542f6e9b5ab38ed39a8798164ef1",
+      "bytes": 379
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/deepseek_reasoner_004_iteration_00.sysml",
+      "sha256": "7b180ab537893af2d7f15e056a4e930dd79d5c7ca4c01e4d159d7fdd9d30eeac",
+      "bytes": 525
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/deepseek_reasoner_005_iteration_00.sysml",
+      "sha256": "d0a13982ff69c96f916d6bd5dd8416469980b8bb0fc51a74c94dc0124972ad36",
+      "bytes": 357
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/deepseek_reasoner_006_iteration_00.sysml",
+      "sha256": "7213db3de4104df51da5ddc95a7e317efbabd4da2a92259e8b8bc90d7f7372ed",
+      "bytes": 1836
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/mistral_large_001_iteration_00.sysml",
+      "sha256": "f0cacac63223e922059df49d9776fd575b6702d8937e9272893b4e2fa15a4090",
+      "bytes": 830
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/mistral_large_002_iteration_00.sysml",
+      "sha256": "bf554ebe7317ec66d4212685da06a428493a2c43d3fc2949b8e9dcb730502e81",
+      "bytes": 574
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/mistral_large_003_iteration_00.sysml",
+      "sha256": "3832cdaaefed46f0cec51d44528122e296841e9460453bdbe7a274f232f46c49",
+      "bytes": 506
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/mistral_large_004_iteration_00.sysml",
+      "sha256": "091ebf71168d59eef97174c0dc62882bdf21651a9831ba45e8f664656ebe4f87",
+      "bytes": 812
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/mistral_large_005_iteration_00.sysml",
+      "sha256": "af9a3f95a680ea4b68e65cd0e77a3a12a1897a8b0d3d49f19f1852c2c490c241",
+      "bytes": 462
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/mistral_large_006_iteration_00.sysml",
+      "sha256": "8c967e7500b48cc6c7dd395cd7e179a7ff703f2febb82dea28cf5f9d420867ce",
+      "bytes": 1856
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/openai_001_iteration_00.sysml",
+      "sha256": "1fbbef14f17c197b4b39d4a41a36ebbd8d09545c04621dfd4d4b3bd3ca448c04",
+      "bytes": 713
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/openai_002_iteration_00.sysml",
+      "sha256": "d87234a38295caf6ff2c85dc8ad85b0c0f0f25a824eec72ba9ac4fcd88a11315",
+      "bytes": 362
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/openai_003_iteration_00.sysml",
+      "sha256": "f9728fdcda71d60b5e6731eacc857cc4007a90bd025fb4d2fe6effc3329e4a17",
+      "bytes": 347
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/openai_004_iteration_00.sysml",
+      "sha256": "f7f902a40363ddc4b2f293f7d763294abd4a82d902ffa0e73761042a21dbea0e",
+      "bytes": 632
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/openai_005_iteration_00.sysml",
+      "sha256": "3a67c9136821a3cdd04d7b5ec55a4a0052f5377ca86eae7b71a83049229872ef",
+      "bytes": 435
+    },
+    {
+      "scope": "external",
+      "file": "research/issue-007/detection/external/openai_006_iteration_00.sysml",
+      "sha256": "ee8feadc4004b64747273fb8e77969f6e186adada61923b5a994a78da933e9f2",
+      "bytes": 1551
+    },
+    {
+      "scope": "probe",
+      "file": "research/issue-007/detection/probes/probe01_first_undefined_source.sysml",
+      "sha256": "ebbe5698a75096c7e6e4f10ba3f5c932d845506bbf14e69a958cd9c6717f6fad",
+      "bytes": 138
+    },
+    {
+      "scope": "probe",
+      "file": "research/issue-007/detection/probes/probe02_satisfy_no_by.sysml",
+      "sha256": "28cf928b146ed7e69e12cedd2a0ffc775a4a1b5664da549a1852906f427fcb1c",
+      "bytes": 111
+    },
+    {
+      "scope": "probe",
+      "file": "research/issue-007/detection/probes/probe03_connect_value_properties.sysml",
+      "sha256": "20ab38ad1c279c58b72275fa8aae8d6773141ea31698c63d661b7b21ccf39b64",
+      "bytes": 142
+    },
+    {
+      "scope": "probe",
+      "file": "research/issue-007/detection/probes/probe04_undefined_in_expression.sysml",
+      "sha256": "a888af4f30f8a398c5e5f860545ff1147126f4bbe67630739e328244bb953aa3",
+      "bytes": 90
+    },
+    {
+      "scope": "probe",
+      "file": "research/issue-007/detection/probes/probe05_satisfy_to.sysml",
+      "sha256": "ec6a987e3a97f2b448b7d3234326b9b5177b6c81b46e488ded8efbf155051dd3",
+      "bytes": 148
+    },
+    {
+      "scope": "probe",
+      "file": "research/issue-007/detection/probes/probe06_satisfy_by_undefined.sysml",
+      "sha256": "806dbb2d5bad7353f8770e3b642ec925af6d7d7e02af47d61186165163a86462",
+      "bytes": 142
+    },
+    {
+      "scope": "probe",
+      "file": "research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml",
+      "sha256": "a0ac37d65c8c5d7af3b502346f8113b08371f434ff1ed12f6742a771d14615f0",
+      "bytes": 94
+    },
+    {
+      "scope": "probe",
+      "file": "research/issue-007/detection/probes/probe08_transition_from_to_on.sysml",
+      "sha256": "2109d22e2d604cc7bc7245f4b4fa7bfbd96642ba1e62792b8876084464994a73",
+      "bytes": 161
+    },
+    {
+      "scope": "probe",
+      "file": "research/issue-007/detection/probes/probe09_connect_multivalued_chain.sysml",
+      "sha256": "a25aeeff6e202f674bd6e2ae948bb83488f925ab6bba58fe24292100f98b7d9d",
+      "bytes": 210
+    },
+    {
+      "scope": "probe",
+      "file": "research/issue-007/detection/probes/probe10_first_action_definition.sysml",
+      "sha256": "c7f370d18d7ec99f5cef774b90e956262a313c8055820f9ec1e7548d21d0cd38",
+      "bytes": 118
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+package InfusionPump {
+    private import ScalarValues::*;
+    private import SI::*;
+
+    part def PressureSensor {
+        attribute pressure : Real;
+        attribute threshold : Real;
+        port sense;
+    }
+
+    part def Alarm {
+        attribute audible : Boolean = false;
+        attribute visible : Boolean = false;
+    }
+
+    part def PumpMechanism {
+        attribute delivering : Boolean = false;
+        port fluidOut;
+    }
+
+    part def FluidLine {
+        attribute occluded : Boolean = false;
+        port in;
+        port out;
+    }
+
+    part def InfusionPump {
+        part sensor : PressureSensor;
+        part alarm : Alarm;
+        part mechanism : PumpMechanism;
+        part line : FluidLine;
+
+        connection lineConnect connect mechanism.fluidOut to line.in;
+    }
+
+    requirement def AlarmTiming {
+        subject pump : InfusionPump;
+        doc /* On occlusion, an audible and visible alarm shall be raised within 2 seconds and
+               delivery shall stop at the same time. */
+        attribute maxDelay : Real = 2.0;
+    }
+
+    requirement alarmTiming : AlarmTiming;
+    satisfy alarmTiming by pump;
+}

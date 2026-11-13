@@ -1,0 +1,13 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_002_iteration_00.sysml
+[exit 2]
+--- stdout ---
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_002_iteration_00.sysml:11:9: error[usage-typing]: An attribute must be typed by attribute definitions.
+        attribute driver : Personnel;
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_002_iteration_00.sysml:15:9: error[usage-typing]: An attribute must be typed by attribute definitions.
+        attribute engine : Engine;
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/deepseek_reasoner_002_iteration_00.sysml did not analyse cleanly; no check was made

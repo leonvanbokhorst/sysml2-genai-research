@@ -1,0 +1,65 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml
+[exit 0]
+--- stdout ---
+✓ package TrafficLightClassification
+✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml: no errors
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:46:23: warning[name-conflict]: Duplicate of inherited member name 'level' from ClassificationEntry
+            attribute level : ClassificationLevel = ClassificationLevel::UNCLASSIFIED;
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:47:23: warning[name-conflict]: Duplicate of inherited member name 'code' from ClassificationEntry
+            attribute code : String = "uncl";
+                      ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:48:23: warning[name-conflict]: Duplicate of inherited member name 'color' from ClassificationEntry
+            attribute color : String = "green";
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:52:23: warning[name-conflict]: Duplicate of inherited member name 'level' from ClassificationEntry
+            attribute level : ClassificationLevel = ClassificationLevel::CONFIDENTIAL;
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:53:23: warning[name-conflict]: Duplicate of inherited member name 'code' from ClassificationEntry
+            attribute code : String = "conf";
+                      ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:54:23: warning[name-conflict]: Duplicate of inherited member name 'color' from ClassificationEntry
+            attribute color : String = "yellow";
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:58:23: warning[name-conflict]: Duplicate of inherited member name 'level' from ClassificationEntry
+            attribute level : ClassificationLevel = ClassificationLevel::SECRET;
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:59:23: warning[name-conflict]: Duplicate of inherited member name 'code' from ClassificationEntry
+            attribute code : String = "secr";
+                      ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:60:23: warning[name-conflict]: Duplicate of inherited member name 'color' from ClassificationEntry
+            attribute color : String = "red";
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:64:23: warning[name-conflict]: Duplicate of inherited member name 'grade' from GradeEntry
+            attribute grade : GradeLevel = GradeLevel::A;
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:65:23: warning[name-conflict]: Duplicate of inherited member name 'points' from GradeEntry
+            attribute points : Real = 4.0;
+                      ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:69:23: warning[name-conflict]: Duplicate of inherited member name 'grade' from GradeEntry
+            attribute grade : GradeLevel = GradeLevel::B;
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:70:23: warning[name-conflict]: Duplicate of inherited member name 'points' from GradeEntry
+            attribute points : Real = 3.0;
+                      ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:74:23: warning[name-conflict]: Duplicate of inherited member name 'grade' from GradeEntry
+            attribute grade : GradeLevel = GradeLevel::C;
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:75:23: warning[name-conflict]: Duplicate of inherited member name 'points' from GradeEntry
+            attribute points : Real = 2.0;
+                      ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:79:23: warning[name-conflict]: Duplicate of inherited member name 'grade' from GradeEntry
+            attribute grade : GradeLevel = GradeLevel::D;
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:80:23: warning[name-conflict]: Duplicate of inherited member name 'points' from GradeEntry
+            attribute points : Real = 1.0;
+                      ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:84:23: warning[name-conflict]: Duplicate of inherited member name 'grade' from GradeEntry
+            attribute grade : GradeLevel = GradeLevel::F;
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_006_iteration_00.sysml:85:23: warning[name-conflict]: Duplicate of inherited member name 'points' from GradeEntry
+            attribute points : Real = 0.0;
+                      ^~~~~~

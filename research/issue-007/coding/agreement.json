@@ -1,0 +1,353 @@
+{
+  "double_coded_models": 12,
+  "model_level_presence": {
+    "agree": 12,
+    "n": 12,
+    "percent": 100.0,
+    "kappa": 1.0,
+    "kappa_po": 1.0,
+    "kappa_pe": 0.625
+  },
+  "record_level_class": {
+    "paired_records": 11,
+    "agree": 11,
+    "percent": 100.0,
+    "cohen_kappa": 1.0,
+    "kappa_po": 1.0,
+    "kappa_pe": 0.3058,
+    "krippendorff_alpha_nominal": 1.0,
+    "class_distribution_A": {
+      "N1": 5,
+      "S1": 3,
+      "S2": 1,
+      "T1": 1,
+      "R1": 1
+    },
+    "class_distribution_B": {
+      "N1": 5,
+      "S1": 3,
+      "S2": 1,
+      "T1": 1,
+      "R1": 1
+    }
+  },
+  "layer_agreement": {
+    "pairs": 11,
+    "agree": 10,
+    "percent": 90.9,
+    "cohen_kappa": 0.8659
+  },
+  "severity_agreement": {
+    "pairs": 11,
+    "agree": 10,
+    "percent": 90.9,
+    "cohen_kappa": 0.7556
+  },
+  "wrapper_convention": {
+    "A_W1_rows_in_errors_csv": 0,
+    "A_wrapper_defects_over_raw_outputs": "18/18 raw outputs are markdown (see detection/summary.csv)",
+    "B_W1_rows": {
+      "T1-C1": 1,
+      "T1-C2": 1,
+      "T2-C1": 1,
+      "T2-C2": 1,
+      "T3-C2": 1,
+      "T3-C3": 1,
+      "T4-C1": 1,
+      "T4-C2": 1,
+      "T5-C1": 1,
+      "T5-C2": 1,
+      "T6-C2": 1,
+      "T6-C3": 1
+    },
+    "B_convention": "B coded W1 for every model, including bare fences, and excluded W1 from its n_errors; A counts W1 over raw artefacts only (codebook \u00a76). The conventions differ; the modelling labels do not."
+  },
+  "records": [
+    {
+      "model_id": "T1-C1",
+      "index": 1,
+      "A_class": "N1",
+      "B_class": "N1",
+      "A_layer": "name resolution",
+      "B_layer": "name resolution",
+      "A_severity": "blocking",
+      "B_severity": "blocking",
+      "A_excerpt": "first start;",
+      "B_excerpt": "first start;",
+      "A_lines": "64",
+      "B_lines": "64",
+      "class_agree": true,
+      "layer_agree": true,
+      "severity_agree": true
+    },
+    {
+      "model_id": "T1-C2",
+      "index": 1,
+      "A_class": "S1",
+      "B_class": "S1",
+      "A_layer": "syntax/parse",
+      "B_layer": "syntax/parse",
+      "A_severity": "blocking",
+      "B_severity": "blocking",
+      "A_excerpt": "satisfy greenhouse to moistureControl;",
+      "B_excerpt": "satisfy greenhouse to moistureControl;",
+      "A_lines": "41",
+      "B_lines": "41",
+      "class_agree": true,
+      "layer_agree": true,
+      "severity_agree": true
+    },
+    {
+      "model_id": "T2-C1",
+      "index": 1,
+      "A_class": "S1",
+      "B_class": "S1",
+      "A_layer": "syntax/parse",
+      "B_layer": "syntax/parse",
+      "A_severity": "blocking",
+      "B_severity": "blocking",
+      "A_excerpt": "transition from idle to lowering on detection.approaching;",
+      "B_excerpt": "transition from idle to lowering on detection.approaching;",
+      "A_lines": "48-51",
+      "B_lines": "48-51",
+      "class_agree": true,
+      "layer_agree": true,
+      "severity_agree": true
+    },
+    {
+      "model_id": "T2-C2",
+      "index": 1,
+      "A_class": "S2",
+      "B_class": "S2",
+      "A_layer": "constraint/OCL",
+      "B_layer": "syntax/parse",
+      "A_severity": "minor",
+      "B_severity": "blocking",
+      "A_excerpt": "satisfy lowerBeforeArrival;",
+      "B_excerpt": "satisfy lowerBeforeArrival;",
+      "A_lines": "33",
+      "B_lines": "33",
+      "class_agree": true,
+      "layer_agree": false,
+      "severity_agree": false
+    },
+    {
+      "model_id": "T3-C2",
+      "index": 1,
+      "A_class": "S1",
+      "B_class": "S1",
+      "A_layer": "syntax/parse",
+      "B_layer": "syntax/parse",
+      "A_severity": "blocking",
+      "B_severity": "blocking",
+      "A_excerpt": "port in;",
+      "B_excerpt": "port in;",
+      "A_lines": "23,33",
+      "B_lines": "23,33",
+      "class_agree": true,
+      "layer_agree": true,
+      "severity_agree": true
+    },
+    {
+      "model_id": "T3-C2",
+      "index": 2,
+      "A_class": "N1",
+      "B_class": "N1",
+      "A_layer": "name resolution",
+      "B_layer": "name resolution",
+      "A_severity": "blocking",
+      "B_severity": "blocking",
+      "A_excerpt": "satisfy alarmTiming by pump;",
+      "B_excerpt": "satisfy alarmTiming by pump;",
+      "A_lines": "44",
+      "B_lines": "44",
+      "class_agree": true,
+      "layer_agree": true,
+      "severity_agree": true
+    },
+    {
+      "model_id": "T4-C1",
+      "index": 1,
+      "A_class": "T1",
+      "B_class": "T1",
+      "A_layer": "type/typing",
+      "B_layer": "type/typing",
+      "A_severity": "major",
+      "B_severity": "major",
+      "A_excerpt": "first checkCharge; / then checkAvailability; / then assign;",
+      "B_excerpt": "first checkCharge;",
+      "A_lines": "42-44",
+      "B_lines": "42-44",
+      "class_agree": true,
+      "layer_agree": true,
+      "severity_agree": true
+    },
+    {
+      "model_id": "T4-C1",
+      "index": 2,
+      "A_class": "R1",
+      "B_class": "R1",
+      "A_layer": "structural/architectural",
+      "B_layer": "structural/architectural",
+      "A_severity": "major",
+      "B_severity": "major",
+      "A_excerpt": "connection powerLink connect controller.fleet.battery.power to controller.fleet.dock.power;",
+      "B_excerpt": "connection powerLink connect controller.fleet.battery.power to controller.fleet.dock.power;",
+      "A_lines": "51",
+      "B_lines": "51",
+      "class_agree": true,
+      "layer_agree": true,
+      "severity_agree": true
+    },
+    {
+      "model_id": "T4-C2",
+      "index": 1,
+      "A_class": "N1",
+      "B_class": "N1",
+      "A_layer": "name resolution",
+      "B_layer": "name resolution",
+      "A_severity": "blocking",
+      "B_severity": "blocking",
+      "A_excerpt": "satisfy returnToDock by fleet;",
+      "B_excerpt": "satisfy returnToDock by fleet;",
+      "A_lines": "32",
+      "B_lines": "32",
+      "class_agree": true,
+      "layer_agree": true,
+      "severity_agree": true
+    },
+    {
+      "model_id": "T5-C2",
+      "index": 1,
+      "A_class": "N1",
+      "B_class": "N1",
+      "A_layer": "name resolution",
+      "B_layer": "name resolution",
+      "A_severity": "blocking",
+      "B_severity": "blocking",
+      "A_excerpt": "satisfy insideWindow by station;",
+      "B_excerpt": "satisfy insideWindow by station;",
+      "A_lines": "32",
+      "B_lines": "32",
+      "class_agree": true,
+      "layer_agree": true,
+      "severity_agree": true
+    },
+    {
+      "model_id": "T6-C2",
+      "index": 1,
+      "A_class": "N1",
+      "B_class": "N1",
+      "A_layer": "name resolution",
+      "B_layer": "name resolution",
+      "A_severity": "blocking",
+      "B_severity": "blocking",
+      "A_excerpt": "satisfy maintainTemperature by heating;",
+      "B_excerpt": "satisfy maintainTemperature by heating;",
+      "A_lines": "40",
+      "B_lines": "40,42",
+      "class_agree": true,
+      "layer_agree": true,
+      "severity_agree": true
+    }
+  ],
+  "presence": [
+    {
+      "model_id": "T1-C1",
+      "A_any_error": true,
+      "B_any_error": true,
+      "A_n": 1,
+      "B_n": 1,
+      "agree": true
+    },
+    {
+      "model_id": "T1-C2",
+      "A_any_error": true,
+      "B_any_error": true,
+      "A_n": 1,
+      "B_n": 1,
+      "agree": true
+    },
+    {
+      "model_id": "T2-C1",
+      "A_any_error": true,
+      "B_any_error": true,
+      "A_n": 1,
+      "B_n": 1,
+      "agree": true
+    },
+    {
+      "model_id": "T2-C2",
+      "A_any_error": true,
+      "B_any_error": true,
+      "A_n": 1,
+      "B_n": 1,
+      "agree": true
+    },
+    {
+      "model_id": "T3-C2",
+      "A_any_error": true,
+      "B_any_error": true,
+      "A_n": 2,
+      "B_n": 2,
+      "agree": true
+    },
+    {
+      "model_id": "T3-C3",
+      "A_any_error": false,
+      "B_any_error": false,
+      "A_n": 0,
+      "B_n": 0,
+      "agree": true
+    },
+    {
+      "model_id": "T4-C1",
+      "A_any_error": true,
+      "B_any_error": true,
+      "A_n": 2,
+      "B_n": 2,
+      "agree": true
+    },
+    {
+      "model_id": "T4-C2",
+      "A_any_error": true,
+      "B_any_error": true,
+      "A_n": 1,
+      "B_n": 1,
+      "agree": true
+    },
+    {
+      "model_id": "T5-C1",
+      "A_any_error": false,
+      "B_any_error": false,
+      "A_n": 0,
+      "B_n": 0,
+      "agree": true
+    },
+    {
+      "model_id": "T5-C2",
+      "A_any_error": true,
+      "B_any_error": true,
+      "A_n": 1,
+      "B_n": 1,
+      "agree": true
+    },
+    {
+      "model_id": "T6-C2",
+      "A_any_error": true,
+      "B_any_error": true,
+      "A_n": 1,
+      "B_n": 1,
+      "agree": true
+    },
+    {
+      "model_id": "T6-C3",
+      "A_any_error": false,
+      "B_any_error": false,
+      "A_n": 0,
+      "B_n": 0,
+      "agree": true
+    }
+  ],
+  "caveat": "n=12 models / 11 paired records. Kappa is unstable at this size and with these marginals; percent agreement is the primary statistic. The codebook was built from this corpus, so agreement is an upper bound (see second-coder/BRIEF.md)."
+}

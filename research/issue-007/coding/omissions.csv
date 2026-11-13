@@ -1,0 +1,5 @@
+model_id,observation,why_not_an_error
+T4-C2,"Model defines parts only as definitions; no system instance exists, which is what the satisfy then tries to name.","Omission/coverage, not a text defect; the unresolved reference it causes IS coded as N1."
+T6-C2,No instance of HeatingSystem is declared.,Omission/coverage only; N1 covers the defect it causes.
+T4-C1,No transport job element is modelled although the prompt mentions job assignment.,"Coverage of the prompt, not well-formedness (exclusion 1)."
+T5-C1,"Antenna pointing is not constrained in the model, only described in documentation.","Coverage/elaboration, not a text defect."

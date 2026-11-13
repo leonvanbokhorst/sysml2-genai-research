@@ -1,0 +1,83 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml
+[exit 0]
+--- stdout ---
+✓ package VehicleStructure
+✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml: no errors
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:69:19: warning[name-conflict]: Duplicate of inherited member name 'vehicleId' from Vehicle
+        attribute vehicleId = "V001";
+                  ^~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:70:19: warning[name-conflict]: Duplicate of inherited member name 'vehicleName' from Vehicle
+        attribute vehicleName = "Sedan";
+                  ^~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:71:19: warning[name-conflict]: Duplicate of inherited member name 'vehicleModel' from Vehicle
+        attribute vehicleModel = "Model-X";
+                  ^~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:72:19: warning[name-conflict]: Duplicate of inherited member name 'manufacturer' from StandardVehicle
+        attribute manufacturer = "AutoCorp";
+                  ^~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:73:19: warning[name-conflict]: Duplicate of inherited member name 'year' from StandardVehicle
+        attribute year = 2024;
+                  ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:75:14: warning[name-conflict]: Duplicate of inherited member name 'engine' from Vehicle
+        part engine : PerformanceEngine[1] {
+             ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:76:23: warning[name-conflict]: Duplicate of inherited member name 'componentId' from VehicleComponent
+            attribute componentId = "E001";
+                      ^~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:77:23: warning[name-conflict]: Duplicate of inherited member name 'componentName' from VehicleComponent
+            attribute componentName = "V8 Engine";
+                      ^~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:78:23: warning[name-conflict]: Duplicate of inherited member name 'displacement' from Engine
+            attribute displacement = 5.0;
+                      ^~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:79:23: warning[name-conflict]: Duplicate of inherited member name 'horsepower' from Engine
+            attribute horsepower = 450.0;
+                      ^~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:80:23: warning[name-conflict]: Duplicate of inherited member name 'turboCharged' from PerformanceEngine
+            attribute turboCharged = true;
+                      ^~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:81:23: warning[name-conflict]: Duplicate of inherited member name 'maxRPM' from PerformanceEngine
+            attribute maxRPM = 7000;
+                      ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:84:14: warning[name-conflict]: Duplicate of inherited member name 'transmission' from Vehicle
+        part transmission : AutomaticTransmission[1] {
+             ^~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:85:23: warning[name-conflict]: Duplicate of inherited member name 'componentId' from VehicleComponent
+            attribute componentId = "T001";
+                      ^~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:86:23: warning[name-conflict]: Duplicate of inherited member name 'componentName' from VehicleComponent
+            attribute componentName = "8-Speed Auto";
+                      ^~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:87:23: warning[name-conflict]: Duplicate of inherited member name 'gearCount' from Transmission
+            attribute gearCount = 8;
+                      ^~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:88:23: warning[name-conflict]: Duplicate of inherited member name 'transmissionType' from Transmission
+            attribute transmissionType = "Automatic";
+                      ^~~~~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:89:23: warning[name-conflict]: Duplicate of inherited member name 'hasPaddleShifters' from AutomaticTransmission
+            attribute hasPaddleShifters = true;
+                      ^~~~~~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:92:14: warning[name-conflict]: Duplicate of inherited member name 'wheels' from Vehicle
+        part wheels : AlloyWheel[4] {
+             ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:93:23: warning[name-conflict]: Duplicate of inherited member name 'componentId' from VehicleComponent
+            attribute componentId = "W001";
+                      ^~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:94:23: warning[name-conflict]: Duplicate of inherited member name 'componentName' from VehicleComponent
+            attribute componentName = "Sport Alloy";
+                      ^~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:95:23: warning[name-conflict]: Duplicate of inherited member name 'diameter' from Wheel
+            attribute diameter = 19.0;
+                      ^~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:96:23: warning[name-conflict]: Duplicate of inherited member name 'width' from Wheel
+            attribute width = 8.5;
+                      ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:97:23: warning[name-conflict]: Duplicate of inherited member name 'material' from AlloyWheel
+            attribute material = "Aluminum";
+                      ^~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/anthropic_003_iteration_00.sysml:98:23: warning[name-conflict]: Duplicate of inherited member name 'finish' from AlloyWheel
+            attribute finish = "Gloss Black";
+                      ^~~~~~

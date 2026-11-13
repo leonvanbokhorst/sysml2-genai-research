@@ -1,0 +1,1014 @@
+
+===== T1-C1 (80 lines) =====
+  1| package GreenhouseIrrigation {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     part def MoistureProbe {
+  5|         attribute reading : Real;
+  6|         attribute bedId : String;
+  7|     }
+  8| 
+  9|     part def SolenoidValve {
+ 10|         attribute isOpen : Boolean = false;
+ 11|         port inlet;
+ 12|         port outlet;
+ 13|     }
+ 14| 
+ 15|     part def Pump {
+ 16|         attribute isRunning : Boolean = false;
+ 17|         port outlet;
+ 18|     }
+ 19| 
+ 20|     part def Bed {
+ 21|         attribute targetMoistureMin : Real = 35.0;
+ 22|         attribute targetMoistureMax : Real = 55.0;
+ 23|         part probe : MoistureProbe[1];
+ 24|         part valve : SolenoidValve[1];
+ 25|     }
+ 26| 
+ 27|     part def IrrigationController {
+ 28|         part beds : Bed[2];
+ 29|         part pump : Pump[1];
+ 30|         port command;
+ 31|     }
+ 32| 
+ 33|     part greenhouse : IrrigationController;
+ 34| 
+ 35|     requirement def MoistureBand {
+ 36|         doc /* Soil moisture shall be kept between 35% and 55% for each bed. */
+ 37|         attribute minPercent : Real = 35.0;
+ 38|         attribute maxPercent : Real = 55.0;
+ 39|     }
+ 40| 
+ 41|     requirement moistureControl : MoistureBand {
+ 42|         doc /* When moisture in a bed falls below 35% the controller opens that bed's valve
+ 43|                and runs the pump until the reading reaches 50%. */
+ 44|     }
+ 45| 
+ 46|     satisfy moistureControl by greenhouse;
+ 47| 
+ 48|     requirement faultOnProbeLoss {
+ 49|         doc /* If a probe reports no reading for more than 10 minutes, the controller shall stop
+ 50|                all irrigation and raise a fault. */
+ 51|     }
+ 52| 
+ 53|     action def IrrigationCycle {
+ 54|         in bed : Bed;
+ 55|         in moistureReading : Real;
+ 56|         out valveOpen : Boolean;
+ 57| 
+ 58|         action sense : SenseMoisture;
+ 59|         action compare : CompareToBand;
+ 60|         action openValve;
+ 61|         action runPump;
+ 62|         action closeValve;
+ 63| 
+ 64|         first start;
+ 65|         then sense;
+ 66|         then compare;
+ 67|         then openValve;
+ 68|         then runPump;
+ 69|         then closeValve;
+ 70|     }
+ 71| 
+ 72|     action def SenseMoisture {
+ 73|         out reading : Real;
+ 74|     }
+ 75| 
+ 76|     action def CompareToBand {
+ 77|         in reading : Real;
+ 78|         out belowMinimum : Boolean;
+ 79|     }
+ 80| }
+ 81| 
+
+===== T1-C2 (54 lines) =====
+  1| package GreenhouseIrrigation {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     part def MoistureProbe {
+  5|         attribute reading : Real;
+  6|     }
+  7| 
+  8|     part def Valve {
+  9|         attribute open : Boolean = false;
+ 10|         port inlet;
+ 11|         port outlet;
+ 12|     }
+ 13| 
+ 14|     part def Bed {
+ 15|         part probe : MoistureProbe;
+ 16|         part valve : Valve;
+ 17|         attribute moisture : Real;
+ 18|     }
+ 19| 
+ 20|     part def Pump {
+ 21|         attribute running : Boolean = false;
+ 22|         port outlet;
+ 23|     }
+ 24| 
+ 25|     part def IrrigationController {
+ 26|         part beds : Bed[2];
+ 27|         part pump : Pump;
+ 28|     }
+ 29| 
+ 30|     requirement def MoistureControl {
+ 31|         subject system : IrrigationController;
+ 32|         doc /* Soil moisture shall stay between 35% and 55% per bed; below 35% the valve opens and
+ 33|                the pump runs until 50% is reached. */
+ 34|         attribute lower : Real = 35.0;
+ 35|         attribute upper : Real = 55.0;
+ 36|     }
+ 37| 
+ 38|     requirement moistureControl : MoistureControl;
+ 39| 
+ 40|     part greenhouse : IrrigationController;
+ 41|     satisfy greenhouse to moistureControl;
+ 42| 
+ 43|     action def IrrigateBed {
+ 44|         in bed : Bed;
+ 45|         action readProbe;
+ 46|         action openValve;
+ 47|         action runPump;
+ 48|         action stopPump;
+ 49|         first readProbe;
+ 50|         then openValve;
+ 51|         then runPump;
+ 52|         then stopPump;
+ 53|     }
+ 54| }
+ 55| 
+
+===== T1-C3 (66 lines) =====
+  1| package GreenhouseIrrigationSystem {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     part def MoistureProbe {
+  5|         attribute reading : Real;
+  6|         attribute bed : String;
+  7|     }
+  8| 
+  9|     part def SolenoidValve {
+ 10|         attribute isOpen : Boolean = false;
+ 11|         port inlet;
+ 12|         port outlet;
+ 13|     }
+ 14| 
+ 15|     part def Pump {
+ 16|         attribute isRunning : Boolean = false;
+ 17|         attribute flowRate : Real;
+ 18|         port outlet;
+ 19|     }
+ 20| 
+ 21|     part def Bed {
+ 22|         attribute moisturePercent : Real;
+ 23|         part probe : MoistureProbe;
+ 24|         part valve : SolenoidValve;
+ 25|     }
+ 26| 
+ 27|     part def IrrigationController {
+ 28|         part bedA : Bed;
+ 29|         part bedB : Bed;
+ 30|         part pump : Pump;
+ 31|     }
+ 32| 
+ 33|     part greenhouse : IrrigationController;
+ 34| 
+ 35|     requirement def MoistureBandRequirement {
+ 36|         subject controller : IrrigationController;
+ 37|         doc /* Soil moisture shall be kept between 35% and 75% ... */
+ 38|         attribute lowerBound : Real = 35.0;
+ 39|         attribute upperBound : Real = 55.0;
+ 40|         attribute cutOff : Real = 50.0;
+ 41|     }
+ 42| 
+ 43|     requirement moistureBand : MoistureBandRequirement;
+ 44| 
+ 45|     satisfy moistureBand by greenhouse;
+ 46| 
+ 47|     action def IrrigationCycle {
+ 48|         in bed : Bed;
+ 49|         action sense {
+ 50|             out moisture : Real;
+ 51|         }
+ 52|         action compare {
+ 53|             in moisture : Real;
+ 54|             out belowLower : Boolean;
+ 55|         }
+ 56|         action irrigate {
+ 57|             out delivered : Boolean;
+ 58|         }
+ 59|         first sense;
+ 60|         then compare;
+ 61|         then irrigate;
+ 62|     }
+ 63| 
+ 64|     connection pumpToBedA connect greenhouse.pump.outlet to greenhouse.bedA.valve.inlet;
+ 65|     connection pumpToBedB connect greenhouse.pump.outlet to greenhouse.bedB.valve.inlet;
+ 66| }
+ 67| 
+
+===== T2-C1 (53 lines) =====
+  1| package LevelCrossing {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     part def BarrierArm {
+  5|         attribute position : Real;
+  6|         attribute isLowered : Boolean = false;
+  7|     }
+  8| 
+  9|     part def BarrierMotor {
+ 10|         attribute torque : Real;
+ 11|         port drive;
+ 12|     }
+ 13| 
+ 14|     part def FlashingLight {
+ 15|         attribute isFlashing : Boolean = false;
+ 16|         attribute colour : String = "red";
+ 17|     }
+ 18| 
+ 19|     part def TrainDetector {
+ 20|         attribute detectionState : String;
+ 21|         port track;
+ 22|     }
+ 23| 
+ 24|     part def CrossingController {
+ 25|         part motor : BarrierMotor;
+ 26|         part leftArm : BarrierArm;
+ 27|         part rightArm : BarrierArm;
+ 28|         part lights : FlashingLight[2];
+ 29|         part detector : TrainDetector;
+ 30|     }
+ 31| 
+ 32|     part crossing : CrossingController;
+ 33| 
+ 34|     requirement def LowerBeforeArrival {
+ 35|         doc /* The barrier shall be fully lowered before a train reaches the crossing. */
+ 36|     }
+ 37| 
+ 38|     requirement lowerBeforeArrival : LowerBeforeArrival;
+ 39| 
+ 40|     satisfy lowerBeforeArrival by crossing;
+ 41| 
+ 42|     state def OperatingSequence {
+ 43|         state idle;
+ 44|         state lowering;
+ 45|         state closed;
+ 46|         state raising;
+ 47| 
+ 48|         transition from idle to lowering on detection.approaching;
+ 49|         transition from lowering to closed when leftArm.isLowered and rightArm.isLowered;
+ 50|         transition from closed to raising on detection.clear;
+ 51|         transition from raising to idle when leftArm.position > 0.9;
+ 52|     }
+ 53| }
+ 54| 
+
+===== T2-C2 (47 lines) =====
+  1| package LevelCrossingProtection {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     part def BarrierArm {
+  5|         attribute lowered : Boolean = false;
+  6|     }
+  7| 
+  8|     part def BarrierMotor {
+  9|         attribute running : Boolean = false;
+ 10|     }
+ 11| 
+ 12|     part def RedLight {
+ 13|         attribute flashing : Boolean = false;
+ 14|     }
+ 15| 
+ 16|     part def TrainDetector {
+ 17|         attribute state : String;
+ 18|     }
+ 19| 
+ 20|     part def Crossing {
+ 21|         part motor : BarrierMotor;
+ 22|         part arms : BarrierArm[2];
+ 23|         part lights : RedLight[2];
+ 24|         part detector : TrainDetector;
+ 25|     }
+ 26| 
+ 27|     requirement def LowerBeforeArrival {
+ 28|         doc /* The barrier shall be fully lowered before the train reaches the crossing. */
+ 29|         subject crossing : Crossing;
+ 30|     }
+ 31| 
+ 32|     requirement lowerBeforeArrival : LowerBeforeArrival;
+ 33|     satisfy lowerBeforeArrival;
+ 34| 
+ 35|     state def CrossingStates {
+ 36|         state idle;
+ 37|         state lowering;
+ 38|         state down;
+ 39|         state raising;
+ 40|         transition idle then lowering;
+ 41|         transition lowering then down;
+ 42|         transition down then raising;
+ 43|         transition raising then idle;
+ 44|     }
+ 45| 
+ 46|     part levelCrossing : Crossing;
+ 47| }
+ 48| 
+
+===== T2-C3 (69 lines) =====
+  1| package LevelCrossingSystem {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     port def CommandPort;
+  5| 
+  6|     part def BarrierArm {
+  7|         attribute position : Real = 0.0;
+  8|         attribute isLowered : Boolean = false;
+  9|     }
+ 10| 
+ 11|     part def BarrierMotor {
+ 12|         attribute isRunning : Boolean = false;
+ 13|         attribute torque : Real;
+ 14|         port command : CommandPort;
+ 15|     }
+ 16| 
+ 17|     part def WarningLight {
+ 18|         attribute isFlashing : Boolean = false;
+ 19|     }
+ 20| 
+ 21|     part def TrainDetector {
+ 22|         attribute reportedState : String;
+ 23|         port track;
+ 24|     }
+ 25| 
+ 26|     part def CrossingController {
+ 27|         part motor : BarrierMotor;
+ 28|         part detector : TrainDetector;
+ 29|         port command : CommandPort;
+ 30|     }
+ 31| 
+ 32|     part def LevelCrossing {
+ 33|         part controller : CrossingController;
+ 34|         part leftArm : BarrierArm;
+ 35|         part rightArm : BarrierArm;
+ 36|         part lights : WarningLight[2];
+ 37|     }
+ 38| 
+ 39|     part crossing : LevelCrossing;
+ 40| 
+ 41|     requirement def LowerBeforeArrivalRequirement {
+ 42|         subject c : LevelCrossing;
+ 43|         doc /* The barrier shall be fully lowered before the train reaches the crossing, and shall
+ 44|                rise only after the train has cleared it. */
+ 45|     }
+ 46| 
+ 47|     requirement lowerBeforeArrival : LowerBeforeArrivalRequirement;
+ 48|     satisfy lowerBeforeArrival by crossing;
+ 49| 
+ 50|     state def CrossingStates {
+ 51|         state idle;
+ 52|         state lowering {
+ 53|             entry action lowerArms;
+ 54|         }
+ 55|         state closed;
+ 56|         state raising;
+ 57| 
+ 58|         transition idle then lowering;
+ 59|         transition lowering then closed;
+ 60|         transition closed then raising;
+ 61|         transition raising then idle;
+ 62|     }
+ 63| 
+ 64|     action def lowerArms {
+ 65|         out done : Boolean;
+ 66|     }
+ 67| 
+ 68|     connection controllerToMotor connect crossing.controller.command to crossing.controller.motor.command;
+ 69| }
+ 70| 
+
+===== T3-C1 (40 lines) =====
+  1| package InfusionPumpSystem {
+  2| 
+  3|     part def FluidLine {
+  4|         attribute innerDiameter : Real;
+  5|         attribute isOccluded : Boolean = false;
+  6|     }
+  7| 
+  8|     part def PressureSensor {
+  9|         attribute measuredPressure : Real;
+ 10|         attribute occlusionThreshold : Real;
+ 11|     }
+ 12| 
+ 13|     part def Alarm {
+ 14|         attribute isAudible : Boolean = false;
+ 15|         attribute isVisible : Boolean = false;
+ 16|     }
+ 17| 
+ 18|     part def InfusionPump {
+ 19|         attribute flowRate : Real;
+ 20|         attribute isDelivering : Boolean = false;
+ 21|         part line : FluidLine;
+ 22|         part sensor : PressureSensor;
+ 23|         part alarm : Alarm;
+ 24|         port outlet;
+ 25|     }
+ 26| 
+ 27|     part pump : InfusionPump;
+ 28| 
+ 29|     requirement def AlarmWithinTwoSeconds {
+ 30|         doc /* The pump shall raise an audible and visible alarm within 2 seconds of an occlusion
+ 31|                being detected, and shall stop delivery at the same time. */
+ 32|         attribute maxDelaySeconds : Real = 2.0;
+ 33|     }
+ 34| 
+ 35|     requirement occlusionAlarm : AlarmWithinTwoSeconds;
+ 36| 
+ 37|     satisfy occlusionAlarm by pump;
+ 38| 
+ 39|     connection sensorToPump connect pump.sensor.measuredPressure to pump.flowRate;
+ 40| }
+ 41| 
+
+===== T3-C2 (45 lines) =====
+  1| package InfusionPump {
+  2|     private import ScalarValues::*;
+  3|     private import SI::*;
+  4| 
+  5|     part def PressureSensor {
+  6|         attribute pressure : Real;
+  7|         attribute threshold : Real;
+  8|         port sense;
+  9|     }
+ 10| 
+ 11|     part def Alarm {
+ 12|         attribute audible : Boolean = false;
+ 13|         attribute visible : Boolean = false;
+ 14|     }
+ 15| 
+ 16|     part def PumpMechanism {
+ 17|         attribute delivering : Boolean = false;
+ 18|         port fluidOut;
+ 19|     }
+ 20| 
+ 21|     part def FluidLine {
+ 22|         attribute occluded : Boolean = false;
+ 23|         port in;
+ 24|         port out;
+ 25|     }
+ 26| 
+ 27|     part def InfusionPump {
+ 28|         part sensor : PressureSensor;
+ 29|         part alarm : Alarm;
+ 30|         part mechanism : PumpMechanism;
+ 31|         part line : FluidLine;
+ 32| 
+ 33|         connection lineConnect connect mechanism.fluidOut to line.in;
+ 34|     }
+ 35| 
+ 36|     requirement def AlarmTiming {
+ 37|         subject pump : InfusionPump;
+ 38|         doc /* On occlusion, an audible and visible alarm shall be raised within 2 seconds and
+ 39|                delivery shall stop at the same time. */
+ 40|         attribute maxDelay : Real = 2.0;
+ 41|     }
+ 42| 
+ 43|     requirement alarmTiming : AlarmTiming;
+ 44|     satisfy alarmTiming by pump;
+ 45| }
+ 46| 
+
+===== T3-C3 (49 lines) =====
+  1| package InfusionPumpAlarmSystem {
+  2|     private import ScalarValues::*;
+  3|     private import SI::*;
+  4| 
+  5|     part def FluidLine {
+  6|         attribute isOccluded : Boolean = false;
+  7|         port inlet;
+  8|         port outlet;
+  9|     }
+ 10| 
+ 11|     part def PressureSensor {
+ 12|         attribute measuredPressure : Real;
+ 13|         attribute occlusionThreshold : Real;
+ 14|         port sense;
+ 15|     }
+ 16| 
+ 17|     part def AlarmDevice {
+ 18|         attribute audible : Boolean = false;
+ 19|         attribute visible : Boolean = false;
+ 20|     }
+ 21| 
+ 22|     part def PumpDrive {
+ 23|         attribute delivering : Boolean = false;
+ 24|         attribute flowRate : Real;
+ 25|     }
+ 26| 
+ 27|     part def InfusionPump {
+ 28|         attribute configuredThreshold : Real;
+ 29|         part line : FluidLine;
+ 30|         part sensor : PressureSensor;
+ 31|         part alarm : AlarmDevice;
+ 32|         part drive : PumpDrive;
+ 33|     }
+ 34| 
+ 35|     part pump : InfusionPump;
+ 36| 
+ 37|     requirement def OcclusionAlarmRequirement {
+ 38|         subject p : InfusionPump;
+ 39|         doc /* The pump shall raise an audible and visible alarm within 2 seconds of an occlusion
+ 40|                being detected, and shall stop delivery at the same time. */
+ 41|         attribute maxAlarmDelay : Real = 2.0;
+ 42|     }
+ 43| 
+ 44|     requirement occlusionAlarm : OcclusionAlarmRequirement;
+ 45|     satisfy occlusionAlarm by pump;
+ 46| 
+ 47|     connection sensorSignal connect pump.sensor.sense to pump.drive;
+ 48|     connection lineFlow connect pump.drive to pump.line.inlet;
+ 49| }
+ 50| 
+
+===== T4-C1 (52 lines) =====
+  1| package AgvFleet {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     part def Battery {
+  5|         attribute stateOfCharge : Real;
+  6|         attribute capacityKwh : Real;
+  7|         port power;
+  8|     }
+  9| 
+ 10|     part def DockingStation {
+ 11|         attribute isAvailable : Boolean = true;
+ 12|         port power;
+ 13|     }
+ 14| 
+ 15|     part def Agv {
+ 16|         attribute isCharging : Boolean = false;
+ 17|         attribute hasJob : Boolean = false;
+ 18|         part battery : Battery;
+ 19|         part dock : DockingStation;
+ 20|     }
+ 21| 
+ 22|     part def FleetController {
+ 23|         attribute availableAgvs : Integer;
+ 24|         part fleet : Agv[10];
+ 25|     }
+ 26| 
+ 27|     part controller : FleetController;
+ 28| 
+ 29|     requirement def ReturnBeforeLowCharge {
+ 30|         doc /* Each AGV shall dock at a charging station when its state of charge falls below
+ 31|                15% and shall not accept a new transport job while charging. */
+ 32|         attribute chargeThresholdPercent : Real = 15.0;
+ 33|     }
+ 34| 
+ 35|     requirement returnToDock : ReturnBeforeLowCharge;
+ 36|     satisfy returnToDock by controller;
+ 37| 
+ 38|     action def AssignJob {
+ 39|         in agv : Agv;
+ 40|         in jobId : String;
+ 41|         out assigned : Boolean;
+ 42|         first checkCharge;
+ 43|         then checkAvailability;
+ 44|         then assign;
+ 45|     }
+ 46| 
+ 47|     action def checkCharge;
+ 48|     action def checkAvailability;
+ 49|     action def assign;
+ 50| 
+ 51|     connection powerLink connect controller.fleet.battery.power to controller.fleet.dock.power;
+ 52| }
+ 53| 
+
+===== T4-C2 (45 lines) =====
+  1| package WarehouseAgvFleet {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     part def Battery {
+  5|         attribute stateOfCharge : Real;
+  6|         attribute charging : Boolean = false;
+  7|     }
+  8| 
+  9|     part def DockingStation {
+ 10|         attribute occupied : Boolean = false;
+ 11|     }
+ 12| 
+ 13|     part def Agv {
+ 14|         part battery : Battery;
+ 15|         attribute hasJob : Boolean = false;
+ 16|         attribute charging : Boolean = false;
+ 17|     }
+ 18| 
+ 19|     part def FleetController {
+ 20|         part agvs : Agv[10];
+ 21|         part docks : DockingStation[4];
+ 22|     }
+ 23| 
+ 24|     requirement def ReturnToDockBelowFifteen {
+ 25|         subject fleet : FleetController;
+ 26|         doc /* Each AGV shall dock when its state of charge falls below 15% and shall not accept a
+ 27|                new job while charging. */
+ 28|         attribute threshold : Real = 15.0;
+ 29|     }
+ 30| 
+ 31|     requirement returnToDock : ReturnToDockBelowFifteen;
+ 32|     satisfy returnToDock by fleet;
+ 33| 
+ 34|     action def AssignTransportJob {
+ 35|         in job : String;
+ 36|         in agv : Agv;
+ 37|         out accepted : Boolean;
+ 38|         action checkCharge;
+ 39|         action checkAvailability;
+ 40|         action dispatch;
+ 41|         first checkCharge;
+ 42|         then checkAvailability;
+ 43|         then dispatch;
+ 44|     }
+ 45| }
+ 46| 
+
+===== T4-C3 (57 lines) =====
+  1| package WarehouseAgvFleetSystem {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     part def Battery {
+  5|         attribute stateOfCharge : Real;
+  6|         attribute isCharging : Boolean = false;
+  7|         port power;
+  8|     }
+  9| 
+ 10|     part def DockingStation {
+ 11|         attribute isOccupied : Boolean = false;
+ 12|         port power;
+ 13|     }
+ 14| 
+ 15|     part def Agv {
+ 16|         attribute hasAssignedJob : Boolean = false;
+ 17|         part battery : Battery;
+ 18|         port dockPort;
+ 19|     }
+ 20| 
+ 21|     part def TransportJob {
+ 22|         attribute jobId : String;
+ 23|         attribute priority : Integer;
+ 24|     }
+ 25| 
+ 26|     part def FleetController {
+ 27|         attribute availableAgvCount : Integer;
+ 28|         part vehicles : Agv[10];
+ 29|         part stations : DockingStation[4];
+ 30|     }
+ 31| 
+ 32|     part fleet : FleetController;
+ 33| 
+ 34|     requirement def ReturnBeforeLowChargeRequirement {
+ 35|         subject f : FleetController;
+ 36|         doc /* Each AGV shall dock at a charging station when its state of charge falls below 15%
+ 37|                and shall not accept a new transport job while charging. */
+ 38|         attribute returnThresholdPercent : Real = 15.0;
+ 39|     }
+ 40| 
+ 41|     requirement returnBeforeLowCharge : ReturnBeforeLowChargeRequirement;
+ 42|     satisfy returnBeforeLowCharge by fleet;
+ 43| 
+ 44|     action def AssignTransportJob {
+ 45|         in job : TransportJob;
+ 46|         in candidate : Agv;
+ 47|         out assigned : Boolean;
+ 48|         action checkCharge;
+ 49|         action checkIdle;
+ 50|         action dispatch;
+ 51|         first checkCharge;
+ 52|         then checkIdle;
+ 53|         then dispatch;
+ 54|     }
+ 55| 
+ 56|     connection batteryToDock connect fleet.vehicles.battery.power to fleet.stations.power;
+ 57| }
+ 58| 
+
+===== T5-C1 (51 lines) =====
+  1| package GroundStation {
+  2|     private import ScalarValues::*;
+  3|     private import SI::*;
+  4| 
+  5|     part def Antenna {
+  6|         attribute azimuth : Real;
+  7|         attribute elevation : Real;
+  8|         attribute isPointed : Boolean = false;
+  9|     }
+ 10| 
+ 11|     part def Transceiver {
+ 12|         attribute band : String = "S";
+ 13|         attribute isTransmitting : Boolean = false;
+ 14|     }
+ 15| 
+ 16|     part def Satellite {
+ 17|         attribute noradId : Integer;
+ 18|         attribute windowStart : Real;
+ 19|         attribute windowEnd : Real;
+ 20|     }
+ 21| 
+ 22|     part def GroundStation {
+ 23|         part antenna : Antenna;
+ 24|         part transceiver : Transceiver;
+ 25|         part satellites : Satellite[1..*];
+ 26|     }
+ 27| 
+ 28|     part station : GroundStation;
+ 29| 
+ 30|     requirement def ContactInsideWindow {
+ 31|         doc /* A contact may only be scheduled inside a satellite's visibility window, and the
+ 32|                antenna shall be pointed before the window opens. */
+ 33|     }
+ 34| 
+ 35|     requirement windowObligation : ContactInsideWindow;
+ 36|     satisfy windowObligation by station;
+ 37| 
+ 38|     action def ScheduleContact {
+ 39|         in sat : Satellite;
+ 40|         in requestedStart : Real;
+ 41|         out scheduled : Boolean;
+ 42|         action point;
+ 43|         action checkWindow;
+ 44|         action openLink;
+ 45|         first checkWindow;
+ 46|         then point;
+ 47|         then openLink;
+ 48|     }
+ 49| 
+ 50|     connection signalPath connect station.antenna to station.transceiver;
+ 51| }
+ 52| 
+
+===== T5-C2 (47 lines) =====
+  1| package GroundStationScheduling {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     part def Antenna {
+  5|         attribute pointed : Boolean = false;
+  6|         attribute el : Real;
+  7|         attribute az : Real;
+  8|     }
+  9| 
+ 10|     part def Transceiver {
+ 11|         attribute receiving : Boolean = false;
+ 12|     }
+ 13| 
+ 14|     part def Satellite {
+ 15|         attribute visibilityStart : Real;
+ 16|         attribute visibilityEnd : Real;
+ 17|     }
+ 18| 
+ 19|     part def GroundStation {
+ 20|         part antenna : Antenna;
+ 21|         part transceiver : Transceiver;
+ 22|         part satellites : Satellite[1..*];
+ 23|     }
+ 24| 
+ 25|     requirement def InsideVisibilityWindow {
+ 26|         subject station : GroundStation;
+ 27|         doc /* A contact shall only be scheduled inside a satellite's visibility window and the
+ 28|                antenna shall be pointed before the window opens. */
+ 29|     }
+ 30| 
+ 31|     requirement insideWindow : InsideVisibilityWindow;
+ 32|     satisfy insideWindow by station;
+ 33| 
+ 34|     action def ScheduleContact {
+ 35|         in sat : Satellite;
+ 36|         action checkWindow;
+ 37|         action pointAntenna;
+ 38|         action openLink;
+ 39|         action closeLink;
+ 40|         first checkWindow;
+ 41|         then pointAntenna;
+ 42|         then openLink;
+ 43|         then closeLink;
+ 44|     }
+ 45| 
+ 46|     part gs : GroundStation;
+ 47| }
+ 48| 
+
+===== T5-C3 (59 lines) =====
+  1| package GroundStationSchedulingSystem {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     part def VisibilityWindow {
+  5|         attribute startTime : Real;
+  6|         attribute endTime : Real;
+  7|     }
+  8| 
+  9|     part def Satellite {
+ 10|         attribute satelliteId : String;
+ 11|         attribute window : VisibilityWindow;
+ 12|     }
+ 13| 
+ 14|     part def Antenna {
+ 15|         attribute isPointed : Boolean = false;
+ 16|         attribute azimuth : Real;
+ 17|         attribute elevation : Real;
+ 18|     }
+ 19| 
+ 20|     part def Transceiver {
+ 21|         attribute isActive : Boolean = false;
+ 22|         attribute band : String = "S";
+ 23|     }
+ 24| 
+ 25|     part def GroundStation {
+ 26|         part antenna : Antenna;
+ 27|         part transceiver : Transceiver;
+ 28|         part satellites : Satellite[1..*];
+ 29|     }
+ 30| 
+ 31|     part station : GroundStation;
+ 32| 
+ 33|     requirement def ContactInsideWindowRequirement {
+ 34|         subject s : GroundStation;
+ 35|         doc /* A contact may only be scheduled inside a satellite's visibility window, and the
+ 36|                antenna shall be pointed before the window opens. Only one contact at a time. */
+ 37|     }
+ 38| 
+ 39|     requirement contactInsideWindow : ContactInsideWindowRequirement;
+ 40|     satisfy contactInsideWindow by station;
+ 41| 
+ 42|     action def ScheduleContact {
+ 43|         in sat : Satellite;
+ 44|         action checkWindow {
+ 45|             out allowed : Boolean;
+ 46|         }
+ 47|         action pointAntenna {
+ 48|             out pointed : Boolean;
+ 49|         }
+ 50|         action openLink {
+ 51|             out linked : Boolean;
+ 52|         }
+ 53|         first checkWindow;
+ 54|         then pointAntenna;
+ 55|         then openLink;
+ 56|     }
+ 57| 
+ 58|     connection antennaToTransceiver connect station.antenna to station.transceiver;
+ 59| }
+ 60| 
+
+===== T6-C1 (51 lines) =====
+  1| package HeatPumpHeating {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     attribute def Temperature;
+  5| 
+  6|     part def Thermostat {
+  7|         attribute indoorTemperature : Real;
+  8|         attribute setpoint : Real = 20.0;
+  9|     }
+ 10| 
+ 11|     part def BufferTank {
+ 12|         attribute volumeLitres : Real;
+ 13|         attribute waterTemperature : Real;
+ 14|     }
+ 15| 
+ 16|     part def HeatPump {
+ 17|         attribute isRunning : Boolean = false;
+ 18|         attribute thermalOutputKw : Real;
+ 19|         port flowOut;
+ 20|         port flowReturn;
+ 21|     }
+ 22| 
+ 23|     part def HeatingCircuit {
+ 24|         attribute flowTemperature : Real;
+ 25|         port supply;
+ 26|         port return;
+ 27|     }
+ 28| 
+ 29|     part def HeatingSystem {
+ 30|         part pump : HeatPump;
+ 31|         part tank : BufferTank;
+ 32|         part circuit : HeatingCircuit;
+ 33|         part thermostat : Thermostat;
+ 34|     }
+ 35| 
+ 36|     part dwelling : HeatingSystem;
+ 37| 
+ 38|     requirement def IndoorTemperatureMinimum {
+ 39|         doc /* The heat pump shall maintain the indoor temperature at or above 20 degrees Celsius
+ 40|                whenever the outside temperature is below 15 degrees Celsius. */
+ 41|         attribute minimumIndoor : Real = 20.0;
+ 42|         attribute outsideThreshold : Real = 15.0;
+ 43|     }
+ 44| 
+ 45|     requirement indoorMinimum : IndoorTemperatureMinimum;
+ 46|     satisfy indoorMinimum by dwelling;
+ 47| 
+ 48|     flow of Temperature from dwelling.pump.flowOut to dwelling.tank;
+ 49|     flow of Temperature from dwelling.tank to dwelling.circuit.supply;
+ 50|     flow of Temperature from dwelling.circuit.return to dwelling.pump.flowReturn;
+ 51| }
+ 52| 
+
+===== T6-C2 (43 lines) =====
+  1| package HeatPumpBufferTank {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     part def Thermostat {
+  5|         attribute indoorTemp : Real;
+  6|         attribute outsideTemp : Real;
+  7|     }
+  8| 
+  9|     part def BufferTank {
+ 10|         attribute tankTemp : Real;
+ 11|         attribute volume : Real;
+ 12|     }
+ 13| 
+ 14|     part def HeatPump {
+ 15|         attribute running : Boolean = false;
+ 16|         port heatOut;
+ 17|     }
+ 18| 
+ 19|     part def HeatingCircuit {
+ 20|         attribute flowTemp : Real;
+ 21|         port supply;
+ 22|         port return;
+ 23|     }
+ 24| 
+ 25|     part def HeatingSystem {
+ 26|         part pump : HeatPump;
+ 27|         part tank : BufferTank;
+ 28|         part circuit : HeatingCircuit;
+ 29|         part thermostat : Thermostat;
+ 30|     }
+ 31| 
+ 32|     requirement def MaintainIndoorTemperature {
+ 33|         subject heating : HeatingSystem;
+ 34|         doc /* The heat pump shall keep the indoor temperature at or above 20 C when the outside
+ 35|                temperature is below 15 C. */
+ 36|         attribute minIndoor : Real = 20.0;
+ 37|     }
+ 38| 
+ 39|     requirement maintainTemperature : MaintainIndoorTemperature;
+ 40|     satisfy maintainTemperature by heating;
+ 41| 
+ 42|     connection tankToCircuit connect heating.tank to heating.circuit.supply;
+ 43| }
+ 44| 
+
+===== T6-C3 (52 lines) =====
+  1| package HeatPumpHeatingSystem {
+  2|     private import ScalarValues::*;
+  3| 
+  4|     attribute def Temperature;
+  5| 
+  6|     part def Thermostat {
+  7|         attribute indoorTemperature : Real;
+  8|         attribute targetTemperature : Real = 20.0;
+  9|     }
+ 10| 
+ 11|     part def BufferTank {
+ 12|         attribute waterTemperature : Real;
+ 13|         attribute volumeLitres : Real;
+ 14|     }
+ 15| 
+ 16|     part def HeatPumpUnit {
+ 17|         attribute isRunning : Boolean = false;
+ 18|         attribute outputPowerKw : Real;
+ 19|         port heatOut;
+ 20|         port heatReturn;
+ 21|     }
+ 22| 
+ 23|     part def UnderfloorCircuit {
+ 24|         attribute supplyTemperature : Real;
+ 25|         port supply;
+ 26|         port return;
+ 27|     }
+ 28| 
+ 29|     part def HeatingSystem {
+ 30|         part heatPump : HeatPumpUnit;
+ 31|         part tank : BufferTank;
+ 32|         part circuit : UnderfloorCircuit;
+ 33|         part thermostat : Thermostat;
+ 34|     }
+ 35| 
+ 36|     part house : HeatingSystem;
+ 37| 
+ 38|     requirement def IndoorTemperatureRequirement {
+ 39|         subject h : HeatingSystem;
+ 40|         doc /* The heat pump shall maintain the indoor temperature at or above 20 degrees Celsius
+ 41|                whenever the outside temperature is below 15 degrees Celsius. */
+ 42|         attribute minimumIndoorTemperature : Real = 20.0;
+ 43|         attribute outsideTemperatureThreshold : Real = 15.0;
+ 44|     }
+ 45| 
+ 46|     requirement indoorTemperature : IndoorTemperatureRequirement;
+ 47|     satisfy indoorTemperature by house;
+ 48| 
+ 49|     connection pumpToTank connect house.heatPump.heatOut to house.tank;
+ 50|     connection tankToCircuit connect house.tank to house.circuit.supply;
+ 51|     connection circuitToPump connect house.circuit.return to house.heatPump.heatReturn;
+ 52| }
+ 53| 

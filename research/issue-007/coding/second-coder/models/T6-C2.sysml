@@ -1,0 +1,43 @@
+package HeatPumpBufferTank {
+    private import ScalarValues::*;
+
+    part def Thermostat {
+        attribute indoorTemp : Real;
+        attribute outsideTemp : Real;
+    }
+
+    part def BufferTank {
+        attribute tankTemp : Real;
+        attribute volume : Real;
+    }
+
+    part def HeatPump {
+        attribute running : Boolean = false;
+        port heatOut;
+    }
+
+    part def HeatingCircuit {
+        attribute flowTemp : Real;
+        port supply;
+        port return;
+    }
+
+    part def HeatingSystem {
+        part pump : HeatPump;
+        part tank : BufferTank;
+        part circuit : HeatingCircuit;
+        part thermostat : Thermostat;
+    }
+
+    requirement def MaintainIndoorTemperature {
+        subject heating : HeatingSystem;
+        doc /* The heat pump shall keep the indoor temperature at or above 20 C when the outside
+               temperature is below 15 C. */
+        attribute minIndoor : Real = 20.0;
+    }
+
+    requirement maintainTemperature : MaintainIndoorTemperature;
+    satisfy maintainTemperature by heating;
+
+    connection tankToCircuit connect heating.tank to heating.circuit.supply;
+}

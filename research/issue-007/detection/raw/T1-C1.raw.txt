@@ -1,0 +1,40 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md
+[exit 2]
+--- stdout ---
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md:1:1: error[syntax]: expected a namespace member
+Here is a SysML v2 model of the greenhouse irrigation system, covering structure, the moisture-control requirement with a satisfy link, and the irrigation cycle as an action.
+^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md:1:121: error[syntax]: expected '{' or ';' after declaration
+Here is a SysML v2 model of the greenhouse irrigation system, covering structure, the moisture-control requirement with a satisfy link, and the irrigation cycle as an action.
+                                                                                                                        ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md:1:121: error[syntax]: expected a namespace member
+Here is a SysML v2 model of the greenhouse irrigation system, covering structure, the moisture-control requirement with a satisfy link, and the irrigation cycle as an action.
+                                                                                                                        ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md:1:174: error[syntax]: expected '{' or ';' after action declaration
+Here is a SysML v2 model of the greenhouse irrigation system, covering structure, the moisture-control requirement with a satisfy link, and the irrigation cycle as an action.
+                                                                                                                                                                             ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md:1:174: error[syntax]: expected a namespace member
+Here is a SysML v2 model of the greenhouse irrigation system, covering structure, the moisture-control requirement with a satisfy link, and the irrigation cycle as an action.
+                                                                                                                                                                             ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md:84:1: error[syntax]: expected a namespace member
+```
+^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md:86:115: error[reserved-keyword-name]: "and" is a reserved keyword, not a name the ID terminal admits; write 'and' to use it as a name
+The model keeps the controller, beds, probes, valves and pump as parts, states the moisture band as a requirement and satisfies it with the greenhouse, and describes the irrigation cycle as an action with a simple sequence of subactions.
+                                                                                                                  ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md:86:119: error[syntax]: expected '{' or ';' after declaration
+The model keeps the controller, beds, probes, valves and pump as parts, states the moisture band as a requirement and satisfies it with the greenhouse, and describes the irrigation cycle as an action with a simple sequence of subactions.
+                                                                                                                      ^~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md:86:119: error[syntax]: expected a namespace member
+The model keeps the controller, beds, probes, valves and pump as parts, states the moisture band as a requirement and satisfies it with the greenhouse, and describes the irrigation cycle as an action with a simple sequence of subactions.
+                                                                                                                      ^~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md:86:206: error[syntax]: expected '{' or ';' after action declaration
+The model keeps the controller, beds, probes, valves and pump as parts, states the moisture band as a requirement and satisfies it with the greenhouse, and describes the irrigation cycle as an action with a simple sequence of subactions.
+                                                                                                                                                                                                             ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md:86:206: error[syntax]: expected a namespace member
+The model keeps the controller, beds, probes, valves and pump as parts, states the moisture band as a requirement and satisfies it with the greenhouse, and describes the irrigation cycle as an action with a simple sequence of subactions.
+                                                                                                                                                                                                             ^
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/raw/T1-C1.md did not analyse cleanly; no check was made

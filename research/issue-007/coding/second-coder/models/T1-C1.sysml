@@ -1,0 +1,80 @@
+package GreenhouseIrrigation {
+    private import ScalarValues::*;
+
+    part def MoistureProbe {
+        attribute reading : Real;
+        attribute bedId : String;
+    }
+
+    part def SolenoidValve {
+        attribute isOpen : Boolean = false;
+        port inlet;
+        port outlet;
+    }
+
+    part def Pump {
+        attribute isRunning : Boolean = false;
+        port outlet;
+    }
+
+    part def Bed {
+        attribute targetMoistureMin : Real = 35.0;
+        attribute targetMoistureMax : Real = 55.0;
+        part probe : MoistureProbe[1];
+        part valve : SolenoidValve[1];
+    }
+
+    part def IrrigationController {
+        part beds : Bed[2];
+        part pump : Pump[1];
+        port command;
+    }
+
+    part greenhouse : IrrigationController;
+
+    requirement def MoistureBand {
+        doc /* Soil moisture shall be kept between 35% and 55% for each bed. */
+        attribute minPercent : Real = 35.0;
+        attribute maxPercent : Real = 55.0;
+    }
+
+    requirement moistureControl : MoistureBand {
+        doc /* When moisture in a bed falls below 35% the controller opens that bed's valve
+               and runs the pump until the reading reaches 50%. */
+    }
+
+    satisfy moistureControl by greenhouse;
+
+    requirement faultOnProbeLoss {
+        doc /* If a probe reports no reading for more than 10 minutes, the controller shall stop
+               all irrigation and raise a fault. */
+    }
+
+    action def IrrigationCycle {
+        in bed : Bed;
+        in moistureReading : Real;
+        out valveOpen : Boolean;
+
+        action sense : SenseMoisture;
+        action compare : CompareToBand;
+        action openValve;
+        action runPump;
+        action closeValve;
+
+        first start;
+        then sense;
+        then compare;
+        then openValve;
+        then runPump;
+        then closeValve;
+    }
+
+    action def SenseMoisture {
+        out reading : Real;
+    }
+
+    action def CompareToBand {
+        in reading : Real;
+        out belowMinimum : Boolean;
+    }
+}

@@ -1,0 +1,19 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_004_iteration_00.sysml
+[exit 2]
+--- stdout ---
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_004_iteration_00.sysml:13:26: error[syntax]: `:` relates features: a definition declaration admits no `:` clause
+    part def SmallEngine : Engine {
+                         ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_004_iteration_00.sysml:17:26: error[syntax]: `:` relates features: a definition declaration admits no `:` clause
+    part def LargeEngine : Engine {
+                         ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_004_iteration_00.sysml:26:27: error[syntax]: `:` relates features: a definition declaration admits no `:` clause
+    part def SmallVehicle : Vehicle {
+                          ^
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_004_iteration_00.sysml:31:27: error[syntax]: `:` relates features: a definition declaration admits no `:` clause
+    part def LargeVehicle : Vehicle {
+                          ^
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_004_iteration_00.sysml did not analyse cleanly; no check was made

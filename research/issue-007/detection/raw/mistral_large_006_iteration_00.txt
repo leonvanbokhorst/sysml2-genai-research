@@ -1,0 +1,70 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml
+[exit 2]
+--- stdout ---
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:32:19: warning[name-conflict]: Duplicate of inherited member name 'level' from Classification
+        attribute level = ClassificationLevel::uncl;
+                  ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:33:19: warning[name-conflict]: Duplicate of inherited member name 'code' from Classification
+        attribute code = "uncl";
+                  ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:34:19: warning[name-conflict]: Duplicate of inherited member name 'color' from Classification
+        attribute color = ClassificationColor::green;
+                  ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:38:19: warning[name-conflict]: Duplicate of inherited member name 'level' from Classification
+        attribute level = ClassificationLevel::conf;
+                  ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:39:19: warning[name-conflict]: Duplicate of inherited member name 'code' from Classification
+        attribute code = "conf";
+                  ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:40:19: warning[name-conflict]: Duplicate of inherited member name 'color' from Classification
+        attribute color = ClassificationColor::yellow;
+                  ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:44:19: warning[name-conflict]: Duplicate of inherited member name 'level' from Classification
+        attribute level = ClassificationLevel::secr;
+                  ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:45:19: warning[name-conflict]: Duplicate of inherited member name 'code' from Classification
+        attribute code = "secr";
+                  ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:46:19: warning[name-conflict]: Duplicate of inherited member name 'color' from Classification
+        attribute color = ClassificationColor::red;
+                  ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:55:19: warning[name-conflict]: Duplicate of inherited member name 'grade' from Grade
+        attribute grade = GradeLevel::A;
+                  ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:56:19: warning[name-conflict]: Duplicate of inherited member name 'points' from Grade
+        attribute points = 4.0;
+                  ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:60:19: warning[name-conflict]: Duplicate of inherited member name 'grade' from Grade
+        attribute grade = GradeLevel::B;
+                  ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:61:19: warning[name-conflict]: Duplicate of inherited member name 'points' from Grade
+        attribute points = 3.0;
+                  ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:65:19: warning[name-conflict]: Duplicate of inherited member name 'grade' from Grade
+        attribute grade = GradeLevel::C;
+                  ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:66:19: warning[name-conflict]: Duplicate of inherited member name 'points' from Grade
+        attribute points = 2.0;
+                  ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:70:19: warning[name-conflict]: Duplicate of inherited member name 'grade' from Grade
+        attribute grade = GradeLevel::D;
+                  ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:71:19: warning[name-conflict]: Duplicate of inherited member name 'points' from Grade
+        attribute points = 1.0;
+                  ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:75:19: warning[name-conflict]: Duplicate of inherited member name 'grade' from Grade
+        attribute grade = GradeLevel::F;
+                  ^~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:76:19: warning[name-conflict]: Duplicate of inherited member name 'points' from Grade
+        attribute points = 0.0;
+                  ^~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:80:9: error[usage-typing]: An attribute must be typed by attribute definitions.
+        attribute classification : Classification;
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml:81:9: error[usage-typing]: An attribute must be typed by attribute definitions.
+        attribute grade : Grade;
+        ^~~~~~~~~~~~~~~~~~~~~~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/mistral_large_006_iteration_00.sysml did not analyse cleanly; no check was made

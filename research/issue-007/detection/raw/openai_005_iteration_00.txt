@@ -1,0 +1,11 @@
+$ .tools/sysml -validate /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_005_iteration_00.sysml
+[exit 0]
+--- stdout ---
+✓ package TrafficSignalSystemPkg
+✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_005_iteration_00.sysml: no errors
+
+--- stderr ---
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-007/detection/external/openai_005_iteration_00.sysml:14:23: warning[name-conflict]: Duplicate of inherited member name 'color' from TrafficSignal
+            attribute color : TrafficColor = TrafficColor::green;
+                      ^~~~~
