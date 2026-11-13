@@ -1,0 +1,67 @@
+{
+  "total": 623,
+  "by_spec_kind_class": {
+    "KerML 1.0 / check": {
+      "B": 53,
+      "A": 25,
+      "U": 2
+    },
+    "KerML 1.0 / derive": {
+      "A": 89,
+      "B": 1
+    },
+    "KerML 1.0 / validate": {
+      "A": 81,
+      "B": 7
+    },
+    "SysML 2.0 / check": {
+      "A": 10,
+      "B": 118
+    },
+    "SysML 2.0 / derive": {
+      "A": 144,
+      "B": 1
+    },
+    "SysML 2.0 / validate": {
+      "A": 88,
+      "B": 4
+    }
+  },
+  "by_spec_kind": {
+    "KerML 1.0 / check": {
+      "n": 80
+    },
+    "KerML 1.0 / derive": {
+      "n": 90
+    },
+    "KerML 1.0 / validate": {
+      "n": 88
+    },
+    "SysML 2.0 / check": {
+      "n": 128
+    },
+    "SysML 2.0 / derive": {
+      "n": 145
+    },
+    "SysML 2.0 / validate": {
+      "n": 92
+    }
+  },
+  "by_class": {
+    "A": 437,
+    "B": 184,
+    "U": 2
+  },
+  "by_executable_ocl_status": {
+    "defective as published (high-confidence defect)": 43,
+    "no known defect found (not a proof of executability)": 575,
+    "possible defect (medium-confidence only)": 5
+  },
+  "by_obligation": {
+    "MAY report, satisfy by implied relationships, or ignore (explicitly discretionary)": 208,
+    "SHALL enforce (derivation is mandatory for a conformant abstract-syntax tool)": 235,
+    "SHOULD report violations": 180
+  },
+  "constraints_with_published_defect": 48,
+  "constraints_with_high_confidence_defect": 43
+}

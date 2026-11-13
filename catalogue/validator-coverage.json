@@ -1,0 +1,113 @@
+{
+  "measure": "identifier coverage only; not implementation, enforcement or conformance coverage",
+  "runtime_tested": false,
+  "catalogue_total": 623,
+  "validator_distinct_identifier_names": 200,
+  "catalogue_identifiers_matched_exactly": 156,
+  "matched_in_active_check": 149,
+  "matched_only_in_todo_methods": 7,
+  "identifier_coverage_ratio": 0.2504,
+  "identifier_coverage_note": "156/623 = 25.0% of catalogue names appear in the pilot's own validation source, 149 of them in non-TODO methods. This does not demonstrate execution, correct enforcement, or conformance; it is name matching across a 2.0/2.1 revision skew.",
+  "by_spec_kind": {
+    "SysML 2.0 / derive": {
+      "catalogue": 145,
+      "matched_in_active_check": 0,
+      "matched_only_in_todo_methods": 0,
+      "identifier_coverage": 0
+    },
+    "SysML 2.0 / check": {
+      "catalogue": 128,
+      "matched_in_active_check": 0,
+      "matched_only_in_todo_methods": 0,
+      "identifier_coverage": 0
+    },
+    "SysML 2.0 / validate": {
+      "catalogue": 92,
+      "matched_in_active_check": 70,
+      "matched_only_in_todo_methods": 7,
+      "identifier_coverage": 77
+    },
+    "KerML 1.0 / derive": {
+      "catalogue": 90,
+      "matched_in_active_check": 0,
+      "matched_only_in_todo_methods": 0,
+      "identifier_coverage": 0
+    },
+    "KerML 1.0 / check": {
+      "catalogue": 80,
+      "matched_in_active_check": 2,
+      "matched_only_in_todo_methods": 0,
+      "identifier_coverage": 2
+    },
+    "KerML 1.0 / validate": {
+      "catalogue": 88,
+      "matched_in_active_check": 77,
+      "matched_only_in_todo_methods": 0,
+      "identifier_coverage": 77
+    }
+  },
+  "validator_names_not_in_catalogue": [
+    "checkSuccession",
+    "checkTransitionUsage",
+    "validateActionUsageType",
+    "validateAllocationUsageType",
+    "validateAnalysisCaseUsageType",
+    "validateAssignmentActionUsageReferentIsTimeVarying",
+    "validateAttributeUsageEnumerationDefinition",
+    "validateCalculationUsageType",
+    "validateConjugatedPortDefinitionConjugatedPortDefinition",
+    "validateConnectionDefinitionEndsAreUsages",
+    "validateConnectionUsageType",
+    "validateConstructorExpressionNoDuplicateParameterRedefinition",
+    "validateDifferencingTypesNotSelf",
+    "validateElementFilterMembershipIsBoolean",
+    "validateElementFilterMembershipIsModelLevelEvaluable",
+    "validateEnumerationUsageType",
+    "validateFlowDefinitionEnds",
+    "validateFlowDefinitionEndsAreUsages",
+    "validateFlowEndImplicitSubsetting",
+    "validateFlowEndSubsetting",
+    "validateFlowItemFeature",
+    "validateFlowUsageType",
+    "validateInterfaceDefinitionEnd",
+    "validateInterfaceUsageEnd",
+    "validateInterfaceUsageType",
+    "validateLibraryPackageNotStandard",
+    "validateMergeNodeOutgoingSucessions",
+    "validateMetadataUsageType",
+    "validateMultiplicityBoundResults",
+    "validateNamespaceDistinguishability",
+    "validateOperatorExpressionCastConformance",
+    "validateOperatorExpressionQuantity",
+    "validatePortionNotVariable",
+    "validateRedefinitionMultiplicityConformance",
+    "validateReferenceUsageIsReferential",
+    "validateRenderingUsageType",
+    "validateSendActionUsagePayloadArgument",
+    "validateSpecializationSpecificNotConjugated",
+    "validateSubsettingMultiplicityConformance",
+    "validateUseCaseUsageType",
+    "validateVerificationCaseUsageType",
+    "validateViewUsageOnlyOneRendering",
+    "validateViewpointUsageType",
+    "validateWhileLoopActionUsageParameters"
+  ],
+  "todos_named_in_catalogue": [
+    "validateControlNodeIncomingSuccessions",
+    "validateControlNodeOutgoingSuccessions",
+    "validateDecisionNodeIncomingSuccessions",
+    "validateDecisionNodeOutgoingSuccessions",
+    "validateForkNodeIncomingSuccessions",
+    "validateJoinNodeOutgoingSuccessions",
+    "validateMergeNodeIncomingSuccessions"
+  ],
+  "catalogue_names_only_reached_via_todo": [
+    "validateControlNodeIncomingSuccessions",
+    "validateControlNodeOutgoingSuccessions",
+    "validateDecisionNodeIncomingSuccessions",
+    "validateDecisionNodeOutgoingSuccessions",
+    "validateForkNodeIncomingSuccessions",
+    "validateJoinNodeOutgoingSuccessions",
+    "validateMergeNodeIncomingSuccessions"
+  ]
+}
