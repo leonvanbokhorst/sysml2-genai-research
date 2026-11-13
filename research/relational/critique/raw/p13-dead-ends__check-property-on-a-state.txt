@@ -1,0 +1,17 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:50Z
+probe model:    probes/p13-dead-ends.sysml
+model sha256:   2c6e91f29f5a0504cec2104742e3a96c537fd1bd5d14c642408ebf30bccde429
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -state Mission -advance 10 -engine check -check-property Mission::done p13-dead-ends.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/critique/probes/p13-dead-ends.sysml:13:15: warning[name-conflict]: Duplicate of inherited member name 'done' from StateAction
+        state done;
+              ^~~~
+✓ package P13
+sysml: unresolved reference: Mission::done
+----- end of output -----
+exit:           2

@@ -1,0 +1,14 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:50Z
+probe model:    probes/p10-constraint-and-invariant.sysml
+model sha256:   b5589b6bb2350640ae53e84b9602a85e92a7779dcef82889636aae71d933b93e
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -validate=guardedTank p10-constraint-and-invariant.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+✓ package P10
+sysml: no instance of "P10::guardedTank" (use %instantiate first)
+----- end of output -----
+exit:           2

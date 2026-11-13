@@ -1,0 +1,22 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:48Z
+probe model:    probes/p07c-assertions-unbound.sysml
+model sha256:   4bea721caeedb136897b055709217d1a2b91ec8be5d489d3942384193bf24a65
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -instantiate gauge -validate=gauge -engine all p07c-assertions-unbound.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+✓ package P07C
+✓ Created instance of P07C::gauge
+  ID: 1
+  Use %features gauge to inspect
+? assert constraint could not be evaluated (on P07C::gauge ID: 1)
+  Error: constraint : assertion evaluation failed: no value for feature reading
+? assert constraint could not be evaluated (on P07C::gauge ID: 1)
+  Error: constraint : assertion evaluation failed: no value for feature reading
+? P07C::gauge is not shown valid: 2 of 2 assertions undecided
+  standing: not covered (2 undecided); all: run not covered (2 undecided)
+----- end of output -----
+exit:           2

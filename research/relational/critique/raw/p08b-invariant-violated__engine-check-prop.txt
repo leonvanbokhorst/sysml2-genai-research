@@ -1,0 +1,16 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:49Z
+probe model:    probes/p08b-invariant-violated.sysml
+model sha256:   b64b67cbcacec6d1a4878092a8a8b94936018d65335dab04cba5e09cfe2ea704
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -action Seq -engine check -check-property within15 p08b-invariant-violated.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+✓ package P08B
+✓ Action Seq: no violation, exhaustive (3 states, 2 moves, depth 2)
+  outcome: x = 20.0
+  standing: holds (bounded over schedules: 3 states, 2 moves searched)
+----- end of output -----
+exit:           0

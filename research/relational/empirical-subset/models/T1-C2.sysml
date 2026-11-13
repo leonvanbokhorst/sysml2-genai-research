@@ -1,0 +1,54 @@
+package GreenhouseIrrigation {
+    private import ScalarValues::*;
+
+    part def MoistureProbe {
+        attribute reading : Real;
+    }
+
+    part def Valve {
+        attribute open : Boolean = false;
+        port inlet;
+        port outlet;
+    }
+
+    part def Bed {
+        part probe : MoistureProbe;
+        part valve : Valve;
+        attribute moisture : Real;
+    }
+
+    part def Pump {
+        attribute running : Boolean = false;
+        port outlet;
+    }
+
+    part def IrrigationController {
+        part beds : Bed[2];
+        part pump : Pump;
+    }
+
+    requirement def MoistureControl {
+        subject system : IrrigationController;
+        doc /* Soil moisture shall stay between 35% and 55% per bed; below 35% the valve opens and
+               the pump runs until 50% is reached. */
+        attribute lower : Real = 35.0;
+        attribute upper : Real = 55.0;
+    }
+
+    requirement moistureControl : MoistureControl;
+
+    part greenhouse : IrrigationController;
+    satisfy greenhouse to moistureControl;
+
+    action def IrrigateBed {
+        in bed : Bed;
+        action readProbe;
+        action openValve;
+        action runPump;
+        action stopPump;
+        first readProbe;
+        then openValve;
+        then runPump;
+        then stopPump;
+    }
+}

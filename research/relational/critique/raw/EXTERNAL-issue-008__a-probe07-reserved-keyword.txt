@@ -1,0 +1,16 @@
+===== CRITIQUE CROSS-CHECK PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:50Z
+target model:   research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml  (read-only; authored by Researcher B, issue #8)
+model sha256:   a0ac37d65c8c5d7af3b502346f8113b08371f434ff1ed12f6742a771d14615f0
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -validate research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml
+----- stdout+stderr (verbatim) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml:3:23: error[reserved-keyword-name]: "in" is a reserved keyword, not a name the ID terminal admits; write 'in' to use it as a name
+    part def L { port in; }
+                      ^~
+✓ package P
+✓ research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml: no error that stops a check; the notation reported above does not conform
+----- end of output -----
+exit:           0

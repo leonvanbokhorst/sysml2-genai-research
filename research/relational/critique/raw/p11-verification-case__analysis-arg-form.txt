@@ -1,0 +1,16 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:49Z
+probe model:    probes/p11-verification-case.sysml
+model sha256:   ea7e83d42c4f06a695d16ec9313c2280f9fcb5ce1d02dc8121f4bd504c42d59c
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -analysis StopCheck(20.0) p11-verification-case.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+✓ package P11
+✓ package P11Cases
+sysml: calc argument count mismatch: verification P11::StopCheck takes 0 argument(s), got 1
+  standing: not covered (calc argument count mismatch: verification P11::StopCheck takes 0 argument(s), got 1)
+----- end of output -----
+exit:           2

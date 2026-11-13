@@ -1,0 +1,22 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:48Z
+probe model:    probes/p06b-units-incommensurable.sysml
+model sha256:   e81acc1ef8a3cbd34b069726a6860f788ac4b70ac57d3bb34aaf6986fb2d4d7f
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -instantiate vehicle -validate=vehicle p06b-units-incommensurable.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/critique/probes/p06b-units-incommensurable.sysml:11:39: warning[incommensurable-operands]: operator '+' combines incommensurable quantities: MassValue (dimension M) and LengthValue (dimension L)
+        attribute total : MassValue = mass + length;
+                                      ^~~~~~~~~~~~~
+✓ package P06B
+✓ Created instance of P06B::vehicle
+  ID: 1
+  Use %features vehicle to inspect
+error: feature value vehicle.total: incommensurable units: cannot express m (metre) in kg (1000·gram)
+? P06B::vehicle states no assertion to validate
+  standing: not covered (states no assertion to validate)
+----- end of output -----
+exit:           2

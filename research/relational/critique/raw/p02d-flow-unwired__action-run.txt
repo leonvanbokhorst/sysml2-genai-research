@@ -1,0 +1,15 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:46Z
+probe model:    probes/p02d-flow-unwired.sysml
+model sha256:   4adbc6137fe432be8b2c7522ca16cd24893e1c0299853c77b8c933afd3fb825e
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -action Pipe p02d-flow-unwired.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+✓ package P02D
+sysml: execution failed: action Pipe: assignment to observed: multiplicity violation: 0 value(s) bound to a feature with multiplicity lower bound 1
+  standing: not covered (execution failed: action Pipe: assignment to observed: multiplicity violation: 0 value(s) bound to a feature with multiplicity lower bound 1)
+----- end of output -----
+exit:           2

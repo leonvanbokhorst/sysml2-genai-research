@@ -1,0 +1,20 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:39Z
+probe model:    probes/p00-smoke-bad.sysml
+model sha256:   2512728f510bb4280cb12a889e17c47e1b377cbfdd08479a03ca86b1d9605ae8
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -instantiate tank -validate=tank p00-smoke-bad.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+✓ package P00B
+✓ Created instance of P00B::tank
+  ID: 1
+  Use %features tank to inspect
+✗ assert constraint fails (on P00B::tank ID: 1)
+  Assertion evaluated to false: level <= capacity
+✗ P00B::tank is not valid: 1 of 1 assertion fails
+  standing: violated (witnessed: 1 run under reverse)
+----- end of output -----
+exit:           1

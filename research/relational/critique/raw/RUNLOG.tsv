@@ -1,0 +1,123 @@
+utc	probe	invocation_id	argv	exit	raw_file
+2026-11-13T14:48:39Z	p00-smoke	default-validate	sysml -validate p00-smoke.sysml	exit=0	raw/p00-smoke__default-validate.txt
+2026-11-13T14:48:39Z	p00-smoke	instantiate-check	sysml -instantiate tank -validate=tank p00-smoke.sysml	exit=0	raw/p00-smoke__instantiate-check.txt
+2026-11-13T14:48:39Z	p00-smoke-bad	default-validate	sysml -validate p00-smoke-bad.sysml	exit=0	raw/p00-smoke-bad__default-validate.txt
+2026-11-13T14:48:39Z	p00-smoke-bad	instantiate-check	sysml -instantiate tank -validate=tank p00-smoke-bad.sysml	exit=1	raw/p00-smoke-bad__instantiate-check.txt
+2026-11-13T14:48:40Z	p01a-state-terminal-reachable	default-validate	sysml -validate p01a-state-terminal-reachable.sysml	exit=0	raw/p01a-state-terminal-reachable__default-validate.txt
+2026-11-13T14:48:40Z	p01a-state-terminal-reachable	state-initial	sysml -state Mission p01a-state-terminal-reachable.sysml	exit=0	raw/p01a-state-terminal-reachable__state-initial.txt
+2026-11-13T14:48:40Z	p01a-state-terminal-reachable	state-advance-100	sysml -state Mission -advance 100 p01a-state-terminal-reachable.sysml	exit=0	raw/p01a-state-terminal-reachable__state-advance-100.txt
+2026-11-13T14:48:40Z	p01a-state-terminal-reachable	state-advance-check	sysml -state Mission -advance 100 -engine check p01a-state-terminal-reachable.sysml	exit=0	raw/p01a-state-terminal-reachable__state-advance-check.txt
+2026-11-13T14:48:40Z	p01a-state-terminal-reachable	state-advance-explore	sysml -state Mission -advance 100 -schedule explore p01a-state-terminal-reachable.sysml	exit=0	raw/p01a-state-terminal-reachable__state-advance-explore.txt
+2026-11-13T14:48:40Z	p01a-state-terminal-reachable	self-check	sysml -self-check p01a-state-terminal-reachable.sysml	exit=0	raw/p01a-state-terminal-reachable__self-check.txt
+2026-11-13T14:48:40Z	p01b-state-terminal-unreachable	default-validate	sysml -validate p01b-state-terminal-unreachable.sysml	exit=0	raw/p01b-state-terminal-unreachable__default-validate.txt
+2026-11-13T14:48:40Z	p01b-state-terminal-unreachable	state-initial	sysml -state Mission p01b-state-terminal-unreachable.sysml	exit=0	raw/p01b-state-terminal-unreachable__state-initial.txt
+2026-11-13T14:48:40Z	p01b-state-terminal-unreachable	state-advance-100	sysml -state Mission -advance 100 p01b-state-terminal-unreachable.sysml	exit=0	raw/p01b-state-terminal-unreachable__state-advance-100.txt
+2026-11-13T14:48:40Z	p01b-state-terminal-unreachable	state-advance-check	sysml -state Mission -advance 100 -engine check p01b-state-terminal-unreachable.sysml	exit=0	raw/p01b-state-terminal-unreachable__state-advance-check.txt
+2026-11-13T14:48:40Z	p01b-state-terminal-unreachable	state-advance-explore	sysml -state Mission -advance 100 -schedule explore p01b-state-terminal-unreachable.sysml	exit=0	raw/p01b-state-terminal-unreachable__state-advance-explore.txt
+2026-11-13T14:48:40Z	p01b-state-terminal-unreachable	self-check	sysml -self-check p01b-state-terminal-unreachable.sysml	exit=0	raw/p01b-state-terminal-unreachable__self-check.txt
+2026-11-13T14:48:40Z	p01c-state-nonterminating	default-validate	sysml -validate p01c-state-nonterminating.sysml	exit=0	raw/p01c-state-nonterminating__default-validate.txt
+2026-11-13T14:48:40Z	p01c-state-nonterminating	state-initial	sysml -state Mission p01c-state-nonterminating.sysml	exit=0	raw/p01c-state-nonterminating__state-initial.txt
+2026-11-13T14:48:40Z	p01c-state-nonterminating	state-advance-100	sysml -state Mission -advance 100 p01c-state-nonterminating.sysml	exit=0	raw/p01c-state-nonterminating__state-advance-100.txt
+2026-11-13T14:48:42Z	p01c-state-nonterminating	state-advance-check	sysml -state Mission -advance 100 -engine check p01c-state-nonterminating.sysml	exit=2	raw/p01c-state-nonterminating__state-advance-check.txt
+2026-11-13T14:48:43Z	p01c-state-nonterminating	state-advance-explore	sysml -state Mission -advance 100 -schedule explore p01c-state-nonterminating.sysml	exit=1	raw/p01c-state-nonterminating__state-advance-explore.txt
+2026-11-13T14:48:45Z	p01c-state-nonterminating	self-check	sysml -self-check p01c-state-nonterminating.sysml	exit=0	raw/p01c-state-nonterminating__self-check.txt
+2026-11-13T14:48:45Z	p02a-flow-present	default-validate	sysml -validate p02a-flow-present.sysml	exit=0	raw/p02a-flow-present__default-validate.txt
+2026-11-13T14:48:45Z	p02a-flow-present	action-run	sysml -action TakePicture p02a-flow-present.sysml	exit=0	raw/p02a-flow-present__action-run.txt
+2026-11-13T14:48:46Z	p02a-flow-present	action-check	sysml -action TakePicture -engine check p02a-flow-present.sysml	exit=0	raw/p02a-flow-present__action-check.txt
+2026-11-13T14:48:46Z	p02a-flow-present	action-explore	sysml -action TakePicture -schedule explore p02a-flow-present.sysml	exit=0	raw/p02a-flow-present__action-explore.txt
+2026-11-13T14:48:46Z	p02a-flow-present	self-check	sysml -self-check p02a-flow-present.sysml	exit=0	raw/p02a-flow-present__self-check.txt
+2026-11-13T14:48:46Z	p02b-flow-missing	default-validate	sysml -validate p02b-flow-missing.sysml	exit=0	raw/p02b-flow-missing__default-validate.txt
+2026-11-13T14:48:46Z	p02b-flow-missing	action-run	sysml -action TakePicture p02b-flow-missing.sysml	exit=0	raw/p02b-flow-missing__action-run.txt
+2026-11-13T14:48:46Z	p02b-flow-missing	action-check	sysml -action TakePicture -engine check p02b-flow-missing.sysml	exit=0	raw/p02b-flow-missing__action-check.txt
+2026-11-13T14:48:46Z	p02b-flow-missing	action-explore	sysml -action TakePicture -schedule explore p02b-flow-missing.sysml	exit=0	raw/p02b-flow-missing__action-explore.txt
+2026-11-13T14:48:46Z	p02b-flow-missing	self-check	sysml -self-check p02b-flow-missing.sysml	exit=0	raw/p02b-flow-missing__self-check.txt
+2026-11-13T14:48:46Z	p02c-flow-wired	default-validate	sysml -validate p02c-flow-wired.sysml	exit=0	raw/p02c-flow-wired__default-validate.txt
+2026-11-13T14:48:46Z	p02c-flow-wired	action-run	sysml -action Pipe p02c-flow-wired.sysml	exit=0	raw/p02c-flow-wired__action-run.txt
+2026-11-13T14:48:46Z	p02c-flow-wired	action-check	sysml -action Pipe -engine check p02c-flow-wired.sysml	exit=0	raw/p02c-flow-wired__action-check.txt
+2026-11-13T14:48:46Z	p02c-flow-wired	engine-smt-prop	sysml -action Pipe -engine smt -check-property wired p02c-flow-wired.sysml	exit=1	raw/p02c-flow-wired__engine-smt-prop.txt
+2026-11-13T14:48:46Z	p02c-flow-wired	self-check	sysml -self-check p02c-flow-wired.sysml	exit=0	raw/p02c-flow-wired__self-check.txt
+2026-11-13T14:48:46Z	p02d-flow-unwired	default-validate	sysml -validate p02d-flow-unwired.sysml	exit=0	raw/p02d-flow-unwired__default-validate.txt
+2026-11-13T14:48:46Z	p02d-flow-unwired	action-run	sysml -action Pipe p02d-flow-unwired.sysml	exit=2	raw/p02d-flow-unwired__action-run.txt
+2026-11-13T14:48:46Z	p02d-flow-unwired	action-check	sysml -action Pipe -engine check p02d-flow-unwired.sysml	exit=1	raw/p02d-flow-unwired__action-check.txt
+2026-11-13T14:48:46Z	p02d-flow-unwired	engine-smt-prop	sysml -action Pipe -engine smt -check-property wired p02d-flow-unwired.sysml	exit=1	raw/p02d-flow-unwired__engine-smt-prop.txt
+2026-11-13T14:48:46Z	p02d-flow-unwired	self-check	sysml -self-check p02d-flow-unwired.sysml	exit=0	raw/p02d-flow-unwired__self-check.txt
+2026-11-13T14:48:46Z	p03a-req-constraint-holds	default-validate	sysml -validate p03a-req-constraint-holds.sysml	exit=0	raw/p03a-req-constraint-holds__default-validate.txt
+2026-11-13T14:48:46Z	p03a-req-constraint-holds	satisfy-all	sysml -satisfy p03a-req-constraint-holds.sysml	exit=0	raw/p03a-req-constraint-holds__satisfy-all.txt
+2026-11-13T14:48:46Z	p03a-req-constraint-holds	satisfy-json	sysml -satisfy -json p03a-req-constraint-holds.sysml	exit=0	raw/p03a-req-constraint-holds__satisfy-json.txt
+2026-11-13T14:48:46Z	p03a-req-constraint-holds	instantiate-check	sysml -instantiate vehicle -validate=vehicle p03a-req-constraint-holds.sysml	exit=0	raw/p03a-req-constraint-holds__instantiate-check.txt
+2026-11-13T14:48:47Z	p03a-req-constraint-holds	requirement	sysml -requirement vehicleMaximumMass p03a-req-constraint-holds.sysml	exit=0	raw/p03a-req-constraint-holds__requirement.txt
+2026-11-13T14:48:47Z	p03a-req-constraint-holds	self-check	sysml -self-check p03a-req-constraint-holds.sysml	exit=0	raw/p03a-req-constraint-holds__self-check.txt
+2026-11-13T14:48:47Z	p03b-req-constraint-violated	default-validate	sysml -validate p03b-req-constraint-violated.sysml	exit=0	raw/p03b-req-constraint-violated__default-validate.txt
+2026-11-13T14:48:47Z	p03b-req-constraint-violated	satisfy-all	sysml -satisfy p03b-req-constraint-violated.sysml	exit=1	raw/p03b-req-constraint-violated__satisfy-all.txt
+2026-11-13T14:48:47Z	p03b-req-constraint-violated	satisfy-json	sysml -satisfy -json p03b-req-constraint-violated.sysml	exit=1	raw/p03b-req-constraint-violated__satisfy-json.txt
+2026-11-13T14:48:47Z	p03b-req-constraint-violated	instantiate-check	sysml -instantiate vehicle -validate=vehicle p03b-req-constraint-violated.sysml	exit=1	raw/p03b-req-constraint-violated__instantiate-check.txt
+2026-11-13T14:48:47Z	p03b-req-constraint-violated	requirement	sysml -requirement vehicleMaximumMass p03b-req-constraint-violated.sysml	exit=1	raw/p03b-req-constraint-violated__requirement.txt
+2026-11-13T14:48:47Z	p03b-req-constraint-violated	self-check	sysml -self-check p03b-req-constraint-violated.sysml	exit=0	raw/p03b-req-constraint-violated__self-check.txt
+2026-11-13T14:48:47Z	p04-req-prose-only	default-validate	sysml -validate p04-req-prose-only.sysml	exit=0	raw/p04-req-prose-only__default-validate.txt
+2026-11-13T14:48:47Z	p04-req-prose-only	satisfy-all	sysml -satisfy p04-req-prose-only.sysml	exit=0	raw/p04-req-prose-only__satisfy-all.txt
+2026-11-13T14:48:47Z	p04-req-prose-only	satisfy-json	sysml -satisfy -json p04-req-prose-only.sysml	exit=0	raw/p04-req-prose-only__satisfy-json.txt
+2026-11-13T14:48:47Z	p04-req-prose-only	instantiate-check	sysml -instantiate vehicle -validate=vehicle p04-req-prose-only.sysml	exit=0	raw/p04-req-prose-only__instantiate-check.txt
+2026-11-13T14:48:47Z	p04-req-prose-only	requirement	sysml -requirement maxMass p04-req-prose-only.sysml	exit=0	raw/p04-req-prose-only__requirement.txt
+2026-11-13T14:48:47Z	p04-req-prose-only	self-check	sysml -self-check p04-req-prose-only.sysml	exit=0	raw/p04-req-prose-only__self-check.txt
+2026-11-13T14:48:47Z	p05a-types-conformant	default-validate	sysml -validate p05a-types-conformant.sysml	exit=0	raw/p05a-types-conformant__default-validate.txt
+2026-11-13T14:48:47Z	p05a-types-conformant	instantiate-check	sysml -instantiate device -validate=device p05a-types-conformant.sysml	exit=2	raw/p05a-types-conformant__instantiate-check.txt
+2026-11-13T14:48:47Z	p05a-types-conformant	self-check	sysml -self-check p05a-types-conformant.sysml	exit=0	raw/p05a-types-conformant__self-check.txt
+2026-11-13T14:48:47Z	p05b-types-nonconformant	default-validate	sysml -validate p05b-types-nonconformant.sysml	exit=2	raw/p05b-types-nonconformant__default-validate.txt
+2026-11-13T14:48:47Z	p05b-types-nonconformant	instantiate-check	sysml -instantiate device -validate=device p05b-types-nonconformant.sysml	exit=2	raw/p05b-types-nonconformant__instantiate-check.txt
+2026-11-13T14:48:47Z	p05b-types-nonconformant	self-check	sysml -self-check p05b-types-nonconformant.sysml	exit=2	raw/p05b-types-nonconformant__self-check.txt
+2026-11-13T14:48:47Z	p06a-units-consistent	default-validate	sysml -validate p06a-units-consistent.sysml	exit=0	raw/p06a-units-consistent__default-validate.txt
+2026-11-13T14:48:47Z	p06a-units-consistent	instantiate-check	sysml -instantiate vehicle -validate=vehicle p06a-units-consistent.sysml	exit=2	raw/p06a-units-consistent__instantiate-check.txt
+2026-11-13T14:48:48Z	p06a-units-consistent	self-check	sysml -self-check p06a-units-consistent.sysml	exit=0	raw/p06a-units-consistent__self-check.txt
+2026-11-13T14:48:48Z	p06b-units-incommensurable	default-validate	sysml -validate p06b-units-incommensurable.sysml	exit=0	raw/p06b-units-incommensurable__default-validate.txt
+2026-11-13T14:48:48Z	p06b-units-incommensurable	instantiate-check	sysml -instantiate vehicle -validate=vehicle p06b-units-incommensurable.sysml	exit=2	raw/p06b-units-incommensurable__instantiate-check.txt
+2026-11-13T14:48:48Z	p06b-units-incommensurable	self-check	sysml -self-check p06b-units-incommensurable.sysml	exit=0	raw/p06b-units-incommensurable__self-check.txt
+2026-11-13T14:48:48Z	p07a-assertions-consistent	default-validate	sysml -validate p07a-assertions-consistent.sysml	exit=0	raw/p07a-assertions-consistent__default-validate.txt
+2026-11-13T14:48:48Z	p07a-assertions-consistent	instantiate-check	sysml -instantiate gauge -validate=gauge p07a-assertions-consistent.sysml	exit=0	raw/p07a-assertions-consistent__instantiate-check.txt
+2026-11-13T14:48:48Z	p07a-assertions-consistent	instantiate-all	sysml -instantiate gauge -validate=gauge -engine all p07a-assertions-consistent.sysml	exit=0	raw/p07a-assertions-consistent__instantiate-all.txt
+2026-11-13T14:48:48Z	p07a-assertions-consistent	self-check	sysml -self-check p07a-assertions-consistent.sysml	exit=0	raw/p07a-assertions-consistent__self-check.txt
+2026-11-13T14:48:48Z	p07b-assertions-contradictory	default-validate	sysml -validate p07b-assertions-contradictory.sysml	exit=0	raw/p07b-assertions-contradictory__default-validate.txt
+2026-11-13T14:48:48Z	p07b-assertions-contradictory	instantiate-check	sysml -instantiate gauge -validate=gauge p07b-assertions-contradictory.sysml	exit=1	raw/p07b-assertions-contradictory__instantiate-check.txt
+2026-11-13T14:48:48Z	p07b-assertions-contradictory	instantiate-all	sysml -instantiate gauge -validate=gauge -engine all p07b-assertions-contradictory.sysml	exit=1	raw/p07b-assertions-contradictory__instantiate-all.txt
+2026-11-13T14:48:48Z	p07b-assertions-contradictory	self-check	sysml -self-check p07b-assertions-contradictory.sysml	exit=0	raw/p07b-assertions-contradictory__self-check.txt
+2026-11-13T14:48:48Z	p07c-assertions-unbound	default-validate	sysml -validate p07c-assertions-unbound.sysml	exit=0	raw/p07c-assertions-unbound__default-validate.txt
+2026-11-13T14:48:48Z	p07c-assertions-unbound	instantiate-check	sysml -instantiate gauge -validate=gauge p07c-assertions-unbound.sysml	exit=2	raw/p07c-assertions-unbound__instantiate-check.txt
+2026-11-13T14:48:48Z	p07c-assertions-unbound	instantiate-all	sysml -instantiate gauge -validate=gauge -engine all p07c-assertions-unbound.sysml	exit=2	raw/p07c-assertions-unbound__instantiate-all.txt
+2026-11-13T14:48:48Z	p07c-assertions-unbound	self-check	sysml -self-check p07c-assertions-unbound.sysml	exit=0	raw/p07c-assertions-unbound__self-check.txt
+2026-11-13T14:48:48Z	p08a-invariant-holds	default-validate	sysml -validate p08a-invariant-holds.sysml	exit=0	raw/p08a-invariant-holds__default-validate.txt
+2026-11-13T14:48:48Z	p08a-invariant-holds	action-run	sysml -action Seq p08a-invariant-holds.sysml	exit=0	raw/p08a-invariant-holds__action-run.txt
+2026-11-13T14:48:48Z	p08a-invariant-holds	action-explore	sysml -action Seq -schedule explore p08a-invariant-holds.sysml	exit=0	raw/p08a-invariant-holds__action-explore.txt
+2026-11-13T14:48:48Z	p08a-invariant-holds	engine-check-prop	sysml -action Seq -engine check -check-property within15 p08a-invariant-holds.sysml	exit=0	raw/p08a-invariant-holds__engine-check-prop.txt
+2026-11-13T14:48:48Z	p08a-invariant-holds	engine-smt-prop	sysml -action Seq -engine smt -check-property within15 p08a-invariant-holds.sysml	exit=0	raw/p08a-invariant-holds__engine-smt-prop.txt
+2026-11-13T14:48:49Z	p08a-invariant-holds	engine-all-prop	sysml -action Seq -engine all -check-property within15 p08a-invariant-holds.sysml	exit=0	raw/p08a-invariant-holds__engine-all-prop.txt
+2026-11-13T14:48:49Z	p08a-invariant-holds	engine-check-diverge	sysml -action Seq -engine check -check-diverge x p08a-invariant-holds.sysml	exit=0	raw/p08a-invariant-holds__engine-check-diverge.txt
+2026-11-13T14:48:49Z	p08a-invariant-holds	self-check	sysml -self-check p08a-invariant-holds.sysml	exit=0	raw/p08a-invariant-holds__self-check.txt
+2026-11-13T14:48:49Z	p08b-invariant-violated	default-validate	sysml -validate p08b-invariant-violated.sysml	exit=0	raw/p08b-invariant-violated__default-validate.txt
+2026-11-13T14:48:49Z	p08b-invariant-violated	action-run	sysml -action Seq p08b-invariant-violated.sysml	exit=0	raw/p08b-invariant-violated__action-run.txt
+2026-11-13T14:48:49Z	p08b-invariant-violated	action-explore	sysml -action Seq -schedule explore p08b-invariant-violated.sysml	exit=0	raw/p08b-invariant-violated__action-explore.txt
+2026-11-13T14:48:49Z	p08b-invariant-violated	engine-check-prop	sysml -action Seq -engine check -check-property within15 p08b-invariant-violated.sysml	exit=0	raw/p08b-invariant-violated__engine-check-prop.txt
+2026-11-13T14:48:49Z	p08b-invariant-violated	engine-smt-prop	sysml -action Seq -engine smt -check-property within15 p08b-invariant-violated.sysml	exit=1	raw/p08b-invariant-violated__engine-smt-prop.txt
+2026-11-13T14:48:49Z	p08b-invariant-violated	engine-all-prop	sysml -action Seq -engine all -check-property within15 p08b-invariant-violated.sysml	exit=1	raw/p08b-invariant-violated__engine-all-prop.txt
+2026-11-13T14:48:49Z	p08b-invariant-violated	engine-check-diverge	sysml -action Seq -engine check -check-diverge x p08b-invariant-violated.sysml	exit=0	raw/p08b-invariant-violated__engine-check-diverge.txt
+2026-11-13T14:48:49Z	p08b-invariant-violated	self-check	sysml -self-check p08b-invariant-violated.sysml	exit=0	raw/p08b-invariant-violated__self-check.txt
+2026-11-13T14:48:49Z	p11-verification-case	default-validate	sysml -validate p11-verification-case.sysml	exit=0	raw/p11-verification-case__default-validate.txt
+2026-11-13T14:48:49Z	p11-verification-case	analysis-over	sysml -analysis over p11-verification-case.sysml	exit=2	raw/p11-verification-case__analysis-over.txt
+2026-11-13T14:48:49Z	p11-verification-case	analysis-under	sysml -analysis under p11-verification-case.sysml	exit=2	raw/p11-verification-case__analysis-under.txt
+2026-11-13T14:48:49Z	p11-verification-case	analysis-arg-form	sysml -analysis StopCheck(20.0) p11-verification-case.sysml	exit=2	raw/p11-verification-case__analysis-arg-form.txt
+2026-11-13T14:48:49Z	p11-verification-case	self-check	sysml -self-check p11-verification-case.sysml	exit=0	raw/p11-verification-case__self-check.txt
+2026-11-13T14:48:49Z	p12-fixed-binding-redefinition	default-validate	sysml -validate p12-fixed-binding-redefinition.sysml	exit=2	raw/p12-fixed-binding-redefinition__default-validate.txt
+2026-11-13T14:48:49Z	p12-fixed-binding-redefinition	self-check	sysml -self-check p12-fixed-binding-redefinition.sysml	exit=2	raw/p12-fixed-binding-redefinition__self-check.txt
+2026-11-13T14:48:50Z	p13-dead-ends	check-property-on-a-state	sysml -state Mission -advance 10 -engine check -check-property Mission::done p13-dead-ends.sysml	exit=2	raw/p13-dead-ends__check-property-on-a-state.txt
+2026-11-13T14:48:50Z	p13-dead-ends	check-property-no-engine	sysml -state Mission -advance 10 -check-property Mission::done p13-dead-ends.sysml	exit=2	raw/p13-dead-ends__check-property-no-engine.txt
+2026-11-13T14:48:50Z	p13-dead-ends	observe-without-runs	sysml -action Fill -observe level p13-dead-ends.sysml	exit=2	raw/p13-dead-ends__observe-without-runs.txt
+2026-11-13T14:48:50Z	p13-dead-ends	constraint-without-args	sysml -instantiate tank -constraint Fits p13-dead-ends.sysml	exit=2	raw/p13-dead-ends__constraint-without-args.txt
+2026-11-13T14:48:50Z	p10-constraint-and-invariant	default-validate	sysml -validate p10-constraint-and-invariant.sysml	exit=0	raw/p10-constraint-and-invariant__default-validate.txt
+2026-11-13T14:48:50Z	p10-constraint-and-invariant	constraint-on-object	sysml -instantiate tank -constraint Fits p10-constraint-and-invariant.sysml	exit=2	raw/p10-constraint-and-invariant__constraint-on-object.txt
+2026-11-13T14:48:50Z	p10-constraint-and-invariant	constraint-args	sysml -constraint Fits(150.0, 100.0) p10-constraint-and-invariant.sysml	exit=1	raw/p10-constraint-and-invariant__constraint-args.txt
+2026-11-13T14:48:50Z	p10-constraint-and-invariant	invariant-default	sysml -validate=guardedTank p10-constraint-and-invariant.sysml	exit=2	raw/p10-constraint-and-invariant__invariant-default.txt
+2026-11-13T14:48:50Z	p10-constraint-and-invariant	invariant-instantiated	sysml -instantiate guardedTank -validate=guardedTank p10-constraint-and-invariant.sysml	exit=1	raw/p10-constraint-and-invariant__invariant-instantiated.txt
+2026-11-13T14:48:50Z	p10-constraint-and-invariant	self-check	sysml -self-check p10-constraint-and-invariant.sysml	exit=0	raw/p10-constraint-and-invariant__self-check.txt
+2026-11-13T14:48:50Z	EXTERNAL:research/issue-008/mutants/M31-F5-01-feature-value-overriding.sysml	f5-01-default-validate	sysml -validate research/issue-008/mutants/M31-F5-01-feature-value-overriding.sysml	exit=0	raw/EXTERNAL-issue-008__f5-01-default-validate.txt
+2026-11-13T14:48:50Z	EXTERNAL:research/issue-008/known-good/KG-04-featurevalues.sysml	f5-01-base-validate	sysml -validate research/issue-008/known-good/KG-04-featurevalues.sysml	exit=0	raw/EXTERNAL-issue-008__f5-01-base-validate.txt
+2026-11-13T14:48:50Z	EXTERNAL:research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml	a-probe07-reserved-keyword	sysml -validate research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml	exit=0	raw/EXTERNAL-issue-008__a-probe07-reserved-keyword.txt
+2026-11-13T14:48:50Z	EXTERNAL:research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml	a-probe07-strict	sysml -validate -strict research/issue-007/detection/probes/probe07_reserved_keyword_name.sysml	exit=2	raw/EXTERNAL-issue-008__a-probe07-strict.txt
+2026-11-13T14:48:50Z	EXTERNAL:research/issue-007/detection/probes/probe01_first_undefined_source.sysml	a-probe01-succession	sysml -validate research/issue-007/detection/probes/probe01_first_undefined_source.sysml	exit=0	raw/EXTERNAL-issue-008__a-probe01-succession.txt

@@ -1,0 +1,17 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:49Z
+probe model:    probes/p08b-invariant-violated.sysml
+model sha256:   b64b67cbcacec6d1a4878092a8a8b94936018d65335dab04cba5e09cfe2ea704
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -action Seq -engine all -check-property within15 p08b-invariant-violated.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+✓ package P08B
+✗ Action Seq: at step 2: constraint within15: assertion evaluated to false: x <= 15.0
+  inputs: x = 0.0
+  witness: no choices
+  standing: violated (witnessed: inputs as written); all: check not covered (check claimed holds (bounded) but smt witnessed violated; the interpreter's witness stands), smt violated (witnessed), solve refused (solve cannot leave the schedule free)
+----- end of output -----
+exit:           1

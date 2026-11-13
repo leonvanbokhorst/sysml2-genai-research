@@ -1,0 +1,67 @@
+===== CRITIQUE CAPABILITY PROBE — RAW OUTPUT, UNEDITED =====
+utc:            2026-11-13T14:48:47Z
+probe model:    probes/p04-req-prose-only.sysml
+model sha256:   075aa1b8dabe237c1080dfad47b416c5a314881600ace9139337c3f3e1eed7bc
+tool path:      .tools/sysml
+tool version:   sysml v0.12.1
+tool sha256:    ddfc2962db3cd060c00a97386e9d7e9e6ee7c347da9734f95bfb71ce2f1598f0
+argv:           sysml -satisfy -json p04-req-prose-only.sysml
+----- stdout+stderr (verbatim; the sandbox record-cache notice is the tool's own stderr) -----
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": [
+    {
+      "subject": "satisfy maxMass by vehicle",
+      "status": "holds",
+      "values": null,
+      "lines": [
+        "✓ satisfy maxMass by vehicle holds (on P04::vehicle ID: 1)",
+        "  standing: holds (observed: 1 run under reverse; vacuous: requirement maxMass states no required constraint, so it holds vacuously)"
+      ],
+      "rows": null,
+      "plan": {
+        "engine": "auto",
+        "standing": "holds (observed: 1 run under reverse; vacuous: requirement maxMass states no required constraint, so it holds vacuously)",
+        "steps": [
+          {
+            "engine": "run",
+            "status": "answered"
+          }
+        ],
+        "workers": 0,
+        "warming": 0
+      },
+      "results": [
+        {
+          "engine": "run",
+          "claim": "holds",
+          "strength": "observed",
+          "bounds": [
+            {
+              "name": "steps",
+              "limit": 10000000,
+              "reached": false
+            },
+            {
+              "name": "elements",
+              "limit": 1000000,
+              "reached": false
+            }
+          ],
+          "witness": null,
+          "reason": "vacuous: requirement maxMass states no required constraint, so it holds vacuously",
+          "standing": "holds (observed: 1 run under reverse; vacuous: requirement maxMass states no required constraint, so it holds vacuously)"
+        }
+      ]
+    }
+  ],
+  "diagnostics": null,
+  "output": [
+    "✓ package P04"
+  ],
+  "errors": null
+}
+----- end of output -----
+exit:           0

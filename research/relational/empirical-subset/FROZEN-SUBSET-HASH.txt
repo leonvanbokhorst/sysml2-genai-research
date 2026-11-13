@@ -1,0 +1,9 @@
+frozen_utc 2026-11-13T14:33:20Z (item set, models, manifest)
+addendum_utc 2026-11-13T15:14Z (Gate-4 adjudication: contested-as-defect reading, control relabel; item set unchanged)
+bc2b92a5fdff6e976ae7156b13beba3535f0895e4a41268cf76c1551a6c3dfaa  subset.json  (UNCHANGED; B's run is pinned to these bytes)
+a968ff34079a35cdab943dd72415853a4f05617eb353b8deb5665f93ae26b0cb  models/manifest.csv  (UNCHANGED)
+fce76f47776293b39a008209f950293b71431dc7e1e117de991288aaec0c6c03  FROZEN-SUBSET.md (original, before the addendum pointer)
+35e71ab25dee020fbef65a5ec658708171037673a9d08636de0c2a5a5c3ef9fd  FROZEN-SUBSET.md (after the 2026-11-13T15:14Z addendum pointer and control relabel)
+5728ae66d00da36249f4c76119198aaff652e1ccbaa6bd102d1840da4ae49d0c  FROZEN-SUBSET-ADDENDUM.md
+13 error items (10 unqualified + 3 contested); 4 controls + 3 descriptive models
+(original summary line said "13 error items (3 contested); 7 controls")
