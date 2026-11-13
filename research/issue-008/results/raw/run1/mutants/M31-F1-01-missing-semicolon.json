@@ -1,0 +1,24 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "missing ';' at end of declaration",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-01-missing-semicolon.sysml",
+      "line": 20,
+      "column": 23,
+      "pass": "syntax",
+      "code": "syntax"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-01-missing-semicolon.sysml:20:23: error[syntax]: missing ';' at end of declaration",
+    "        part engine : Engine",
+    "                      ^~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-01-missing-semicolon.sysml did not analyse cleanly; no check was made"
+  ]
+}

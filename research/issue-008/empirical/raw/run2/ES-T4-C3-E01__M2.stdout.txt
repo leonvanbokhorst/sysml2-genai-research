@@ -1,0 +1,3 @@
+✓ package WarehouseAgvFleetSystem
+✓ satisfy returnBeforeLowCharge by fleet holds (on WarehouseAgvFleetSystem::fleet ID: 1)
+  standing: holds (observed: 1 run under reverse; vacuous: requirement returnBeforeLowCharge states no required constraint, so it holds vacuously)

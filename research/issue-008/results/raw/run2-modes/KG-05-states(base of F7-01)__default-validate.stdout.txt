@@ -1,0 +1,11 @@
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": null,
+  "diagnostics": null,
+  "output": [
+    "✓ package KG05States",
+    "✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/known-good/KG-05-states.sysml: no errors"
+  ],
+  "errors": null
+}

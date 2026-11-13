@@ -1,0 +1,3 @@
+✓ package InfusionPumpAlarmSystem
+✓ satisfy occlusionAlarm by pump holds (on InfusionPumpAlarmSystem::pump ID: 1)
+  standing: holds (observed: 1 run under reverse; vacuous: requirement occlusionAlarm states no required constraint, so it holds vacuously)

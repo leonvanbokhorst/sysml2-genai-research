@@ -1,0 +1,39 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "unresolved reference: station — did you mean GroundStationScheduling::InsideVisibilityWindow::station?",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T5-C2.sysml",
+      "line": 32,
+      "column": 29,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'station' to 'GroundStationScheduling::InsideVisibilityWindow::station'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 32,
+              "column": 29,
+              "endLine": 32,
+              "endColumn": 36,
+              "newText": "GroundStationScheduling::InsideVisibilityWindow::station"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T5-C2.sysml:32:29: error[unresolved]: unresolved reference: station — did you mean GroundStationScheduling::InsideVisibilityWindow::station?",
+    "    satisfy insideWindow by station;",
+    "                            ^~~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T5-C2.sysml did not analyse cleanly; no check was made"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "\"state\" is a reserved keyword, not a name the ID terminal admits; write 'state' to use it as a name",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C2.sysml",
+      "line": 17,
+      "column": 19,
+      "pass": "syntax",
+      "code": "reserved-keyword-name"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C2.sysml:17:19: error[reserved-keyword-name]: \"state\" is a reserved keyword, not a name the ID terminal admits; write 'state' to use it as a name",
+    "        attribute state : String;",
+    "                  ^~~~~",
+    "✓ package LevelCrossingProtection",
+    "✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C2.sysml: no error that stops a check; the notation reported above does not conform"
+  ],
+  "errors": null
+}

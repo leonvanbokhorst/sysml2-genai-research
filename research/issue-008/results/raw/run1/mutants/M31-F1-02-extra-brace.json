@@ -1,0 +1,24 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "expected a namespace member",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-02-extra-brace.sysml",
+      "line": 21,
+      "column": 1,
+      "pass": "syntax",
+      "code": "syntax"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-02-extra-brace.sysml:21:1: error[syntax]: expected a namespace member",
+    "}",
+    "^"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-02-extra-brace.sysml did not analyse cleanly; no check was made"
+  ]
+}

@@ -1,0 +1,5 @@
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T5-C2.sysml:32:29: error[unresolved]: unresolved reference: station — did you mean GroundStationScheduling::InsideVisibilityWindow::station?
+    satisfy insideWindow by station;
+                            ^~~~~~~
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T5-C2.sysml did not analyse cleanly; no check was made

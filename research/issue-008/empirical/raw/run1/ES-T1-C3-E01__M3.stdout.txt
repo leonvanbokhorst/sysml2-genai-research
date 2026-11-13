@@ -1,0 +1,7 @@
+✓ package GreenhouseIrrigationSystem
+✓ Created instance of GreenhouseIrrigationSystem::greenhouse
+  ID: 1
+  Use %features greenhouse to inspect
+✓ satisfy moistureBand by greenhouse holds (on GreenhouseIrrigationSystem::greenhouse ID: 1)
+✓ GreenhouseIrrigationSystem::greenhouse is valid: its 1 assertion holds
+  standing: holds (observed: 1 run under reverse)

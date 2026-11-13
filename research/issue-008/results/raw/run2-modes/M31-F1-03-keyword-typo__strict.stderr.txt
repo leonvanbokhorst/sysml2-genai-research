@@ -1,0 +1,11 @@
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-03-keyword-typo.sysml:8:5: error[syntax]: expected a namespace member
+    prot def FuelingPort {
+    ^~~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-03-keyword-typo.sysml:8:10: error[syntax]: expected a namespace member
+    prot def FuelingPort {
+         ^~~
+/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-03-keyword-typo.sysml:20:1: error[syntax]: expected a namespace member
+}
+^
+sysml: /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F1-03-keyword-typo.sysml did not analyse cleanly; no check was made

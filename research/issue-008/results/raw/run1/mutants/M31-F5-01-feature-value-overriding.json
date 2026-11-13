@@ -1,0 +1,24 @@
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "message": "Duplicate of inherited member name 'cutoff' from TestRecord",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-01-feature-value-overriding.sysml",
+      "line": 17,
+      "column": 19,
+      "pass": "name-resolution",
+      "code": "name-conflict"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-01-feature-value-overriding.sysml:17:19: warning[name-conflict]: Duplicate of inherited member name 'cutoff' from TestRecord",
+    "        attribute cutoff : Rational default = 0.75 * averageScore;",
+    "                  ^~~~~~",
+    "✓ package KG04FeatureValues",
+    "✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F5-01-feature-value-overriding.sysml: no errors"
+  ],
+  "errors": null
+}

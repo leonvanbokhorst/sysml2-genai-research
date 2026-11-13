@@ -1,0 +1,6 @@
+✓ package KG05States
+✓ Started state machine executor for "OperationalStates"
+  Current state: off
+  Time: 0.0
+  Events: 0
+  standing: value (observed: 1 run under reverse)

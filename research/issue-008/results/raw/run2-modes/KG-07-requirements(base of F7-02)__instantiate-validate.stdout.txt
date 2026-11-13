@@ -1,0 +1,7 @@
+✓ package KG07Requirements
+✓ Created instance of KG07Requirements::vehicle
+  ID: 1
+  Use %features vehicle to inspect
+✓ satisfy vehicleMaximumMass by vehicle holds (on KG07Requirements::vehicle ID: 1)
+✓ KG07Requirements::vehicle is valid: its 1 assertion holds
+  standing: holds (observed: 1 run under reverse)

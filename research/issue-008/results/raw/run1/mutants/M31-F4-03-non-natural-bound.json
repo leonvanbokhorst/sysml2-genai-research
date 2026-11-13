@@ -1,0 +1,24 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "Must have a Natural value",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-03-non-natural-bound.sysml",
+      "line": 21,
+      "column": 21,
+      "pass": "constraint",
+      "code": "multiplicity-bound-natural"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-03-non-natural-bound.sysml:21:21: error[multiplicity-bound-natural]: Must have a Natural value",
+    "        part wheels[0.5] : Wheel;",
+    "                    ^~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-03-non-natural-bound.sysml did not analyse cleanly; no check was made"
+  ]
+}

@@ -1,0 +1,5 @@
+sysml: record cache unavailable, holding every file loaded: mkdir /Users/leonvanbokhorst/Library/Caches/sysml-ls: operation not permitted
+? assert constraint could not be evaluated (on KG10Asserts::testObject ID: 1)
+  Error: constraint : assertion evaluation failed: no value for feature computedMass
+? KG10Asserts::testObject is not shown valid: 1 of 1 assertion undecided
+  standing: not covered (1 undecided)

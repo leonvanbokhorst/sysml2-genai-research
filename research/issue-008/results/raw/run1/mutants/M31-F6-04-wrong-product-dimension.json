@@ -1,0 +1,24 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "cannot bind a value of dimension L·M·T^-1 to a feature typed by EnergyValue (dimension L^2·M·T^-2)",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-04-wrong-product-dimension.sysml",
+      "line": 14,
+      "column": 13,
+      "pass": "type",
+      "code": "incommensurable-binding"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-04-wrong-product-dimension.sysml:14:13: error[incommensurable-binding]: cannot bind a value of dimension L·M·T^-1 to a feature typed by EnergyValue (dimension L^2·M·T^-2)",
+    "            unladenMass * ratedSpeed;",
+    "            ^~~~~~~~~~~~~~~~~~~~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-04-wrong-product-dimension.sysml did not analyse cleanly; no check was made"
+  ]
+}

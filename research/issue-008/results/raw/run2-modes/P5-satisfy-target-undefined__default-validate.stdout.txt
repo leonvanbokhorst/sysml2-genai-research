@@ -1,0 +1,24 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "unresolved reference: nosuchtank",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P5-satisfy-target-undefined.sysml",
+      "line": 10,
+      "column": 22,
+      "pass": "name-resolution",
+      "code": "unresolved"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P5-satisfy-target-undefined.sysml:10:22: error[unresolved]: unresolved reference: nosuchtank",
+    "    satisfy limit by nosuchtank;",
+    "                     ^~~~~~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P5-satisfy-target-undefined.sysml did not analyse cleanly; no check was made"
+  ]
+}

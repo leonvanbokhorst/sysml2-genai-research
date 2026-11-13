@@ -1,0 +1,11 @@
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": null,
+  "diagnostics": null,
+  "output": [
+    "✓ package KG09Actions",
+    "✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F7-03-missing-flow.sysml: no errors"
+  ],
+  "errors": null
+}

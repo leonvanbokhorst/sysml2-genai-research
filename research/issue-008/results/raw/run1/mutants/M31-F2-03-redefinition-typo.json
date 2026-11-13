@@ -1,0 +1,24 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "unresolved reference: massActul",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-03-redefinition-typo.sysml",
+      "line": 34,
+      "column": 23,
+      "pass": "name-resolution",
+      "code": "unresolved"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-03-redefinition-typo.sysml:34:23: error[unresolved]: unresolved reference: massActul",
+    "        attribute :\u003e\u003e massActul = 1500.0;",
+    "                      ^~~~~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-03-redefinition-typo.sysml did not analyse cleanly; no check was made"
+  ]
+}

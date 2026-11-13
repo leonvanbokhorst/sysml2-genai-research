@@ -1,0 +1,7 @@
+✓ package HeatPumpHeating
+✓ Created instance of HeatPumpHeating::dwelling
+  ID: 1
+  Use %features dwelling to inspect
+✓ satisfy indoorMinimum by dwelling holds (on HeatPumpHeating::dwelling ID: 1)
+✓ HeatPumpHeating::dwelling is valid: its 1 assertion holds
+  standing: holds (observed: 1 run under reverse)

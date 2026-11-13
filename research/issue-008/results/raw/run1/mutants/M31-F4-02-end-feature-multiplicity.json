@@ -1,0 +1,24 @@
+{
+  "status": "holds",
+  "exit": 0,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "message": "End feature must have multiplicity 1: an end relates exactly one thing per link; write `[1]` or take it from a feature the end subsets or redefines",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-02-end-feature-multiplicity.sysml",
+      "line": 11,
+      "column": 9,
+      "pass": "constraint",
+      "code": "end-feature-multiplicity"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-02-end-feature-multiplicity.sysml:11:9: warning[end-feature-multiplicity]: End feature must have multiplicity 1: an end relates exactly one thing per link; write `[1]` or take it from a feature the end subsets or redefines",
+    "        end part hub : Hub[2];",
+    "        ^~~~~~~~~~~~~~~~~~~~~~",
+    "✓ package KG03Connections",
+    "✓ /Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-02-end-feature-multiplicity.sysml: no errors"
+  ],
+  "errors": null
+}

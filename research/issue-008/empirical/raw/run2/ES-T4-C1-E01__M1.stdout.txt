@@ -1,0 +1,72 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "succession endpoint checkAvailability is not an action node",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C1.sysml",
+      "line": 43,
+      "column": 14,
+      "pass": "action-endpoint",
+      "code": "endpoint-not-a-node"
+    },
+    {
+      "severity": "error",
+      "message": "expected ':=' after assignment target",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C1.sysml",
+      "line": 44,
+      "column": 20,
+      "pass": "syntax",
+      "code": "syntax"
+    },
+    {
+      "severity": "error",
+      "message": "expected a body member",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C1.sysml",
+      "line": 44,
+      "column": 20,
+      "pass": "syntax",
+      "code": "syntax"
+    },
+    {
+      "severity": "error",
+      "message": "expected an expression",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C1.sysml",
+      "line": 44,
+      "column": 20,
+      "pass": "syntax",
+      "code": "syntax"
+    },
+    {
+      "severity": "error",
+      "message": "\"assign\" is a reserved keyword, not a name the ID terminal admits; write 'assign' to use it as a name",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C1.sysml",
+      "line": 49,
+      "column": 16,
+      "pass": "syntax",
+      "code": "reserved-keyword-name"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C1.sysml:43:14: error[endpoint-not-a-node]: succession endpoint checkAvailability is not an action node",
+    "        then checkAvailability;",
+    "             ^~~~~~~~~~~~~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C1.sysml:44:20: error[syntax]: expected ':=' after assignment target",
+    "        then assign;",
+    "                   ^",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C1.sysml:44:20: error[syntax]: expected a body member",
+    "        then assign;",
+    "                   ^",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C1.sysml:44:20: error[syntax]: expected an expression",
+    "        then assign;",
+    "                   ^",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C1.sysml:49:16: error[reserved-keyword-name]: \"assign\" is a reserved keyword, not a name the ID terminal admits; write 'assign' to use it as a name",
+    "    action def assign;",
+    "               ^~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T4-C1.sysml did not analyse cleanly; no check was made"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "cannot bind kg (dimension M) to a feature typed by SpeedValue (dimension L·T^-1)",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-01-wrong-dimension-unit.sysml",
+      "line": 12,
+      "column": 45,
+      "pass": "type",
+      "code": "incommensurable-binding"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-01-wrong-dimension-unit.sysml:12:45: error[incommensurable-binding]: cannot bind kg (dimension M) to a feature typed by SpeedValue (dimension L·T^-1)",
+    "        attribute ratedSpeed : SpeedValue = 55.0 [kg];",
+    "                                            ^~~~~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F6-01-wrong-dimension-unit.sysml did not analyse cleanly; no check was made"
+  ]
+}

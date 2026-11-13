@@ -1,0 +1,10 @@
+✓ package KG09Actions
+✓ Started action executor for "TakePicture"
+  State: Running
+  Tokens: 1
+✓ Action completed
+  Final state: Completed
+  Results:
+    focus.scene = []
+    picture = []
+  standing: value (observed: 1 run under reverse)

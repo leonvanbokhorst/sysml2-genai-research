@@ -1,0 +1,36 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "2 value(s) bound to a feature with multiplicity upper bound 1",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-04-feature-value-count.sysml",
+      "line": 11,
+      "column": 41,
+      "pass": "type",
+      "code": "feature-value-count"
+    },
+    {
+      "severity": "warning",
+      "message": "Duplicate of inherited member name 'cutoff' from TestRecord",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-04-feature-value-count.sysml",
+      "line": 17,
+      "column": 19,
+      "pass": "name-resolution",
+      "code": "name-conflict"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-04-feature-value-count.sysml:11:41: error[feature-value-count]: 2 value(s) bound to a feature with multiplicity upper bound 1",
+    "        attribute scores[1] : Integer = (1, 2);",
+    "                                        ^~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-04-feature-value-count.sysml:17:19: warning[name-conflict]: Duplicate of inherited member name 'cutoff' from TestRecord",
+    "        attribute cutoff : Rational default = 0.75 * averageScore;",
+    "                  ^~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F4-04-feature-value-count.sysml did not analyse cleanly; no check was made"
+  ]
+}

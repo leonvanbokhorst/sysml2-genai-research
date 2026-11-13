@@ -1,0 +1,24 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "cannot bind String value to a feature typed by Integer",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-03-value-kind.sysml",
+      "line": 18,
+      "column": 35,
+      "pass": "type",
+      "code": "binding-connector-type-conformance"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-03-value-kind.sysml:18:35: error[binding-connector-type-conformance]: cannot bind String value to a feature typed by Integer",
+    "        @SafetyRelevant { level = \"high\"; }",
+    "                                  ^~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F8-03-value-kind.sysml did not analyse cleanly; no check was made"
+  ]
+}

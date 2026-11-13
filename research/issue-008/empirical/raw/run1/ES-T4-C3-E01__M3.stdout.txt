@@ -1,0 +1,7 @@
+✓ package WarehouseAgvFleetSystem
+✓ Created instance of WarehouseAgvFleetSystem::fleet
+  ID: 1
+  Use %features fleet to inspect
+✓ satisfy returnBeforeLowCharge by fleet holds (on WarehouseAgvFleetSystem::fleet ID: 1)
+✓ WarehouseAgvFleetSystem::fleet is valid: its 1 assertion holds
+  standing: holds (observed: 1 run under reverse)

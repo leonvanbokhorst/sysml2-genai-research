@@ -1,0 +1,4 @@
+✓ package KG07Requirements
+✗ satisfy vehicleMaximumMass by vehicle fails (on KG07Requirements::vehicle ID: 1)
+  Required condition evaluated to false: massActual <= massRequired
+  standing: violated (witnessed: 1 run under reverse)

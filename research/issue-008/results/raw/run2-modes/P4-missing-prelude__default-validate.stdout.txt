@@ -1,0 +1,90 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P4-missing-prelude.sysml",
+      "line": 4,
+      "column": 28,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Real' to 'ScalarValues::Real'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 4,
+              "column": 28,
+              "endLine": 4,
+              "endColumn": 32,
+              "newText": "ScalarValues::Real"
+            }
+          ]
+        },
+        {
+          "title": "Import 'ScalarValues::*'",
+          "edits": [
+            {
+              "line": 3,
+              "column": 5,
+              "endLine": 3,
+              "endColumn": 5,
+              "newText": "private import ScalarValues::*;\n    "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P4-missing-prelude.sysml",
+      "line": 5,
+      "column": 28,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Boolean' to 'ScalarValues::Boolean'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 5,
+              "column": 28,
+              "endLine": 5,
+              "endColumn": 35,
+              "newText": "ScalarValues::Boolean"
+            }
+          ]
+        },
+        {
+          "title": "Import 'ScalarValues::*'",
+          "edits": [
+            {
+              "line": 3,
+              "column": 5,
+              "endLine": 3,
+              "endColumn": 5,
+              "newText": "private import ScalarValues::*;\n    "
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P4-missing-prelude.sysml:4:28: error[unresolved]: unresolved reference: Real — did you mean ScalarValues::Real? To use the bare name, import its package: private import ScalarValues::*;",
+    "        attribute volume : Real;",
+    "                           ^~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P4-missing-prelude.sysml:5:28: error[unresolved]: unresolved reference: Boolean — did you mean ScalarValues::Boolean? To use the bare name, import its package: private import ScalarValues::*;",
+    "        attribute isFull : Boolean = false;",
+    "                           ^~~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/results/probes-gate2/P4-missing-prelude.sysml did not analyse cleanly; no check was made"
+  ]
+}

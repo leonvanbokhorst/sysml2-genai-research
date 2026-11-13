@@ -1,0 +1,105 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "\"return\" is a reserved keyword, not a name the ID terminal admits; write 'return' to use it as a name",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml",
+      "line": 22,
+      "column": 14,
+      "pass": "syntax",
+      "code": "reserved-keyword-name"
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: heating — did you mean HeatPumpBufferTank::MaintainIndoorTemperature::heating?",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml",
+      "line": 40,
+      "column": 36,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'heating' to 'HeatPumpBufferTank::MaintainIndoorTemperature::heating'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 40,
+              "column": 36,
+              "endLine": 40,
+              "endColumn": 43,
+              "newText": "HeatPumpBufferTank::MaintainIndoorTemperature::heating"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: heating — did you mean HeatPumpBufferTank::MaintainIndoorTemperature::heating?",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml",
+      "line": 42,
+      "column": 38,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'heating' to 'HeatPumpBufferTank::MaintainIndoorTemperature::heating'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 42,
+              "column": 38,
+              "endLine": 42,
+              "endColumn": 45,
+              "newText": "HeatPumpBufferTank::MaintainIndoorTemperature::heating"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "message": "unresolved reference: heating — did you mean HeatPumpBufferTank::MaintainIndoorTemperature::heating?",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml",
+      "line": 42,
+      "column": 54,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'heating' to 'HeatPumpBufferTank::MaintainIndoorTemperature::heating'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 42,
+              "column": 54,
+              "endLine": 42,
+              "endColumn": 61,
+              "newText": "HeatPumpBufferTank::MaintainIndoorTemperature::heating"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml:22:14: error[reserved-keyword-name]: \"return\" is a reserved keyword, not a name the ID terminal admits; write 'return' to use it as a name",
+    "        port return;",
+    "             ^~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml:40:36: error[unresolved]: unresolved reference: heating — did you mean HeatPumpBufferTank::MaintainIndoorTemperature::heating?",
+    "    satisfy maintainTemperature by heating;",
+    "                                   ^~~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml:42:38: error[unresolved]: unresolved reference: heating — did you mean HeatPumpBufferTank::MaintainIndoorTemperature::heating?",
+    "    connection tankToCircuit connect heating.tank to heating.circuit.supply;",
+    "                                     ^~~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml:42:54: error[unresolved]: unresolved reference: heating — did you mean HeatPumpBufferTank::MaintainIndoorTemperature::heating?",
+    "    connection tankToCircuit connect heating.tank to heating.circuit.supply;",
+    "                                                     ^~~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T6-C2.sysml did not analyse cleanly; no check was made"
+  ]
+}

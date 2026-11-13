@@ -1,0 +1,60 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "a transition states its ends as `transition first \u003csource\u003e … then \u003ctarget\u003e;`",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml",
+      "line": 48,
+      "column": 25,
+      "pass": "syntax",
+      "code": "syntax"
+    },
+    {
+      "severity": "error",
+      "message": "a transition states its ends as `transition first \u003csource\u003e … then \u003ctarget\u003e;`",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml",
+      "line": 49,
+      "column": 25,
+      "pass": "syntax",
+      "code": "syntax"
+    },
+    {
+      "severity": "error",
+      "message": "a transition states its ends as `transition first \u003csource\u003e … then \u003ctarget\u003e;`",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml",
+      "line": 50,
+      "column": 25,
+      "pass": "syntax",
+      "code": "syntax"
+    },
+    {
+      "severity": "error",
+      "message": "a transition states its ends as `transition first \u003csource\u003e … then \u003ctarget\u003e;`",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml",
+      "line": 51,
+      "column": 25,
+      "pass": "syntax",
+      "code": "syntax"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml:48:25: error[syntax]: a transition states its ends as `transition first \u003csource\u003e … then \u003ctarget\u003e;`",
+    "        transition from idle to lowering on detection.approaching;",
+    "                        ^~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml:49:25: error[syntax]: a transition states its ends as `transition first \u003csource\u003e … then \u003ctarget\u003e;`",
+    "        transition from lowering to closed when leftArm.isLowered and rightArm.isLowered;",
+    "                        ^~~~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml:50:25: error[syntax]: a transition states its ends as `transition first \u003csource\u003e … then \u003ctarget\u003e;`",
+    "        transition from closed to raising on detection.clear;",
+    "                        ^~~~~~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml:51:25: error[syntax]: a transition states its ends as `transition first \u003csource\u003e … then \u003ctarget\u003e;`",
+    "        transition from raising to idle when leftArm.position \u003e 0.9;",
+    "                        ^~~~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/relational/empirical-subset/models/T2-C1.sysml did not analyse cleanly; no check was made"
+  ]
+}

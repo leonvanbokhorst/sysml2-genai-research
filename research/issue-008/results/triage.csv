@@ -1,0 +1,33 @@
+mutant_id,fault_class,expected_detectable,expected_layer,surface_tell,spec_status,n_errors,n_warnings,any_error,any_signal,error_codes,warning_codes,top_layer,category,judgement_note
+M31-F1-01-missing-semicolon,F1-syntax,yes,syntax,yes,notation,1,0,1,yes,syntax,,syntax,detected,syntax error names the missing terminator
+M31-F1-02-extra-brace,F1-syntax,yes,syntax,yes,notation,1,0,1,yes,syntax,,syntax,detected,syntax error: expected a namespace member
+M31-F1-03-keyword-typo,F1-syntax,yes,syntax,yes,notation,3,0,1,yes,syntax;syntax;syntax,,syntax,detected,three cascade syntax errors from the misspelt keyword
+M31-F1-04-unquoted-shortname,F1-syntax,yes,syntax,no,notation,5,0,1,yes,syntax;syntax;syntax;syntax;syntax,,syntax,detected,five cascade syntax errors from the unquoted short name
+M31-F2-01-type-typo,F2-unresolved,yes,names,no,resolution_mechanism,1,0,1,yes,unresolved,,name-resolution,detected,unresolved reference with the intended name suggested
+M31-F2-02-parameter-typo,F2-unresolved,yes,names,no,resolution_mechanism,1,0,1,yes,unresolved,,name-resolution,detected,unresolved reference with the intended name suggested
+M31-F2-03-redefinition-typo,F2-unresolved,yes,names,no,resolution_mechanism,1,0,1,yes,unresolved,,name-resolution,detected,unresolved reference at the redefinition target
+M31-F2-04-missing-declaration,F2-unresolved,yes,names,no,resolution_mechanism,1,0,1,yes,unresolved,,name-resolution,detected,"unresolved reference; hint offers a feature name, not a type"
+M31-F3-01-part-typed-by-portdef,F3-kind-mismatch,yes,typing,no,prose_only,0,1,0,yes,,name-conflict,name-resolution,misleading,"only a warning, at the right line but naming `name-conflict: duplicate of inherited member 'self'`; the wrong-kind typing itself is not reported"
+M31-F3-02-attribute-typed-by-partdef,F3-kind-mismatch,yes,typing,no,prose_only,1,1,1,yes,usage-typing,bound-feature-types,type,detected,usage-typing error names the required definition kind
+M31-F3-03-state-replaced-by-action,F3-kind-mismatch,yes,typing,no,metamodel_constraint,2,0,1,yes,not-a-vertex;not-a-vertex,,name-resolution,detected,not-a-vertex error names the transition endpoint
+M31-F3-04-subject-typed-by-requirement,F3-kind-mismatch,yes,typing,no,prose_only,0,1,0,yes,,bound-feature-types,type,incidental,"one warning, located on the `satisfy` line five lines below the injected subject, naming `bound-feature-types`; the wrong-kind subject typing is not reported"
+M31-F4-01-inverted-bounds,F4-multiplicity,no,none,no,none,1,0,1,yes,multiplicity-range,,constraint,detected,multiplicity-range error (a rule no catalogue constraint states)
+M31-F4-02-end-feature-multiplicity,F4-multiplicity,yes,constraints,no,metamodel_constraint,0,1,0,yes,,end-feature-multiplicity,constraint,wrong_severity,"end-feature-multiplicity warns, although KerML validateFeatureEndMultiplicity is SHOULD-report"
+M31-F4-03-non-natural-bound,F4-multiplicity,yes,typing,no,metamodel_constraint,1,0,1,yes,multiplicity-bound-natural,,constraint,detected,multiplicity-bound-natural error
+M31-F4-04-feature-value-count,F4-multiplicity,uncertain,typing,no,none,1,1,1,yes,feature-value-count,name-conflict,type,detected,feature-value-count error names count and upper bound
+M31-F5-01-feature-value-overriding,F5-named-constraint,yes,constraints,no,metamodel_constraint,0,1,0,yes,,name-conflict,name-resolution,incidental,warning[name-conflict] carried over from the base model; nothing about the override is reported
+M31-F5-02-satisfy-reference,F5-named-constraint,yes,constraints,no,metamodel_constraint,1,0,1,yes,relationship-target-kind,,type,detected,relationship-target-kind error names the satisfy target kind
+M31-F5-03-decision-node-incoming,F5-named-constraint,yes,constraints,no,metamodel_constraint,1,0,1,yes,decision-incoming-successions,,control-node,detected,"decision-incoming-successions error, with the fix suggested"
+M31-F5-04-composite-port-feature,F5-named-constraint,uncertain,constraints,no,prose_only,1,0,1,yes,port-owned-usage-composite,,type,detected,port-owned-usage-composite error: the prose-only §8.4.8.1 condition IS enforced here
+M31-F6-01-wrong-dimension-unit,F6-quantity,yes,typing,no,library_semantics,1,0,1,yes,incommensurable-binding,,type,detected,incommensurable-binding names both dimensions
+M31-F6-02-missing-unit,F6-quantity,no,typing,no,library_semantics,1,0,1,yes,binding-connector-type-conformance,,type,detected,binding-connector-type-conformance: a unitless magnitude is a Rational and does not conform
+M31-F6-03-incommensurable-sum,F6-quantity,yes,typing,no,library_semantics,0,1,0,yes,,incommensurable-operands,type,wrong_severity,incommensurable-operands identifies the defect but only as a warning
+M31-F6-04-wrong-product-dimension,F6-quantity,yes,typing,no,library_semantics,1,0,1,yes,incommensurable-binding,,type,detected,incommensurable-binding names the computed dimension and the declared one
+M31-F7-01-unreachable-state,F7-structural,no,none,no,none,0,0,0,no,,,none,silent,no diagnostic
+M31-F7-02-satisfied-but-violated,F7-structural,no,none,no,none,0,0,0,no,,,none,silent,no diagnostic
+M31-F7-03-missing-flow,F7-structural,no,none,no,none,0,0,0,no,,,none,silent,no diagnostic
+M31-F7-04-contradictory-assertions,F7-structural,no,none,no,none,0,0,0,no,,,none,silent,no diagnostic
+M31-F8-01-annotation-not-metadata,F8-metadata,yes,constraints,no,metamodel_constraint,1,0,1,yes,metadata-metaclass,,constraint,detected,metadata-metaclass error
+M31-F8-02-body-feature-typo,F8-metadata,yes,constraints,no,metamodel_constraint,1,0,1,yes,metadata-owning-type-feature,,constraint,detected,metadata-owning-type-feature error
+M31-F8-03-value-kind,F8-metadata,yes,typing,no,metamodel_constraint,1,0,1,yes,binding-connector-type-conformance,,type,detected,binding-connector-type-conformance names String vs Integer
+M31-F8-04-abstract-metaclass,F8-metadata,yes,constraints,no,metamodel_constraint,1,0,1,yes,metadata-concrete-type,,constraint,detected,metadata-concrete-type error

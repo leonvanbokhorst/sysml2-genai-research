@@ -1,0 +1,36 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "transition endpoint on is not a state or pseudostate",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-03-state-replaced-by-action.sysml",
+      "line": 13,
+      "column": 42,
+      "pass": "name-resolution",
+      "code": "not-a-vertex"
+    },
+    {
+      "severity": "error",
+      "message": "transition endpoint on is not a state or pseudostate",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-03-state-replaced-by-action.sysml",
+      "line": 14,
+      "column": 33,
+      "pass": "name-resolution",
+      "code": "not-a-vertex"
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-03-state-replaced-by-action.sysml:13:42: error[not-a-vertex]: transition endpoint on is not a state or pseudostate",
+    "        transition off_on first off then on;",
+    "                                         ^~",
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-03-state-replaced-by-action.sysml:14:33: error[not-a-vertex]: transition endpoint on is not a state or pseudostate",
+    "        transition on_off first on then off;",
+    "                                ^~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F3-03-state-replaced-by-action.sysml did not analyse cleanly; no check was made"
+  ]
+}

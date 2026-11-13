@@ -1,0 +1,39 @@
+{
+  "status": "unresolved",
+  "exit": 2,
+  "checks": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "unresolved reference: Engin — did you mean Engine?",
+      "file": "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-01-type-typo.sysml",
+      "line": 20,
+      "column": 23,
+      "pass": "name-resolution",
+      "code": "unresolved",
+      "fixes": [
+        {
+          "title": "Change 'Engin' to 'Engine'",
+          "preferred": true,
+          "edits": [
+            {
+              "line": 20,
+              "column": 23,
+              "endLine": 20,
+              "endColumn": 28,
+              "newText": "Engine"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "output": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-01-type-typo.sysml:20:23: error[unresolved]: unresolved reference: Engin — did you mean Engine?",
+    "        part engine : Engin;",
+    "                      ^~~~~"
+  ],
+  "errors": [
+    "/Users/leonvanbokhorst/repos/sysml2-to-do-with-research-i-dont-know/research/issue-008/mutants/M31-F2-01-type-typo.sysml did not analyse cleanly; no check was made"
+  ]
+}
